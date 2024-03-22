@@ -4,30 +4,48 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D),typeof(TouchingDirections))]
 public class PlayerController : MonoBehaviour
 {
     public float walkSpeed = 5f;
     public float runSpeed = 8f;
+    public float airWalkSpeed = 3f;
+    public float jumpImpulse = 10f;
     Vector2 moveInput;
+    TouchingDirections touchingDirections;
 
-    public float CurrentMoveSpeed { get
-        {
-            if (IsMoving)
+    public float CurrentMoveSpeed 
+    { get
+        {   if (CanMove)
             {
-                if (IsRunning)
+                if (IsMoving && !touchingDirections.IsOnWall)
                 {
-                    return runSpeed;
+                    if (touchingDirections.IsGrounded)
+                    {
+                        if (IsRunning)
+                        {
+                            return runSpeed;
+                        }
+                        else
+                        {
+                            return walkSpeed;
+                        }
+                    }
+                    else
+                    {
+                        return airWalkSpeed;
+                    }
                 }
                 else
                 {
-                    return walkSpeed;
+                    return 0;
                 }
             }
             else
             {
                 return 0;
             }
+            
         }
     }
 
@@ -75,13 +93,25 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public bool CanMove
+    {   get
+        {
+            return animator.GetBool(AnimationStrings.canMove);
+        }
+    }
+
+
+
+
     Rigidbody2D rb;
     Animator animator;
+
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        touchingDirections = GetComponent<TouchingDirections>();
     }
 
     // Start is called before the first frame update
@@ -136,4 +166,23 @@ public class PlayerController : MonoBehaviour
             IsRunning = false;
         }
     }
+
+    public void OnJump(InputAction.CallbackContext context)
+    {
+        if (context.started && touchingDirections.IsGrounded && CanMove)
+        {
+            animator.SetTrigger(AnimationStrings.jumpTrigger);
+            rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
+        }
+ 
+    }
+    public void OnAttack(InputAction.CallbackContext context)
+    {
+        if (context.started && touchingDirections.IsGrounded)
+        {
+            animator.SetTrigger(AnimationStrings.attackTrigger);
+        }
+
+    }
+
 }
