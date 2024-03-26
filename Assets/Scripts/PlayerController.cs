@@ -100,7 +100,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
+    public bool IsAlive
+    {
+        get 
+        {
+            return animator.GetBool(AnimationStrings.isAlive);
+        }
+    
+    }
 
 
     Rigidbody2D rb;
@@ -136,9 +143,16 @@ public class PlayerController : MonoBehaviour
 	{
         moveInput = context.ReadValue<Vector2>();
 
-        IsMoving = moveInput != Vector2.zero;
+        if (IsAlive)
+        {
+            IsMoving = moveInput != Vector2.zero;
 
-        SetFacingDirection(moveInput);
+            SetFacingDirection(moveInput);
+        }else
+        {
+            IsMoving = false;
+        }
+
 	}
 
     private void SetFacingDirection(Vector2 moveInput)
@@ -184,5 +198,8 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
+    public void OnHit(int damage, Vector2 knockback)
+    {
+        rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
+    }
 }

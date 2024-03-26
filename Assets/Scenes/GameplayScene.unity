@@ -3181,6 +3181,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8198951932485516424, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
   m_PrefabInstance: {fileID: 7150571030326940445}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2003513250 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2999302699537840522, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
+  m_PrefabInstance: {fileID: 7150571030326940445}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0b1cb2a71eae694a8979da9b0aed90c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2017033258
 GameObject:
   m_ObjectHideFlags: 0
@@ -3676,6 +3687,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5493665764848477191, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
+      propertyPath: damageableHit.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493665764848477191, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
+      propertyPath: damageableHit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2003513250}
+    - target: {fileID: 5493665764848477191, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
+      propertyPath: damageableHit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493665764848477191, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
+      propertyPath: damageableHit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnHit
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493665764848477191, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
+      propertyPath: damageableHit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493665764848477191, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
+      propertyPath: damageableHit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8198951932485516424, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

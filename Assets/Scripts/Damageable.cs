@@ -1,12 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Damageable : MonoBehaviour
 {
+    public UnityEvent<int, Vector2> damageableHit;
+
+    Animator animator;
+    
     [SerializeField]
-    private float _maxHealth = 100;
-    public float MaxHealth
+    private int _maxHealth = 100;
+    public int MaxHealth
     {
         get
         {
@@ -18,24 +24,26 @@ public class Damageable : MonoBehaviour
         }
     }
 
-    private float _health = 100;
-    public float Health
+    [SerializeField]
+    private int _health = 100;
+    public int Health
     {
         get
         { 
-            return _maxHealth;
+            return _health;
         }
         set
         {
             _health = value;
 
-            if (_health < 0)
+            if (_health <= 0)
             {
                 IsAlive = false;
             }
         }
     }
 
+    [SerializeField]
     private bool _isAlive = true;
     public bool IsAlive
     {
@@ -46,20 +54,49 @@ public class Damageable : MonoBehaviour
         set
         {
             _isAlive = value;
+            animator.SetBool(AnimationStrings.isAlive, value);
+            Debug.Log("IsAlive set " + value);
 
         }
     }
 
+    [SerializeField]
+    private bool isInvincible = false;
+    private float timeSinceHit = 0;
+    public float invincibilityTime = 0.25f;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (isInvincible)
+        {
+            if (timeSinceHit > invincibilityTime)
+            {
+                isInvincible = false;
+                timeSinceHit = 0;
+            }
+
+            timeSinceHit += Time.deltaTime;
+        }
+
+    }
+
+    public bool Hit(int damage,Vector2 knockback) 
+    {
+        if (IsAlive && !isInvincible) 
+        {
+            Health -= damage;
+            isInvincible = true;
+
+            damageableHit?.Invoke(damage,knockback);
+
+            return true;
+        }
+
+        return false;
     }
 }
