@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections))]
+[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections),typeof(Damageable))]
 public class Knight : MonoBehaviour
 {
     public float walkSpeed = 3f;
     public float walkStopRate = 0.6f;
     public DetectionZone attackZone;
+    public DetectionZone cliffDetectionZone;
+
 
     Rigidbody2D rb;
     TouchingDirections touchingDirections;
     Animator animator;
+    Damageable damageable;
 
 
     public enum WalkalbeDirection { Right, Left };
@@ -56,34 +59,48 @@ public class Knight : MonoBehaviour
         }
     }
 
+    public float AttackCooldown { get {
+            return animator.GetFloat(AnimationStrings.attackCooldown);
+        } private set {
+            animator.SetFloat(AnimationStrings.attackCooldown, Mathf.Max(value,0));
+        } 
+    }
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         touchingDirections = GetComponent<TouchingDirections>();
         animator = GetComponent<Animator>();
+        damageable = GetComponent<Damageable>();
     }
 
     // Update is called once per frame
     void Update()
     {
         HasTarget = attackZone.dectectedColliders.Count > 0;
+        if (AttackCooldown > 0)
+        {
+            AttackCooldown -= Time.deltaTime;
+        }
+
     }
 
 
     private void FixedUpdate()
     {
 
-        if (touchingDirections.IsGrounded && touchingDirections.IsOnWall)
+        if (touchingDirections.IsGrounded && touchingDirections.IsOnWall )
         {
             FlipDirection();
         }
 
-        if (canMove)
-            rb.velocity = new Vector2(walkSpeed * walkDirectionVector.x, rb.velocity.y);
-        else
-            rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x,0,walkStopRate), rb.velocity.y);
-
+        if (!damageable.LockVelocity)
+        {
+            if (canMove)
+                rb.velocity = new Vector2(walkSpeed * walkDirectionVector.x, rb.velocity.y);
+            else
+                rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, walkStopRate), rb.velocity.y);
+        }
     }
 
     private void FlipDirection()
@@ -102,12 +119,16 @@ public class Knight : MonoBehaviour
     
     }
 
-
-    // Start is called before the first frame update
-    void Start()
+    public void OnHit(int damage, Vector2 knockback)
     {
-        
+        rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
     }
 
-
+    public void OnCLiffDetected()
+    {
+        if (touchingDirections.IsGrounded)
+        {
+            FlipDirection();
+        }
+    }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 
 public class Attack : MonoBehaviour
@@ -13,7 +14,9 @@ public class Attack : MonoBehaviour
 
         if (damageable != null)
         {
-            bool gotHit = damageable.Hit(attackDamage,knockback);
+            Vector2 deliveredKnockback = transform.parent.localScale.x > 0 ? knockback : new Vector2(-knockback.x, knockback.y);
+
+            bool gotHit = damageable.Hit(attackDamage, deliveredKnockback);
 
             if(gotHit)
             Debug.Log(collision.name + "hit for" + attackDamage);
