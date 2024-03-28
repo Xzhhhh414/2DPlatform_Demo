@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7072197036726259257}
+  - component: {fileID: 2974908712971513563}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -31,3 +32,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2974908712971513563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325195006111773829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4faef4380ce94841b6202868e75b933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTextPrefab: {fileID: 4127040908755293030, guid: 01a7d96603d857a47a7cb54a11d5c8d8, type: 3}
+  healthTextPrefab: {fileID: 4127040908755293030, guid: ae3b12df415612043940b82971049c75, type: 3}
+  gameCanvas: {fileID: 0}
