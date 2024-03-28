@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class Damageable : MonoBehaviour
 {
     public UnityEvent<int, Vector2> damageableHit;
+    public UnityEvent damagebleDeath;
 
     Animator animator;
     
@@ -57,6 +58,10 @@ public class Damageable : MonoBehaviour
             animator.SetBool(AnimationStrings.isAlive, value);
             Debug.Log("IsAlive set " + value);
 
+            if (value == false)
+            { 
+                damagebleDeath.Invoke();
+            }
         }
     }
 

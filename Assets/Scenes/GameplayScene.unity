@@ -3056,17 +3056,6 @@ Transform:
   - {fileID: 153752788}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &945320893 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5781109479608492534, guid: 3a4d4e2d459dd594f96349a9cc3c72d4, type: 3}
-  m_PrefabInstance: {fileID: 4026864335273277986}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 254a7ee3f85faef4da9395ecf02c9d82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &973259192
 GameObject:
   m_ObjectHideFlags: 0
@@ -3515,11 +3504,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420031}
   followTarget: {fileID: 2003513244}
---- !u!4 &1976824063 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5424188767339078681, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
-  m_PrefabInstance: {fileID: 7150571030326940445}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2003513244 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8198951932485516424, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
@@ -4142,10 +4126,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlyingtEye
       objectReference: {fileID: 0}
-    - target: {fileID: 3776471736364299616, guid: 3a4d4e2d459dd594f96349a9cc3c72d4, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 3906881211269733644, guid: 3a4d4e2d459dd594f96349a9cc3c72d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.48
@@ -4187,14 +4167,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6143276226531961324, guid: 3a4d4e2d459dd594f96349a9cc3c72d4, type: 3}
-      propertyPath: biteDetectionZone
-      value: 
-      objectReference: {fileID: 945320893}
-    - target: {fileID: 6143276226531961324, guid: 3a4d4e2d459dd594f96349a9cc3c72d4, type: 3}
-      propertyPath: waypoints.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6143276226531961324, guid: 3a4d4e2d459dd594f96349a9cc3c72d4, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 815492568}
@@ -4223,10 +4195,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1115463557619649417, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
-      propertyPath: launchPoint
-      value: 
-      objectReference: {fileID: 1976824063}
     - target: {fileID: 8198951932485516424, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

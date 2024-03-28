@@ -37,6 +37,7 @@ Transform:
   m_Children:
   - {fileID: 2031294376905247443}
   - {fileID: 7177431905141260708}
+  - {fileID: 3140747520124482719}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7551012797831096553
@@ -150,8 +151,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.34999418, y: -0.32999378}
-  m_Size: {x: 1.5951395, y: 1.9151341}
+  m_Offset: {x: 0.30559874, y: -0.35073495}
+  m_Size: {x: 1.1455908, y: 1.39147}
   m_Direction: 0
 --- !u!114 &7374005314067382154
 MonoBehaviour:
@@ -168,6 +169,21 @@ MonoBehaviour:
   damageableHit:
     m_PersistentCalls:
       m_Calls: []
+  damagebleDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6143276226531961324}
+        m_TargetAssemblyTypeName: FlyingEye, Assembly-CSharp
+        m_MethodName: OnDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _maxHealth: 50
   _health: 50
   _isAlive: 1
@@ -206,7 +222,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdb710e7ffe40ef489d7221acb411bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  biteDetectionZone: {fileID: 0}
+  flightSpeed: 2
+  waypointReachedDistance: 0.1
+  biteDetectionZone: {fileID: 5781109479608492534}
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  deathCollider: {fileID: 4433300934303020410}
   _hasTarget: 0
 --- !u!1 &3776471736364299616
 GameObject:
@@ -290,6 +314,83 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 20
   knockback: {x: 1, y: 0}
+--- !u!1 &7347298008799011483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3140747520124482719}
+  - component: {fileID: 4433300934303020410}
+  m_Layer: 8
+  m_Name: DeathCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3140747520124482719
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7347298008799011483}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3906881211269733644}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &4433300934303020410
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7347298008799011483}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.16543841, y: -1.4661994}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.034371, y: 0.28816748}
+  m_EdgeRadius: 0
 --- !u!1 &8823222125282170735
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,7 +418,7 @@ Transform:
   m_GameObject: {fileID: 8823222125282170735}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3, y: 0, z: 0}
+  m_LocalPosition: {x: 1.03, y: -0.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

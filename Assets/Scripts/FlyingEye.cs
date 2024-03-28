@@ -10,6 +10,7 @@ public class FlyingEye : MonoBehaviour
     public float waypointReachedDistance = 0.1f;
     public DetectionZone biteDetectionZone;
     public List<Transform> waypoints;
+    public Collider2D deathCollider;
 
     Animator animator;
     Rigidbody2D rb;
@@ -17,10 +18,10 @@ public class FlyingEye : MonoBehaviour
 
     Transform nextWayPoint;
     int waypointNum = 0;
-
+    
 
     public bool _hasTarget = false;
-
+   
 
     public bool HasTarget
     {
@@ -53,6 +54,13 @@ public class FlyingEye : MonoBehaviour
     {
         nextWayPoint = waypoints[waypointNum]; 
     }
+
+    private void OnEnable()
+    {
+        damageable.damagebleDeath.AddListener(OnDeath);
+    }
+
+
     // Update is called once per frame
     void Update()
     {
@@ -72,7 +80,6 @@ public class FlyingEye : MonoBehaviour
                 rb.velocity = Vector3.zero;
             }
         }
-
     }
 
     private void Flight()
@@ -82,6 +89,7 @@ public class FlyingEye : MonoBehaviour
         float distance = Vector2.Distance(nextWayPoint.position, transform.position);
 
         rb.velocity = directionToWaypoint * flightSpeed;
+        UpdateDirection();
 
         if (distance < waypointReachedDistance)
         {
@@ -94,5 +102,36 @@ public class FlyingEye : MonoBehaviour
 
             nextWayPoint = waypoints[waypointNum];
         }
+    }
+
+    private void UpdateDirection()
+    {
+        Vector3 locScale = transform.localScale;
+
+        if (transform.localScale.x > 0)
+        {
+
+            if (rb.velocity.x < 0)
+            {
+
+                transform.localScale = new Vector3(-1 * locScale.x, locScale.y, locScale.z);
+            }
+        }
+        else
+        {
+            if (rb.velocity.x > 0)
+            {
+
+                transform.localScale = new Vector3(-1 * locScale.x, locScale.y, locScale.z);
+            }
+        }
+
+    }
+
+    public void OnDeath()
+    {
+        rb.gravityScale = 2f;
+        rb.velocity = new Vector2(0, rb.velocity.y);
+        deathCollider.enabled = true;
     }
 }
