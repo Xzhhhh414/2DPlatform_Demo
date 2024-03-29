@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 1115463557619649417}
   m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -629,6 +629,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: cf00eedd-937f-4961-a595-f3c36f7ee7b1
     m_ActionName: Player/New action
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b8319dd5-a5cd-46fe-9bd9-852607b2e155
+    m_ActionName: UI/Escape[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
