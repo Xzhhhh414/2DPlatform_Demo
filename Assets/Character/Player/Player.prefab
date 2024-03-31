@@ -77,15 +77,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.36793864, y: -0.15364468}
-      - {x: -0.104635715, y: 0.67496157}
-      - {x: -0.72307193, y: 0.69739765}
+    - - {x: 0.66183114, y: 0.115816474}
+      - {x: 0.16745436, y: 0.7314329}
+      - {x: -0.76414216, y: 0.6922639}
       - {x: -0.46208197, y: 0.079230905}
       - {x: -0.26722044, y: -0.38346922}
       - {x: -1.2504787, y: -0.8175838}
+      - {x: -1.1974254, y: -0.91914105}
       - {x: -0.86014354, y: -1.1039399}
-      - {x: -0.28382373, y: -1.0454854}
-      - {x: 0.22428703, y: -0.663626}
+      - {x: -0.11440909, y: -1.148161}
+      - {x: 0.61683476, y: -0.721489}
   m_UseDelaunayMesh: 0
 --- !u!114 &5756550324840890632
 MonoBehaviour:
@@ -99,8 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a5cb8f3f3195a4fbe2fac3034cef82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 15
-  knockback: {x: 2, y: 0}
+  attackDamage: 25
+  knockback: {x: 2.5, y: 0}
 --- !u!1 &5244544144875778800
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1268234941028590771
 Transform:
   m_ObjectHideFlags: 0
@@ -313,14 +314,15 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.33858168, y: 0.72706175}
-      - {x: -0.19270623, y: 1.1916426}
-      - {x: -1.1810393, y: 0.95573825}
-      - {x: -0.22612089, y: 0.05688393}
-      - {x: -0.92168164, y: -0.79409814}
-      - {x: -0.20254946, y: -0.8338567}
-      - {x: 0.25047135, y: -0.5346757}
-      - {x: 0.50611293, y: 0.17010921}
+    - - {x: 0.6002072, y: 0.6405847}
+      - {x: 0.4977287, y: 0.6808579}
+      - {x: -0.059227943, y: 1.0324957}
+      - {x: -0.8268089, y: 0.7401197}
+      - {x: -0.59575266, y: 0.015813708}
+      - {x: -1.1835041, y: -0.7119577}
+      - {x: -0.3565626, y: -1.1675524}
+      - {x: 0.584167, y: -0.8273009}
+      - {x: 0.86034334, y: 0.021229684}
   m_UseDelaunayMesh: 0
 --- !u!114 &8765665047581289978
 MonoBehaviour:
@@ -334,8 +336,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a5cb8f3f3195a4fbe2fac3034cef82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 10
-  knockback: {x: 1, y: 0}
+  attackDamage: 20
+  knockback: {x: 1.5, y: 0}
 --- !u!1 &8577367491070427345
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,12 +425,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 63393eacffe7efd4f96486e464e8101e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0cb5e1812477023439215071a07ea897, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.125, y: 2.3125}
+  m_Size: {x: 3.75, y: 2.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -449,7 +451,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 4.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -473,10 +475,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0b1cb2a71eae694a8979da9b0aed90c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 5
+  walkSpeed: 7
   runSpeed: 8
-  airWalkSpeed: 3
-  jumpImpulse: 10
+  airWalkSpeed: 5
+  jumpImpulse: 15
   _IsMoving: 0
   _isRunning: 0
   _isFacingRight: 1
@@ -691,8 +693,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.030036122, y: -0.15518695}
-  m_Size: {x: 0.922347, y: 1.8935164}
+  m_Offset: {x: -0.089274704, y: -0.26693517}
+  m_Size: {x: 0.9072579, y: 1.8412894}
   m_Direction: 0
 --- !u!114 &5646727627007476385
 MonoBehaviour:
@@ -754,6 +756,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   damagebleDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  healthChanged:
     m_PersistentCalls:
       m_Calls: []
   _maxHealth: 100
@@ -852,18 +857,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.4289887, y: 0.26597524}
-      - {x: -0.11097658, y: 0.7713425}
-      - {x: -0.44938213, y: 0.5729854}
-      - {x: -0.40537304, y: -0.056901455}
-      - {x: -0.87863636, y: -0.11041266}
-      - {x: -1.4795299, y: 0.12011397}
-      - {x: -1.5532181, y: -0.22138286}
-      - {x: -1.2033114, y: -0.37104285}
-      - {x: -1.0346951, y: -0.4193555}
-      - {x: -0.649484, y: -0.47712648}
-      - {x: -0.08796072, y: -0.40384328}
-      - {x: 0.37941158, y: -0.15255755}
+    - - {x: 0.4977287, y: 0.6808579}
+      - {x: -0.023291588, y: 1.1300374}
+      - {x: -0.70359826, y: 0.9660058}
+      - {x: -0.59575266, y: 0.015813708}
+      - {x: -1.1835041, y: -0.7119577}
+      - {x: -0.3565626, y: -1.1675524}
+      - {x: 0.57903314, y: -0.7194916}
+      - {x: 0.6498586, y: 0.10337013}
   m_UseDelaunayMesh: 0
 --- !u!114 &1905446562947274360
 MonoBehaviour:
@@ -877,7 +878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a5cb8f3f3195a4fbe2fac3034cef82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 12
+  attackDamage: 22
   knockback: {x: 0, y: 0}
 --- !u!1 &8949459135359903940
 GameObject:
@@ -896,7 +897,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &231892951645642054
 Transform:
   m_ObjectHideFlags: 0
