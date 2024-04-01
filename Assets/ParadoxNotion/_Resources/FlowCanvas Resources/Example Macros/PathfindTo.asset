@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 625114ef92abc6f4d98f906588e93662, type: 3}
+  m_Name: PathfindTo
+  m_EditorClassIdentifier: 
+  _serializedGraph: '{"type":"FlowCanvas.Macros.Macro","nodes":[{"_position":{"x":4592.0,"y":5143.0},"$type":"FlowCanvas.Macros.MacroInputNode","$id":"0"},{"_method":{"_baseInfo":"UnityEngine.AI.NavMeshAgent|SetDestination|System.Boolean","_paramsInfo":"UnityEngine.Vector3"},"_callable":true,"_position":{"x":4772.0,"y":5166.0},"_comment":"Set
+    the destination","$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"1"},{"_simplexNode":{},"_position":{"x":4987.0,"y":5165.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.Cache`1[[UnityEngine.AI.NavMeshAgent,
+    UnityEngine.AIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+    ParadoxNotion, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"2"},{"_portCount":2,"_position":{"x":5310.0,"y":5166.0},"$type":"FlowCanvas.Nodes.Split","$id":"3"},{"_position":{"x":5753.0,"y":5155.0},"$type":"FlowCanvas.Macros.MacroOutputNode","$id":"4"},{"_position":{"x":5543.0,"y":5234.0},"_comment":"While
+    either has path or path is pending, call Moving. When neither call Done.","$type":"FlowCanvas.Nodes.While","$id":"5"},{"_method":{"_baseInfo":"UnityEngine.AI.NavMeshAgent|get_hasPath|System.Boolean","_paramsInfo":""},"_position":{"x":5155.0,"y":5270.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"6"},{"_simplexNode":{},"_position":{"x":5380.0,"y":5289.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.OR,
+    ParadoxNotion, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"7"},{"_method":{"_baseInfo":"UnityEngine.AI.NavMeshAgent|get_pathPending|System.Boolean","_paramsInfo":""},"_position":{"x":5156.0,"y":5336.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"8"}],"connections":[{"_sourcePortName":"0df10ebd-4dea-49ea-8fc7-5600f55218c3","_targetPortName":"
+    ","_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"47085048-42ec-4d62-8bb4-04783a3f8a8d","_targetPortName":"NavMeshAgent","_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.AI.NavMeshAgent,
+    UnityEngine.AIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"2204a5eb-023a-4f39-ba75-ee19f5e37d0a","_targetPortName":"target","_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"NavMeshAgent","_targetPortName":"value","_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.AI.NavMeshAgent,
+    UnityEngine.AIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"
+    ","_targetPortName":" ","_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"
+    ","_targetPortName":"In","_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"NavMeshAgent","_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"6"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.AI.NavMeshAgent,
+    UnityEngine.AIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"NavMeshAgent","_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"8"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.AI.NavMeshAgent,
+    UnityEngine.AIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"0","_targetPortName":"696e0a6a-1329-477e-a31f-f9c5f4b7329d","_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"4"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"1","_targetPortName":"In","_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"5"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Do","_targetPortName":"426b06fa-9ecc-4933-a839-13e3c7b89ea7","_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"4"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Done","_targetPortName":"8ea15323-fd47-4582-9eaa-14b8786afa03","_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"4"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"a","_sourceNode":{"$ref":"6"},"_targetNode":{"$ref":"7"},"$type":"FlowCanvas.BinderConnection`1[[System.Boolean,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"Condition","_sourceNode":{"$ref":"7"},"_targetNode":{"$ref":"5"},"$type":"FlowCanvas.BinderConnection`1[[System.Boolean,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"b","_sourceNode":{"$ref":"8"},"_targetNode":{"$ref":"7"},"$type":"FlowCanvas.BinderConnection`1[[System.Boolean,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}],"canvasGroups":[],"localBlackboard":{"_variables":{}},"derivedData":{"inputDefinitions":[{"_ID":"0df10ebd-4dea-49ea-8fc7-5600f55218c3","_name":"In","_type":"FlowCanvas.Flow"},{"_ID":"47085048-42ec-4d62-8bb4-04783a3f8a8d","_name":"Agent","_type":"UnityEngine.AI.NavMeshAgent"},{"_ID":"2204a5eb-023a-4f39-ba75-ee19f5e37d0a","_name":"Destination","_type":"UnityEngine.Vector3"}],"outputDefinitions":[{"_ID":"696e0a6a-1329-477e-a31f-f9c5f4b7329d","_name":"Start","_type":"FlowCanvas.Flow"},{"_ID":"426b06fa-9ecc-4933-a839-13e3c7b89ea7","_name":"Moving","_type":"FlowCanvas.Flow"},{"_ID":"8ea15323-fd47-4582-9eaa-14b8786afa03","_name":"Done","_type":"FlowCanvas.Flow"}],"$type":"FlowCanvas.Macros.Macro+DerivedSerializationData"}}'
+  _objectReferences: []
+  _graphSource:
+    _version: 3.18
+    _category: 
+    _comments: Makes a NavMeshAgent move to destination, with respective callbacks
+    _translation: {x: -4549, y: -4934}
+    _zoomFactor: 1
+  _haltSerialization: 0
+  inputDefinitions:
+  - _ID: 0df10ebd-4dea-49ea-8fc7-5600f55218c3
+    _name: In
+    _type: FlowCanvas.Flow
+  - _ID: 47085048-42ec-4d62-8bb4-04783a3f8a8d
+    _name: Agent
+    _type: UnityEngine.AI.NavMeshAgent
+  - _ID: 2204a5eb-023a-4f39-ba75-ee19f5e37d0a
+    _name: Destination
+    _type: UnityEngine.Vector3
+  outputDefinitions:
+  - _ID: 696e0a6a-1329-477e-a31f-f9c5f4b7329d
+    _name: Start
+    _type: FlowCanvas.Flow
+  - _ID: 426b06fa-9ecc-4933-a839-13e3c7b89ea7
+    _name: Moving
+    _type: FlowCanvas.Flow
+  - _ID: 8ea15323-fd47-4582-9eaa-14b8786afa03
+    _name: Done
+    _type: FlowCanvas.Flow

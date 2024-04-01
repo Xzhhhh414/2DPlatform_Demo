@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d31b62ec9d586a4e94389d9071559ca, type: 3}
+  m_Name: Pickup
+  m_EditorClassIdentifier: 
+  _serializedGraph: '{"version":2.82,"type":"FlowCanvas.FlowScript","translation":{"x":-4921.995,"y":-5069.995},"nodes":[{"updateInterval":{},"_inputPortValues":{},"_position":{"x":5546.0,"y":5443.0},"$type":"FlowCanvas.Nodes.UpdateEvent","$id":"2"},{"_method":{"_baseInfo":"UnityEngine.Transform|Rotate|System.Void","_paramsInfo":"UnityEngine.Vector3"},"_callable":true,"_inputPortValues":{},"_position":{"x":5759.0,"y":5489.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"5"},{"_simplexNode":{},"_inputPortValues":{"x":{"$content":15.0,"$type":"System.Single"},"y":{"$content":30.0,"$type":"System.Single"},"z":{"$content":45.0,"$type":"System.Single"}},"_position":{"x":5379.0,"y":5532.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.NewVector3,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"8"},{"_simplexNode":{},"_inputPortValues":{"multiplier":{"$content":1.0,"$type":"System.Single"}},"_position":{"x":5541.0,"y":5583.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.DeltaTimedVector3,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"11"}],"connections":[{"_sourcePortName":"Out","_targetPortName":"
+    ","_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"5"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"value","_sourceNode":{"$ref":"8"},"_targetNode":{"$ref":"11"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"eulers","_sourceNode":{"$ref":"11"},"_targetNode":{"$ref":"5"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}],"canvasGroups":[{"name":"Rotate","rect":{"xMin":5321.898,"yMin":5390.903,"xMax":5992.898,"yMax":5734.903}}],"localBlackboard":{"_name":"Local
+    Blackboard","_variables":{}}}'
+  _objectReferences: []
+  _deserializationFailed: 0

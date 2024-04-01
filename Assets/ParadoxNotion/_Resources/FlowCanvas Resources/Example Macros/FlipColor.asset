@@ -1,0 +1,316 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 625114ef92abc6f4d98f906588e93662, type: 3}
+  m_Name: FlipColor
+  m_EditorClassIdentifier: 
+  _serializedGraph: '{"type":"FlowCanvas.Macros.Macro","nodes":[{"_position":{"x":5057.0,"y":5188.0},"$type":"FlowCanvas.Macros.MacroInputNode","$id":"0"},{"_method":{"_baseInfo":"UnityEngine.Renderer|get_material|UnityEngine.Material","_paramsInfo":""},"_position":{"x":5382.0,"y":5221.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"1"},{"_method":{"_baseInfo":"UnityEngine.Material|set_color|System.Void","_paramsInfo":"UnityEngine.Color"},"_callable":true,"_position":{"x":5822.0,"y":5162.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"2"},{"_position":{"x":6169.0,"y":5148.0},"$type":"FlowCanvas.Macros.MacroOutputNode","$id":"3"},{"_method":{"_baseInfo":"UnityEngine.Material|get_color|UnityEngine.Color","_paramsInfo":""},"_position":{"x":6001.0,"y":5219.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"4"},{"_position":{"x":5382.0,"y":5123.0},"$type":"FlowCanvas.Nodes.FlipFlop","$id":"5"},{"_simplexNode":{},"_position":{"x":5610.0,"y":5276.0},"_comment":"Return
+    A or B according to the current FlipFlop value","$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.SwitchValue`1[[UnityEngine.Color,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+    ParadoxNotion, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"6"}],"connections":[{"_sourcePortName":"097a83d7-fa02-45d2-a6a2-81c2266d2261","_targetPortName":"Renderer","_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Renderer,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"72e1622f-a576-4e97-b630-5aee6adf7d87","_targetPortName":"In","_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"5"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"f947ea8a-5f9e-4df1-b9c6-10baeb64fe6e","_targetPortName":"isTrue","_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"6"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Color,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"0bbabd59-a92a-450c-8be9-0f72e9842ca8","_targetPortName":"isFalse","_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"6"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Color,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"Material","_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Material,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"
+    ","_targetPortName":"41ff8822-2cd8-4014-8726-ef20e47c264b","_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Material","_targetPortName":"Material","_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"4"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Material,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"ebb293cf-c659-4df9-b762-7fb2508714f0","_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"3"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Color,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Flip","_targetPortName":"
+    ","_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"2"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Flop","_targetPortName":"
+    ","_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"2"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Is
+    Flip","_targetPortName":"condition","_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"6"},"$type":"FlowCanvas.BinderConnection`1[[System.Boolean,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"value","_sourceNode":{"$ref":"6"},"_targetNode":{"$ref":"2"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Color,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}],"canvasGroups":[],"localBlackboard":{"_variables":{}},"derivedData":{"inputDefinitions":[{"_ID":"72e1622f-a576-4e97-b630-5aee6adf7d87","_name":"In","_type":"FlowCanvas.Flow"},{"_ID":"097a83d7-fa02-45d2-a6a2-81c2266d2261","_name":"Renderer","_type":"UnityEngine.Renderer"},{"_ID":"f947ea8a-5f9e-4df1-b9c6-10baeb64fe6e","_name":"ColorA","_type":"UnityEngine.Color"},{"_ID":"0bbabd59-a92a-450c-8be9-0f72e9842ca8","_name":"ColorB","_type":"UnityEngine.Color"}],"outputDefinitions":[{"_ID":"41ff8822-2cd8-4014-8726-ef20e47c264b","_name":"Out","_type":"FlowCanvas.Flow"},{"_ID":"ebb293cf-c659-4df9-b762-7fb2508714f0","_name":"Current","_type":"UnityEngine.Color"}],"$type":"FlowCanvas.Macros.Macro+DerivedSerializationData"}}'
+  _objectReferences: []
+  _graphSource:
+    _version: 3
+    _category: 
+    _comments: Flips an object's color between the two provided
+    _translation: {x: -5005, y: -4909}
+    _zoomFactor: 1
+  _haltSerialization: 0
+  inputDefinitions:
+  - _ID: 72e1622f-a576-4e97-b630-5aee6adf7d87
+    _name: In
+    _type: FlowCanvas.Flow
+  - _ID: 097a83d7-fa02-45d2-a6a2-81c2266d2261
+    _name: Renderer
+    _type: UnityEngine.Renderer
+  - _ID: f947ea8a-5f9e-4df1-b9c6-10baeb64fe6e
+    _name: ColorA
+    _type: UnityEngine.Color
+  - _ID: 0bbabd59-a92a-450c-8be9-0f72e9842ca8
+    _name: ColorB
+    _type: UnityEngine.Color
+  outputDefinitions:
+  - _ID: 41ff8822-2cd8-4014-8726-ef20e47c264b
+    _name: Out
+    _type: FlowCanvas.Flow
+  - _ID: ebb293cf-c659-4df9-b762-7fb2508714f0
+    _name: Current
+    _type: UnityEngine.Color
+#---GRAPH_START---
+#The pretty formatted json serialization bellow is only a reference to help in version control diff. Other than that it is not used at all.
+#{
+#    "type": "FlowCanvas.Macros.Macro",
+#    "nodes": [
+#        {
+#            "_position": {
+#                "x": 5057.0,
+#                "y": 5188.0
+#            },
+#            "$type": "FlowCanvas.Macros.MacroInputNode",
+#            "$id": "0"
+#        },
+#        {
+#            "_method": {
+#                "_baseInfo": "UnityEngine.Renderer|get_material|UnityEngine.Material",
+#                "_paramsInfo": ""
+#            },
+#            "_position": {
+#                "x": 5382.0,
+#                "y": 5221.0
+#            },
+#            "$type": "FlowCanvas.Nodes.ReflectedMethodNodeWrapper",
+#            "$id": "1"
+#        },
+#        {
+#            "_method": {
+#                "_baseInfo": "UnityEngine.Material|set_color|System.Void",
+#                "_paramsInfo": "UnityEngine.Color"
+#            },
+#            "_callable": true,
+#            "_position": {
+#                "x": 5822.0,
+#                "y": 5162.0
+#            },
+#            "$type": "FlowCanvas.Nodes.ReflectedMethodNodeWrapper",
+#            "$id": "2"
+#        },
+#        {
+#            "_position": {
+#                "x": 6169.0,
+#                "y": 5148.0
+#            },
+#            "$type": "FlowCanvas.Macros.MacroOutputNode",
+#            "$id": "3"
+#        },
+#        {
+#            "_method": {
+#                "_baseInfo": "UnityEngine.Material|get_color|UnityEngine.Color",
+#                "_paramsInfo": ""
+#            },
+#            "_position": {
+#                "x": 6001.0,
+#                "y": 5219.0
+#            },
+#            "$type": "FlowCanvas.Nodes.ReflectedMethodNodeWrapper",
+#            "$id": "4"
+#        },
+#        {
+#            "_position": {
+#                "x": 5382.0,
+#                "y": 5123.0
+#            },
+#            "$type": "FlowCanvas.Nodes.FlipFlop",
+#            "$id": "5"
+#        },
+#        {
+#            "_simplexNode": {
+#
+#            },
+#            "_position": {
+#                "x": 5610.0,
+#                "y": 5276.0
+#            },
+#            "_comment": "Return A or B according to the current FlipFlop value",
+#            "$type": "FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.SwitchValue`1[[UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], ParadoxNotion, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+#            "$id": "6"
+#        }
+#    ],
+#    "connections": [
+#        {
+#            "_sourcePortName": "097a83d7-fa02-45d2-a6a2-81c2266d2261",
+#            "_targetPortName": "Renderer",
+#            "_sourceNode": {
+#                "$ref": "0"
+#            },
+#            "_targetNode": {
+#                "$ref": "1"
+#            },
+#            "$type": "FlowCanvas.BinderConnection`1[[UnityEngine.Renderer, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+#        },
+#        {
+#            "_sourcePortName": "72e1622f-a576-4e97-b630-5aee6adf7d87",
+#            "_targetPortName": "In",
+#            "_sourceNode": {
+#                "$ref": "0"
+#            },
+#            "_targetNode": {
+#                "$ref": "5"
+#            },
+#            "$type": "FlowCanvas.BinderConnection"
+#        },
+#        {
+#            "_sourcePortName": "f947ea8a-5f9e-4df1-b9c6-10baeb64fe6e",
+#            "_targetPortName": "isTrue",
+#            "_sourceNode": {
+#                "$ref": "0"
+#            },
+#            "_targetNode": {
+#                "$ref": "6"
+#            },
+#            "$type": "FlowCanvas.BinderConnection`1[[UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+#        },
+#        {
+#            "_sourcePortName": "0bbabd59-a92a-450c-8be9-0f72e9842ca8",
+#            "_targetPortName": "isFalse",
+#            "_sourceNode": {
+#                "$ref": "0"
+#            },
+#            "_targetNode": {
+#                "$ref": "6"
+#            },
+#            "$type": "FlowCanvas.BinderConnection`1[[UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+#        },
+#        {
+#            "_sourcePortName": "Value",
+#            "_targetPortName": "Material",
+#            "_sourceNode": {
+#                "$ref": "1"
+#            },
+#            "_targetNode": {
+#                "$ref": "2"
+#            },
+#            "$type": "FlowCanvas.BinderConnection`1[[UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+#        },
+#        {
+#            "_sourcePortName": " ",
+#            "_targetPortName": "41ff8822-2cd8-4014-8726-ef20e47c264b",
+#            "_sourceNode": {
+#                "$ref": "2"
+#            },
+#            "_targetNode": {
+#                "$ref": "3"
+#            },
+#            "$type": "FlowCanvas.BinderConnection"
+#        },
+#        {
+#            "_sourcePortName": "Material",
+#            "_targetPortName": "Material",
+#            "_sourceNode": {
+#                "$ref": "2"
+#            },
+#            "_targetNode": {
+#                "$ref": "4"
+#            },
+#            "$type": "FlowCanvas.BinderConnection`1[[UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+#        },
+#        {
+#            "_sourcePortName": "Value",
+#            "_targetPortName": "ebb293cf-c659-4df9-b762-7fb2508714f0",
+#            "_sourceNode": {
+#                "$ref": "4"
+#            },
+#            "_targetNode": {
+#                "$ref": "3"
+#            },
+#            "$type": "FlowCanvas.BinderConnection`1[[UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+#        },
+#        {
+#            "_sourcePortName": "Flip",
+#            "_targetPortName": " ",
+#            "_sourceNode": {
+#                "$ref": "5"
+#            },
+#            "_targetNode": {
+#                "$ref": "2"
+#            },
+#            "$type": "FlowCanvas.BinderConnection"
+#        },
+#        {
+#            "_sourcePortName": "Flop",
+#            "_targetPortName": " ",
+#            "_sourceNode": {
+#                "$ref": "5"
+#            },
+#            "_targetNode": {
+#                "$ref": "2"
+#            },
+#            "$type": "FlowCanvas.BinderConnection"
+#        },
+#        {
+#            "_sourcePortName": "Is Flip",
+#            "_targetPortName": "condition",
+#            "_sourceNode": {
+#                "$ref": "5"
+#            },
+#            "_targetNode": {
+#                "$ref": "6"
+#            },
+#            "$type": "FlowCanvas.BinderConnection`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"
+#        },
+#        {
+#            "_sourcePortName": "Value",
+#            "_targetPortName": "value",
+#            "_sourceNode": {
+#                "$ref": "6"
+#            },
+#            "_targetNode": {
+#                "$ref": "2"
+#            },
+#            "$type": "FlowCanvas.BinderConnection`1[[UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+#        }
+#    ],
+#    "canvasGroups": [],
+#    "localBlackboard": {
+#        "_variables": {
+#
+#        }
+#    },
+#    "derivedData": {
+#        "inputDefinitions": [
+#            {
+#                "_ID": "72e1622f-a576-4e97-b630-5aee6adf7d87",
+#                "_name": "In",
+#                "_type": "FlowCanvas.Flow"
+#            },
+#            {
+#                "_ID": "097a83d7-fa02-45d2-a6a2-81c2266d2261",
+#                "_name": "Renderer",
+#                "_type": "UnityEngine.Renderer"
+#            },
+#            {
+#                "_ID": "f947ea8a-5f9e-4df1-b9c6-10baeb64fe6e",
+#                "_name": "ColorA",
+#                "_type": "UnityEngine.Color"
+#            },
+#            {
+#                "_ID": "0bbabd59-a92a-450c-8be9-0f72e9842ca8",
+#                "_name": "ColorB",
+#                "_type": "UnityEngine.Color"
+#            }
+#        ],
+#        "outputDefinitions": [
+#            {
+#                "_ID": "41ff8822-2cd8-4014-8726-ef20e47c264b",
+#                "_name": "Out",
+#                "_type": "FlowCanvas.Flow"
+#            },
+#            {
+#                "_ID": "ebb293cf-c659-4df9-b762-7fb2508714f0",
+#                "_name": "Current",
+#                "_type": "UnityEngine.Color"
+#            }
+#        ],
+#        "$type": "FlowCanvas.Macros.Macro+DerivedSerializationData"
+#    }
+#}
+#---GRAPH_END---

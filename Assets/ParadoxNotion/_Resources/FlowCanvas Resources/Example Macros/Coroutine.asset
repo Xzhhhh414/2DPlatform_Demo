@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 625114ef92abc6f4d98f906588e93662, type: 3}
+  m_Name: Coroutine
+  m_EditorClassIdentifier: 
+  _serializedGraph: '{"type":"FlowCanvas.Macros.Macro","nodes":[{"_position":{"x":5937.0,"y":5413.0},"$type":"FlowCanvas.Macros.MacroInputNode","$id":"0"},{"_position":{"x":6292.0,"y":5435.0},"_comment":"Continue
+    only if active is false so that we don''t reactivate","$type":"FlowCanvas.Nodes.SwitchBool","$id":"1"},{"targetVariable":{"_name":"active","_targetVariableID":"ef745792-ef25-4b9e-87b0-7b66f95d1fb5"},"_inputPortValues":{"Value":{"$content":true,"$type":"System.Boolean"}},"_position":{"x":6502.0,"y":5438.0},"_comment":"Set
+    active to true","$type":"FlowCanvas.Nodes.SetVariable`1[[System.Boolean, mscorlib,
+    Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"2"},{"_portCount":2,"_position":{"x":6747.0,"y":5419.0},"_comment":"Split
+    the flow here, so that both Start and Update are called in the same frame but
+    one afte the other","$type":"FlowCanvas.Nodes.Split","$id":"3"},{"_position":{"x":7105.0,"y":5410.0},"$type":"FlowCanvas.Macros.MacroOutputNode","$id":"4"},{"_position":{"x":6892.0,"y":5510.0},"_comment":"Keep
+    calling Update until active becomes false due to Break been called","$type":"FlowCanvas.Nodes.While","$id":"5"},{"targetVariable":{"_name":"active","_targetVariableID":"ef745792-ef25-4b9e-87b0-7b66f95d1fb5"},"_position":{"x":6079.0,"y":5513.0},"_comment":"Set
+    active to false when Break is called","$type":"FlowCanvas.Nodes.SetVariable`1[[System.Boolean,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"6"}],"connections":[{"_sourcePortName":"a6d2a748-8749-4ba5-b441-58babec548dd","_targetPortName":"In","_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"6dd052fd-3b87-4e90-9f71-6e4477e1a469","_targetPortName":"In","_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"6"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"False","_targetPortName":"In","_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Out","_targetPortName":"In","_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"Condition","_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"5"},"$type":"FlowCanvas.BinderConnection`1[[System.Boolean,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"0","_targetPortName":"06df2f61-bcd9-473b-aacd-4e4bf0ff8c6b","_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"4"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"1","_targetPortName":"In","_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"5"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Do","_targetPortName":"e5864299-3868-44f7-91f5-7b8bf94862a3","_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"4"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Done","_targetPortName":"f0df05fd-b48b-4074-b8ac-a87c75b18673","_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"4"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"Condition","_sourceNode":{"$ref":"6"},"_targetNode":{"$ref":"1"},"$type":"FlowCanvas.BinderConnection`1[[System.Boolean,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}],"canvasGroups":[],"localBlackboard":{"_variables":{"active":{"_name":"active","_id":"ef745792-ef25-4b9e-87b0-7b66f95d1fb5","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}},"derivedData":{"inputDefinitions":[{"_ID":"a6d2a748-8749-4ba5-b441-58babec548dd","_name":"Start","_type":"FlowCanvas.Flow"},{"_ID":"6dd052fd-3b87-4e90-9f71-6e4477e1a469","_name":"Break","_type":"FlowCanvas.Flow"}],"outputDefinitions":[{"_ID":"06df2f61-bcd9-473b-aacd-4e4bf0ff8c6b","_name":"Start","_type":"FlowCanvas.Flow"},{"_ID":"e5864299-3868-44f7-91f5-7b8bf94862a3","_name":"Update","_type":"FlowCanvas.Flow"},{"_ID":"f0df05fd-b48b-4074-b8ac-a87c75b18673","_name":"Finish","_type":"FlowCanvas.Flow"}],"$type":"FlowCanvas.Macros.Macro+DerivedSerializationData"}}'
+  _objectReferences: []
+  _graphSource:
+    _version: 3.26
+    _category: 
+    _comments: Recreation of the Coroutine node
+    _translation: {x: -5944, y: -5242}
+    _zoomFactor: 1
+  _haltSerialization: 0
+  inputDefinitions:
+  - _ID: a6d2a748-8749-4ba5-b441-58babec548dd
+    _name: Start
+    _type: FlowCanvas.Flow
+  - _ID: 6dd052fd-3b87-4e90-9f71-6e4477e1a469
+    _name: Break
+    _type: FlowCanvas.Flow
+  outputDefinitions:
+  - _ID: 06df2f61-bcd9-473b-aacd-4e4bf0ff8c6b
+    _name: Start
+    _type: FlowCanvas.Flow
+  - _ID: e5864299-3868-44f7-91f5-7b8bf94862a3
+    _name: Update
+    _type: FlowCanvas.Flow
+  - _ID: f0df05fd-b48b-4074-b8ac-a87c75b18673
+    _name: Finish
+    _type: FlowCanvas.Flow

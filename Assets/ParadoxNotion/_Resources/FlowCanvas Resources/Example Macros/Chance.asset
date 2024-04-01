@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 625114ef92abc6f4d98f906588e93662, type: 3}
+  m_Name: Chance
+  m_EditorClassIdentifier: 
+  _serializedGraph: '{"type":"FlowCanvas.Macros.Macro","nodes":[{"_position":{"x":6265.0,"y":5513.0},"$type":"FlowCanvas.Macros.MacroInputNode","$id":"0"},{"_method":{"_baseInfo":"UnityEngine.Random|Range|System.Single","_paramsInfo":"System.Single|System.Single"},"_position":{"x":6480.0,"y":5678.0},"_comment":"Get 
+    a random number from min to max","$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"1"},{"_simplexNode":{},"_position":{"x":6682.0,"y":5608.0},"_comment":"Check
+    it against the required","$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.FloatLessThan,
+    FlowCanvas, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"2"},{"_position":{"x":6853.0,"y":5525.0},"_comment":"Branch
+    the flow accordingly","$type":"FlowCanvas.Nodes.SwitchBool","$id":"3"},{"_position":{"x":7159.0,"y":5537.0},"$type":"FlowCanvas.Macros.MacroOutputNode","$id":"4"}],"connections":[{"_sourcePortName":"90bb4367-4632-41e3-8b73-1487e230c011","_targetPortName":"min","_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"e1a15c66-80b9-49b9-9e92-d299a0ddc96d","_targetPortName":"max","_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"d6600211-1e9a-4074-80ff-f4168f270644","_targetPortName":"a","_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"2"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"07bee64d-c186-457f-92c9-851068e75bf3","_targetPortName":"In","_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"3"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"b","_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"Condition","_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"FlowCanvas.BinderConnection`1[[System.Boolean,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"False","_targetPortName":"2fe818d2-a8db-4970-be24-94bfdc51ca54","_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"4"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"True","_targetPortName":"4d9a2284-789d-49e7-8613-79f945d87df6","_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"4"},"$type":"FlowCanvas.BinderConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}},"derivedData":{"inputDefinitions":[{"_ID":"07bee64d-c186-457f-92c9-851068e75bf3","_name":"In","_type":"FlowCanvas.Flow"},{"_ID":"d6600211-1e9a-4074-80ff-f4168f270644","_name":"Chance","_type":"System.Single"},{"_ID":"90bb4367-4632-41e3-8b73-1487e230c011","_name":"Min","_type":"System.Single"},{"_ID":"e1a15c66-80b9-49b9-9e92-d299a0ddc96d","_name":"Max","_type":"System.Single"}],"outputDefinitions":[{"_ID":"4d9a2284-789d-49e7-8613-79f945d87df6","_name":"Success","_type":"FlowCanvas.Flow"},{"_ID":"2fe818d2-a8db-4970-be24-94bfdc51ca54","_name":"Failure","_type":"FlowCanvas.Flow"}],"$type":"FlowCanvas.Macros.Macro+DerivedSerializationData"}}'
+  _objectReferences: []
+  _graphSource:
+    _version: 3.26
+    _category: 
+    _comments: Recreation of the Chance filter node
+    _translation: {x: -6129, y: -5322}
+    _zoomFactor: 1
+  _haltSerialization: 0
+  inputDefinitions:
+  - _ID: 07bee64d-c186-457f-92c9-851068e75bf3
+    _name: In
+    _type: FlowCanvas.Flow
+  - _ID: d6600211-1e9a-4074-80ff-f4168f270644
+    _name: Chance
+    _type: System.Single
+  - _ID: 90bb4367-4632-41e3-8b73-1487e230c011
+    _name: Min
+    _type: System.Single
+  - _ID: e1a15c66-80b9-49b9-9e92-d299a0ddc96d
+    _name: Max
+    _type: System.Single
+  outputDefinitions:
+  - _ID: 4d9a2284-789d-49e7-8613-79f945d87df6
+    _name: Success
+    _type: FlowCanvas.Flow
+  - _ID: 2fe818d2-a8db-4970-be24-94bfdc51ca54
+    _name: Failure
+    _type: FlowCanvas.Flow

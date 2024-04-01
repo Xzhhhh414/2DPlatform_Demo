@@ -1,0 +1,1021 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 9
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 88ec9a13802800449aaf825aff3aadc7, type: 2}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.16487625, g: 0.10864479, b: 0.22398311, a: 1}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 11
+  m_GIWorkflowMode: 0
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_TemporalCoherenceThreshold: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 1
+  m_LightmapEditorSettings:
+    serializedVersion: 10
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 1
+    m_BakeBackend: 0
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 500
+    m_PVRBounces: 2
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVRFilteringMode: 0
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ShowResolutionOverlay: 1
+  m_LightingDataAsset: {fileID: 0}
+  m_UseShadowmask: 0
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    accuratePlacement: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!4 &182446199 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4396862769364992, guid: c3df53bd6d4f80740843b2550642fed7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1693894751}
+--- !u!114 &690425992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d31b62ec9d586a4e94389d9071559ca, type: 3}
+  m_Name: PlatformSpawner FlowScript
+  m_EditorClassIdentifier: 
+  _serializedGraph: '{"version":2.82,"type":"FlowCanvas.FlowScript","comments":"Creates
+    the new patforms.\n","translation":{"x":-984.0,"y":-1100.0},"zoomFactor":0.2932861,"nodes":[{"_inputPortValues":{},"_position":{"x":5126.0,"y":4399.0},"$type":"FlowCanvas.Nodes.ConstructionEvent","$id":"2"},{"_inputPortValues":{"Time":{"$content":0.01,"$type":"System.Single"}},"_position":{"x":5340.0,"y":4440.0},"$type":"FlowCanvas.Nodes.Cooldown","$id":"4"},{"targetVariable":{"_name":"PlatformSize","_targetVariableID":"10a85c75-4889-42b9-9e65-066b345d0ac7"},"_inputPortValues":{},"_position":{"x":5606.0,"y":4509.0},"$type":"FlowCanvas.Nodes.SetVariable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"6"},{"_inputPortValues":{"Loops":{"$content":5,"$type":"System.Int32"},"Step":{"$content":1,"$type":"System.Int32"}},"_position":{"x":5877.0,"y":4503.0},"$type":"FlowCanvas.Nodes.ForLoop","$id":"9"},{"_simplexNode":{},"_inputPortValues":{"eventName":{"$content":"RandomPositionPlatforms","$type":"System.String"}},"_position":{"x":6189.0,"y":4432.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.SendEvent,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"11"},{"_inputPortValues":{"Time":{"$content":0.5,"$type":"System.Single"}},"_position":{"x":6159.0,"y":4556.0},"$type":"FlowCanvas.Nodes.Cooldown","$id":"14"},{"_simplexNode":{},"_inputPortValues":{"eventName":{"$content":"MakePlatforms","$type":"System.String"}},"_position":{"x":6484.0,"y":4596.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.SendEvent,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"16"},{"_method":{"_baseInfo":"UnityEngine.Transform|get_localScale|UnityEngine.Vector3","_paramsInfo":""},"_inputPortValues":{"Transform":{"$content":1,"$type":"UnityEngine.Transform"}},"_position":{"x":5139.0,"y":4596.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"19"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5364.0,"y":4596.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.ExtractVector3,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"22"},{"eventName":{"_value":"SpawnX"},"target":{},"targets":{},"_inputPortValues":{},"_position":{"x":5300.0,"y":5705.0},"$type":"FlowCanvas.Nodes.CustomEvent","$id":"25"},{"_method":{"_baseInfo":"UnityEngine.Transform|set_position|System.Void","_paramsInfo":"UnityEngine.Vector3"},"_callable":true,"_inputPortValues":{},"_position":{"x":5998.0,"y":5786.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"30"},{"_method":{"_baseInfo":"UnityEngine.Object|Instantiate|UnityEngine.Object","_paramsInfo":"UnityEngine.Object|UnityEngine.Vector3|UnityEngine.Quaternion"},"_callable":true,"_inputPortValues":{"original":{"$content":2,"$type":"UnityEngine.GameObject"}},"_position":{"x":6339.0,"y":5791.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"33"},{"_method":{"_baseInfo":"UnityEngine.Transform|get_position|UnityEngine.Vector3","_paramsInfo":""},"_inputPortValues":{},"_position":{"x":5072.0,"y":5969.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"36"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5293.0,"y":5966.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.ExtractVector3,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"39"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5862.0,"y":5959.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.NewVector3,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"42"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5667.0,"y":5888.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.FloatAdd,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"45"},{"value":{"_name":"PlatformSize","_targetVariableID":"10a85c75-4889-42b9-9e65-066b345d0ac7"},"_inputPortValues":{},"_position":{"x":5502.0,"y":5946.0},"$type":"FlowCanvas.Nodes.GetVariable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"48"},{"eventName":{"_value":"SpawnZ"},"target":{},"targets":{},"_inputPortValues":{},"_position":{"x":5037.0,"y":6202.0},"$type":"FlowCanvas.Nodes.CustomEvent","$id":"51"},{"_method":{"_baseInfo":"UnityEngine.Transform|set_position|System.Void","_paramsInfo":"UnityEngine.Vector3"},"_callable":true,"_inputPortValues":{},"_position":{"x":6015.0,"y":6206.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"56"},{"_method":{"_baseInfo":"UnityEngine.Object|Instantiate|UnityEngine.Object","_paramsInfo":"UnityEngine.Object|UnityEngine.Vector3|UnityEngine.Quaternion"},"_callable":true,"_inputPortValues":{"original":{"$content":2,"$type":"UnityEngine.GameObject"}},"_position":{"x":6345.0,"y":6201.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"59"},{"_method":{"_baseInfo":"UnityEngine.Transform|get_position|UnityEngine.Vector3","_paramsInfo":""},"_inputPortValues":{},"_position":{"x":5071.0,"y":6338.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"62"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5328.0,"y":6339.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.ExtractVector3,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"65"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5854.0,"y":6354.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.NewVector3,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"68"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5635.0,"y":6460.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.FloatAdd,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"71"},{"value":{"_name":"PlatformSize","_targetVariableID":"10a85c75-4889-42b9-9e65-066b345d0ac7"},"_inputPortValues":{},"_position":{"x":5356.0,"y":6501.0},"$type":"FlowCanvas.Nodes.GetVariable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"74"},{"eventName":{"_value":"RandomPositionPlatforms"},"target":{},"targets":{},"_inputPortValues":{},"_position":{"x":5054.0,"y":5312.0},"$type":"FlowCanvas.Nodes.CustomEvent","$id":"77"},{"targetVariable":{"_name":"RandomRange","_targetVariableID":"20030715-a418-4152-9c1e-07eb1aef7785"},"_inputPortValues":{},"_position":{"x":5590.0,"y":5378.0},"$type":"FlowCanvas.Nodes.SetVariable`1[[System.Int32,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"82"},{"_inputPortValues":{},"_position":{"x":6042.0,"y":5387.0},"$type":"FlowCanvas.Nodes.SwitchBool","$id":"85"},{"_simplexNode":{},"_inputPortValues":{"eventName":{"$content":"SpawnX","$type":"System.String"}},"_position":{"x":6353.0,"y":5320.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.SendEvent,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"87"},{"_simplexNode":{},"_inputPortValues":{"eventName":{"$content":"SpawnZ","$type":"System.String"}},"_position":{"x":6357.0,"y":5451.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.SendEvent,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"90"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5876.0,"y":5463.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.IntegerLessThan,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"93"},{"_method":{"_baseInfo":"UnityEngine.Random|Range|System.Single","_paramsInfo":"System.Single|System.Single"},"_inputPortValues":{"max":{"$content":5.0,"$type":"System.Single"}},"_position":{"x":5346.0,"y":5412.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"96"},{"value":{"_name":"Split","_targetVariableID":"14fe6b7e-468f-4738-9062-eb0b4ba401fe"},"_inputPortValues":{},"_position":{"x":5695.0,"y":5509.0},"$type":"FlowCanvas.Nodes.GetVariable`1[[System.Int32,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"99"},{"eventName":{"_value":"MakePlatforms"},"target":{},"targets":{},"_inputPortValues":{},"_position":{"x":5096.0,"y":4870.0},"$type":"FlowCanvas.Nodes.CustomEvent","$id":"102"},{"_inputPortValues":{},"_position":{"x":5547.0,"y":4897.0},"$type":"FlowCanvas.Nodes.CoroutineState","$id":"107"},{"_inputPortValues":{"Time":{"$content":0.2,"$type":"System.Single"}},"_position":{"x":5803.0,"y":4915.0},"$type":"FlowCanvas.Nodes.Cooldown","$id":"109"},{"_simplexNode":{},"_inputPortValues":{"eventName":{"$content":"RandomPositionPlatforms","$type":"System.String"}},"_position":{"x":6169.0,"y":4949.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.SendEvent,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"111"},{"eventName":{"_value":"Stop"},"target":{},"targets":{},"_inputPortValues":{},"_position":{"x":5174.0,"y":4973.0},"$type":"FlowCanvas.Nodes.CustomEvent","$id":"114"}],"connections":[{"_sourcePortName":"Once","_targetPortName":"In","_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"4"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Ready","_targetPortName":"In","_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"6"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Out","_targetPortName":"In","_sourceNode":{"$ref":"6"},"_targetNode":{"$ref":"9"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Do","_targetPortName":"
+    ","_sourceNode":{"$ref":"9"},"_targetNode":{"$ref":"11"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Done","_targetPortName":"In","_sourceNode":{"$ref":"9"},"_targetNode":{"$ref":"14"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Ready","_targetPortName":"
+    ","_sourceNode":{"$ref":"14"},"_targetNode":{"$ref":"16"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"Vector3","_sourceNode":{"$ref":"19"},"_targetNode":{"$ref":"22"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"x","_targetPortName":"Value","_sourceNode":{"$ref":"22"},"_targetNode":{"$ref":"6"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Received","_targetPortName":"
+    ","_sourceNode":{"$ref":"25"},"_targetNode":{"$ref":"30"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"
+    ","_targetPortName":" ","_sourceNode":{"$ref":"30"},"_targetNode":{"$ref":"33"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Transform","_targetPortName":"position","_sourceNode":{"$ref":"30"},"_targetNode":{"$ref":"33"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"Vector3","_sourceNode":{"$ref":"36"},"_targetNode":{"$ref":"39"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"z","_targetPortName":"z","_sourceNode":{"$ref":"39"},"_targetNode":{"$ref":"42"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"y","_targetPortName":"y","_sourceNode":{"$ref":"39"},"_targetNode":{"$ref":"42"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"x","_targetPortName":"a","_sourceNode":{"$ref":"39"},"_targetNode":{"$ref":"45"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"value","_sourceNode":{"$ref":"42"},"_targetNode":{"$ref":"30"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"x","_sourceNode":{"$ref":"45"},"_targetNode":{"$ref":"42"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"b","_sourceNode":{"$ref":"48"},"_targetNode":{"$ref":"45"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Received","_targetPortName":"
+    ","_sourceNode":{"$ref":"51"},"_targetNode":{"$ref":"56"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"
+    ","_targetPortName":" ","_sourceNode":{"$ref":"56"},"_targetNode":{"$ref":"59"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Transform","_targetPortName":"position","_sourceNode":{"$ref":"56"},"_targetNode":{"$ref":"59"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"Vector3","_sourceNode":{"$ref":"62"},"_targetNode":{"$ref":"65"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"y","_targetPortName":"y","_sourceNode":{"$ref":"65"},"_targetNode":{"$ref":"68"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"x","_targetPortName":"x","_sourceNode":{"$ref":"65"},"_targetNode":{"$ref":"68"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"z","_targetPortName":"a","_sourceNode":{"$ref":"65"},"_targetNode":{"$ref":"71"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"value","_sourceNode":{"$ref":"68"},"_targetNode":{"$ref":"56"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"z","_sourceNode":{"$ref":"71"},"_targetNode":{"$ref":"68"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"b","_sourceNode":{"$ref":"74"},"_targetNode":{"$ref":"71"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Received","_targetPortName":"In","_sourceNode":{"$ref":"77"},"_targetNode":{"$ref":"82"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Out","_targetPortName":"In","_sourceNode":{"$ref":"82"},"_targetNode":{"$ref":"85"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"a","_sourceNode":{"$ref":"82"},"_targetNode":{"$ref":"93"},"$type":"FlowCanvas.BinderConnection`1[[System.Int32,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"True","_targetPortName":"
+    ","_sourceNode":{"$ref":"85"},"_targetNode":{"$ref":"87"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"False","_targetPortName":"
+    ","_sourceNode":{"$ref":"85"},"_targetNode":{"$ref":"90"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"Condition","_sourceNode":{"$ref":"93"},"_targetNode":{"$ref":"85"},"$type":"FlowCanvas.BinderConnection`1[[System.Boolean,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"Value","_sourceNode":{"$ref":"96"},"_targetNode":{"$ref":"82"},"$type":"FlowCanvas.BinderConnection`1[[System.Int32,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"b","_sourceNode":{"$ref":"99"},"_targetNode":{"$ref":"93"},"$type":"FlowCanvas.BinderConnection`1[[System.Int32,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Received","_targetPortName":"Start","_sourceNode":{"$ref":"102"},"_targetNode":{"$ref":"107"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Update","_targetPortName":"In","_sourceNode":{"$ref":"107"},"_targetNode":{"$ref":"109"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Ready","_targetPortName":"
+    ","_sourceNode":{"$ref":"109"},"_targetNode":{"$ref":"111"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Received","_targetPortName":"Break","_sourceNode":{"$ref":"114"},"_targetNode":{"$ref":"107"},"$type":"FlowCanvas.BinderConnection"}],"canvasGroups":[{"name":"Initialize","rect":{"xMin":5003.524,"yMin":4336.874,"xMax":6742.358,"yMax":4771.583}},{"name":"Generate
+    platforms","rect":{"xMin":4981.644,"yMin":4786.17,"xMax":6402.469,"yMax":5197.539}},{"name":"Position
+    Platforms","rect":{"xMin":4972.891,"yMin":5234.008,"xMax":6611.071,"yMax":5630.789}},{"name":"Spawn
+    X","rect":{"xMin":4968.65,"yMin":5652.206,"xMax":6660.136,"yMax":6107.445}},{"name":"Spawn
+    Z","rect":{"xMin":4967.258,"yMin":6121.367,"xMax":6677.666,"yMax":6684.626}}],"localBlackboard":{"_name":"Local
+    Blackboard","_variables":{}}}'
+  _objectReferences:
+  - {fileID: 0}
+  - {fileID: 182446199}
+  - {fileID: 1883942479144004, guid: c3df53bd6d4f80740843b2550642fed7, type: 2}
+  _deserializationFailed: 0
+--- !u!1 &944887323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 944887328}
+  - component: {fileID: 944887327}
+  - component: {fileID: 944887326}
+  - component: {fileID: 944887325}
+  - component: {fileID: 944887324}
+  - component: {fileID: 944887330}
+  - component: {fileID: 944887329}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &944887324
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 944887323}
+  m_Enabled: 1
+--- !u!124 &944887325
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 944887323}
+  m_Enabled: 1
+--- !u!92 &944887326
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 944887323}
+  m_Enabled: 1
+--- !u!20 &944887327
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 944887323}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 11
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 0
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &944887328
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 944887323}
+  m_LocalRotation: {x: 0.37794822, y: 0.219187, z: -0.09258821, w: 0.89472884}
+  m_LocalPosition: {x: -6.3, y: 20.2, z: -11.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 45.8, y: 27.53, z: 0}
+--- !u!114 &944887329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 944887323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98a6db0b653f764eac834f85857a9dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _serializedBlackboard: '{"_variables":{"offset":{"_name":"offset","_id":"9430a3f6-6909-417b-beac-0a1c92a8b8a6","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"myFloat":{"_value":-10.0,"_name":"myFloat","_id":"e6078f29-63e9-42e8-b545-997b417bd124","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"MaxValue":{"_name":"MaxValue","_id":"e7bd3275-bdfa-4cd9-b335-eb12d208c375","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"lerpRate":{"_value":2.0,"_name":"lerpRate","_id":"cf96e30c-a4d7-4cf5-b6ae-e27b4fb5ce04","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
+  _objectReferences: []
+--- !u!114 &944887330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 944887323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b5c3ebb24c97464da319951cafe5a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boundGraphSerialization: '{"version":2.82,"type":"FlowCanvas.FlowScript","translation":{"x":-5066.0,"y":-5155.0},"nodes":[{"_inputPortValues":{},"_position":{"x":5298.0,"y":5224.0},"$type":"FlowCanvas.Nodes.ConstructionEvent","$id":"2"},{"targetVariable":{"_name":"offset","_targetVariableID":"9430a3f6-6909-417b-beac-0a1c92a8b8a6"},"_inputPortValues":{},"_position":{"x":5631.0,"y":5229.0},"$type":"FlowCanvas.Nodes.SetVariable`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"4"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5841.0,"y":5229.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.LogValue,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"7"},{"updateInterval":{},"_inputPortValues":{},"_position":{"x":5440.0,"y":5553.0},"$type":"FlowCanvas.Nodes.UpdateEvent","$id":"10"},{"_inputPortValues":{},"_position":{"x":5780.0,"y":5628.0},"$type":"FlowCanvas.Nodes.SwitchComparison","$id":"13"},{"_method":{"_baseInfo":"UnityEngine.Transform|set_position|System.Void","_paramsInfo":"UnityEngine.Vector3"},"_callable":true,"_inputPortValues":{},"_position":{"x":6126.0,"y":5751.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"15"},{"_method":{"_baseInfo":"UnityEngine.Transform|get_position|UnityEngine.Vector3","_paramsInfo":""},"_inputPortValues":{},"_position":{"x":5274.0,"y":5376.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"18"},{"_method":{"_baseInfo":"UnityEngine.Vector3|op_Subtraction|UnityEngine.Vector3","_paramsInfo":"UnityEngine.Vector3|UnityEngine.Vector3"},"_inputPortValues":{},"_position":{"x":5470.0,"y":5333.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"21"},{"_method":{"_baseInfo":"UnityEngine.Transform|get_position|UnityEngine.Vector3","_paramsInfo":""},"_inputPortValues":{"Transform":{"$content":1,"$type":"UnityEngine.Transform"}},"_position":{"x":5275.0,"y":5303.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"24"},{"_method":{"_baseInfo":"UnityEngine.Transform|get_position|UnityEngine.Vector3","_paramsInfo":""},"_inputPortValues":{"Transform":{"$content":1,"$type":"UnityEngine.Transform"}},"_position":{"x":5246.0,"y":5917.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"27"},{"_method":{"_baseInfo":"UnityEngine.Vector3|op_Subtraction|UnityEngine.Vector3","_paramsInfo":"UnityEngine.Vector3|UnityEngine.Vector3"},"_inputPortValues":{},"_position":{"x":5496.0,"y":5947.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"30"},{"_method":{"_baseInfo":"UnityEngine.Vector3|Lerp|UnityEngine.Vector3","_paramsInfo":"UnityEngine.Vector3|UnityEngine.Vector3|System.Single"},"_inputPortValues":{},"_position":{"x":5886.0,"y":5917.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"33"},{"value":{"_name":"offset","_targetVariableID":"9430a3f6-6909-417b-beac-0a1c92a8b8a6"},"_inputPortValues":{},"_position":{"x":5246.0,"y":5992.0},"$type":"FlowCanvas.Nodes.GetVariable`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"36"},{"_method":{"_baseInfo":"UnityEngine.Transform|get_position|UnityEngine.Vector3","_paramsInfo":""},"_inputPortValues":{"Transform":{"$content":1,"$type":"UnityEngine.Transform"}},"_position":{"x":5316.0,"y":5655.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"39"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5553.0,"y":5640.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.ExtractVector3,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"42"},{"value":{"_name":"myFloat","_targetVariableID":"e6078f29-63e9-42e8-b545-997b417bd124"},"_inputPortValues":{},"_position":{"x":5570.0,"y":5748.0},"$type":"FlowCanvas.Nodes.GetVariable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"45"},{"_method":{"_baseInfo":"UnityEngine.Transform|get_position|UnityEngine.Vector3","_paramsInfo":""},"_inputPortValues":{},"_position":{"x":5659.0,"y":5874.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"48"},{"value":{"_name":"lerpRate","_targetVariableID":"cf96e30c-a4d7-4cf5-b6ae-e27b4fb5ce04"},"_inputPortValues":{},"_position":{"x":5487.0,"y":6046.0},"$type":"FlowCanvas.Nodes.GetVariable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"51"},{"_simplexNode":{},"_inputPortValues":{"multiplier":{"$content":1.0,"$type":"System.Single"}},"_position":{"x":5676.0,"y":6013.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.DeltaTimed,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"54"}],"connections":[{"_sourcePortName":"Once","_targetPortName":"In","_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"4"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Out","_targetPortName":"
+    ","_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"7"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"obj","_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"7"},"$type":"FlowCanvas.BinderConnection`1[[System.Object,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Out","_targetPortName":"In","_sourceNode":{"$ref":"10"},"_targetNode":{"$ref":"13"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":">","_targetPortName":"
+    ","_sourceNode":{"$ref":"13"},"_targetNode":{"$ref":"15"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"b","_sourceNode":{"$ref":"18"},"_targetNode":{"$ref":"21"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"Value","_sourceNode":{"$ref":"21"},"_targetNode":{"$ref":"4"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"a","_sourceNode":{"$ref":"24"},"_targetNode":{"$ref":"21"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"a","_sourceNode":{"$ref":"27"},"_targetNode":{"$ref":"30"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"b","_sourceNode":{"$ref":"30"},"_targetNode":{"$ref":"33"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"value","_sourceNode":{"$ref":"33"},"_targetNode":{"$ref":"15"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"b","_sourceNode":{"$ref":"36"},"_targetNode":{"$ref":"30"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"Vector3","_sourceNode":{"$ref":"39"},"_targetNode":{"$ref":"42"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"y","_targetPortName":"A","_sourceNode":{"$ref":"42"},"_targetNode":{"$ref":"13"},"$type":"FlowCanvas.BinderConnection`1[[System.IComparable,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"B","_sourceNode":{"$ref":"45"},"_targetNode":{"$ref":"13"},"$type":"FlowCanvas.BinderConnection`1[[System.IComparable,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"a","_sourceNode":{"$ref":"48"},"_targetNode":{"$ref":"33"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"value","_sourceNode":{"$ref":"51"},"_targetNode":{"$ref":"54"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"t","_sourceNode":{"$ref":"54"},"_targetNode":{"$ref":"33"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}],"canvasGroups":[{"name":"Initialize","rect":{"xMin":5185.0,"yMin":5174.0,"xMax":6038.0,"yMax":5481.0}},{"name":"Update","rect":{"xMin":5187.0,"yMin":5495.0,"xMax":6359.0,"yMax":6129.0}}],"localBlackboard":{"_name":"Local
+    Blackboard","_variables":{}}}'
+  boundGraphObjectReferences:
+  - {fileID: 0}
+  - {fileID: 1995639651}
+  enableAction: 0
+  disableAction: 0
+  _graph: {fileID: 1816038903}
+  _blackboard: {fileID: 944887329}
+--- !u!114 &1543999167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d31b62ec9d586a4e94389d9071559ca, type: 3}
+  m_Name: Ball FlowScript
+  m_EditorClassIdentifier: 
+  _serializedGraph: '{"version":2.82,"type":"FlowCanvas.FlowScript","translation":{"x":-1635.0,"y":-2021.0},"zoomFactor":0.4232657,"nodes":[{"updateInterval":{},"_inputPortValues":{},"_position":{"x":4935.0,"y":6458.0},"$type":"FlowCanvas.Nodes.UpdateEvent","$id":"2"},{"_inputPortValues":{},"_position":{"x":5215.0,"y":6526.0},"$type":"FlowCanvas.Nodes.SwitchBool","$id":"5"},{"targetVariable":{"_name":"gameActive","_targetVariableID":"0e4599a0-6331-4d64-aee0-996ccc297157"},"_inputPortValues":{},"_position":{"x":5426.0,"y":6568.0},"$type":"FlowCanvas.Nodes.SetVariable`1[[System.Boolean,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"7"},{"_method":{"_baseInfo":"UnityEngine.Rigidbody|set_velocity|System.Void","_paramsInfo":"UnityEngine.Vector3"},"_callable":true,"_inputPortValues":{},"_position":{"x":5695.0,"y":6578.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"10"},{"_portCount":2,"_position":{"x":5950.0,"y":6580.0},"$type":"FlowCanvas.Nodes.Split","$id":"13"},{"_simplexNode":{},"_inputPortValues":{"target":{"$content":1,"$type":"FlowCanvas.FlowScriptController"},"eventName":{"$content":"Stop","$type":"System.String"}},"_position":{"x":6200.0,"y":6533.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.SendEvent,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"14"},{"_inputPortValues":{},"_position":{"x":6191.0,"y":6658.0},"$type":"FlowCanvas.Nodes.Cooldown","$id":"17"},{"_method":{"_baseInfo":"UnityEngine.SceneManagement.SceneManager|LoadScene|System.Void","_paramsInfo":"System.Int32"},"_callable":true,"_inputPortValues":{},"_position":{"x":6424.0,"y":6694.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"19"},{"value":{"_name":"gameActive","_targetVariableID":"0e4599a0-6331-4d64-aee0-996ccc297157"},"_inputPortValues":{},"_position":{"x":4720.0,"y":5375.0},"$type":"FlowCanvas.Nodes.GetVariable`1[[System.Boolean,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"22"},{"_inputPortValues":{},"_position":{"x":4914.0,"y":5316.0},"$type":"FlowCanvas.Nodes.SwitchBool","$id":"25"},{"_simplexNode":{},"_inputPortValues":{"eventName":{"$content":"SwitchDirection","$type":"System.String"}},"_position":{"x":5304.0,"y":5286.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.SendEvent,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"27"},{"_simplexNode":{},"_inputPortValues":{"eventName":{"$content":"StartMoving","$type":"System.String"}},"_position":{"x":5304.0,"y":5391.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.SendEvent,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"30"},{"_method":{"_baseInfo":"UnityEngine.Transform|get_position|UnityEngine.Vector3","_paramsInfo":""},"_inputPortValues":{},"_position":{"x":4751.0,"y":6613.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"33"},{"_method":{"_baseInfo":"UnityEngine.Physics|Raycast|System.Boolean","_paramsInfo":"UnityEngine.Vector3|UnityEngine.Vector3|System.Single"},"_inputPortValues":{"maxDistance":{"$content":1.0,"$type":"System.Single"}},"_position":{"x":4976.0,"y":6628.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"36"},{"_method":{"_baseInfo":"UnityEngine.Vector3|get_down|UnityEngine.Vector3","_paramsInfo":""},"_inputPortValues":{},"_position":{"x":4751.0,"y":6688.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"39"},{"value":{"_name":"fallSpeed","_targetVariableID":"eb0ddbb3-0bcc-4746-8779-483c2400892c"},"_inputPortValues":{},"_position":{"x":5302.0,"y":6691.0},"$type":"FlowCanvas.Nodes.GetVariable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"42"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5484.0,"y":6675.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.NewVector3,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"45"},{"buttonName":{"_value":"Fire1"},"_inputPortValues":{},"_position":{"x":4628.0,"y":5269.0},"$type":"FlowCanvas.Nodes.InputButtonEvents","$id":"48"},{"value":{"_name":"speed","_targetVariableID":"c8db19f1-b5e3-4f47-8568-ca30089a9283"},"_inputPortValues":{},"_position":{"x":4866.0,"y":5733.0},"$type":"FlowCanvas.Nodes.GetVariable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"51"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5082.0,"y":5719.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.NewVector3,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"54"},{"_method":{"_baseInfo":"UnityEngine.Rigidbody|set_velocity|System.Void","_paramsInfo":"UnityEngine.Vector3"},"_callable":true,"_inputPortValues":{},"_position":{"x":5339.0,"y":5637.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"57"},{"_method":{"_baseInfo":"UnityEngine.Rigidbody|get_velocity|UnityEngine.Vector3","_paramsInfo":""},"_inputPortValues":{},"_position":{"x":4736.0,"y":6144.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"60"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":4962.0,"y":6147.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.ExtractVector3,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"63"},{"_inputPortValues":{},"_position":{"x":5209.0,"y":6069.0},"$type":"FlowCanvas.Nodes.SwitchComparison","$id":"66"},{"_inputPortValues":{},"_position":{"x":5449.0,"y":5979.0},"$type":"FlowCanvas.Nodes.Dummy","$id":"68"},{"_method":{"_baseInfo":"UnityEngine.Rigidbody|set_velocity|System.Void","_paramsInfo":"UnityEngine.Vector3"},"_callable":true,"_inputPortValues":{},"_position":{"x":5799.0,"y":5950.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"70"},{"_method":{"_baseInfo":"UnityEngine.Rigidbody|set_velocity|System.Void","_paramsInfo":"UnityEngine.Vector3"},"_callable":true,"_inputPortValues":{},"_position":{"x":5599.0,"y":6158.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"73"},{"value":{"_name":"speed","_targetVariableID":"c8db19f1-b5e3-4f47-8568-ca30089a9283"},"_inputPortValues":{},"_position":{"x":5457.0,"y":6049.0},"$type":"FlowCanvas.Nodes.GetVariable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"76"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5607.0,"y":6019.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.NewVector3,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"79"},{"value":{"_name":"speed","_targetVariableID":"c8db19f1-b5e3-4f47-8568-ca30089a9283"},"_inputPortValues":{},"_position":{"x":5250.0,"y":6232.0},"$type":"FlowCanvas.Nodes.GetVariable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"82"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5400.0,"y":6232.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.NewVector3,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"85"},{"eventName":{"_value":"SwitchDirection"},"target":{},"targets":{},"_inputPortValues":{},"_position":{"x":4611.0,"y":6019.0},"$type":"FlowCanvas.Nodes.CustomEvent","$id":"88"},{"eventName":{"_value":"StartMoving"},"target":{},"targets":{},"_inputPortValues":{},"_position":{"x":4628.0,"y":5597.0},"$type":"FlowCanvas.Nodes.CustomEvent","$id":"93"},{"targetVariable":{"_name":"gameActive","_targetVariableID":"0e4599a0-6331-4d64-aee0-996ccc297157"},"_inputPortValues":{"Value":{"$content":true,"$type":"System.Boolean"}},"_position":{"x":5022.0,"y":5610.0},"$type":"FlowCanvas.Nodes.SetVariable`1[[System.Boolean,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"98"}],"connections":[{"_sourcePortName":"Out","_targetPortName":"In","_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"5"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"False","_targetPortName":"In","_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"7"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Out","_targetPortName":"
+    ","_sourceNode":{"$ref":"7"},"_targetNode":{"$ref":"10"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"
+    ","_targetPortName":"In","_sourceNode":{"$ref":"10"},"_targetNode":{"$ref":"13"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"0","_targetPortName":"
+    ","_sourceNode":{"$ref":"13"},"_targetNode":{"$ref":"14"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"1","_targetPortName":"In","_sourceNode":{"$ref":"13"},"_targetNode":{"$ref":"17"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Ready","_targetPortName":"
+    ","_sourceNode":{"$ref":"17"},"_targetNode":{"$ref":"19"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"Condition","_sourceNode":{"$ref":"22"},"_targetNode":{"$ref":"25"},"$type":"FlowCanvas.BinderConnection`1[[System.Boolean,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"True","_targetPortName":"
+    ","_sourceNode":{"$ref":"25"},"_targetNode":{"$ref":"27"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"False","_targetPortName":"
+    ","_sourceNode":{"$ref":"25"},"_targetNode":{"$ref":"30"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"origin","_sourceNode":{"$ref":"33"},"_targetNode":{"$ref":"36"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"Condition","_sourceNode":{"$ref":"36"},"_targetNode":{"$ref":"5"},"$type":"FlowCanvas.BinderConnection`1[[System.Boolean,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"direction","_sourceNode":{"$ref":"39"},"_targetNode":{"$ref":"36"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"y","_sourceNode":{"$ref":"42"},"_targetNode":{"$ref":"45"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"value","_sourceNode":{"$ref":"45"},"_targetNode":{"$ref":"10"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Down","_targetPortName":"In","_sourceNode":{"$ref":"48"},"_targetNode":{"$ref":"25"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"x","_sourceNode":{"$ref":"51"},"_targetNode":{"$ref":"54"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"value","_sourceNode":{"$ref":"54"},"_targetNode":{"$ref":"57"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"Vector3","_sourceNode":{"$ref":"60"},"_targetNode":{"$ref":"63"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"z","_targetPortName":"B","_sourceNode":{"$ref":"63"},"_targetNode":{"$ref":"66"},"$type":"FlowCanvas.BinderConnection`1[[System.IComparable,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"x","_targetPortName":"A","_sourceNode":{"$ref":"63"},"_targetNode":{"$ref":"66"},"$type":"FlowCanvas.BinderConnection`1[[System.IComparable,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":">","_targetPortName":"In","_sourceNode":{"$ref":"66"},"_targetNode":{"$ref":"68"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"<","_targetPortName":"
+    ","_sourceNode":{"$ref":"66"},"_targetNode":{"$ref":"73"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Out","_targetPortName":"
+    ","_sourceNode":{"$ref":"68"},"_targetNode":{"$ref":"70"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"z","_sourceNode":{"$ref":"76"},"_targetNode":{"$ref":"79"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"value","_sourceNode":{"$ref":"79"},"_targetNode":{"$ref":"70"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"x","_sourceNode":{"$ref":"82"},"_targetNode":{"$ref":"85"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"value","_sourceNode":{"$ref":"85"},"_targetNode":{"$ref":"73"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Received","_targetPortName":"In","_sourceNode":{"$ref":"88"},"_targetNode":{"$ref":"66"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Received","_targetPortName":"In","_sourceNode":{"$ref":"93"},"_targetNode":{"$ref":"98"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Out","_targetPortName":"
+    ","_sourceNode":{"$ref":"98"},"_targetNode":{"$ref":"57"},"$type":"FlowCanvas.BinderConnection"}],"canvasGroups":[{"name":"Handle
+    Input","rect":{"xMin":4579.186,"yMin":5223.376,"xMax":5505.001,"yMax":5522.742}},{"name":"Switch
+    Direction Event","rect":{"xMin":4577.833,"yMin":5887.557,"xMax":6023.659,"yMax":6357.672}},{"name":"Begin","rect":{"xMin":4584.621,"yMin":5547.371,"xMax":5594.703,"yMax":5860.042}},{"name":"Check
+    for Fall","rect":{"xMin":4574.481,"yMin":6372.91,"xMax":6746.609,"yMax":6873.4}}],"localBlackboard":{"_name":"Local
+    Blackboard","_variables":{}}}'
+  _objectReferences:
+  - {fileID: 0}
+  - {fileID: 1953577407}
+  _deserializationFailed: 0
+--- !u!1 &1555630527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1555630529}
+  - component: {fileID: 1555630528}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1555630528
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1555630527}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 1
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &1555630529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1555630527}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1604637783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1604637786}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1604637786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1604637783}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1693894751
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4396862769364992, guid: c3df53bd6d4f80740843b2550642fed7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4396862769364992, guid: c3df53bd6d4f80740843b2550642fed7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4396862769364992, guid: c3df53bd6d4f80740843b2550642fed7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4396862769364992, guid: c3df53bd6d4f80740843b2550642fed7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4396862769364992, guid: c3df53bd6d4f80740843b2550642fed7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4396862769364992, guid: c3df53bd6d4f80740843b2550642fed7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4396862769364992, guid: c3df53bd6d4f80740843b2550642fed7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4396862769364992, guid: c3df53bd6d4f80740843b2550642fed7, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114933241705239008, guid: c3df53bd6d4f80740843b2550642fed7,
+        type: 2}
+      propertyPath: _graph
+      value: 
+      objectReference: {fileID: 1996690781}
+    - target: {fileID: 114933241705239008, guid: c3df53bd6d4f80740843b2550642fed7,
+        type: 2}
+      propertyPath: boundGraphSerialization
+      value: '{"version":2.82,"type":"FlowCanvas.FlowScript","translation":{"x":-5252.0,"y":-4781.0},"nodes":[{"target":{},"targets":{},"_inputPortValues":{},"_position":{"x":5383.0,"y":5159.0},"$type":"FlowCanvas.Nodes.TriggerEvents","$id":"2"},{"targetVariable":{"_name":"myGameObject","_targetVariableID":"1c84d13e-c603-4144-b3b5-e215ffd39d01"},"_inputPortValues":{},"_position":{"x":5760.0,"y":5295.0},"$type":"FlowCanvas.Nodes.SetVariable`1[[UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"6"},{"_inputPortValues":{"Time":{"$content":0.7,"$type":"System.Single"}},"_position":{"x":6041.0,"y":5193.0},"$type":"FlowCanvas.Nodes.Cooldown","$id":"9"},{"_method":{"_baseInfo":"UnityEngine.Rigidbody|set_useGravity|System.Void","_paramsInfo":"System.Boolean"},"_callable":true,"_inputPortValues":{"value":{"$content":true,"$type":"System.Boolean"}},"_position":{"x":6293.0,"y":5291.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"11"},{"_method":{"_baseInfo":"UnityEngine.Rigidbody|set_isKinematic|System.Void","_paramsInfo":"System.Boolean"},"_callable":true,"_inputPortValues":{},"_position":{"x":6540.0,"y":5289.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"14"},{"_method":{"_baseInfo":"UnityEngine.Object|Destroy|System.Void","_paramsInfo":"UnityEngine.Object|System.Single"},"_callable":true,"_inputPortValues":{"t":{"$content":1.5,"$type":"System.Single"}},"_position":{"x":6799.0,"y":5290.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"17"},{"_inputPortValues":{},"_position":{"x":5345.0,"y":5370.0},"$type":"FlowCanvas.Nodes.OwnerVariable","$id":"20"},{"_method":{"_baseInfo":"UnityEngine.Transform|get_parent|UnityEngine.Transform","_paramsInfo":""},"_inputPortValues":{},"_position":{"x":5515.0,"y":5368.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"22"},{"value":{"_name":"myGameObject","_targetVariableID":"1c84d13e-c603-4144-b3b5-e215ffd39d01"},"_inputPortValues":{},"_position":{"x":6570.0,"y":5404.0},"$type":"FlowCanvas.Nodes.GetVariable`1[[UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"25"}],"connections":[{"_sourcePortName":"Exit","_targetPortName":"In","_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"6"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Out","_targetPortName":"In","_sourceNode":{"$ref":"6"},"_targetNode":{"$ref":"9"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"Rigidbody","_sourceNode":{"$ref":"6"},"_targetNode":{"$ref":"11"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Rigidbody,
+        UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Ready","_targetPortName":"
+        ","_sourceNode":{"$ref":"9"},"_targetNode":{"$ref":"11"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Rigidbody","_targetPortName":"Rigidbody","_sourceNode":{"$ref":"11"},"_targetNode":{"$ref":"14"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Rigidbody,
+        UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"
+        ","_targetPortName":" ","_sourceNode":{"$ref":"11"},"_targetNode":{"$ref":"14"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"
+        ","_targetPortName":" ","_sourceNode":{"$ref":"14"},"_targetNode":{"$ref":"17"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"Transform","_sourceNode":{"$ref":"20"},"_targetNode":{"$ref":"22"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Transform,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"Value","_sourceNode":{"$ref":"22"},"_targetNode":{"$ref":"6"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"obj","_sourceNode":{"$ref":"25"},"_targetNode":{"$ref":"17"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Object,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}],"canvasGroups":[{"name":"Make
+        platform fall","rect":{"xMin":5206.914,"yMin":5044.35,"xMax":7138.17,"yMax":5559.677}}],"localBlackboard":{"_name":"Local
+        Blackboard","_variables":{}}}'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c3df53bd6d4f80740843b2550642fed7, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1 &1729454348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1729454352}
+  - component: {fileID: 1729454351}
+  - component: {fileID: 1729454350}
+  - component: {fileID: 1729454349}
+  m_Layer: 0
+  m_Name: startPlatform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &1729454349
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1729454348}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 19dc2cf3b20b1ea41b9386dac6e2d7c6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &1729454350
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1729454348}
+  m_Material: {fileID: 13400000, guid: 2e4301654fc30a5498e4005b1b57b024, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1729454351
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1729454348}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1729454352
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1729454348}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 10, y: 1, z: 10}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1816038903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d31b62ec9d586a4e94389d9071559ca, type: 3}
+  m_Name: Main Camera FlowScript
+  m_EditorClassIdentifier: 
+  _serializedGraph: '{"version":2.82,"type":"FlowCanvas.FlowScript","translation":{"x":-5066.0,"y":-5155.0},"nodes":[{"_inputPortValues":{},"_position":{"x":5298.0,"y":5224.0},"$type":"FlowCanvas.Nodes.ConstructionEvent","$id":"2"},{"targetVariable":{"_name":"offset","_targetVariableID":"9430a3f6-6909-417b-beac-0a1c92a8b8a6"},"_inputPortValues":{},"_position":{"x":5631.0,"y":5229.0},"$type":"FlowCanvas.Nodes.SetVariable`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"4"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5841.0,"y":5229.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.LogValue,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"7"},{"updateInterval":{},"_inputPortValues":{},"_position":{"x":5440.0,"y":5553.0},"$type":"FlowCanvas.Nodes.UpdateEvent","$id":"10"},{"_inputPortValues":{},"_position":{"x":5780.0,"y":5628.0},"$type":"FlowCanvas.Nodes.SwitchComparison","$id":"13"},{"_method":{"_baseInfo":"UnityEngine.Transform|set_position|System.Void","_paramsInfo":"UnityEngine.Vector3"},"_callable":true,"_inputPortValues":{},"_position":{"x":6126.0,"y":5751.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"15"},{"_method":{"_baseInfo":"UnityEngine.Transform|get_position|UnityEngine.Vector3","_paramsInfo":""},"_inputPortValues":{},"_position":{"x":5274.0,"y":5376.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"18"},{"_method":{"_baseInfo":"UnityEngine.Vector3|op_Subtraction|UnityEngine.Vector3","_paramsInfo":"UnityEngine.Vector3|UnityEngine.Vector3"},"_inputPortValues":{},"_position":{"x":5470.0,"y":5333.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"21"},{"_method":{"_baseInfo":"UnityEngine.Transform|get_position|UnityEngine.Vector3","_paramsInfo":""},"_inputPortValues":{"Transform":{"$content":1,"$type":"UnityEngine.Transform"}},"_position":{"x":5275.0,"y":5303.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"24"},{"_method":{"_baseInfo":"UnityEngine.Transform|get_position|UnityEngine.Vector3","_paramsInfo":""},"_inputPortValues":{"Transform":{"$content":1,"$type":"UnityEngine.Transform"}},"_position":{"x":5246.0,"y":5917.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"27"},{"_method":{"_baseInfo":"UnityEngine.Vector3|op_Subtraction|UnityEngine.Vector3","_paramsInfo":"UnityEngine.Vector3|UnityEngine.Vector3"},"_inputPortValues":{},"_position":{"x":5496.0,"y":5947.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"30"},{"_method":{"_baseInfo":"UnityEngine.Vector3|Lerp|UnityEngine.Vector3","_paramsInfo":"UnityEngine.Vector3|UnityEngine.Vector3|System.Single"},"_inputPortValues":{},"_position":{"x":5886.0,"y":5917.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"33"},{"value":{"_name":"offset","_targetVariableID":"9430a3f6-6909-417b-beac-0a1c92a8b8a6"},"_inputPortValues":{},"_position":{"x":5246.0,"y":5992.0},"$type":"FlowCanvas.Nodes.GetVariable`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"36"},{"_method":{"_baseInfo":"UnityEngine.Transform|get_position|UnityEngine.Vector3","_paramsInfo":""},"_inputPortValues":{"Transform":{"$content":1,"$type":"UnityEngine.Transform"}},"_position":{"x":5316.0,"y":5655.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"39"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5553.0,"y":5640.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.ExtractVector3,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"42"},{"value":{"_name":"myFloat","_targetVariableID":"e6078f29-63e9-42e8-b545-997b417bd124"},"_inputPortValues":{},"_position":{"x":5570.0,"y":5748.0},"$type":"FlowCanvas.Nodes.GetVariable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"45"},{"_method":{"_baseInfo":"UnityEngine.Transform|get_position|UnityEngine.Vector3","_paramsInfo":""},"_inputPortValues":{},"_position":{"x":5659.0,"y":5874.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"48"},{"value":{"_name":"lerpRate","_targetVariableID":"cf96e30c-a4d7-4cf5-b6ae-e27b4fb5ce04"},"_inputPortValues":{},"_position":{"x":5487.0,"y":6046.0},"$type":"FlowCanvas.Nodes.GetVariable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"51"},{"_simplexNode":{},"_inputPortValues":{"multiplier":{"$content":1.0,"$type":"System.Single"}},"_position":{"x":5676.0,"y":6013.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.DeltaTimed,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"54"}],"connections":[{"_sourcePortName":"Once","_targetPortName":"In","_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"4"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Out","_targetPortName":"
+    ","_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"7"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"obj","_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"7"},"$type":"FlowCanvas.BinderConnection`1[[System.Object,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Out","_targetPortName":"In","_sourceNode":{"$ref":"10"},"_targetNode":{"$ref":"13"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":">","_targetPortName":"
+    ","_sourceNode":{"$ref":"13"},"_targetNode":{"$ref":"15"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"b","_sourceNode":{"$ref":"18"},"_targetNode":{"$ref":"21"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"Value","_sourceNode":{"$ref":"21"},"_targetNode":{"$ref":"4"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"a","_sourceNode":{"$ref":"24"},"_targetNode":{"$ref":"21"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"a","_sourceNode":{"$ref":"27"},"_targetNode":{"$ref":"30"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"b","_sourceNode":{"$ref":"30"},"_targetNode":{"$ref":"33"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"value","_sourceNode":{"$ref":"33"},"_targetNode":{"$ref":"15"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"b","_sourceNode":{"$ref":"36"},"_targetNode":{"$ref":"30"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"Vector3","_sourceNode":{"$ref":"39"},"_targetNode":{"$ref":"42"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"y","_targetPortName":"A","_sourceNode":{"$ref":"42"},"_targetNode":{"$ref":"13"},"$type":"FlowCanvas.BinderConnection`1[[System.IComparable,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"B","_sourceNode":{"$ref":"45"},"_targetNode":{"$ref":"13"},"$type":"FlowCanvas.BinderConnection`1[[System.IComparable,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"a","_sourceNode":{"$ref":"48"},"_targetNode":{"$ref":"33"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"value","_sourceNode":{"$ref":"51"},"_targetNode":{"$ref":"54"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"t","_sourceNode":{"$ref":"54"},"_targetNode":{"$ref":"33"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}],"canvasGroups":[{"name":"Initialize","rect":{"xMin":5185.0,"yMin":5174.0,"xMax":6038.0,"yMax":5481.0}},{"name":"Update","rect":{"xMin":5187.0,"yMin":5495.0,"xMax":6359.0,"yMax":6129.0}}],"localBlackboard":{"_name":"Local
+    Blackboard","_variables":{}}}'
+  _objectReferences:
+  - {fileID: 0}
+  - {fileID: 1995639651}
+  _deserializationFailed: 0
+--- !u!1 &1953577405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1953577408}
+  - component: {fileID: 1953577407}
+  - component: {fileID: 1953577406}
+  m_Layer: 0
+  m_Name: PlatformSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1953577406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1953577405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98a6db0b653f764eac834f85857a9dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _serializedBlackboard: '{"_variables":{"PlatformSize":{"_name":"PlatformSize","_id":"10a85c75-4889-42b9-9e65-066b345d0ac7","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"LastPos":{"_name":"LastPos","_id":"9d38378a-963b-4c9b-ada5-d3f6661ad037","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"RandomRange":{"_name":"RandomRange","_id":"20030715-a418-4152-9c1e-07eb1aef7785","$type":"NodeCanvas.Framework.Variable`1[[System.Int32,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"Split":{"_value":3,"_name":"Split","_id":"14fe6b7e-468f-4738-9062-eb0b4ba401fe","$type":"NodeCanvas.Framework.Variable`1[[System.Int32,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
+  _objectReferences: []
+--- !u!114 &1953577407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1953577405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b5c3ebb24c97464da319951cafe5a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boundGraphSerialization: '{"version":2.82,"type":"FlowCanvas.FlowScript","comments":"Creates
+    the new patforms.\n","translation":{"x":-984.0,"y":-1100.0},"zoomFactor":0.2932861,"nodes":[{"_inputPortValues":{},"_position":{"x":5126.0,"y":4399.0},"$type":"FlowCanvas.Nodes.ConstructionEvent","$id":"2"},{"_inputPortValues":{"Time":{"$content":0.01,"$type":"System.Single"}},"_position":{"x":5340.0,"y":4440.0},"$type":"FlowCanvas.Nodes.Cooldown","$id":"4"},{"targetVariable":{"_name":"PlatformSize","_targetVariableID":"10a85c75-4889-42b9-9e65-066b345d0ac7"},"_inputPortValues":{},"_position":{"x":5606.0,"y":4509.0},"$type":"FlowCanvas.Nodes.SetVariable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"6"},{"_inputPortValues":{"Loops":{"$content":5,"$type":"System.Int32"},"Step":{"$content":1,"$type":"System.Int32"}},"_position":{"x":5877.0,"y":4503.0},"$type":"FlowCanvas.Nodes.ForLoop","$id":"9"},{"_simplexNode":{},"_inputPortValues":{"eventName":{"$content":"RandomPositionPlatforms","$type":"System.String"}},"_position":{"x":6189.0,"y":4432.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.SendEvent,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"11"},{"_inputPortValues":{"Time":{"$content":0.5,"$type":"System.Single"}},"_position":{"x":6159.0,"y":4556.0},"$type":"FlowCanvas.Nodes.Cooldown","$id":"14"},{"_simplexNode":{},"_inputPortValues":{"eventName":{"$content":"MakePlatforms","$type":"System.String"}},"_position":{"x":6484.0,"y":4596.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.SendEvent,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"16"},{"_method":{"_baseInfo":"UnityEngine.Transform|get_localScale|UnityEngine.Vector3","_paramsInfo":""},"_inputPortValues":{"Transform":{"$content":1,"$type":"UnityEngine.Transform"}},"_position":{"x":5139.0,"y":4596.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"19"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5364.0,"y":4596.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.ExtractVector3,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"22"},{"eventName":{"_value":"SpawnX"},"target":{},"targets":{},"_inputPortValues":{},"_position":{"x":5300.0,"y":5705.0},"$type":"FlowCanvas.Nodes.CustomEvent","$id":"25"},{"_method":{"_baseInfo":"UnityEngine.Transform|set_position|System.Void","_paramsInfo":"UnityEngine.Vector3"},"_callable":true,"_inputPortValues":{},"_position":{"x":5998.0,"y":5786.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"30"},{"_method":{"_baseInfo":"UnityEngine.Object|Instantiate|UnityEngine.Object","_paramsInfo":"UnityEngine.Object|UnityEngine.Vector3|UnityEngine.Quaternion"},"_callable":true,"_inputPortValues":{"original":{"$content":2,"$type":"UnityEngine.GameObject"}},"_position":{"x":6339.0,"y":5791.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"33"},{"_method":{"_baseInfo":"UnityEngine.Transform|get_position|UnityEngine.Vector3","_paramsInfo":""},"_inputPortValues":{},"_position":{"x":5072.0,"y":5969.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"36"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5293.0,"y":5966.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.ExtractVector3,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"39"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5862.0,"y":5959.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.NewVector3,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"42"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5667.0,"y":5888.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.FloatAdd,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"45"},{"value":{"_name":"PlatformSize","_targetVariableID":"10a85c75-4889-42b9-9e65-066b345d0ac7"},"_inputPortValues":{},"_position":{"x":5502.0,"y":5946.0},"$type":"FlowCanvas.Nodes.GetVariable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"48"},{"eventName":{"_value":"SpawnZ"},"target":{},"targets":{},"_inputPortValues":{},"_position":{"x":5037.0,"y":6202.0},"$type":"FlowCanvas.Nodes.CustomEvent","$id":"51"},{"_method":{"_baseInfo":"UnityEngine.Transform|set_position|System.Void","_paramsInfo":"UnityEngine.Vector3"},"_callable":true,"_inputPortValues":{},"_position":{"x":6015.0,"y":6206.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"56"},{"_method":{"_baseInfo":"UnityEngine.Object|Instantiate|UnityEngine.Object","_paramsInfo":"UnityEngine.Object|UnityEngine.Vector3|UnityEngine.Quaternion"},"_callable":true,"_inputPortValues":{"original":{"$content":2,"$type":"UnityEngine.GameObject"}},"_position":{"x":6345.0,"y":6201.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"59"},{"_method":{"_baseInfo":"UnityEngine.Transform|get_position|UnityEngine.Vector3","_paramsInfo":""},"_inputPortValues":{},"_position":{"x":5071.0,"y":6338.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"62"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5328.0,"y":6339.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.ExtractVector3,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"65"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5854.0,"y":6354.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.NewVector3,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"68"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5635.0,"y":6460.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.FloatAdd,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"71"},{"value":{"_name":"PlatformSize","_targetVariableID":"10a85c75-4889-42b9-9e65-066b345d0ac7"},"_inputPortValues":{},"_position":{"x":5356.0,"y":6501.0},"$type":"FlowCanvas.Nodes.GetVariable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"74"},{"eventName":{"_value":"RandomPositionPlatforms"},"target":{},"targets":{},"_inputPortValues":{},"_position":{"x":5054.0,"y":5312.0},"$type":"FlowCanvas.Nodes.CustomEvent","$id":"77"},{"targetVariable":{"_name":"RandomRange","_targetVariableID":"20030715-a418-4152-9c1e-07eb1aef7785"},"_inputPortValues":{},"_position":{"x":5590.0,"y":5378.0},"$type":"FlowCanvas.Nodes.SetVariable`1[[System.Int32,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"82"},{"_inputPortValues":{},"_position":{"x":6042.0,"y":5387.0},"$type":"FlowCanvas.Nodes.SwitchBool","$id":"85"},{"_simplexNode":{},"_inputPortValues":{"eventName":{"$content":"SpawnX","$type":"System.String"}},"_position":{"x":6353.0,"y":5320.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.SendEvent,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"87"},{"_simplexNode":{},"_inputPortValues":{"eventName":{"$content":"SpawnZ","$type":"System.String"}},"_position":{"x":6357.0,"y":5451.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.SendEvent,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"90"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5876.0,"y":5463.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.IntegerLessThan,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"93"},{"_method":{"_baseInfo":"UnityEngine.Random|Range|System.Single","_paramsInfo":"System.Single|System.Single"},"_inputPortValues":{"max":{"$content":5.0,"$type":"System.Single"}},"_position":{"x":5346.0,"y":5412.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"96"},{"value":{"_name":"Split","_targetVariableID":"14fe6b7e-468f-4738-9062-eb0b4ba401fe"},"_inputPortValues":{},"_position":{"x":5695.0,"y":5509.0},"$type":"FlowCanvas.Nodes.GetVariable`1[[System.Int32,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"99"},{"eventName":{"_value":"MakePlatforms"},"target":{},"targets":{},"_inputPortValues":{},"_position":{"x":5096.0,"y":4870.0},"$type":"FlowCanvas.Nodes.CustomEvent","$id":"102"},{"_inputPortValues":{},"_position":{"x":5547.0,"y":4897.0},"$type":"FlowCanvas.Nodes.CoroutineState","$id":"107"},{"_inputPortValues":{"Time":{"$content":0.2,"$type":"System.Single"}},"_position":{"x":5803.0,"y":4915.0},"$type":"FlowCanvas.Nodes.Cooldown","$id":"109"},{"_simplexNode":{},"_inputPortValues":{"eventName":{"$content":"RandomPositionPlatforms","$type":"System.String"}},"_position":{"x":6169.0,"y":4949.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.SendEvent,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"111"},{"eventName":{"_value":"Stop"},"target":{},"targets":{},"_inputPortValues":{},"_position":{"x":5174.0,"y":4973.0},"$type":"FlowCanvas.Nodes.CustomEvent","$id":"114"}],"connections":[{"_sourcePortName":"Once","_targetPortName":"In","_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"4"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Ready","_targetPortName":"In","_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"6"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Out","_targetPortName":"In","_sourceNode":{"$ref":"6"},"_targetNode":{"$ref":"9"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Do","_targetPortName":"
+    ","_sourceNode":{"$ref":"9"},"_targetNode":{"$ref":"11"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Done","_targetPortName":"In","_sourceNode":{"$ref":"9"},"_targetNode":{"$ref":"14"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Ready","_targetPortName":"
+    ","_sourceNode":{"$ref":"14"},"_targetNode":{"$ref":"16"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"Vector3","_sourceNode":{"$ref":"19"},"_targetNode":{"$ref":"22"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"x","_targetPortName":"Value","_sourceNode":{"$ref":"22"},"_targetNode":{"$ref":"6"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Received","_targetPortName":"
+    ","_sourceNode":{"$ref":"25"},"_targetNode":{"$ref":"30"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"
+    ","_targetPortName":" ","_sourceNode":{"$ref":"30"},"_targetNode":{"$ref":"33"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Transform","_targetPortName":"position","_sourceNode":{"$ref":"30"},"_targetNode":{"$ref":"33"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"Vector3","_sourceNode":{"$ref":"36"},"_targetNode":{"$ref":"39"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"z","_targetPortName":"z","_sourceNode":{"$ref":"39"},"_targetNode":{"$ref":"42"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"y","_targetPortName":"y","_sourceNode":{"$ref":"39"},"_targetNode":{"$ref":"42"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"x","_targetPortName":"a","_sourceNode":{"$ref":"39"},"_targetNode":{"$ref":"45"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"value","_sourceNode":{"$ref":"42"},"_targetNode":{"$ref":"30"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"x","_sourceNode":{"$ref":"45"},"_targetNode":{"$ref":"42"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"b","_sourceNode":{"$ref":"48"},"_targetNode":{"$ref":"45"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Received","_targetPortName":"
+    ","_sourceNode":{"$ref":"51"},"_targetNode":{"$ref":"56"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"
+    ","_targetPortName":" ","_sourceNode":{"$ref":"56"},"_targetNode":{"$ref":"59"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Transform","_targetPortName":"position","_sourceNode":{"$ref":"56"},"_targetNode":{"$ref":"59"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"Vector3","_sourceNode":{"$ref":"62"},"_targetNode":{"$ref":"65"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"y","_targetPortName":"y","_sourceNode":{"$ref":"65"},"_targetNode":{"$ref":"68"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"x","_targetPortName":"x","_sourceNode":{"$ref":"65"},"_targetNode":{"$ref":"68"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"z","_targetPortName":"a","_sourceNode":{"$ref":"65"},"_targetNode":{"$ref":"71"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"value","_sourceNode":{"$ref":"68"},"_targetNode":{"$ref":"56"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"z","_sourceNode":{"$ref":"71"},"_targetNode":{"$ref":"68"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"b","_sourceNode":{"$ref":"74"},"_targetNode":{"$ref":"71"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Received","_targetPortName":"In","_sourceNode":{"$ref":"77"},"_targetNode":{"$ref":"82"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Out","_targetPortName":"In","_sourceNode":{"$ref":"82"},"_targetNode":{"$ref":"85"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"a","_sourceNode":{"$ref":"82"},"_targetNode":{"$ref":"93"},"$type":"FlowCanvas.BinderConnection`1[[System.Int32,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"True","_targetPortName":"
+    ","_sourceNode":{"$ref":"85"},"_targetNode":{"$ref":"87"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"False","_targetPortName":"
+    ","_sourceNode":{"$ref":"85"},"_targetNode":{"$ref":"90"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"Condition","_sourceNode":{"$ref":"93"},"_targetNode":{"$ref":"85"},"$type":"FlowCanvas.BinderConnection`1[[System.Boolean,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"Value","_sourceNode":{"$ref":"96"},"_targetNode":{"$ref":"82"},"$type":"FlowCanvas.BinderConnection`1[[System.Int32,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"b","_sourceNode":{"$ref":"99"},"_targetNode":{"$ref":"93"},"$type":"FlowCanvas.BinderConnection`1[[System.Int32,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Received","_targetPortName":"Start","_sourceNode":{"$ref":"102"},"_targetNode":{"$ref":"107"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Update","_targetPortName":"In","_sourceNode":{"$ref":"107"},"_targetNode":{"$ref":"109"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Ready","_targetPortName":"
+    ","_sourceNode":{"$ref":"109"},"_targetNode":{"$ref":"111"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Received","_targetPortName":"Break","_sourceNode":{"$ref":"114"},"_targetNode":{"$ref":"107"},"$type":"FlowCanvas.BinderConnection"}],"canvasGroups":[{"name":"Initialize","rect":{"xMin":5003.524,"yMin":4336.874,"xMax":6742.358,"yMax":4771.583}},{"name":"Generate
+    platforms","rect":{"xMin":4981.644,"yMin":4786.17,"xMax":6402.469,"yMax":5197.539}},{"name":"Position
+    Platforms","rect":{"xMin":4972.891,"yMin":5234.008,"xMax":6611.071,"yMax":5630.789}},{"name":"Spawn
+    X","rect":{"xMin":4968.65,"yMin":5652.206,"xMax":6660.136,"yMax":6107.445}},{"name":"Spawn
+    Z","rect":{"xMin":4967.258,"yMin":6121.367,"xMax":6677.666,"yMax":6684.626}}],"localBlackboard":{"_name":"Local
+    Blackboard","_variables":{}}}'
+  boundGraphObjectReferences:
+  - {fileID: 0}
+  - {fileID: 182446199}
+  - {fileID: 1883942479144004, guid: c3df53bd6d4f80740843b2550642fed7, type: 2}
+  enableAction: 0
+  disableAction: 0
+  _graph: {fileID: 690425992}
+  _blackboard: {fileID: 1953577406}
+--- !u!4 &1953577408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1953577405}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4, y: 0, z: 6}
+  m_LocalScale: {x: 2, y: 1, z: 2}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1995639644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1995639651}
+  - component: {fileID: 1995639650}
+  - component: {fileID: 1995639649}
+  - component: {fileID: 1995639648}
+  - component: {fileID: 1995639647}
+  - component: {fileID: 1995639646}
+  - component: {fileID: 1995639645}
+  m_Layer: 0
+  m_Name: Ball
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &1995639645
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1995639644}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!114 &1995639646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1995639644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98a6db0b653f764eac834f85857a9dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _serializedBlackboard: '{"_variables":{"gameActive":{"_name":"gameActive","_id":"0e4599a0-6331-4d64-aee0-996ccc297157","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"speed":{"_value":6.0,"_name":"speed","_id":"c8db19f1-b5e3-4f47-8568-ca30089a9283","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"fallSpeed":{"_value":-25.0,"_name":"fallSpeed","_id":"eb0ddbb3-0bcc-4746-8779-483c2400892c","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"myBoolean":{"_name":"myBoolean","_id":"7cadb405-82cc-45c0-9315-b898c6a1dc3c","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"myGameObject":{"_name":"myGameObject","_id":"74c47eca-b8c3-4819-9654-e6a4c295d813","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"myFloat":{"_name":"myFloat","_id":"4da754b4-ced4-41ad-8a89-ca8f66e31a5d","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
+  _objectReferences: []
+--- !u!114 &1995639647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1995639644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b5c3ebb24c97464da319951cafe5a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boundGraphSerialization: '{"version":2.82,"type":"FlowCanvas.FlowScript","translation":{"x":-1635.0,"y":-2021.0},"zoomFactor":0.4232657,"nodes":[{"updateInterval":{},"_inputPortValues":{},"_position":{"x":4935.0,"y":6458.0},"$type":"FlowCanvas.Nodes.UpdateEvent","$id":"2"},{"_inputPortValues":{},"_position":{"x":5215.0,"y":6526.0},"$type":"FlowCanvas.Nodes.SwitchBool","$id":"5"},{"targetVariable":{"_name":"gameActive","_targetVariableID":"0e4599a0-6331-4d64-aee0-996ccc297157"},"_inputPortValues":{},"_position":{"x":5426.0,"y":6568.0},"$type":"FlowCanvas.Nodes.SetVariable`1[[System.Boolean,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"7"},{"_method":{"_baseInfo":"UnityEngine.Rigidbody|set_velocity|System.Void","_paramsInfo":"UnityEngine.Vector3"},"_callable":true,"_inputPortValues":{},"_position":{"x":5695.0,"y":6578.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"10"},{"_portCount":2,"_position":{"x":5950.0,"y":6580.0},"$type":"FlowCanvas.Nodes.Split","$id":"13"},{"_simplexNode":{},"_inputPortValues":{"target":{"$content":1,"$type":"FlowCanvas.FlowScriptController"},"eventName":{"$content":"Stop","$type":"System.String"}},"_position":{"x":6200.0,"y":6533.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.SendEvent,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"14"},{"_inputPortValues":{},"_position":{"x":6191.0,"y":6658.0},"$type":"FlowCanvas.Nodes.Cooldown","$id":"17"},{"_method":{"_baseInfo":"UnityEngine.SceneManagement.SceneManager|LoadScene|System.Void","_paramsInfo":"System.Int32"},"_callable":true,"_inputPortValues":{},"_position":{"x":6424.0,"y":6694.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"19"},{"value":{"_name":"gameActive","_targetVariableID":"0e4599a0-6331-4d64-aee0-996ccc297157"},"_inputPortValues":{},"_position":{"x":4720.0,"y":5375.0},"$type":"FlowCanvas.Nodes.GetVariable`1[[System.Boolean,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"22"},{"_inputPortValues":{},"_position":{"x":4914.0,"y":5316.0},"$type":"FlowCanvas.Nodes.SwitchBool","$id":"25"},{"_simplexNode":{},"_inputPortValues":{"eventName":{"$content":"SwitchDirection","$type":"System.String"}},"_position":{"x":5304.0,"y":5286.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.SendEvent,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"27"},{"_simplexNode":{},"_inputPortValues":{"eventName":{"$content":"StartMoving","$type":"System.String"}},"_position":{"x":5304.0,"y":5391.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.SendEvent,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"30"},{"_method":{"_baseInfo":"UnityEngine.Transform|get_position|UnityEngine.Vector3","_paramsInfo":""},"_inputPortValues":{},"_position":{"x":4751.0,"y":6613.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"33"},{"_method":{"_baseInfo":"UnityEngine.Physics|Raycast|System.Boolean","_paramsInfo":"UnityEngine.Vector3|UnityEngine.Vector3|System.Single"},"_inputPortValues":{"maxDistance":{"$content":1.0,"$type":"System.Single"}},"_position":{"x":4976.0,"y":6628.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"36"},{"_method":{"_baseInfo":"UnityEngine.Vector3|get_down|UnityEngine.Vector3","_paramsInfo":""},"_inputPortValues":{},"_position":{"x":4751.0,"y":6688.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"39"},{"value":{"_name":"fallSpeed","_targetVariableID":"eb0ddbb3-0bcc-4746-8779-483c2400892c"},"_inputPortValues":{},"_position":{"x":5302.0,"y":6691.0},"$type":"FlowCanvas.Nodes.GetVariable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"42"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5484.0,"y":6675.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.NewVector3,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"45"},{"buttonName":{"_value":"Fire1"},"_inputPortValues":{},"_position":{"x":4628.0,"y":5269.0},"$type":"FlowCanvas.Nodes.InputButtonEvents","$id":"48"},{"value":{"_name":"speed","_targetVariableID":"c8db19f1-b5e3-4f47-8568-ca30089a9283"},"_inputPortValues":{},"_position":{"x":4866.0,"y":5733.0},"$type":"FlowCanvas.Nodes.GetVariable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"51"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5082.0,"y":5719.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.NewVector3,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"54"},{"_method":{"_baseInfo":"UnityEngine.Rigidbody|set_velocity|System.Void","_paramsInfo":"UnityEngine.Vector3"},"_callable":true,"_inputPortValues":{},"_position":{"x":5339.0,"y":5637.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"57"},{"_method":{"_baseInfo":"UnityEngine.Rigidbody|get_velocity|UnityEngine.Vector3","_paramsInfo":""},"_inputPortValues":{},"_position":{"x":4736.0,"y":6144.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"60"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":4962.0,"y":6147.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.ExtractVector3,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"63"},{"_inputPortValues":{},"_position":{"x":5209.0,"y":6069.0},"$type":"FlowCanvas.Nodes.SwitchComparison","$id":"66"},{"_inputPortValues":{},"_position":{"x":5449.0,"y":5979.0},"$type":"FlowCanvas.Nodes.Dummy","$id":"68"},{"_method":{"_baseInfo":"UnityEngine.Rigidbody|set_velocity|System.Void","_paramsInfo":"UnityEngine.Vector3"},"_callable":true,"_inputPortValues":{},"_position":{"x":5799.0,"y":5950.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"70"},{"_method":{"_baseInfo":"UnityEngine.Rigidbody|set_velocity|System.Void","_paramsInfo":"UnityEngine.Vector3"},"_callable":true,"_inputPortValues":{},"_position":{"x":5599.0,"y":6158.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"73"},{"value":{"_name":"speed","_targetVariableID":"c8db19f1-b5e3-4f47-8568-ca30089a9283"},"_inputPortValues":{},"_position":{"x":5457.0,"y":6049.0},"$type":"FlowCanvas.Nodes.GetVariable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"76"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5607.0,"y":6019.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.NewVector3,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"79"},{"value":{"_name":"speed","_targetVariableID":"c8db19f1-b5e3-4f47-8568-ca30089a9283"},"_inputPortValues":{},"_position":{"x":5250.0,"y":6232.0},"$type":"FlowCanvas.Nodes.GetVariable`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"82"},{"_simplexNode":{},"_inputPortValues":{},"_position":{"x":5400.0,"y":6232.0},"$type":"FlowCanvas.Nodes.SimplexNodeWrapper`1[[FlowCanvas.Nodes.NewVector3,
+    Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"85"},{"eventName":{"_value":"SwitchDirection"},"target":{},"targets":{},"_inputPortValues":{},"_position":{"x":4611.0,"y":6019.0},"$type":"FlowCanvas.Nodes.CustomEvent","$id":"88"},{"eventName":{"_value":"StartMoving"},"target":{},"targets":{},"_inputPortValues":{},"_position":{"x":4628.0,"y":5597.0},"$type":"FlowCanvas.Nodes.CustomEvent","$id":"93"},{"targetVariable":{"_name":"gameActive","_targetVariableID":"0e4599a0-6331-4d64-aee0-996ccc297157"},"_inputPortValues":{"Value":{"$content":true,"$type":"System.Boolean"}},"_position":{"x":5022.0,"y":5610.0},"$type":"FlowCanvas.Nodes.SetVariable`1[[System.Boolean,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]","$id":"98"}],"connections":[{"_sourcePortName":"Out","_targetPortName":"In","_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"5"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"False","_targetPortName":"In","_sourceNode":{"$ref":"5"},"_targetNode":{"$ref":"7"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Out","_targetPortName":"
+    ","_sourceNode":{"$ref":"7"},"_targetNode":{"$ref":"10"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"
+    ","_targetPortName":"In","_sourceNode":{"$ref":"10"},"_targetNode":{"$ref":"13"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"0","_targetPortName":"
+    ","_sourceNode":{"$ref":"13"},"_targetNode":{"$ref":"14"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"1","_targetPortName":"In","_sourceNode":{"$ref":"13"},"_targetNode":{"$ref":"17"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Ready","_targetPortName":"
+    ","_sourceNode":{"$ref":"17"},"_targetNode":{"$ref":"19"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"Condition","_sourceNode":{"$ref":"22"},"_targetNode":{"$ref":"25"},"$type":"FlowCanvas.BinderConnection`1[[System.Boolean,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"True","_targetPortName":"
+    ","_sourceNode":{"$ref":"25"},"_targetNode":{"$ref":"27"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"False","_targetPortName":"
+    ","_sourceNode":{"$ref":"25"},"_targetNode":{"$ref":"30"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"origin","_sourceNode":{"$ref":"33"},"_targetNode":{"$ref":"36"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"Condition","_sourceNode":{"$ref":"36"},"_targetNode":{"$ref":"5"},"$type":"FlowCanvas.BinderConnection`1[[System.Boolean,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"direction","_sourceNode":{"$ref":"39"},"_targetNode":{"$ref":"36"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"y","_sourceNode":{"$ref":"42"},"_targetNode":{"$ref":"45"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"value","_sourceNode":{"$ref":"45"},"_targetNode":{"$ref":"10"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Down","_targetPortName":"In","_sourceNode":{"$ref":"48"},"_targetNode":{"$ref":"25"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"x","_sourceNode":{"$ref":"51"},"_targetNode":{"$ref":"54"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"value","_sourceNode":{"$ref":"54"},"_targetNode":{"$ref":"57"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"Vector3","_sourceNode":{"$ref":"60"},"_targetNode":{"$ref":"63"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"z","_targetPortName":"B","_sourceNode":{"$ref":"63"},"_targetNode":{"$ref":"66"},"$type":"FlowCanvas.BinderConnection`1[[System.IComparable,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"x","_targetPortName":"A","_sourceNode":{"$ref":"63"},"_targetNode":{"$ref":"66"},"$type":"FlowCanvas.BinderConnection`1[[System.IComparable,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":">","_targetPortName":"In","_sourceNode":{"$ref":"66"},"_targetNode":{"$ref":"68"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"<","_targetPortName":"
+    ","_sourceNode":{"$ref":"66"},"_targetNode":{"$ref":"73"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Out","_targetPortName":"
+    ","_sourceNode":{"$ref":"68"},"_targetNode":{"$ref":"70"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"z","_sourceNode":{"$ref":"76"},"_targetNode":{"$ref":"79"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"value","_sourceNode":{"$ref":"79"},"_targetNode":{"$ref":"70"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"x","_sourceNode":{"$ref":"82"},"_targetNode":{"$ref":"85"},"$type":"FlowCanvas.BinderConnection`1[[System.Single,
+    mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},{"_sourcePortName":"Value","_targetPortName":"value","_sourceNode":{"$ref":"85"},"_targetNode":{"$ref":"73"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Received","_targetPortName":"In","_sourceNode":{"$ref":"88"},"_targetNode":{"$ref":"66"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Received","_targetPortName":"In","_sourceNode":{"$ref":"93"},"_targetNode":{"$ref":"98"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Out","_targetPortName":"
+    ","_sourceNode":{"$ref":"98"},"_targetNode":{"$ref":"57"},"$type":"FlowCanvas.BinderConnection"}],"canvasGroups":[{"name":"Handle
+    Input","rect":{"xMin":4579.186,"yMin":5223.376,"xMax":5505.001,"yMax":5522.742}},{"name":"Switch
+    Direction Event","rect":{"xMin":4577.833,"yMin":5887.557,"xMax":6023.659,"yMax":6357.672}},{"name":"Begin","rect":{"xMin":4584.621,"yMin":5547.371,"xMax":5594.703,"yMax":5860.042}},{"name":"Check
+    for Fall","rect":{"xMin":4574.481,"yMin":6372.91,"xMax":6746.609,"yMax":6873.4}}],"localBlackboard":{"_name":"Local
+    Blackboard","_variables":{}}}'
+  boundGraphObjectReferences:
+  - {fileID: 0}
+  - {fileID: 1953577407}
+  enableAction: 0
+  disableAction: 0
+  _graph: {fileID: 1543999167}
+  _blackboard: {fileID: 1995639646}
+--- !u!23 &1995639648
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1995639644}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: ed3995e3df9ea18469f94dbe916dab31, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!135 &1995639649
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1995639644}
+  m_Material: {fileID: 13400000, guid: 2e4301654fc30a5498e4005b1b57b024, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1995639650
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1995639644}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1995639651
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1995639644}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.71, y: 0.95, z: -3.35}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1996690781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d31b62ec9d586a4e94389d9071559ca, type: 3}
+  m_Name: GameObject FlowScript
+  m_EditorClassIdentifier: 
+  _serializedGraph: '{"version":2.82,"type":"FlowCanvas.FlowScript","translation":{"x":-5252.0,"y":-4781.0},"nodes":[{"target":{},"targets":{},"_inputPortValues":{},"_position":{"x":5383.0,"y":5159.0},"$type":"FlowCanvas.Nodes.TriggerEvents","$id":"2"},{"targetVariable":{"_name":"myGameObject","_targetVariableID":"1c84d13e-c603-4144-b3b5-e215ffd39d01"},"_inputPortValues":{},"_position":{"x":5760.0,"y":5295.0},"$type":"FlowCanvas.Nodes.SetVariable`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"6"},{"_inputPortValues":{"Time":{"$content":0.7,"$type":"System.Single"}},"_position":{"x":6041.0,"y":5193.0},"$type":"FlowCanvas.Nodes.Cooldown","$id":"9"},{"_method":{"_baseInfo":"UnityEngine.Rigidbody|set_useGravity|System.Void","_paramsInfo":"System.Boolean"},"_callable":true,"_inputPortValues":{"value":{"$content":true,"$type":"System.Boolean"}},"_position":{"x":6293.0,"y":5291.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"11"},{"_method":{"_baseInfo":"UnityEngine.Rigidbody|set_isKinematic|System.Void","_paramsInfo":"System.Boolean"},"_callable":true,"_inputPortValues":{},"_position":{"x":6540.0,"y":5289.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"14"},{"_method":{"_baseInfo":"UnityEngine.Object|Destroy|System.Void","_paramsInfo":"UnityEngine.Object|System.Single"},"_callable":true,"_inputPortValues":{"t":{"$content":1.5,"$type":"System.Single"}},"_position":{"x":6799.0,"y":5290.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"17"},{"_inputPortValues":{},"_position":{"x":5345.0,"y":5370.0},"$type":"FlowCanvas.Nodes.OwnerVariable","$id":"20"},{"_method":{"_baseInfo":"UnityEngine.Transform|get_parent|UnityEngine.Transform","_paramsInfo":""},"_inputPortValues":{},"_position":{"x":5515.0,"y":5368.0},"$type":"FlowCanvas.Nodes.ReflectedMethodNodeWrapper","$id":"22"},{"value":{"_name":"myGameObject","_targetVariableID":"1c84d13e-c603-4144-b3b5-e215ffd39d01"},"_inputPortValues":{},"_position":{"x":6570.0,"y":5404.0},"$type":"FlowCanvas.Nodes.GetVariable`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]","$id":"25"}],"connections":[{"_sourcePortName":"Exit","_targetPortName":"In","_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"6"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Out","_targetPortName":"In","_sourceNode":{"$ref":"6"},"_targetNode":{"$ref":"9"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"Rigidbody","_sourceNode":{"$ref":"6"},"_targetNode":{"$ref":"11"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Rigidbody,
+    UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Ready","_targetPortName":"
+    ","_sourceNode":{"$ref":"9"},"_targetNode":{"$ref":"11"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Rigidbody","_targetPortName":"Rigidbody","_sourceNode":{"$ref":"11"},"_targetNode":{"$ref":"14"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Rigidbody,
+    UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"
+    ","_targetPortName":" ","_sourceNode":{"$ref":"11"},"_targetNode":{"$ref":"14"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"
+    ","_targetPortName":" ","_sourceNode":{"$ref":"14"},"_targetNode":{"$ref":"17"},"$type":"FlowCanvas.BinderConnection"},{"_sourcePortName":"Value","_targetPortName":"Transform","_sourceNode":{"$ref":"20"},"_targetNode":{"$ref":"22"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Transform,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"Value","_sourceNode":{"$ref":"22"},"_targetNode":{"$ref":"6"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},{"_sourcePortName":"Value","_targetPortName":"obj","_sourceNode":{"$ref":"25"},"_targetNode":{"$ref":"17"},"$type":"FlowCanvas.BinderConnection`1[[UnityEngine.Object,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}],"canvasGroups":[{"name":"Make
+    platform fall","rect":{"xMin":5206.914,"yMin":5044.35,"xMax":7138.17,"yMax":5559.677}}],"localBlackboard":{"_name":"Local
+    Blackboard","_variables":{}}}'
+  _objectReferences: []
+  _deserializationFailed: 0
