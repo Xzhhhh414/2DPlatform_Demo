@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     Vector2 moveInput;
     TouchingDirections touchingDirections;
     Damageable damageable;
+    //SpellCooldown spellCooldown;
 
     public float CurrentMoveSpeed 
     { get
@@ -199,6 +200,7 @@ public class PlayerController : MonoBehaviour
         if (context.started)
         {
             animator.SetTrigger(AnimationStrings.attackTrigger);
+            //spellCooldown.UseSpell();
         }
 
     }
