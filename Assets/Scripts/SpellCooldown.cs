@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Net.NetworkInformation;
+
 
 public class SpellCooldown : MonoBehaviour
 {
+    PlayerController playerController;
+
+
     [SerializeField]
     private Image imageCooldown;
     [SerializeField]
@@ -18,6 +23,17 @@ public class SpellCooldown : MonoBehaviour
     private float cooldownTime = 10.0f;
     private float cooldownTimer = 0.0f;
 
+
+    private void Awake()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null)
+        {
+            Debug.Log("No Player found in the scene");
+        }
+        playerController = player.GetComponent<PlayerController>();
+
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -26,13 +42,23 @@ public class SpellCooldown : MonoBehaviour
         imageCooldown.fillAmount = 0.0f;
     }
 
+    private void OnEnable()
+    {
+        playerController.SpellAttack.AddListener(UseSpell);
+    }
+
+  
+
+
     // Update is called once per frame
     void Update()
     {
+        /* 
         if (Input.GetKeyDown(KeyCode.Q))
         {
             UseSpell();
         }
+        */
         if (isCooldown)
         {
             ApplyCooldown();

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D),typeof(TouchingDirections),typeof(Damageable))]
@@ -14,7 +15,9 @@ public class PlayerController : MonoBehaviour
     Vector2 moveInput;
     TouchingDirections touchingDirections;
     Damageable damageable;
-    //SpellCooldown spellCooldown;
+
+    public UnityEvent SpellAttack;
+
 
     public float CurrentMoveSpeed 
     { get
@@ -200,7 +203,7 @@ public class PlayerController : MonoBehaviour
         if (context.started)
         {
             animator.SetTrigger(AnimationStrings.attackTrigger);
-            //spellCooldown.UseSpell();
+            SpellAttack.Invoke();
         }
 
     }
