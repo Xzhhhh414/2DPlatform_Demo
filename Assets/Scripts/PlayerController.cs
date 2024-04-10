@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     TouchingDirections touchingDirections;
     Damageable damageable;
 
-    public UnityEvent SpellAttack;
+    public UnityEvent SpellSkill01;
 
 
     public float CurrentMoveSpeed 
@@ -203,16 +203,17 @@ public class PlayerController : MonoBehaviour
         if (context.started)
         {
             animator.SetTrigger(AnimationStrings.attackTrigger);
-            SpellAttack.Invoke();
+            
         }
 
     }
 
-    public void OnRangedAttack(InputAction.CallbackContext context)
+    public void OnSkill01(InputAction.CallbackContext context)
     {
         if (context.started && touchingDirections.IsGrounded)
         {
-            animator.SetTrigger(AnimationStrings.rangedAttackTrigger);
+            animator.SetTrigger(AnimationStrings.skill01Trigger);
+            SpellSkill01.Invoke();
         }
 
     }
