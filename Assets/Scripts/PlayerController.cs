@@ -114,6 +114,22 @@ public class PlayerController : MonoBehaviour
     
     }
 
+    public float Skill01Cooldown
+    {
+        get
+        {
+            return animator.GetFloat(AnimationStrings.skill01Cooldown);
+        }
+        private set
+        {
+            animator.SetFloat(AnimationStrings.skill01Cooldown, Mathf.Max(value, 0));
+        }
+    }
+
+
+
+
+
 
     Rigidbody2D rb;
     Animator animator;
@@ -137,7 +153,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Skill01Cooldown > 0)
+        {
+            Skill01Cooldown -= Time.deltaTime;
+        }
     }
     private void FixedUpdate()
     {
@@ -210,10 +229,11 @@ public class PlayerController : MonoBehaviour
 
     public void OnSkill01(InputAction.CallbackContext context)
     {
-        if (context.started && touchingDirections.IsGrounded)
+        if (context.started && touchingDirections.IsGrounded && Skill01Cooldown <= 0)
         {
             animator.SetTrigger(AnimationStrings.skill01Trigger);
             SpellSkill01.Invoke();
+  
         }
 
     }
