@@ -20,7 +20,7 @@ public class SpellCooldown : MonoBehaviour
 
     //variables for cooldownTimer
     private bool isCooldown = false;
-    private float cooldownTime = 10.0f;
+    private float cooldownTime = 5.0f;
     private float cooldownTimer = 0.0f;
 
 
