@@ -1,0 +1,836 @@
+fileFormatVersion: 2
+guid: ec5b2d74cab4fed4c9bac4a1072504d1
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: SnowWhite_BlockAttack_Success_01_Frame_0
+    originalName: 
+    pivot: {x: 0.25714287, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 282
+      width: 70
+      height: 35
+    spriteID: 6be5d75ce5e2bea4f871863f25f42bbf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 282}
+  - name: SnowWhite_BlockAttack_Success_01_Frame_1
+    originalName: 
+    pivot: {x: 0.23529412, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 227
+      width: 68
+      height: 47
+    spriteID: 7ff13b0e4088ceb418fc1ad5efea30dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 227}
+  - name: SnowWhite_BlockAttack_Success_01_Frame_2
+    originalName: 
+    pivot: {x: 0.28767124, y: -0.021276597}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 172
+      width: 73
+      height: 47
+    spriteID: 5f286e83c38238649be907473d768a2a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 172}
+  - name: SnowWhite_BlockAttack_Success_01_Frame_3
+    originalName: 
+    pivot: {x: 0.28767124, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 116
+      width: 73
+      height: 48
+    spriteID: 6c87886f4b9211447a70ee61e6de0a69
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 116}
+  - name: SnowWhite_BlockAttack_Success_01_Frame_4
+    originalName: 
+    pivot: {x: 0.26250002, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 60
+      width: 80
+      height: 48
+    spriteID: b185517b7df609d4eb21aaf7627d8ac4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 60}
+  - name: SnowWhite_BlockAttack_Success_01_Frame_5
+    originalName: 
+    pivot: {x: 0.29629627, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 81
+      height: 48
+    spriteID: 4e5db8ad08e94c44e99fa5666524d003
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: SnowWhite_BlockAttack_Success_01_Frame_6
+    originalName: 
+    pivot: {x: 0.31325302, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 4
+      width: 83
+      height: 46
+    spriteID: cf57cc7483510c14383d36430f987fec
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 4}
+  - name: SnowWhite_BlockAttack_Success_01_Frame_7
+    originalName: 
+    pivot: {x: 0.31325302, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 58
+      width: 83
+      height: 44
+    spriteID: 49a238c74786b00459bb1914e21a35f6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 58}
+  - name: SnowWhite_BlockAttack_Success_01_Frame_8
+    originalName: 
+    pivot: {x: 0.6571428, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 184
+      y: 4
+      width: 35
+      height: 35
+    spriteID: 777c29c7d0d5e2a4dab13bc8aead3653
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 184, y: 4}
+  - name: SnowWhite_BlockAttack_Success_01_Frame_9
+    originalName: 
+    pivot: {x: 0.6571428, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 325
+      width: 35
+      height: 34
+    spriteID: 024adcf0a441618419d440991dabf143
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 325}
+  - name: SnowWhite_BlockAttack_Success_01_Frame_10
+    originalName: 
+    pivot: {x: 0.6571428, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 367
+      width: 35
+      height: 34
+    spriteID: 6431119b48fccee458047dba6ca7bf5f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 367}
+  - name: SnowWhite_BlockAttack_Success_01_Frame_11
+    originalName: 
+    pivot: {x: 0.6571428, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 409
+      width: 35
+      height: 34
+    spriteID: 692b4b9fbc12ebf4fb9a7bcd8eebfa8a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 409}
+  - name: SnowWhite_BlockAttack_Success_01_Frame_12
+    originalName: 
+    pivot: {x: 0.6470589, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 451
+      width: 34
+      height: 34
+    spriteID: 34587b4eca14c9240b5986cd74e195b2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 451}
+  - name: SnowWhite_BlockAttack_Success_01_Frame_13
+    originalName: 
+    pivot: {x: 0.6363637, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 325
+      width: 33
+      height: 34
+    spriteID: 289898375cd647149a8eeb1e7c4964f0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 325}
+  - name: SnowWhite_BlockAttack_Success_01_Frame_14
+    originalName: 
+    pivot: {x: 0.625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 367
+      width: 32
+      height: 34
+    spriteID: 0170f76d9dfd5a54cabbc225a07dbd3c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 367}
+  - name: SnowWhite_BlockAttack_Success_01_Frame_15
+    originalName: 
+    pivot: {x: 0.6, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 409
+      width: 30
+      height: 34
+    spriteID: 14921842695edf74e97e6b7f7d8e47fe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 409}
+  - name: SnowWhite_BlockAttack_Success_01_Frame_16
+    originalName: 
+    pivot: {x: 0.58620685, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 110
+      width: 29
+      height: 34
+    spriteID: e5ffe5ecef29b7747944a2fbcc8896f0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 110}
+  - name: SnowWhite_BlockAttack_Success_01_Frame_17
+    originalName: 
+    pivot: {x: 0.5384615, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 290
+      width: 26
+      height: 34
+    spriteID: f88205ad57c9dd840bc09655e34c8fc8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 290}
+  - name: SnowWhite_BlockAttack_Success_01_Frame_18
+    originalName: 
+    pivot: {x: 0.45454547, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 377
+      width: 22
+      height: 36
+    spriteID: f89391a837f07874d89be17a7efd448b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 377}
+  - name: SnowWhite_BlockAttack_Success_01_Frame_19
+    originalName: 
+    pivot: {x: 0.43478262, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 332
+      width: 23
+      height: 37
+    spriteID: 7c4d9f6f6e7836145b1108642d726561
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 332}
+  - name: SnowWhite_BlockAttack_Success_01_Frame_20
+    originalName: 
+    pivot: {x: 0.4166667, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 152
+      width: 24
+      height: 38
+    spriteID: 4fc6cafb5b84aae418e3f5b47c471b75
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 152}
+  - name: SnowWhite_BlockAttack_Success_01_Frame_21
+    originalName: 
+    pivot: {x: 0.4166667, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 198
+      width: 24
+      height: 38
+    spriteID: d9ae4c2aa25571a4cbfb81b4e60aa347
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 198}
+  - name: SnowWhite_BlockAttack_Success_01_Frame_22
+    originalName: 
+    pivot: {x: 0.4166667, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 244
+      width: 24
+      height: 38
+    spriteID: 874e0da1922169d45989f9232978c4c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 244}
+  - name: SnowWhite_BlockAttack_Success_01_Frame_23
+    originalName: 
+    pivot: {x: 0.40000004, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 227
+      y: 4
+      width: 25
+      height: 38
+    spriteID: 9792f88f066b55c409901a3f4a8301a9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 227, y: 4}
+  - name: SnowWhite_BlockAttack_Success_01_Frame_24
+    originalName: 
+    pivot: {x: 0.3703704, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 451
+      width: 27
+      height: 37
+    spriteID: c3e1a412ec4a1974da4ee85f7925b3cd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 451}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1767684718
+    name: SnowWhite_BlockAttack_Success_01
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: SnowWhite_BlockAttack_Success_01_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 54
+        y: 0
+        width: 70
+        height: 35
+      spriteId: 6be5d75ce5e2bea4f871863f25f42bbf
+    - name: SnowWhite_BlockAttack_Success_01_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 56
+        y: 0
+        width: 68
+        height: 47
+      spriteId: 7ff13b0e4088ceb418fc1ad5efea30dc
+    - name: SnowWhite_BlockAttack_Success_01_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 51
+        y: 1
+        width: 73
+        height: 47
+      spriteId: 5f286e83c38238649be907473d768a2a
+    - name: SnowWhite_BlockAttack_Success_01_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 51
+        y: 0
+        width: 73
+        height: 48
+      spriteId: 6c87886f4b9211447a70ee61e6de0a69
+    - name: SnowWhite_BlockAttack_Success_01_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 51
+        y: 0
+        width: 80
+        height: 48
+      spriteId: b185517b7df609d4eb21aaf7627d8ac4
+    - name: SnowWhite_BlockAttack_Success_01_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 48
+        y: 0
+        width: 81
+        height: 48
+      spriteId: 4e5db8ad08e94c44e99fa5666524d003
+    - name: SnowWhite_BlockAttack_Success_01_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 46
+        y: 0
+        width: 83
+        height: 46
+      spriteId: cf57cc7483510c14383d36430f987fec
+    - name: SnowWhite_BlockAttack_Success_01_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 46
+        y: 0
+        width: 83
+        height: 44
+      spriteId: 49a238c74786b00459bb1914e21a35f6
+    - name: SnowWhite_BlockAttack_Success_01_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 49
+        y: 0
+        width: 35
+        height: 35
+      spriteId: 777c29c7d0d5e2a4dab13bc8aead3653
+    - name: SnowWhite_BlockAttack_Success_01_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 49
+        y: 0
+        width: 35
+        height: 34
+      spriteId: 024adcf0a441618419d440991dabf143
+    - name: SnowWhite_BlockAttack_Success_01_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 49
+        y: 0
+        width: 35
+        height: 34
+      spriteId: 6431119b48fccee458047dba6ca7bf5f
+    - name: SnowWhite_BlockAttack_Success_01_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 49
+        y: 0
+        width: 35
+        height: 34
+      spriteId: 692b4b9fbc12ebf4fb9a7bcd8eebfa8a
+    - name: SnowWhite_BlockAttack_Success_01_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 50
+        y: 0
+        width: 34
+        height: 34
+      spriteId: 34587b4eca14c9240b5986cd74e195b2
+    - name: SnowWhite_BlockAttack_Success_01_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 51
+        y: 0
+        width: 33
+        height: 34
+      spriteId: 289898375cd647149a8eeb1e7c4964f0
+    - name: SnowWhite_BlockAttack_Success_01_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 52
+        y: 0
+        width: 32
+        height: 34
+      spriteId: 0170f76d9dfd5a54cabbc225a07dbd3c
+    - name: SnowWhite_BlockAttack_Success_01_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 54
+        y: 0
+        width: 30
+        height: 34
+      spriteId: 14921842695edf74e97e6b7f7d8e47fe
+    - name: SnowWhite_BlockAttack_Success_01_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 55
+        y: 0
+        width: 29
+        height: 34
+      spriteId: e5ffe5ecef29b7747944a2fbcc8896f0
+    - name: SnowWhite_BlockAttack_Success_01_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 58
+        y: 0
+        width: 26
+        height: 34
+      spriteId: f88205ad57c9dd840bc09655e34c8fc8
+    - name: SnowWhite_BlockAttack_Success_01_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 62
+        y: 0
+        width: 22
+        height: 36
+      spriteId: f89391a837f07874d89be17a7efd448b
+    - name: SnowWhite_BlockAttack_Success_01_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 62
+        y: 0
+        width: 23
+        height: 37
+      spriteId: 7c4d9f6f6e7836145b1108642d726561
+    - name: SnowWhite_BlockAttack_Success_01_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 62
+        y: 0
+        width: 24
+        height: 38
+      spriteId: 4fc6cafb5b84aae418e3f5b47c471b75
+    - name: SnowWhite_BlockAttack_Success_01_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 62
+        y: 0
+        width: 24
+        height: 38
+      spriteId: d9ae4c2aa25571a4cbfb81b4e60aa347
+    - name: SnowWhite_BlockAttack_Success_01_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 62
+        y: 0
+        width: 24
+        height: 38
+      spriteId: 874e0da1922169d45989f9232978c4c0
+    - name: SnowWhite_BlockAttack_Success_01_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 62
+        y: 0
+        width: 25
+        height: 38
+      spriteId: 9792f88f066b55c409901a3f4a8301a9
+    - name: SnowWhite_BlockAttack_Success_01_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 62
+        y: 0
+        width: 27
+        height: 37
+      spriteId: c3e1a412ec4a1974da4ee85f7925b3cd
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 144, y: 48}
