@@ -927,6 +927,7 @@ namespace NodeCanvas.Editor
                 var headerRect = new Rect(group.rect.x, group.rect.y, group.rect.width, 25);
                 var autoRect = new Rect(headerRect.xMax - 68, headerRect.y + 1, 68, headerRect.height);
                 var scaleRectBR = new Rect(group.rect.xMax - 20, group.rect.yMax - 20, 20, 20);
+                var notesRect = new Rect(group.rect.x, headerRect.yMax, group.rect.width, group.rect.height - headerRect.height);
 
                 GUI.color = EditorGUIUtility.isProSkin ? new Color(1, 1, 1, 0.4f) : new Color(0.5f, 0.5f, 0.5f, 0.3f);
                 Styles.Draw(group.rect, StyleSheet.editorPanel);
@@ -959,6 +960,17 @@ namespace NodeCanvas.Editor
                     GUI.color = Color.white;
                 }
 
+                if ( !string.IsNullOrEmpty(group.notes) ) {
+                    GUI.color = group.color.grayscale > 0.6f ? Color.black : Color.white;
+                    if ( group.editState == CanvasGroup.EditState.EditingComments ) {
+                        GUI.SetNextControlName("GroupComments" + i);
+                        group.notes = GUI.TextArea(group.rect.ExpandBy(-5, -35, -5, -5), group.notes, Styles.topLeftLabel);
+                        GUI.FocusControl("GroupComments" + i);
+                    } else {
+                        GUI.Label(group.rect.ExpandBy(-5, -35, -5, -5), group.notes, Styles.topLeftLabel);
+                    }
+                    GUI.color = Color.white;
+                }
 
                 if ( group.editState == CanvasGroup.EditState.RenamingTitle ) {
                     GUI.SetNextControlName("GroupRename" + i);
@@ -969,6 +981,10 @@ namespace NodeCanvas.Editor
                         GUIUtility.hotControl = 0;
                         GUIUtility.keyboardControl = 0;
                     }
+                }
+
+                if ( group.editState == CanvasGroup.EditState.EditingComments && e.type == EventType.MouseDown && !group.rect.Contains(e.mousePosition) ) {
+                    group.editState = CanvasGroup.EditState.None;
                 }
 
                 if ( e.type == EventType.MouseDown && GraphEditorUtility.allowClick ) {
@@ -985,6 +1001,12 @@ namespace NodeCanvas.Editor
                             var menu = new GenericMenu();
                             menu.AddItem(new GUIContent("Rename"), false, () => { group.editState = CanvasGroup.EditState.RenamingTitle; });
                             menu.AddItem(new GUIContent("Edit Color"), false, () => { DoPopup(() => { group.color = EditorGUILayout.ColorField(group.color); }); });
+                            menu.AddItem(new GUIContent("Make Notes"), false, () =>
+                            {
+                                group.editState = CanvasGroup.EditState.EditingComments;
+                                if ( string.IsNullOrEmpty(group.notes) ) { group.notes = "..."; }
+                                if ( group.color == default(Color) ) { group.color = CanvasGroup.DEFAULT_NOTES_COLOR; }
+                            });
                             menu.AddItem(new GUIContent("Delete"), false, () => { currentGraph.canvasGroups.Remove(group); });
                             GraphEditorUtility.PostGUI += () => { menu.ShowAsContext(); };
                         } else if ( e.button == 0 ) {
@@ -1004,6 +1026,13 @@ namespace NodeCanvas.Editor
                         group.editState = CanvasGroup.EditState.Scaling;
                         UndoUtility.SetDirty(currentGraph);
                         e.Use();
+                    }
+
+                    if ( !string.IsNullOrEmpty(group.notes) && notesRect.Contains(e.mousePosition) ) {
+                        if ( e.button == 0 && e.clickCount == 2 ) {
+                            group.editState = CanvasGroup.EditState.EditingComments;
+                            e.Use();
+                        }
                     }
                 }
 
@@ -1030,7 +1059,7 @@ namespace NodeCanvas.Editor
                     }
                 }
 
-                if ( e.rawType == EventType.MouseUp && group.editState != CanvasGroup.EditState.RenamingTitle ) {
+                if ( e.rawType == EventType.MouseUp && group.editState != CanvasGroup.EditState.RenamingTitle && group.editState != CanvasGroup.EditState.EditingComments ) {
                     if ( group.editState == CanvasGroup.EditState.Dragging ) {
                         foreach ( var node in group.GatherContainedNodes(currentGraph) ) {
                             node.TrySortConnectionsByRelativePosition();

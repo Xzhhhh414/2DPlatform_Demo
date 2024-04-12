@@ -105,7 +105,7 @@ namespace NodeCanvas.Editor
             if ( owner != null ) {
                 if ( GUILayout.Button(string.Format("[{0}]", owner.gameObject.name), EditorStyles.toolbarDropDown, GUILayout.Width(120)) ) {
                     var menu = new GenericMenu();
-                    foreach ( var _o in Object.FindObjectsOfType<GraphOwner>().OrderBy(x => x.gameObject != owner.gameObject) ) {
+                    foreach ( var _o in Object.FindObjectsByType<GraphOwner>(FindObjectsSortMode.InstanceID).OrderBy(x => x.gameObject != owner.gameObject) ) {
                         var o = _o;
                         menu.AddItem(new GUIContent(o.gameObject.name + "/" + o.GetType().Name), o == owner, () => { SetReferences(o); });
                     }

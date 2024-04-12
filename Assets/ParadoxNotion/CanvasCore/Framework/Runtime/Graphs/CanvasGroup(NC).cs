@@ -15,6 +15,7 @@ namespace NodeCanvas.Framework
         public Rect rect;
         public Color color;
         public bool autoGroup;
+        public string notes;
 
         //required
         public CanvasGroup() { }
@@ -32,7 +33,7 @@ namespace NodeCanvas.Framework
 
         public enum EditState
         {
-            None, Dragging, RenamingTitle, Scaling
+            None, Dragging, RenamingTitle, EditingComments, Scaling
         }
 
         public Node[] GatherContainedNodes(Graph graph) {

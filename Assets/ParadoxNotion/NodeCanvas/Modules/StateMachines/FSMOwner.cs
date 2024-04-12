@@ -1,4 +1,5 @@
 using NodeCanvas.Framework;
+using ParadoxNotion.Design;
 using UnityEngine;
 
 
@@ -11,42 +12,24 @@ namespace NodeCanvas.StateMachines
     {
 
         ///<summary>The current state name of the root fsm.</summary>
-        public string currentRootStateName {
-            get { return behaviour != null ? behaviour.currentStateName : null; }
-        }
+        public string currentRootStateName => behaviour?.currentStateName;
 
         ///<summary>The previous state name of the root fsm.</summary>
-        public string previousRootStateName {
-            get { return behaviour != null ? behaviour.previousStateName : null; }
-        }
+        public string previousRootStateName => behaviour?.previousStateName;
 
         ///<summary>The current deep state name of the fsm including sub fsms if any.</summary>
-        public string currentDeepStateName {
-            get
-            {
-                var state = GetCurrentState(true);
-                return state != null ? state.name : null;
-            }
-        }
+        public string currentDeepStateName => GetCurrentState(true)?.name;
 
         ///<summary>The previous deep state name of the fsm including sub fsms if any.</summary>
-        public string previousDeepStateName {
-            get
-            {
-                var state = GetPreviousState(true);
-                return state != null ? state.name : null;
-            }
-        }
-
+        public string previousDeepStateName => GetPreviousState(true)?.name;
 
         ///<summary>Returns the current fsm state optionally recursively by including SubFSMs.</summary>
         public IState GetCurrentState(bool includeSubFSMs = true) {
             if ( behaviour == null ) { return null; }
             var current = behaviour.currentState;
             if ( includeSubFSMs ) {
-                while ( current is NestedFSMState ) {
-                    var subState = (NestedFSMState)current;
-                    current = subState.currentInstance != null ? subState.currentInstance.currentState : null;
+                while ( current is NestedFSMState subState ) {
+                    current = subState.currentInstance?.currentState;
                 }
             }
             return current;
@@ -58,31 +41,30 @@ namespace NodeCanvas.StateMachines
             var current = behaviour.currentState;
             var previous = behaviour.previousState;
             if ( includeSubFSMs ) {
-                while ( current is NestedFSMState ) {
-                    var subState = (NestedFSMState)current;
-                    current = subState.currentInstance != null ? subState.currentInstance.currentState : null;
-                    previous = subState.currentInstance != null ? subState.currentInstance.previousState : null;
+                while ( current is NestedFSMState subState ) {
+                    current = subState.currentInstance?.currentState;
+                    previous = subState.currentInstance?.previousState;
                 }
             }
             return previous;
         }
 
 
-        ///<summary>Enter a state of the root FSM by it's name.</summary>
+        ///<summary>Enter a state of the root FSM by its name.</summary>
         public IState TriggerState(string stateName) { return TriggerState(stateName, FSM.TransitionCallMode.Normal); }
         public IState TriggerState(string stateName, FSM.TransitionCallMode callMode) {
-            if ( behaviour != null ) {
-                return behaviour.TriggerState(stateName, callMode);
-            }
-            return null;
+            return behaviour?.TriggerState(stateName, callMode);
         }
 
         ///<summary>Get all root state names, excluding non-named states.</summary>
         public string[] GetStateNames() {
-            if ( behaviour != null ) {
-                return behaviour.GetStateNames();
-            }
-            return null;
+            return behaviour?.GetStateNames();
         }
+
+#if UNITY_EDITOR
+        protected override void OnDrawGizmos() {
+            UnityEditor.Handles.Label(transform.position + new Vector3(0, -0.3f, 0), currentDeepStateName, Styles.centerLabel);
+        }
+#endif
     }
 }

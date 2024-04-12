@@ -740,7 +740,9 @@ namespace NodeCanvas.Framework
         ///<summary>Invokes named onCustomEvent on EventRouter</summary>
         public void SendEvent(string name, object value, object sender) {
             if ( agent == null || !isRunning ) { return; }
+#if UNITY_EDITOR
             Logger.Log(string.Format("Event '{0}' Send to '{1}'", name, agent.gameObject.name), LogTag.EVENT, agent);
+#endif
             var router = agent.GetComponent<EventRouter>();
             if ( router != null ) { router.InvokeCustomEvent(name, value, sender); }
         }
@@ -748,7 +750,9 @@ namespace NodeCanvas.Framework
         ///<summary>Invokes named onCustomEvent on EventRouter</summary>
         public void SendEvent<T>(string name, T value, object sender) {
             if ( agent == null || !isRunning ) { return; }
+#if UNITY_EDITOR
             Logger.Log(string.Format("Event '{0}' Send to '{1}'", name, agent.gameObject.name), LogTag.EVENT, agent);
+#endif
             var router = agent.GetComponent<EventRouter>();
             if ( router != null ) { router.InvokeCustomEvent(name, value, sender); }
         }

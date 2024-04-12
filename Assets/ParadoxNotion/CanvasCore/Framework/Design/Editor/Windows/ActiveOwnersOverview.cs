@@ -38,7 +38,7 @@ namespace NodeCanvas.Editor
 
             activeOwners = new List<GraphOwner>();
             if ( Application.isPlaying ) {
-                foreach ( var owner in FindObjectsOfType<GraphOwner>().Where(o => o.isRunning) ) {
+                foreach ( var owner in FindObjectsByType<GraphOwner>(FindObjectsSortMode.InstanceID).Where(o => o.isRunning) ) {
                     if ( !activeOwners.Contains(owner) ) { activeOwners.Add(owner); }
                 }
             }

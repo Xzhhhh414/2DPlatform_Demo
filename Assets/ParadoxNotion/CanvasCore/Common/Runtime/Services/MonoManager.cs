@@ -34,7 +34,7 @@ namespace ParadoxNotion.Services
             get
             {
                 if ( _current == null && Threader.applicationIsPlaying && !isQuiting ) {
-                    _current = FindObjectOfType<MonoManager>();
+                    _current = FindAnyObjectByType<MonoManager>();
                     if ( _current == null ) {
                         _current = new GameObject("_MonoManager").AddComponent<MonoManager>();
                     }

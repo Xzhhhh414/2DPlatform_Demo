@@ -42,11 +42,6 @@ namespace NodeCanvas.StateMachines
             return result;
         }
 
-        //just a default orange color
-        public override void OnCreate(Graph assignedGraph) {
-            base.customColor = new Color(1, 0.42f, 0.32f);
-        }
-
         ///<summary>Declares that the state has finished</summary>
         public void Finish() { Finish(Status.Success); }
         public void Finish(bool inSuccess) { Finish(inSuccess ? Status.Success : Status.Failure); }
@@ -162,6 +157,11 @@ namespace NodeCanvas.StateMachines
         ///----------------------------------------------------------------------------------------------
         ///---------------------------------------UNITY EDITOR-------------------------------------------
 #if UNITY_EDITOR
+
+        //just a default orange color
+        public override void OnCreate(Graph assignedGraph) {
+            base.customColor = new Color(1, 0.42f, 0.32f);
+        }
 
         //...
         protected override void OnNodeInspectorGUI() {

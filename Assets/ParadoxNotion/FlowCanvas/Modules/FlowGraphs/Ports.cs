@@ -300,7 +300,6 @@ namespace FlowCanvas
     ///<summary>Base input port for values</summary>
     abstract public class ValueInput : Port
     {
-
         public ValueInput(FlowNode parent, string name, string ID) : base(parent, name, ID) { }
 
         ///<summary>Creates a generic instance of ValueInput</summary>
@@ -325,13 +324,8 @@ namespace FlowCanvas
             return this;
         }
 
-        ///<summary>Convenience method to make the port skip self object assigment if it was a valid candidate in the first place.</summary>
-        public ValueInput SkipSelfInstanceAssignment(bool skip) {
-            this.skipSelfInstanceAssignment = skip;
-            return this;
-        }
-
-        public bool skipSelfInstanceAssignment { get; private set; }
+        public bool skipSelfInstanceAssignment { get; set; }
+        public bool isRequired { get; set; }
         abstract public object defaultValue { get; set; }
         abstract public object serializedValue { get; set; }
         abstract public bool isDefaultValue { get; }
@@ -401,10 +395,22 @@ namespace FlowCanvas
         ///<summary>The port value type which is always of type T</summary>
         public override Type type { get { return typeof(T); } }
 
-        ///<summary>Sets the default and serialized value of the port. Can be used when registering ports.</summary>
+        ///<summary>Convenience method that sets the default and serialized value of the port. Can be used when registering ports.</summary>
         public ValueInput<T> SetDefaultAndSerializedValue(T v) {
             this._defaultValue = v;
             this._value = v;
+            return this;
+        }
+
+        ///<summary>Convenience method to make the port skip self object assigment if it was a valid candidate in the first place. Can be used when registering ports.</summary>
+        public ValueInput<T> SkipSelfInstanceAssignment(bool skip = true) {
+            this.skipSelfInstanceAssignment = skip;
+            return this;
+        }
+
+        ///<summary>Convenience method to flag the value input as required to set which will show an error in UI (useful for nullable only types). Can be used when registering ports.</summary>
+        public ValueInput<T> FlagRequired(bool required = true) {
+            this.isRequired = required;
             return this;
         }
 

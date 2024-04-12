@@ -20,19 +20,17 @@ namespace NodeCanvas.Tasks.Conditions
 
         [GetFromAgent]
         protected Collider2D agentCollider;
-        private RaycastHit2D[] hits;
 
-        protected override string info {
-            get { return "LOS with " + LOSTarget.ToString(); }
-        }
+        protected override string info => "LOS with " + LOSTarget.ToString();
 
         protected override bool OnCheck() {
-            hits = Physics2D.LinecastAll(agent.position, LOSTarget.value.transform.position, layerMask.value);
+            var hits = Physics2D.LinecastAll(agent.position, LOSTarget.value.transform.position, layerMask.value);
             foreach ( var collider in hits.Select(h => h.collider) ) {
                 if ( collider != agentCollider && collider != LOSTarget.value.GetComponent<Collider2D>() ) {
                     return false;
                 }
             }
+            saveDistanceAs.value = Vector2.Distance(LOSTarget.value.transform.position, agent.position);
             return true;
         }
 

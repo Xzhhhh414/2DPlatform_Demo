@@ -54,7 +54,7 @@ namespace NodeCanvas.Editor
             resourcesIcon = Resources.Load("Resources") as Texture2D;
             supportIcon = Resources.Load("Support") as Texture2D;
             communityIcon = Resources.Load("Community") as Texture2D;
-            var size = new Vector2(header != null ? header.width : 800, 455);
+            var size = new Vector2(header != null ? header.width : 800, 435);
             minSize = size;
             maxSize = size;
             FetchWebMessageBoard();
@@ -111,7 +111,7 @@ namespace NodeCanvas.Editor
                 GUI.Label(headerRect, $"\t\t<size=30><b>{packageName}</b></size>", Styles.leftLabel);
             }
 
-            var copyrightText = "<color=#9c9c9c><size=10><b>© 2014-2023 Paradox Notion. All rights reserved.</b></size></color>";
+            var copyrightText = "<color=#9c9c9c><size=10><b>© 2014-2024 Paradox Notion. All rights reserved.</b></size></color>";
             var size = Styles.leftLabel.CalcSize(new GUIContent(copyrightText));
             var copyrightRect = new Rect(92, 69, size.x, size.y);
             GUI.color = Color.black.WithAlpha(0.05f);
@@ -158,10 +158,6 @@ namespace NodeCanvas.Editor
             ///----------------------------------------------------------------------------------------------
 
             GUILayout.FlexibleSpace();
-
-            GUILayout.Label(string.Format("Consider leaving a review to support {0}!", packageName));
-
-            GUILayout.Space(5);
 
             Prefs.hideWelcomeWindow = EditorGUILayout.ToggleLeft("Don't show again.", Prefs.hideWelcomeWindow);
 

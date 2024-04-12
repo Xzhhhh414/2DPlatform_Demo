@@ -25,7 +25,7 @@ namespace NodeCanvas.Tasks.Actions
         }
 
         protected override void OnExecute() {
-            owners = Object.FindObjectsOfType<GraphOwner>();
+            owners = Object.FindObjectsByType<GraphOwner>(FindObjectsSortMode.None);
             receivedOwners = new bool[owners.Length];
         }
 

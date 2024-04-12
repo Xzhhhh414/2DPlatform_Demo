@@ -65,32 +65,22 @@ namespace NodeCanvas.Framework
         }
 
         ///<summary>Editor. Is currently actively relinking?</summary>
-        private bool isRelinkingActive {
-            get { return relinkClickPos != null && relinkSnaped; }
-        }
+        private bool isRelinkingActive => relinkClickPos != null && relinkSnaped;
 
         ///<summary>Editor. Current relinking state</summary>
         public RelinkState relinkState { get; private set; }
 
         ///<summary>Editor. Default Color of connection</summary>
-        virtual public Color defaultColor {
-            get { return StyleSheet.GetStatusColor(status); }
-        }
+        virtual public Color defaultColor => StyleSheet.GetStatusColor(status);
 
         ///<summary>Editor. Will animate connection? By default if status running</summary>
-        virtual public bool animate {
-            get { return status == Status.Running; }
-        }
+        virtual public bool animate => status == Status.Running;
 
         ///<summary>Editor. Defacult size of connection</summary>
-        virtual public float defaultSize {
-            get { return 3f; }
-        }
+        virtual public float defaultSize => 3f;
 
         ///<summary>Editor. End Tip connection style</summary>
-        virtual public TipConnectionStyle tipConnectionStyle {
-            get { return TipConnectionStyle.Circle; }
-        }
+        virtual public TipConnectionStyle tipConnectionStyle => TipConnectionStyle.Circle;
 
         ///----------------------------------------------------------------------------------------------
 
@@ -105,7 +95,7 @@ namespace NodeCanvas.Framework
             _endRect.center = toPos;
             endRect = _endRect;
 
-            ParadoxNotion.CurveUtils.ResolveTangents(fromPos, toPos, sourceNode.rect, targetNode.rect, Prefs.connectionsMLT, graph.flowDirection, out fromTangent, out toTangent);
+            CurveUtils.ResolveTangents(fromPos, toPos, sourceNode.rect, targetNode.rect, Prefs.connectionsMLT, graph.flowDirection, out fromTangent, out toTangent);
             if ( sourceNode == targetNode ) {
                 fromTangent = fromTangent.normalized * 120;
                 toTangent = toTangent.normalized * 120;
@@ -133,8 +123,7 @@ namespace NodeCanvas.Framework
 
             //On click select this connection
             if ( GraphEditorUtility.allowClick && e.type == EventType.MouseDown && e.button == 0 ) {
-                float norm;
-                var onConnection = ParadoxNotion.CurveUtils.IsPosAlongCurve(fromPos, toPos, fromTangent, toTangent, e.mousePosition, out norm);
+                var onConnection = CurveUtils.IsPosAlongCurve(fromPos, toPos, fromTangent, toTangent, e.mousePosition, out float norm);
                 var onStart = startRect.Contains(e.mousePosition);
                 var onEnd = endRect.Contains(e.mousePosition);
                 var onCenter = centerRect.Contains(e.mousePosition);
@@ -170,7 +159,7 @@ namespace NodeCanvas.Framework
                 }
             }
 
-            if ( GraphEditorUtility.allowClick && e.type == EventType.MouseUp && e.button == 1 && centerRect.Contains(e.mousePosition) ) {
+            if ( GraphEditorUtility.allowClick && e.type == EventType.ContextClick && e.button == 1 && centerRect.Contains(e.mousePosition) ) {
                 GraphEditorUtility.PostGUI += () => { GetConnectionMenu().ShowAsContext(); };
                 e.Use();
             }
@@ -198,7 +187,7 @@ namespace NodeCanvas.Framework
                 if ( relinkState == RelinkState.Target ) {
                     toPos = Event.current.mousePosition;
                 }
-                ParadoxNotion.CurveUtils.ResolveTangents(fromPos, toPos, Prefs.connectionsMLT, graph.flowDirection, out fromTangent, out toTangent);
+                CurveUtils.ResolveTangents(fromPos, toPos, Prefs.connectionsMLT, graph.flowDirection, out fromTangent, out toTangent);
                 size = defaultSize;
             }
 
@@ -301,7 +290,7 @@ namespace NodeCanvas.Framework
                     packetColor.a = norm * ( deltaTimeSinceChange / ( STATUS_BLINK_DURATION + 0.25f ) );
 
                     var rect = new Rect(0, 0, pSize, pSize);
-                    rect.center = ParadoxNotion.CurveUtils.GetPosAlongCurve(fromPos, toPos, fromTangent, toTangent, normPos); ;
+                    rect.center = CurveUtils.GetPosAlongCurve(fromPos, toPos, fromTangent, toTangent, normPos); ;
                     GUI.color = packetColor;
                     GUI.DrawTexture(rect, StyleSheet.circle);
                     GUI.color = Color.white;
@@ -357,8 +346,7 @@ namespace NodeCanvas.Framework
             menu.AddItem(new GUIContent(infoExpanded ? "Collapse Info" : "Expand Info"), false, () => { infoExpanded = !infoExpanded; });
             menu.AddItem(new GUIContent(isActive ? "Disable" : "Enable"), false, () => { isActive = !isActive; });
 
-            var assignable = this as ITaskAssignable;
-            if ( assignable != null ) {
+            if ( this is ITaskAssignable assignable ) {
 
                 if ( assignable.task != null ) {
                     menu.AddItem(new GUIContent("Copy Assigned Condition"), false, () => { CopyBuffer.Set<Task>(assignable.task); });

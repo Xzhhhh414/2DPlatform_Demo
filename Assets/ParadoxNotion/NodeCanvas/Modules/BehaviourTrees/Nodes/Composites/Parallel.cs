@@ -106,6 +106,14 @@ namespace NodeCanvas.BehaviourTrees
 
 #if UNITY_EDITOR
 
+        public override string GetConnectionInfo(int i) {
+            if ( dynamic && status == Status.Running ) {
+                return finishedConnections[i] ? "Repeating" : null;
+            }
+            return null;
+        }
+
+
         protected override void OnNodeGUI() {
             GUILayout.Label(( dynamic ? "<b>REPEAT</b>\n" : "" ) + policy.ToString().SplitCamelCase());
         }

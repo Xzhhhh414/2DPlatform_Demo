@@ -44,8 +44,8 @@ namespace NodeCanvas.Editor
         //...
         void Gather() {
 
-            EditorGUIUtility.keyboardControl = 0;
-            EditorGUIUtility.hotControl = 0;
+            GUIUtility.keyboardControl = 0;
+            GUIUtility.hotControl = 0;
 
             GatherRecoverables();
             GatherReflected();
@@ -61,8 +61,7 @@ namespace NodeCanvas.Editor
             var metaGraph = graph.GetFlatMetaGraph();
             var recoverables = metaGraph.GetAllChildrenReferencesOfType<IMissingRecoverable>();
             foreach ( var recoverable in recoverables ) {
-                List<IMissingRecoverable> collection;
-                if ( !recoverablesMap.TryGetValue(recoverable.missingType, out collection) ) {
+                if ( !recoverablesMap.TryGetValue(recoverable.missingType, out List<IMissingRecoverable> collection) ) {
                     collection = new List<IMissingRecoverable>();
                     recoverablesMap[recoverable.missingType] = collection;
                     recoverableChangesMap[recoverable.missingType] = recoverable.missingType;
@@ -81,11 +80,9 @@ namespace NodeCanvas.Editor
 
         //...
         void DoCollect(object o, fsData d) {
-            if ( o is ISerializedReflectedInfo ) {
-                var reflect = (ISerializedReflectedInfo)o;
+            if ( o is ISerializedReflectedInfo reflect ) {
                 if ( reflect.AsMemberInfo() == null ) {
-                    List<ISerializedReflectedInfo> collection;
-                    if ( !reflectedMap.TryGetValue(reflect.AsString(), out collection) ) {
+                    if ( !reflectedMap.TryGetValue(reflect.AsString(), out List<ISerializedReflectedInfo> collection) ) {
                         collection = new List<ISerializedReflectedInfo>();
                         reflectedMap[reflect.AsString()] = collection;
                         reflectedChangesMap[reflect.AsString()] = d;
@@ -102,8 +99,7 @@ namespace NodeCanvas.Editor
             var graph = GraphEditor.currentGraph;
             foreach ( var missingParameter in graph.GetDefinedParameters().Where(p => p.varRef == null && !p.isPresumedDynamic) ) {
                 var key = string.Format("{0}({1})", missingParameter.name, missingParameter.varType.Name);
-                List<BBParameter> collection;
-                if ( !missingParametersMap.TryGetValue(key, out collection) ) {
+                if ( !missingParametersMap.TryGetValue(key, out List<BBParameter> collection) ) {
                     collection = new List<BBParameter>();
                     var fakeParam = new Framework.Internal.BBObjectParameter(missingParameter.varType);
                     fakeParam.name = missingParameter.name;
@@ -139,6 +135,9 @@ namespace NodeCanvas.Editor
                 GraphEditor.currentGraph.SelfSerialize();
                 GraphEditor.currentGraph.SelfDeserialize();
                 GraphEditor.currentGraph.Validate();
+
+                UndoUtility.SetDirty(GraphEditor.currentGraph);
+                AssetDatabase.SaveAssets();
                 Gather();
             }
         }

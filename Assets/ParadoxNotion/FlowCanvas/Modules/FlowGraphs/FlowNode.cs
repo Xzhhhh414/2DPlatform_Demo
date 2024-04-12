@@ -1002,6 +1002,10 @@ namespace FlowCanvas
                 if ( port.type == typeof(string) ) {
                     labelString = labelString.CapLength(20);
                 }
+                //override required
+                if ( ( port as ValueInput ).isRequired && value == null ) {
+                    labelString = "<b><color=#ff3300>* REQUIRED *</color></b>";
+                }
                 //show tip label
                 if ( !string.IsNullOrEmpty(labelString) ) {
                     var size = StyleSheet.labelOnCanvas.CalcSize(EditorUtils.GetTempContent(labelString));
@@ -1063,6 +1067,7 @@ namespace FlowCanvas
         //     	});
         //     }
         // }
+
 
         //Draw all ports in order
         void DrawNodePorts() {
@@ -1219,6 +1224,10 @@ namespace FlowCanvas
                 }
                 var serializationInfo = new InspectedFieldInfo(graph, null, null, null);
                 input.serializedValue = EditorUtils.ReflectedFieldInspector(input.displayName, input.serializedValue, input.type, serializationInfo);
+
+                if ( input.isRequired && input.serializedValue == null ) {
+                    EditorUtils.MarkLastFieldError("This input port is required to be assigned or be connected.");
+                }
             }
         }
 

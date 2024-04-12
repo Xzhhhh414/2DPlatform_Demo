@@ -18,7 +18,7 @@ namespace NodeCanvas.Tasks.Conditions
         }
 
         protected override bool OnCheck() {
-            return variable.value == null;
+            return ParadoxNotion.ObjectUtils.AnyEquals(variable.value, null);
         }
     }
 }

@@ -22,7 +22,7 @@ namespace NodeCanvas.Tasks.Actions
 
         protected override void OnExecute() {
 
-            var objects = Object.FindObjectsOfType<T>();
+            var objects = Object.FindObjectsByType<T>(FindObjectsSortMode.None);
             if ( objects.Length == 0 ) {
                 EndAction(false);
                 return;

@@ -61,7 +61,7 @@ namespace ParadoxNotion
 
         ///<summary>Return all GameObjects within specified LayerMask, optionaly excluding specified GameObject</summary>
         public static IEnumerable<GameObject> FindGameObjectsWithinLayerMask(LayerMask mask, GameObject exclude = null) {
-            return UnityEngine.Object.FindObjectsOfType<GameObject>().Where(x => x != exclude && x.IsInLayerMask(mask));
+            return UnityEngine.Object.FindObjectsByType<GameObject>(FindObjectsSortMode.None).Where(x => x != exclude && x.IsInLayerMask(mask));
         }
 
         ///<summary>Return if GameObject is within specified LayerMask</summary>
