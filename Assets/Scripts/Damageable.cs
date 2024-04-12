@@ -85,6 +85,15 @@ public class Damageable : MonoBehaviour
         }
     }
 
+    public bool IsBlocking
+    {
+        get
+        {
+            return animator.GetBool(AnimationStrings.isBlocking);
+        }
+    }
+
+
 
 
     private void Awake()
@@ -109,7 +118,7 @@ public class Damageable : MonoBehaviour
 
     public bool Hit(int damage,Vector2 knockback) 
     {
-        if (IsAlive && !isInvincible) 
+        if (IsAlive && !isInvincible && !IsBlocking) 
         {
             Health -= damage;
             isInvincible = true;
@@ -120,6 +129,11 @@ public class Damageable : MonoBehaviour
             CharacterEvents.characterDamaged.Invoke(gameObject, damage);
 
             return true;
+        }
+        if (IsBlocking)
+        {
+            animator.SetTrigger(AnimationStrings.skill01CounterAtk);
+            return false;
         }
 
         return false;
