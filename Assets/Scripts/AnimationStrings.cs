@@ -21,6 +21,7 @@ internal class AnimationStrings
     internal static string hitTrigger = "hit";
     internal static string lockVelocity = "lockVelocity";
     internal static string attackCooldown = "attackCooldown";
-    internal static string skill01Trigger = "skill01Trigger";
+    internal static string skill01Tap = "skill01Tap";
     internal static string skill01Cooldown = "skill01Cooldown";
+    internal static string skill01Release = "skill01Release";
 }

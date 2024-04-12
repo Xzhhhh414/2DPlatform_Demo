@@ -157,6 +157,8 @@ public class PlayerController : MonoBehaviour
         {
             Skill01Cooldown -= Time.deltaTime;
         }
+
+
     }
     private void FixedUpdate()
     {
@@ -229,11 +231,19 @@ public class PlayerController : MonoBehaviour
 
     public void OnSkill01(InputAction.CallbackContext context)
     {
-        if (context.started && touchingDirections.IsGrounded && Skill01Cooldown <= 0)
+        animator.ResetTrigger(AnimationStrings.skill01Release);
+
+        if (context.started && Skill01Cooldown <= 0)
         {
-            animator.SetTrigger(AnimationStrings.skill01Trigger);
-            SpellSkill01.Invoke();
-  
+            animator.SetTrigger(AnimationStrings.skill01Tap);
+            SpellSkill01.Invoke();  
+        }
+        
+        if (context.canceled)
+        {
+            animator.SetTrigger(AnimationStrings.skill01Release);
+            //Debug.Log("OnSkill01 Released====================================");
+
         }
 
     }
