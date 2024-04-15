@@ -121,15 +121,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: SnowWhite_AirAttack_01_Frame_0
     originalName: 
-    pivot: {x: 0.72, y: -0.06451613}
+    pivot: {x: 0.71875, y: -0.025641028}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 479
-      y: 4
-      width: 25
-      height: 31
+      x: 476
+      y: 230
+      width: 32
+      height: 39
     spriteID: 10efac043d34d0040b769881565f5073
     spriteBone: []
     spriteOutline: []
@@ -138,18 +138,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 467, y: 2}
+    uvTransform: {x: 476, y: 230}
   - name: SnowWhite_AirAttack_01_Frame_1
     originalName: 
-    pivot: {x: 0.77272725, y: -0.17857143}
+    pivot: {x: 0.77777785, y: -0.1388889}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 426
-      y: 206
-      width: 22
-      height: 28
+      x: 477
+      y: 284
+      width: 27
+      height: 36
     spriteID: 97d8c1b7866b98c4596500036fabf754
     spriteBone: []
     spriteOutline: []
@@ -158,18 +158,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 413, y: 201}
+    uvTransform: {x: 477, y: 284}
   - name: SnowWhite_AirAttack_01_Frame_2
     originalName: 
-    pivot: {x: 0.19444445, y: -0.08108108}
+    pivot: {x: 0.17073168, y: -0.075}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 426
-      y: 117
-      width: 36
-      height: 37
+      x: 4
+      y: 343
+      width: 41
+      height: 40
     spriteID: a75d2d2c56e550f4091b3c083f58ecb4
     spriteBone: []
     spriteOutline: []
@@ -178,18 +178,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 426, y: 117}
+    uvTransform: {x: 4, y: 343}
   - name: SnowWhite_AirAttack_01_Frame_3
     originalName: 
-    pivot: {x: 0.22222221, y: -0.11111112}
+    pivot: {x: 0.16279067, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 426
-      y: 162
-      width: 36
-      height: 36
+      y: 284
+      width: 43
+      height: 42
     spriteID: acc637bef09179445a48e6bec11bcc22
     spriteBone: []
     spriteOutline: []
@@ -198,18 +198,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 426, y: 162}
+    uvTransform: {x: 426, y: 284}
   - name: SnowWhite_AirAttack_01_Frame_4
     originalName: 
-    pivot: {x: 0.37777779, y: -0.11111112}
+    pivot: {x: 0.23809525, y: -0.04347826}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 426
-      y: 4
-      width: 45
-      height: 36
+      y: 230
+      width: 42
+      height: 46
     spriteID: 17fcdc8e44692d7439283c1ffa71162c
     spriteBone: []
     spriteOutline: []
@@ -218,18 +218,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 413, y: 0}
+    uvTransform: {x: 426, y: 230}
   - name: SnowWhite_AirAttack_01_Frame_5
     originalName: 
-    pivot: {x: 0.37777779, y: -0.11111112}
+    pivot: {x: 0.34693876, y: -0.04347826}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 426
-      y: 48
-      width: 45
-      height: 36
+      y: 171
+      width: 49
+      height: 46
     spriteID: 55f04593d8e050448ac8cc2135391417
     spriteBone: []
     spriteOutline: []
@@ -238,18 +238,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 413, y: 44}
+    uvTransform: {x: 426, y: 171}
   - name: SnowWhite_AirAttack_01_Frame_6
     originalName: 
-    pivot: {x: 0.04347826, y: 0.7047619}
+    pivot: {x: 0.38461542, y: -0.04347826}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 4
-      width: 414
-      height: 105
+      x: 426
+      y: 58
+      width: 52
+      height: 46
     spriteID: 8f6a1ffad099ed4478a3d9950e3f3915
     spriteBone: []
     spriteOutline: []
@@ -258,18 +258,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -8, y: 4}
+    uvTransform: {x: 426, y: 58}
   - name: SnowWhite_AirAttack_01_Frame_7
     originalName: 
-    pivot: {x: 0.04347826, y: 0.7047619}
+    pivot: {x: 0.38461542, y: -0.04347826}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
+      x: 426
       y: 117
-      width: 414
-      height: 105
+      width: 52
+      height: 46
     spriteID: 6f29f9f8189b14547857a2ac737c0671
     spriteBone: []
     spriteOutline: []
@@ -278,18 +278,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -8, y: 117}
+    uvTransform: {x: 426, y: 117}
   - name: SnowWhite_AirAttack_01_Frame_8
     originalName: 
-    pivot: {x: 0.56, y: -0.4347826}
+    pivot: {x: 0.39622644, y: -0.04347826}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 479
-      y: 48
-      width: 25
-      height: 23
+      x: 426
+      y: 4
+      width: 53
+      height: 46
     spriteID: 1c352dab5264aaa44b6c6769bd4c83b7
     spriteBone: []
     spriteOutline: []
@@ -298,18 +298,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 463, y: 38}
+    uvTransform: {x: 426, y: 4}
   - name: SnowWhite_AirAttack_01_Frame_9
     originalName: 
-    pivot: {x: 0.42105263, y: -0.47619048}
+    pivot: {x: 0.05797101, y: 0.62857145}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 479
-      y: 79
-      width: 19
-      height: 21
+      x: 4
+      y: 4
+      width: 414
+      height: 105
     spriteID: ac7636a03ec46854f9f6fb14d85defa4
     spriteBone: []
     spriteOutline: []
@@ -318,7 +318,167 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 457, y: 69}
+    uvTransform: {x: 4, y: 4}
+  - name: SnowWhite_AirAttack_01_Frame_10
+    originalName: 
+    pivot: {x: 0.05797101, y: 0.62857145}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 117
+      width: 414
+      height: 105
+    spriteID: a989ae3a132021a4ea6058c4ea9f2ebe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 117}
+  - name: SnowWhite_AirAttack_01_Frame_11
+    originalName: 
+    pivot: {x: 0.05797101, y: 0.62857145}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 230
+      width: 414
+      height: 105
+    spriteID: b9a55980e7c0a824ea19071132bab274
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 230}
+  - name: SnowWhite_AirAttack_01_Frame_12
+    originalName: 
+    pivot: {x: 0.64705884, y: -0.23333333}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 53
+      y: 343
+      width: 34
+      height: 30
+    spriteID: ddcf3d3782cdcbb42bbef32b382df48f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 53, y: 343}
+  - name: SnowWhite_AirAttack_01_Frame_13
+    originalName: 
+    pivot: {x: 0.64705884, y: -0.2758621}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 95
+      y: 343
+      width: 34
+      height: 29
+    spriteID: e69ab9717fd869b4d87b8a6bd41bc49a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 95, y: 343}
+  - name: SnowWhite_AirAttack_01_Frame_14
+    originalName: 
+    pivot: {x: 0.50000006, y: -0.37931037}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 137
+      y: 343
+      width: 30
+      height: 29
+    spriteID: 25efccbc4aba6194f8c377b94972f3e6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 137, y: 343}
+  - name: SnowWhite_AirAttack_01_Frame_15
+    originalName: 
+    pivot: {x: 0.4642857, y: -0.39285716}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 175
+      y: 343
+      width: 28
+      height: 28
+    spriteID: ae4cbf6df7acc4e46b0159ac48b48c0e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 175, y: 343}
+  - name: SnowWhite_AirAttack_01_Frame_16
+    originalName: 
+    pivot: {x: 0.40000004, y: -0.39285716}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 483
+      y: 171
+      width: 25
+      height: 28
+    spriteID: e1a8f7e6e795f77408700c52454314a3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 483, y: 171}
+  - name: SnowWhite_AirAttack_01_Frame_17
+    originalName: 
+    pivot: {x: 0.30000004, y: -0.33333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 487
+      y: 4
+      width: 20
+      height: 30
+    spriteID: 2037a02d72b372b43bd7514c2ad7b4bf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 487, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -331,86 +491,150 @@ ScriptedImporter:
     - name: SnowWhite_AirAttack_01_Frame_0
       frameIndex: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 60
-        height: 40
+        x: 13
+        y: 1
+        width: 32
+        height: 39
       spriteId: 10efac043d34d0040b769881565f5073
     - name: SnowWhite_AirAttack_01_Frame_1
       frameIndex: 1
       cellRect:
-        x: 0
-        y: 0
-        width: 60
-        height: 40
+        x: 15
+        y: 5
+        width: 27
+        height: 36
       spriteId: 97d8c1b7866b98c4596500036fabf754
     - name: SnowWhite_AirAttack_01_Frame_2
       frameIndex: 2
       cellRect:
-        x: 23
+        x: 29
         y: 3
-        width: 36
-        height: 37
+        width: 41
+        height: 40
       spriteId: a75d2d2c56e550f4091b3c083f58ecb4
     - name: SnowWhite_AirAttack_01_Frame_3
       frameIndex: 3
       cellRect:
-        x: 22
-        y: 4
-        width: 36
-        height: 36
+        x: 29
+        y: 0
+        width: 43
+        height: 42
       spriteId: acc637bef09179445a48e6bec11bcc22
     - name: SnowWhite_AirAttack_01_Frame_4
       frameIndex: 4
       cellRect:
-        x: 0
-        y: 0
-        width: 60
-        height: 40
+        x: 26
+        y: 2
+        width: 42
+        height: 46
       spriteId: 17fcdc8e44692d7439283c1ffa71162c
     - name: SnowWhite_AirAttack_01_Frame_5
       frameIndex: 5
       cellRect:
-        x: 0
-        y: 0
-        width: 60
-        height: 40
+        x: 19
+        y: 2
+        width: 49
+        height: 46
       spriteId: 55f04593d8e050448ac8cc2135391417
     - name: SnowWhite_AirAttack_01_Frame_6
       frameIndex: 6
       cellRect:
-        x: 0
-        y: -74
-        width: 426
-        height: 114
+        x: 16
+        y: 2
+        width: 52
+        height: 46
       spriteId: 8f6a1ffad099ed4478a3d9950e3f3915
     - name: SnowWhite_AirAttack_01_Frame_7
       frameIndex: 7
       cellRect:
-        x: 0
-        y: -74
-        width: 426
-        height: 114
+        x: 16
+        y: 2
+        width: 52
+        height: 46
       spriteId: 6f29f9f8189b14547857a2ac737c0671
     - name: SnowWhite_AirAttack_01_Frame_8
       frameIndex: 8
       cellRect:
-        x: 0
-        y: 0
-        width: 60
-        height: 40
+        x: 15
+        y: 2
+        width: 53
+        height: 46
       spriteId: 1c352dab5264aaa44b6c6769bd4c83b7
     - name: SnowWhite_AirAttack_01_Frame_9
       frameIndex: 9
       cellRect:
-        x: 0
-        y: 0
-        width: 60
-        height: 40
+        x: 12
+        y: -66
+        width: 414
+        height: 105
       spriteId: ac7636a03ec46854f9f6fb14d85defa4
+    - name: SnowWhite_AirAttack_01_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 12
+        y: -66
+        width: 414
+        height: 105
+      spriteId: a989ae3a132021a4ea6058c4ea9f2ebe
+    - name: SnowWhite_AirAttack_01_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 12
+        y: -66
+        width: 414
+        height: 105
+      spriteId: b9a55980e7c0a824ea19071132bab274
+    - name: SnowWhite_AirAttack_01_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 14
+        y: 7
+        width: 34
+        height: 30
+      spriteId: ddcf3d3782cdcbb42bbef32b382df48f
+    - name: SnowWhite_AirAttack_01_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 14
+        y: 8
+        width: 34
+        height: 29
+      spriteId: e69ab9717fd869b4d87b8a6bd41bc49a
+    - name: SnowWhite_AirAttack_01_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 21
+        y: 11
+        width: 30
+        height: 29
+      spriteId: 25efccbc4aba6194f8c377b94972f3e6
+    - name: SnowWhite_AirAttack_01_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 23
+        y: 11
+        width: 28
+        height: 28
+      spriteId: ae4cbf6df7acc4e46b0159ac48b48c0e
+    - name: SnowWhite_AirAttack_01_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 26
+        y: 11
+        width: 25
+        height: 28
+      spriteId: e1a8f7e6e795f77408700c52454314a3
+    - name: SnowWhite_AirAttack_01_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 30
+        y: 10
+        width: 20
+        height: 30
+      spriteId: 2037a02d72b372b43bd7514c2ad7b4bf
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 60, y: 40}
+  canvasSize: {x: 72, y: 48}
