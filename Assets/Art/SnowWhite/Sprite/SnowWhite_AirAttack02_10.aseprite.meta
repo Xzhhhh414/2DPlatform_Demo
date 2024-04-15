@@ -126,8 +126,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 185
-      y: 139
+      x: 4
+      y: 186
       width: 27
       height: 32
     spriteID: e38ddfdd94dc4204a854416eef7f50a3
@@ -138,7 +138,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 162, y: 128}
+    uvTransform: {x: -19, y: 175}
   - name: SnowWhite_AirAttack02_10_Frame_1
     originalName: 
     pivot: {x: 0.31914896, y: -0.2647059}
@@ -146,7 +146,7 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 118
+      x: 110
       y: 97
       width: 47
       height: 34
@@ -158,7 +158,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 97, y: 88}
+    uvTransform: {x: 89, y: 88}
   - name: SnowWhite_AirAttack02_10_Frame_2
     originalName: 
     pivot: {x: 0.30612245, y: -0.27272728}
@@ -166,8 +166,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 61
-      y: 97
+      x: 173
+      y: 51
       width: 49
       height: 33
     spriteID: 9289378f617558f4387e9d32074a1a49
@@ -178,7 +178,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 40, y: 88}
+    uvTransform: {x: 152, y: 42}
   - name: SnowWhite_AirAttack02_10_Frame_3
     originalName: 
     pivot: {x: 0.30612245, y: -0.29411766}
@@ -186,8 +186,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 97
+      x: 116
+      y: 51
       width: 49
       height: 34
     spriteID: edb8c46a0e97daa46bdd3ab9b36882e8
@@ -198,7 +198,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -17, y: 87}
+    uvTransform: {x: 95, y: 41}
   - name: SnowWhite_AirAttack02_10_Frame_4
     originalName: 
     pivot: {x: 0.2916667, y: -0.26315787}
@@ -207,7 +207,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
+      y: 51
       width: 48
       height: 38
     spriteID: 3fa4ec4b60f719542b01bac9145b4b79
@@ -218,7 +218,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -18, y: -6}
+    uvTransform: {x: -18, y: 41}
   - name: SnowWhite_AirAttack02_10_Frame_5
     originalName: 
     pivot: {x: 0.2916667, y: -0.26315787}
@@ -227,7 +227,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 60
-      y: 4
+      y: 51
       width: 48
       height: 38
     spriteID: 74035ae0c1010914ebdc9f1355cd60b1
@@ -238,7 +238,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 38, y: -6}
+    uvTransform: {x: 38, y: 41}
   - name: SnowWhite_AirAttack02_10_Frame_6
     originalName: 
     pivot: {x: 0.4166667, y: -0.26315787}
@@ -246,9 +246,9 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 169
+      x: 178
       y: 4
-      width: 44
+      width: 49
       height: 38
     spriteID: 416a2595d4fe58e4eb8b508bfa11c0f3
     spriteBone: []
@@ -258,7 +258,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 148, y: -6}
+    uvTransform: {x: 157, y: -6}
   - name: SnowWhite_AirAttack02_10_Frame_7
     originalName: 
     pivot: {x: 0.4324324, y: -0.26315787}
@@ -266,9 +266,9 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 163
-      y: 50
-      width: 45
+      x: 62
+      y: 4
+      width: 50
       height: 38
     spriteID: 9eec8805650b6844bbf0af546457cde4
     spriteBone: []
@@ -278,7 +278,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 143, y: 40}
+    uvTransform: {x: 42, y: -6}
   - name: SnowWhite_AirAttack02_10_Frame_8
     originalName: 
     pivot: {x: 0.4324324, y: -0.26315787}
@@ -286,9 +286,9 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 116
+      x: 120
       y: 4
-      width: 45
+      width: 50
       height: 38
     spriteID: 27b61980544b756439e194cd5d14950b
     spriteBone: []
@@ -298,7 +298,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 96, y: -6}
+    uvTransform: {x: 100, y: -6}
   - name: SnowWhite_AirAttack02_10_Frame_9
     originalName: 
     pivot: {x: 0.5517241, y: -0.25714287}
@@ -307,8 +307,8 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 50
-      width: 45
+      y: 4
+      width: 50
       height: 39
     spriteID: f457511b42185fb4cb2d4b2a9d9f41d5
     spriteBone: []
@@ -318,7 +318,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -16, y: 41}
+    uvTransform: {x: -16, y: -5}
   - name: SnowWhite_AirAttack02_10_Frame_10
     originalName: 
     pivot: {x: 0.5517241, y: -0.25714287}
@@ -326,8 +326,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 57
-      y: 50
+      x: 4
+      y: 97
       width: 45
       height: 39
     spriteID: 3fa06749154183e4db2b443e8b104b34
@@ -338,7 +338,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 37, y: 41}
+    uvTransform: {x: -16, y: 88}
   - name: SnowWhite_AirAttack02_10_Frame_11
     originalName: 
     pivot: {x: 0.5333333, y: -0.25714287}
@@ -346,8 +346,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 110
-      y: 50
+      x: 57
+      y: 97
       width: 45
       height: 39
     spriteID: 8433b1bfc4a00ab4cb9e381a4aa3c93a
@@ -358,7 +358,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 90, y: 41}
+    uvTransform: {x: 37, y: 88}
   - name: SnowWhite_AirAttack02_10_Frame_12
     originalName: 
     pivot: {x: 0.5333333, y: -0.2647059}
@@ -366,8 +366,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 221
-      y: 4
+      x: 165
+      y: 97
       width: 30
       height: 34
     spriteID: c0571b3d4bf5997489a243aad3fd252f
@@ -378,7 +378,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 201, y: -5}
+    uvTransform: {x: 145, y: 88}
   - name: SnowWhite_AirAttack02_10_Frame_13
     originalName: 
     pivot: {x: 0.51724136, y: -0.2647059}
@@ -386,8 +386,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 216
-      y: 50
+      x: 203
+      y: 97
       width: 29
       height: 34
     spriteID: 237d52375aca61b48847de48ee8d919d
@@ -398,7 +398,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 195, y: 41}
+    uvTransform: {x: 182, y: 88}
   - name: SnowWhite_AirAttack02_10_Frame_14
     originalName: 
     pivot: {x: 0.51724136, y: -0.2647059}
@@ -406,8 +406,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 173
-      y: 97
+      x: 4
+      y: 144
       width: 29
       height: 34
     spriteID: faa26863a03230f49bf2ed93144cc960
@@ -418,7 +418,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 152, y: 88}
+    uvTransform: {x: -17, y: 135}
   - name: SnowWhite_AirAttack02_10_Frame_15
     originalName: 
     pivot: {x: 0.51724136, y: -0.27272728}
@@ -426,8 +426,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 210
-      y: 97
+      x: 41
+      y: 144
       width: 29
       height: 33
     spriteID: 7e46dc06f91d8f64e83fad6d7475cf53
@@ -438,7 +438,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 189, y: 88}
+    uvTransform: {x: 20, y: 135}
   - name: SnowWhite_AirAttack02_10_Frame_16
     originalName: 
     pivot: {x: 0.51724136, y: -0.27272728}
@@ -446,8 +446,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 139
+      x: 78
+      y: 144
       width: 29
       height: 33
     spriteID: d11d0b440a5ec8148af33bb4be27d5f0
@@ -458,7 +458,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -17, y: 130}
+    uvTransform: {x: 57, y: 135}
   - name: SnowWhite_AirAttack02_10_Frame_17
     originalName: 
     pivot: {x: 0.5, y: -0.27272728}
@@ -466,8 +466,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 41
-      y: 139
+      x: 115
+      y: 144
       width: 28
       height: 33
     spriteID: 5cb819b66cebe884ab8aad533a46028d
@@ -478,7 +478,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 19, y: 130}
+    uvTransform: {x: 93, y: 135}
   - name: SnowWhite_AirAttack02_10_Frame_18
     originalName: 
     pivot: {x: 0.5, y: -0.28125}
@@ -486,8 +486,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 113
-      y: 139
+      x: 187
+      y: 144
       width: 28
       height: 32
     spriteID: d4dcad0f0e175f74083b83f98bae3299
@@ -498,7 +498,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 91, y: 130}
+    uvTransform: {x: 165, y: 135}
   - name: SnowWhite_AirAttack02_10_Frame_19
     originalName: 
     pivot: {x: 0.5, y: -0.28125}
@@ -506,8 +506,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 149
-      y: 139
+      x: 223
+      y: 144
       width: 28
       height: 32
     spriteID: 6f6570a09c92a4c45a7562dd67c59d2a
@@ -518,7 +518,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 127, y: 130}
+    uvTransform: {x: 201, y: 135}
   - name: SnowWhite_AirAttack02_10_Frame_20
     originalName: 
     pivot: {x: 0.5, y: -0.27272728}
@@ -526,8 +526,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 77
-      y: 139
+      x: 151
+      y: 144
       width: 28
       height: 33
     spriteID: 02dd0fa611ba4474c923a310772df086
@@ -538,7 +538,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 55, y: 130}
+    uvTransform: {x: 129, y: 135}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
