@@ -181,28 +181,32 @@ public class PlayerController : MonoBehaviour
         if (IsAlive)
         {
             IsMoving = moveInput != Vector2.zero;
-
-            if (CanChangeDIR)
-            {
-                SetFacingDirection(moveInput);
-            }
-               
+            
+            SetFacingDirection(moveInput);        
+              
         }else
         {
             IsMoving = false;
         }
 
+        if (context.performed)
+        {
+            Debug.Log("长按进来了~~~~~~~~~~~~~~~~~~~~");
+        }
 	}
 
     private void SetFacingDirection(Vector2 moveInput)
     {
-        if (moveInput.x > 0 && !IsFacingRight)
+        if (CanChangeDIR)
         {
-            IsFacingRight = true;
-        }
-        else if (moveInput.x < 0 && IsFacingRight)
-        {
-            IsFacingRight = false;
+            if (moveInput.x > 0 && !IsFacingRight)
+            {
+                IsFacingRight = true;
+            }
+            else if (moveInput.x < 0 && IsFacingRight)
+            {
+                IsFacingRight = false;
+            }
         }
 
     }
