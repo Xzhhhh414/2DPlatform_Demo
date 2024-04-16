@@ -126,7 +126,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
+    public bool CanChangeDIR
+    {
+        get
+        {
+            return animator.GetBool(AnimationStrings.canChangeDIR);
+        }
+    }
 
 
 
@@ -176,7 +182,11 @@ public class PlayerController : MonoBehaviour
         {
             IsMoving = moveInput != Vector2.zero;
 
-            SetFacingDirection(moveInput);
+            if (CanChangeDIR)
+            {
+                SetFacingDirection(moveInput);
+            }
+               
         }else
         {
             IsMoving = false;
@@ -194,7 +204,7 @@ public class PlayerController : MonoBehaviour
         {
             IsFacingRight = false;
         }
-    
+
     }
 
 
