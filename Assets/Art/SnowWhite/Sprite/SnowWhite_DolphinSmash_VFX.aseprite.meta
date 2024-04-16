@@ -121,7 +121,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: SnowWhite_DolphinSmash_VFX_Frame_0
     originalName: 
-    pivot: {x: 0.50000006, y: -0.41071427}
+    pivot: {x: 0.25000003, y: -0.41071427}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -141,7 +141,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 120}
   - name: SnowWhite_DolphinSmash_VFX_Frame_1
     originalName: 
-    pivot: {x: 0.6666666, y: -0.42}
+    pivot: {x: 0.43750003, y: -0.42}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -161,7 +161,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 184}
   - name: SnowWhite_DolphinSmash_VFX_Frame_2
     originalName: 
-    pivot: {x: 0.9047619, y: -0.41071427}
+    pivot: {x: 0.64285713, y: -0.41071427}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -181,7 +181,7 @@ ScriptedImporter:
     uvTransform: {x: 64, y: 62}
   - name: SnowWhite_DolphinSmash_VFX_Frame_3
     originalName: 
-    pivot: {x: 0.57142854, y: -0.48214287}
+    pivot: {x: 0.30952385, y: -0.48214287}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -201,7 +201,7 @@ ScriptedImporter:
     uvTransform: {x: 64, y: 126}
   - name: SnowWhite_DolphinSmash_VFX_Frame_4
     originalName: 
-    pivot: {x: 0.7083333, y: -0.65999997}
+    pivot: {x: 0.47916663, y: -0.65999997}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -221,7 +221,7 @@ ScriptedImporter:
     uvTransform: {x: 64, y: 4}
   - name: SnowWhite_DolphinSmash_VFX_Frame_5
     originalName: 
-    pivot: {x: 0.8095238, y: -0.48214287}
+    pivot: {x: 0.547619, y: -0.48214287}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -241,7 +241,7 @@ ScriptedImporter:
     uvTransform: {x: 64, y: 190}
   - name: SnowWhite_DolphinSmash_VFX_Frame_6
     originalName: 
-    pivot: {x: 0.6923077, y: -0.58}
+    pivot: {x: 0.48076922, y: -0.58}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -261,7 +261,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: SnowWhite_DolphinSmash_VFX_Frame_7
     originalName: 
-    pivot: {x: 0.6923077, y: -0.58}
+    pivot: {x: 0.48076922, y: -0.58}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -291,7 +291,7 @@ ScriptedImporter:
     - name: SnowWhite_DolphinSmash_VFX_Frame_0
       frameIndex: 0
       cellRect:
-        x: 50
+        x: 61
         y: 23
         width: 44
         height: 56
@@ -299,7 +299,7 @@ ScriptedImporter:
     - name: SnowWhite_DolphinSmash_VFX_Frame_1
       frameIndex: 1
       cellRect:
-        x: 40
+        x: 51
         y: 21
         width: 48
         height: 50
@@ -307,7 +307,7 @@ ScriptedImporter:
     - name: SnowWhite_DolphinSmash_VFX_Frame_2
       frameIndex: 2
       cellRect:
-        x: 34
+        x: 45
         y: 23
         width: 42
         height: 56
@@ -315,7 +315,7 @@ ScriptedImporter:
     - name: SnowWhite_DolphinSmash_VFX_Frame_3
       frameIndex: 3
       cellRect:
-        x: 48
+        x: 59
         y: 27
         width: 42
         height: 56
@@ -323,7 +323,7 @@ ScriptedImporter:
     - name: SnowWhite_DolphinSmash_VFX_Frame_4
       frameIndex: 4
       cellRect:
-        x: 38
+        x: 49
         y: 33
         width: 48
         height: 50
@@ -331,7 +331,7 @@ ScriptedImporter:
     - name: SnowWhite_DolphinSmash_VFX_Frame_5
       frameIndex: 5
       cellRect:
-        x: 38
+        x: 49
         y: 27
         width: 42
         height: 56
@@ -339,7 +339,7 @@ ScriptedImporter:
     - name: SnowWhite_DolphinSmash_VFX_Frame_6
       frameIndex: 6
       cellRect:
-        x: 36
+        x: 47
         y: 29
         width: 52
         height: 50
@@ -347,7 +347,7 @@ ScriptedImporter:
     - name: SnowWhite_DolphinSmash_VFX_Frame_7
       frameIndex: 7
       cellRect:
-        x: 36
+        x: 47
         y: 29
         width: 52
         height: 50
