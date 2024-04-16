@@ -1,0 +1,556 @@
+fileFormatVersion: 2
+guid: 7254575a04f4c324aa59e532f36b42fe
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: SnowWhite_DolphinSmash_05_mosaic_Frame_0
+    originalName: 
+    pivot: {x: 0.38095236, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 155
+      width: 42
+      height: 35
+    spriteID: d5a12621ef6702e439b91b726e8e0a7d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 155}
+  - name: SnowWhite_DolphinSmash_05_mosaic_Frame_1
+    originalName: 
+    pivot: {x: 0.4090909, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 117
+      y: 43
+      width: 44
+      height: 33
+    spriteID: 20312549729381242a17003ecc6fa8fa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 117, y: 43}
+  - name: SnowWhite_DolphinSmash_05_mosaic_Frame_2
+    originalName: 
+    pivot: {x: 0.4489796, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 117
+      y: 4
+      width: 49
+      height: 31
+    spriteID: c3b2311f6329eef42b838d9341b224c8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 117, y: 4}
+  - name: SnowWhite_DolphinSmash_05_mosaic_Frame_3
+    originalName: 
+    pivot: {x: 0.38636363, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 117
+      y: 84
+      width: 44
+      height: 32
+    spriteID: 64f6e397479a0b44c9fef4e9a2ce34ad
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 117, y: 84}
+  - name: SnowWhite_DolphinSmash_05_mosaic_Frame_4
+    originalName: 
+    pivot: {x: 0.35714287, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 117
+      y: 124
+      width: 42
+      height: 31
+    spriteID: 3d5bc661a8499164cac77f21e6ef6887
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 117, y: 124}
+  - name: SnowWhite_DolphinSmash_05_mosaic_Frame_5
+    originalName: 
+    pivot: {x: 0.29999998, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 198
+      width: 40
+      height: 34
+    spriteID: 19447b09ff17489429b80245558b8853
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 198}
+  - name: SnowWhite_DolphinSmash_05_mosaic_Frame_6
+    originalName: 
+    pivot: {x: 0.2682927, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 107
+      width: 41
+      height: 40
+    spriteID: c3c3e0dae5cb04344a9b01f561d07e3d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 107}
+  - name: SnowWhite_DolphinSmash_05_mosaic_Frame_7
+    originalName: 
+    pivot: {x: 0.2820513, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 56
+      width: 39
+      height: 43
+    spriteID: 0287b85459d210e4e9851d20a09d7881
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 56}
+  - name: SnowWhite_DolphinSmash_05_mosaic_Frame_8
+    originalName: 
+    pivot: {x: 0.33333334, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 42
+      height: 44
+    spriteID: c5d22492fe78ccd45a57a969fbeb8c04
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: SnowWhite_DolphinSmash_05_mosaic_Frame_9
+    originalName: 
+    pivot: {x: 0.39130434, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 54
+      y: 128
+      width: 46
+      height: 37
+    spriteID: c00ce9dc02011f647b4bdf96ca9718fb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 54, y: 128}
+  - name: SnowWhite_DolphinSmash_05_mosaic_Frame_10
+    originalName: 
+    pivot: {x: 0.4716981, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 54
+      y: 173
+      width: 53
+      height: 32
+    spriteID: 4ac542edefc8d0d40a3dd3653da1c8dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 54, y: 173}
+  - name: SnowWhite_DolphinSmash_05_mosaic_Frame_11
+    originalName: 
+    pivot: {x: 0.4814815, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 54
+      y: 45
+      width: 54
+      height: 33
+    spriteID: ff253ea4bddb110459fbabf07bb8c11c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 54, y: 45}
+  - name: SnowWhite_DolphinSmash_05_mosaic_Frame_12
+    originalName: 
+    pivot: {x: 0.49090907, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 54
+      y: 4
+      width: 55
+      height: 33
+    spriteID: bafcafe1599b2b841aa848139d617090
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 54, y: 4}
+  - name: SnowWhite_DolphinSmash_05_mosaic_Frame_13
+    originalName: 
+    pivot: {x: 0.53846157, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 54
+      y: 86
+      width: 52
+      height: 34
+    spriteID: 34addad1b1ef94c42acfd2cb35a07c76
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 54, y: 86}
+  - name: SnowWhite_DolphinSmash_05_mosaic_Frame_14
+    originalName: 
+    pivot: {x: 0.49090907, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 54
+      y: 213
+      width: 55
+      height: 30
+    spriteID: 10083ff53667a43468b9873afcb0e137
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 54, y: 213}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1869367572
+    name: SnowWhite_DolphinSmash_05_mosaic
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: SnowWhite_DolphinSmash_05_mosaic_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 20
+        y: 0
+        width: 42
+        height: 35
+      spriteId: d5a12621ef6702e439b91b726e8e0a7d
+    - name: SnowWhite_DolphinSmash_05_mosaic_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 18
+        y: 0
+        width: 44
+        height: 33
+      spriteId: 20312549729381242a17003ecc6fa8fa
+    - name: SnowWhite_DolphinSmash_05_mosaic_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 14
+        y: 0
+        width: 49
+        height: 31
+      spriteId: c3b2311f6329eef42b838d9341b224c8
+    - name: SnowWhite_DolphinSmash_05_mosaic_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 19
+        y: 0
+        width: 44
+        height: 32
+      spriteId: 64f6e397479a0b44c9fef4e9a2ce34ad
+    - name: SnowWhite_DolphinSmash_05_mosaic_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 21
+        y: 0
+        width: 42
+        height: 31
+      spriteId: 3d5bc661a8499164cac77f21e6ef6887
+    - name: SnowWhite_DolphinSmash_05_mosaic_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 24
+        y: 0
+        width: 40
+        height: 34
+      spriteId: 19447b09ff17489429b80245558b8853
+    - name: SnowWhite_DolphinSmash_05_mosaic_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 25
+        y: 0
+        width: 41
+        height: 40
+      spriteId: c3c3e0dae5cb04344a9b01f561d07e3d
+    - name: SnowWhite_DolphinSmash_05_mosaic_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 25
+        y: 0
+        width: 39
+        height: 43
+      spriteId: 0287b85459d210e4e9851d20a09d7881
+    - name: SnowWhite_DolphinSmash_05_mosaic_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 22
+        y: 0
+        width: 42
+        height: 44
+      spriteId: c5d22492fe78ccd45a57a969fbeb8c04
+    - name: SnowWhite_DolphinSmash_05_mosaic_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 18
+        y: 0
+        width: 46
+        height: 37
+      spriteId: c00ce9dc02011f647b4bdf96ca9718fb
+    - name: SnowWhite_DolphinSmash_05_mosaic_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 11
+        y: 0
+        width: 53
+        height: 32
+      spriteId: 4ac542edefc8d0d40a3dd3653da1c8dc
+    - name: SnowWhite_DolphinSmash_05_mosaic_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 10
+        y: 0
+        width: 54
+        height: 33
+      spriteId: ff253ea4bddb110459fbabf07bb8c11c
+    - name: SnowWhite_DolphinSmash_05_mosaic_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 9
+        y: 0
+        width: 55
+        height: 33
+      spriteId: bafcafe1599b2b841aa848139d617090
+    - name: SnowWhite_DolphinSmash_05_mosaic_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 8
+        y: 0
+        width: 52
+        height: 34
+      spriteId: 34addad1b1ef94c42acfd2cb35a07c76
+    - name: SnowWhite_DolphinSmash_05_mosaic_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 9
+        y: 0
+        width: 55
+        height: 30
+      spriteId: 10083ff53667a43468b9873afcb0e137
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 72, y: 48}
