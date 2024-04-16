@@ -13066,7 +13066,7 @@ GameObject:
   - component: {fileID: 1272362199}
   - component: {fileID: 1272362198}
   - component: {fileID: 1272362197}
-  - component: {fileID: 1272362196}
+  - component: {fileID: 1272362202}
   m_Layer: 6
   m_Name: JumpGround
   m_TagString: Untagged
@@ -13089,25 +13089,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1545533906}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!253 &1272362196
-BuoyancyEffector2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1272362194}
-  m_Enabled: 1
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_SurfaceLevel: 0
-  m_Density: 6
-  m_LinearDrag: 5
-  m_AngularDrag: 5
-  m_FlowAngle: 180
-  m_FlowMagnitude: 0
-  m_FlowVariation: 0
 --- !u!66 &1272362197
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -14346,6 +14327,26 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!249 &1272362202
+AreaEffector2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272362194}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGlobalAngle: 0
+  m_ForceAngle: 90
+  m_ForceMagnitude: 800
+  m_ForceVariation: 0
+  m_ForceTarget: 0
+  m_Drag: 0
+  m_AngularDrag: 0
 --- !u!1 &1307842185
 GameObject:
   m_ObjectHideFlags: 3
@@ -14451,7 +14452,7 @@ GameObject:
   - component: {fileID: 1367983042}
   m_Layer: 6
   m_Name: OneWayGround
-  m_TagString: Untagged
+  m_TagString: One Way
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25481,6 +25482,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6420420121662775390, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420420121662775390, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
+      propertyPath: m_ActionEvents.Array.data[17].m_ActionId
+      value: ef8f2954-9873-4492-bdf4-d45e1aa89b5e
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420420121662775390, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
+      propertyPath: m_ActionEvents.Array.data[17].m_ActionName
+      value: Player/Down[/Keyboard/s]
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420420121662775390, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
+      propertyPath: m_ActionEvents.Array.data[17].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420420121662775390, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
+      propertyPath: m_ActionEvents.Array.data[17].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420420121662775390, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
+      propertyPath: m_ActionEvents.Array.data[17].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7150571030326940446}
+    - target: {fileID: 6420420121662775390, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
+      propertyPath: m_ActionEvents.Array.data[17].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420420121662775390, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
+      propertyPath: m_ActionEvents.Array.data[17].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420420121662775390, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
+      propertyPath: m_ActionEvents.Array.data[17].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420420121662775390, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
+      propertyPath: m_ActionEvents.Array.data[17].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8198951932485516424, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
       propertyPath: m_LocalPosition.x
       value: 27.17
@@ -25530,6 +25571,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
+--- !u!114 &7150571030326940446 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2999302699537840522, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
+  m_PrefabInstance: {fileID: 7150571030326940445}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0b1cb2a71eae694a8979da9b0aed90c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
