@@ -192,6 +192,16 @@ public class PlayerController : MonoBehaviour
             Skill01Cooldown -= Time.deltaTime;
         }
 
+        if (Skill02Cooldown > 0)
+        {
+            Skill02Cooldown -= Time.deltaTime;
+        }
+
+        if (Skill03Cooldown > 0)
+        {
+            Skill03Cooldown -= Time.deltaTime;
+        }
+
         if (isOnMoveHolding)
         {
             //Debug.Log("OnMoveHolding~~~~~~~~~~~~~~~~~~~~");
