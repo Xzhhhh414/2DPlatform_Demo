@@ -321,7 +321,7 @@ public class PlayerController : MonoBehaviour
  
         if (context.started && Skill02Cooldown <= 0)
         {
-            animator.SetTrigger(AnimationStrings.skill01Tap);
+            animator.SetTrigger(AnimationStrings.skill02Tap);
             SpellSkill02.Invoke();
         }
 
