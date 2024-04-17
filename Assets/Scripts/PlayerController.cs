@@ -12,12 +12,12 @@ public class PlayerController : MonoBehaviour
     public float runSpeed = 8f;
     public float airWalkSpeed = 3f;
     public float jumpImpulse = 10f;
-    Vector2 moveInput;
+    public Vector2 moveInput;
     TouchingDirections touchingDirections;
     Damageable damageable;
 
     public UnityEvent SpellSkill01;
-
+    public bool isOnMoveHolding = false;
 
     public float CurrentMoveSpeed 
     { get
@@ -164,6 +164,11 @@ public class PlayerController : MonoBehaviour
             Skill01Cooldown -= Time.deltaTime;
         }
 
+        if (isOnMoveHolding)
+        {
+            //Debug.Log("OnMoveHolding~~~~~~~~~~~~~~~~~~~~");
+            Moving(moveInput);
+        }
 
     }
     private void FixedUpdate()
@@ -178,22 +183,43 @@ public class PlayerController : MonoBehaviour
 	{
         moveInput = context.ReadValue<Vector2>();
 
+        if (context.started)
+        {
+            //Debug.Log("started~~~~~~~~~~~~~~~~~~~~");
+            Moving(moveInput);
+            isOnMoveHolding = true;
+        }
+
+         if (context.performed)
+        {
+            isOnMoveHolding = true;
+            //Debug.Log("performed~~~~~~~~~~~~~~~~~~~~");
+        }
+
+        if (context.canceled)
+        {
+            //Debug.Log("canceled~~~~~~~~~~~~~~~~~~~~");
+            isOnMoveHolding = false;
+            Moving(moveInput);
+        }
+    }
+
+    private void Moving(Vector2 moveInput)
+    {
         if (IsAlive)
         {
             IsMoving = moveInput != Vector2.zero;
-            
-            SetFacingDirection(moveInput);        
-              
-        }else
+
+            SetFacingDirection(moveInput);
+
+        }
+        else
         {
             IsMoving = false;
         }
 
-        if (context.performed)
-        {
-            Debug.Log("长按进来了~~~~~~~~~~~~~~~~~~~~");
-        }
-	}
+    }
+
 
     private void SetFacingDirection(Vector2 moveInput)
     {
