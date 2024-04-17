@@ -68,10 +68,18 @@ public class Damageable : MonoBehaviour
     }
 
     [SerializeField]
-    private bool isInvincible = false;
+    private bool hitInterval = false;
 
     private float timeSinceHit = 0;
-    public float invincibilityTime = 0.25f;
+    public float hitIntervalTime = 0.25f;
+
+    public bool IsInvincible
+    {
+        get
+        {
+            return animator.GetBool(AnimationStrings.isInvincible);
+        }
+    }
 
     public bool LockVelocity
     {
@@ -103,11 +111,12 @@ public class Damageable : MonoBehaviour
 
     private void Update()
     {
-        if (isInvincible)
+
+        if (hitInterval)
         {
-            if (timeSinceHit > invincibilityTime)
+            if (timeSinceHit > hitIntervalTime)
             {
-                isInvincible = false;
+                hitInterval = false;
                 timeSinceHit = 0;
             }
 
@@ -118,10 +127,10 @@ public class Damageable : MonoBehaviour
 
     public bool Hit(int damage,Vector2 knockback) 
     {
-        if (IsAlive && !isInvincible && !IsBlocking) 
+        if (IsAlive && !hitInterval && !IsBlocking && !IsInvincible) 
         {
             Health -= damage;
-            isInvincible = true;
+            hitInterval = true;
 
             animator.SetTrigger(AnimationStrings.hitTrigger);
             LockVelocity = true;
