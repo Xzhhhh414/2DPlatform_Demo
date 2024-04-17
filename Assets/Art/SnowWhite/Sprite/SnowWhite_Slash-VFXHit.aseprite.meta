@@ -1,0 +1,948 @@
+fileFormatVersion: 2
+guid: 979f3af2edf3a4440b41206fad2d6745
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: SnowWhite_Slash-VFXHit_Frame_0
+    originalName: 
+    pivot: {x: 0.43749997, y: -2.4}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 221
+      y: 4
+      width: 16
+      height: 10
+    spriteID: 0b91bb214ed920f49a70c021661367b5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 221, y: 4}
+  - name: SnowWhite_Slash-VFXHit_Frame_1
+    originalName: 
+    pivot: {x: 0.13636363, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 284
+      width: 44
+      height: 27
+    spriteID: 504c46babbb725745ac8321e9270576a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 284}
+  - name: SnowWhite_Slash-VFXHit_Frame_2
+    originalName: 
+    pivot: {x: 0.10638297, y: -0.032258064}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 106
+      y: 4
+      width: 47
+      height: 31
+    spriteID: 7ee0b4e0fc576e34185520f765a7c2b1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 106, y: 4}
+  - name: SnowWhite_Slash-VFXHit_Frame_3
+    originalName: 
+    pivot: {x: 0.06382979, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 144
+      width: 47
+      height: 27
+    spriteID: a0f6388708b3ff747af6e2008eea35f8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 144}
+  - name: SnowWhite_Slash-VFXHit_Frame_4
+    originalName: 
+    pivot: {x: 0.06382979, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 179
+      width: 47
+      height: 27
+    spriteID: f0d88b546c02fe64a91334422c09af75
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 179}
+  - name: SnowWhite_Slash-VFXHit_Frame_5
+    originalName: 
+    pivot: {x: -0.047619045, y: -0.16}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 439
+      width: 42
+      height: 25
+    spriteID: 16cc8137f967f0943861f2cda66a215a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 439}
+  - name: SnowWhite_Slash-VFXHit_Frame_6
+    originalName: 
+    pivot: {x: 0.13461538, y: -0.18518518}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 4
+      width: 52
+      height: 27
+    spriteID: de2bb17c7cb2f644ea6107708bd2224d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 4}
+  - name: SnowWhite_Slash-VFXHit_Frame_7
+    originalName: 
+    pivot: {x: 0.13461538, y: -0.18518518}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 39
+      width: 52
+      height: 27
+    spriteID: 753ad69199df20444bf00e8ec382a249
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 39}
+  - name: SnowWhite_Slash-VFXHit_Frame_8
+    originalName: 
+    pivot: {x: 0.2272727, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 210
+      width: 44
+      height: 35
+    spriteID: b7fc3af0d3b13e5449801bd7077cce65
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 210}
+  - name: SnowWhite_Slash-VFXHit_Frame_9
+    originalName: 
+    pivot: {x: 0.2272727, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 253
+      width: 44
+      height: 35
+    spriteID: 5291b736193faf74f95d0fefaac22282
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 253}
+  - name: SnowWhite_Slash-VFXHit_Frame_10
+    originalName: 
+    pivot: {x: 0.2272727, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 296
+      width: 44
+      height: 35
+    spriteID: d68fcad4c59e8ee42af31ce84ec2cf21
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 296}
+  - name: SnowWhite_Slash-VFXHit_Frame_11
+    originalName: 
+    pivot: {x: 0.27027026, y: -0.3125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 319
+      width: 37
+      height: 32
+    spriteID: 3e7176afc642a2946a25bd549fcddf1c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 319}
+  - name: SnowWhite_Slash-VFXHit_Frame_12
+    originalName: 
+    pivot: {x: 0.19230768, y: -0.07692308}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 52
+      height: 39
+    spriteID: dd3b68d6ec78f8a4b931d17133bd2cd0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: SnowWhite_Slash-VFXHit_Frame_13
+    originalName: 
+    pivot: {x: 0.12765957, y: -0.032258064}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 106
+      y: 43
+      width: 47
+      height: 31
+    spriteID: ede72e649e480d349ba2908e6fdffdf7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 106, y: 43}
+  - name: SnowWhite_Slash-VFXHit_Frame_14
+    originalName: 
+    pivot: {x: 0.17021276, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 214
+      width: 47
+      height: 27
+    spriteID: 2c5737837cfeda14eb54ce9b10fc5520
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 214}
+  - name: SnowWhite_Slash-VFXHit_Frame_15
+    originalName: 
+    pivot: {x: 0.17021276, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 249
+      width: 47
+      height: 27
+    spriteID: 3b86e1fa631c6264da65d41fe6e7c513
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 249}
+  - name: SnowWhite_Slash-VFXHit_Frame_16
+    originalName: 
+    pivot: {x: 0.19047618, y: -0.16}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 472
+      width: 42
+      height: 25
+    spriteID: 7a232c4fffdbdd94e8e4d40cb196669a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 472}
+  - name: SnowWhite_Slash-VFXHit_Frame_17
+    originalName: 
+    pivot: {x: 0.17307691, y: -0.18518518}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 74
+      width: 52
+      height: 27
+    spriteID: af74ded00c0fd9b459348b5ab8e9f1b0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 74}
+  - name: SnowWhite_Slash-VFXHit_Frame_18
+    originalName: 
+    pivot: {x: 0.17307691, y: -0.18518518}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 109
+      width: 52
+      height: 27
+    spriteID: 45d5c4e85f2667c48b9a184d1874d7db
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 109}
+  - name: SnowWhite_Slash-VFXHit_Frame_19
+    originalName: 
+    pivot: {x: -0.046511628, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 339
+      width: 43
+      height: 35
+    spriteID: 1183717cbef90264f8174e4b6ba7eeaa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 339}
+  - name: SnowWhite_Slash-VFXHit_Frame_20
+    originalName: 
+    pivot: {x: -0.046511628, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 382
+      width: 43
+      height: 35
+    spriteID: 7fdea8465ffa14e45b2404e9e9b4c10e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 382}
+  - name: SnowWhite_Slash-VFXHit_Frame_21
+    originalName: 
+    pivot: {x: -0.046511628, y: -0.14285715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 425
+      width: 43
+      height: 35
+    spriteID: 6594e1e6c0a78fe4c95005885b58d70f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 425}
+  - name: SnowWhite_Slash-VFXHit_Frame_22
+    originalName: 
+    pivot: {x: -0.25000006, y: -0.3125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 359
+      width: 36
+      height: 32
+    spriteID: 6f3e58866d3f3994582629e962523ccf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 359}
+  - name: SnowWhite_Slash-VFXHit_Frame_23
+    originalName: 
+    pivot: {x: -0.25000006, y: -0.3125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 161
+      y: 399
+      width: 36
+      height: 32
+    spriteID: 1b36252d44b8aa8428bc28a38fe262b1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 161, y: 399}
+  - name: SnowWhite_Slash-VFXHit_Frame_24
+    originalName: 
+    pivot: {x: -0.18421058, y: -0.15384616}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 468
+      width: 38
+      height: 39
+    spriteID: 2f1efea529d216e47b152bd7d945ff33
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 468}
+  - name: SnowWhite_Slash-VFXHit_Frame_25
+    originalName: 
+    pivot: {x: -0.20588242, y: -0.069767445}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 4
+      width: 34
+      height: 43
+    spriteID: cd608ed977d38d74aafa5f6994417d74
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 64, y: 4}
+  - name: SnowWhite_Slash-VFXHit_Frame_26
+    originalName: 
+    pivot: {x: -0.20000006, y: -0.04444445}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 157
+      width: 35
+      height: 45
+    spriteID: c2fa89cf2cbab4945a541a98329cd997
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 157}
+  - name: SnowWhite_Slash-VFXHit_Frame_27
+    originalName: 
+    pivot: {x: -0.16666666, y: -0.04444445}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 51
+      width: 36
+      height: 45
+    spriteID: f9648d1e444f6744d928c42bbeb74928
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 51}
+  - name: SnowWhite_Slash-VFXHit_Frame_28
+    originalName: 
+    pivot: {x: -0.16666666, y: -0.04444445}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 104
+      width: 36
+      height: 45
+    spriteID: 9b2e79af71fbe5442ac3b7f11c66bc39
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 104}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 225418282
+    name: SnowWhite_Slash-VFXHit
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: SnowWhite_Slash-VFXHit_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 38
+        y: 24
+        width: 16
+        height: 10
+      spriteId: 0b91bb214ed920f49a70c021661367b5
+    - name: SnowWhite_Slash-VFXHit_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 39
+        y: 3
+        width: 44
+        height: 27
+      spriteId: 504c46babbb725745ac8321e9270576a
+    - name: SnowWhite_Slash-VFXHit_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 40
+        y: 1
+        width: 47
+        height: 31
+      spriteId: 7ee0b4e0fc576e34185520f765a7c2b1
+    - name: SnowWhite_Slash-VFXHit_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 42
+        y: 3
+        width: 47
+        height: 27
+      spriteId: a0f6388708b3ff747af6e2008eea35f8
+    - name: SnowWhite_Slash-VFXHit_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 42
+        y: 3
+        width: 47
+        height: 27
+      spriteId: f0d88b546c02fe64a91334422c09af75
+    - name: SnowWhite_Slash-VFXHit_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 47
+        y: 4
+        width: 42
+        height: 25
+      spriteId: 16cc8137f967f0943861f2cda66a215a
+    - name: SnowWhite_Slash-VFXHit_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 38
+        y: 5
+        width: 52
+        height: 27
+      spriteId: de2bb17c7cb2f644ea6107708bd2224d
+    - name: SnowWhite_Slash-VFXHit_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 38
+        y: 5
+        width: 52
+        height: 27
+      spriteId: 753ad69199df20444bf00e8ec382a249
+    - name: SnowWhite_Slash-VFXHit_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 35
+        y: 5
+        width: 44
+        height: 35
+      spriteId: b7fc3af0d3b13e5449801bd7077cce65
+    - name: SnowWhite_Slash-VFXHit_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 35
+        y: 5
+        width: 44
+        height: 35
+      spriteId: 5291b736193faf74f95d0fefaac22282
+    - name: SnowWhite_Slash-VFXHit_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 35
+        y: 5
+        width: 44
+        height: 35
+      spriteId: d68fcad4c59e8ee42af31ce84ec2cf21
+    - name: SnowWhite_Slash-VFXHit_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 35
+        y: 10
+        width: 37
+        height: 32
+      spriteId: 3e7176afc642a2946a25bd549fcddf1c
+    - name: SnowWhite_Slash-VFXHit_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 35
+        y: 3
+        width: 52
+        height: 39
+      spriteId: dd3b68d6ec78f8a4b931d17133bd2cd0
+    - name: SnowWhite_Slash-VFXHit_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 39
+        y: 1
+        width: 47
+        height: 31
+      spriteId: ede72e649e480d349ba2908e6fdffdf7
+    - name: SnowWhite_Slash-VFXHit_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 37
+        y: 3
+        width: 47
+        height: 27
+      spriteId: 2c5737837cfeda14eb54ce9b10fc5520
+    - name: SnowWhite_Slash-VFXHit_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 37
+        y: 3
+        width: 47
+        height: 27
+      spriteId: 3b86e1fa631c6264da65d41fe6e7c513
+    - name: SnowWhite_Slash-VFXHit_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 37
+        y: 4
+        width: 42
+        height: 25
+      spriteId: 7a232c4fffdbdd94e8e4d40cb196669a
+    - name: SnowWhite_Slash-VFXHit_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 36
+        y: 5
+        width: 52
+        height: 27
+      spriteId: af74ded00c0fd9b459348b5ab8e9f1b0
+    - name: SnowWhite_Slash-VFXHit_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 36
+        y: 5
+        width: 52
+        height: 27
+      spriteId: 45d5c4e85f2667c48b9a184d1874d7db
+    - name: SnowWhite_Slash-VFXHit_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 47
+        y: 5
+        width: 43
+        height: 35
+      spriteId: 1183717cbef90264f8174e4b6ba7eeaa
+    - name: SnowWhite_Slash-VFXHit_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 47
+        y: 5
+        width: 43
+        height: 35
+      spriteId: 7fdea8465ffa14e45b2404e9e9b4c10e
+    - name: SnowWhite_Slash-VFXHit_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 47
+        y: 5
+        width: 43
+        height: 35
+      spriteId: 6594e1e6c0a78fe4c95005885b58d70f
+    - name: SnowWhite_Slash-VFXHit_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 54
+        y: 10
+        width: 36
+        height: 32
+      spriteId: 6f3e58866d3f3994582629e962523ccf
+    - name: SnowWhite_Slash-VFXHit_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 54
+        y: 10
+        width: 36
+        height: 32
+      spriteId: 1b36252d44b8aa8428bc28a38fe262b1
+    - name: SnowWhite_Slash-VFXHit_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 52
+        y: 6
+        width: 38
+        height: 39
+      spriteId: 2f1efea529d216e47b152bd7d945ff33
+    - name: SnowWhite_Slash-VFXHit_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 52
+        y: 3
+        width: 34
+        height: 43
+      spriteId: cd608ed977d38d74aafa5f6994417d74
+    - name: SnowWhite_Slash-VFXHit_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 52
+        y: 2
+        width: 35
+        height: 45
+      spriteId: c2fa89cf2cbab4945a541a98329cd997
+    - name: SnowWhite_Slash-VFXHit_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 51
+        y: 2
+        width: 36
+        height: 45
+      spriteId: f9648d1e444f6744d928c42bbeb74928
+    - name: SnowWhite_Slash-VFXHit_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 51
+        y: 2
+        width: 36
+        height: 45
+      spriteId: 9b2e79af71fbe5442ac3b7f11c66bc39
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 90, y: 48}
