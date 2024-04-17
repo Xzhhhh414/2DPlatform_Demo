@@ -9,7 +9,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public float walkSpeed = 5f;
-    public float runSpeed = 8f;
+    //public float runSpeed = 8f;
     public float airWalkSpeed = 3f;
     public float jumpImpulse = 10f;
     public Vector2 moveInput;
@@ -31,14 +31,9 @@ public class PlayerController : MonoBehaviour
                 {
                     if (touchingDirections.IsGrounded)
                     {
-                        if (IsRunning)
-                        {
-                            return runSpeed;
-                        }
-                        else
-                        {
-                            return walkSpeed;
-                        }
+                        
+                        return walkSpeed;
+                        
                     }
                     else
                     {
@@ -76,20 +71,20 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    [SerializeField]
-    private bool _isRunning = false;
-    public bool IsRunning
-    {
-        get
-        {
-            return _isRunning;
-        }
-        set
-        {
-            _isRunning = value;
-            animator.SetBool(AnimationStrings.isRunning, value);
-        }
-    }
+    //[SerializeField]
+    //private bool _isRunning = false;
+    //public bool IsRunning
+    //{
+    //    get
+    //    {
+    //        return _isRunning;
+    //    }
+    //    set
+    //    {
+    //        _isRunning = value;
+    //        animator.SetBool(AnimationStrings.isRunning, value);
+    //    }
+    //}
 
     public bool _isFacingRight = true;
     public bool IsFacingRight { get { return _isFacingRight; } private set {
@@ -276,17 +271,17 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    public void OnRun(InputAction.CallbackContext context)
-    {
-        if (context.started)
-        {
-            IsRunning = true;
-        }
-        else if (context.canceled)
-        {
-            IsRunning = false;
-        }
-    }
+    //public void OnRun(InputAction.CallbackContext context)
+    //{
+    //    if (context.started)
+    //    {
+    //        IsRunning = true;
+    //    }
+    //    else if (context.canceled)
+    //    {
+    //        IsRunning = false;
+    //    }
+    //}
 
     public void OnJump(InputAction.CallbackContext context)
     {
