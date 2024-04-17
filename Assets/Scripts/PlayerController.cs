@@ -157,7 +157,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
+    public bool LockInAir
+    {
+        get
+        {
+            return animator.GetBool(AnimationStrings.lockInAir);
+        }
+    }
 
 
     Rigidbody2D rb;
@@ -206,12 +212,24 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if (LockInAir)
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezePositionY | rb.constraints;
+        }
+        else
+        {
+            rb.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
+        }
+
+
         //if (!damageable.LockVelocity)
-       //{
+        //{
             rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
         //}
 
         animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
+        
+
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -329,6 +347,7 @@ public class PlayerController : MonoBehaviour
         if (context.started && Skill02Cooldown <= 0)
         {
             animator.SetTrigger(AnimationStrings.skill02Tap);
+
             SpellSkill02.Invoke();
         }
 

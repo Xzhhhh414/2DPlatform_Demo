@@ -835,6 +835,7 @@ AnimatorStateMachine:
   - {fileID: -9183738189499501305}
   - {fileID: 7428785672709453061}
   - {fileID: 767595283049989083}
+  - {fileID: -2765146141519077487}
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 810, y: 110, z: 0}
@@ -1021,6 +1022,23 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &-2765146141519077487
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca3f392d60f403b4dbebae62e8536e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boolName: lockInAir
+  updateOnState: 0
+  updateOnStateMachine: 1
+  valueOnEnter: 1
+  valueOnExit: 0
 --- !u!114 &-2632418226269858748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1477,6 +1495,12 @@ AnimatorController:
     m_Controller: {fileID: 0}
   - m_Name: yVelocity
     m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: lockInAir
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0

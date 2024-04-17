@@ -32,4 +32,5 @@ internal class AnimationStrings
     internal static string skill02Cooldown = "skill02Cooldown";
     internal static string skill03Cooldown = "skill03Cooldown";
     internal static string isInvincible = "isInvincible";
+    internal static string lockInAir = "lockInAir";
 }
