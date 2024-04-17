@@ -6,7 +6,7 @@ using TMPro;
 using System.Net.NetworkInformation;
 
 
-public class SpellCooldown_Skill01 : MonoBehaviour
+public class SpellCooldown_Skill03 : MonoBehaviour
 {
     PlayerController playerController;
 
@@ -44,7 +44,7 @@ public class SpellCooldown_Skill01 : MonoBehaviour
 
     private void OnEnable()
     {
-        playerController.SpellSkill01.AddListener(UseSpell);
+        playerController.SpellSkill03.AddListener(UseSpell);
     }
 
   

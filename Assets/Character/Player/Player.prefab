@@ -1062,7 +1062,15 @@ MonoBehaviour:
   runSpeed: 8
   airWalkSpeed: 5
   jumpImpulse: 15
+  moveInput: {x: 0, y: 0}
+  isOnMoveHolding: 0
   SpellSkill01:
+    m_PersistentCalls:
+      m_Calls: []
+  SpellSkill02:
+    m_PersistentCalls:
+      m_Calls: []
+  SpellSkill03:
     m_PersistentCalls:
       m_Calls: []
   _IsMoving: 0
@@ -1221,6 +1229,38 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: b8319dd5-a5cd-46fe-9bd9-852607b2e155
     m_ActionName: UI/Escape[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2999302699537840522}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnSkill02
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 20c038ff-577e-4fd2-8444-fd3f74b8d0b3
+    m_ActionName: Player/Skill2[/Keyboard/f]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2999302699537840522}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnSkill03
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 92852e48-1a42-4b11-a9ea-9d46c4e16fc3
+    m_ActionName: Player/Skill3[/Keyboard/g]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

@@ -27,4 +27,8 @@ internal class AnimationStrings
     internal static string isBlocking = "skill01Blocking";
     internal static string skill01CounterAtk = "skill01CounterAtk";
     internal static string canChangeDIR = "canChangeDIR";
+    internal static string skill02Tap = "skill02Tap";
+    internal static string skill03Tap = "skill03Tap";
+    internal static string skill02Cooldown = "skill02Cooldown";
+    internal static string skill03Cooldown = "skill03Cooldown";
 }

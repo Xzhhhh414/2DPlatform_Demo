@@ -13,11 +13,15 @@ public class PlayerController : MonoBehaviour
     public float airWalkSpeed = 3f;
     public float jumpImpulse = 10f;
     public Vector2 moveInput;
+    public bool isOnMoveHolding = false;
     TouchingDirections touchingDirections;
     Damageable damageable;
 
     public UnityEvent SpellSkill01;
-    public bool isOnMoveHolding = false;
+    public UnityEvent SpellSkill02;
+    public UnityEvent SpellSkill03;
+
+
 
     public float CurrentMoveSpeed 
     { get
@@ -123,6 +127,30 @@ public class PlayerController : MonoBehaviour
         private set
         {
             animator.SetFloat(AnimationStrings.skill01Cooldown, Mathf.Max(value, 0));
+        }
+    }
+
+    public float Skill02Cooldown
+    {
+        get
+        {
+            return animator.GetFloat(AnimationStrings.skill02Cooldown);
+        }
+        private set
+        {
+            animator.SetFloat(AnimationStrings.skill02Cooldown, Mathf.Max(value, 0));
+        }
+    }
+
+    public float Skill03Cooldown
+    {
+        get
+        {
+            return animator.GetFloat(AnimationStrings.skill03Cooldown);
+        }
+        private set
+        {
+            animator.SetFloat(AnimationStrings.skill03Cooldown, Mathf.Max(value, 0));
         }
     }
 
@@ -287,6 +315,32 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+
+    public void OnSkill02(InputAction.CallbackContext context)
+    {
+ 
+        if (context.started && Skill02Cooldown <= 0)
+        {
+            animator.SetTrigger(AnimationStrings.skill01Tap);
+            SpellSkill02.Invoke();
+        }
+
+    }
+
+   public void OnSkill03(InputAction.CallbackContext context)
+    {
+
+        if (context.started && Skill03Cooldown <= 0)
+        {
+            animator.SetTrigger(AnimationStrings.skill03Tap);
+            SpellSkill03.Invoke();
+        }
+
+    }
+
+
+
+
 
 
     public void OnHit(int damage, Vector2 knockback)
