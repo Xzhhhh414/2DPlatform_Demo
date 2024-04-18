@@ -21,11 +21,11 @@ public class PlayerController : MonoBehaviour
     public UnityEvent SpellSkill02;
     public UnityEvent SpellSkill03;
 
-    //dashÂß¼­Ä¿Ç°Ö»Îª³å´Ì¼¼ÄÜ·þÎñ
-    private float dashSpeed = 350f; // ³å´ÌËÙ¶È
-    private float dashDuration = 0.02f; // ³å´Ì³ÖÐøÊ±¼ä£¬µ¥Î»Ãë
-    private float dashTimeLeft; // Ê£Óà³å´ÌÊ±¼ä
-    private bool isDashing; // ÊÇ·ñÕýÔÚ³å´Ì
+    //dashï¿½ß¼ï¿½Ä¿Ç°Ö»Îªï¿½ï¿½Ì¼ï¿½ï¿½Ü·ï¿½ï¿½ï¿½
+    private float dashSpeed = 75f; // ï¿½ï¿½ï¿½ï¿½Ù¶ï¿½
+    private float dashDuration = 0.1f; // ï¿½ï¿½Ì³ï¿½ï¿½ï¿½Ê±ï¿½ä£¬ï¿½ï¿½Î»ï¿½ï¿½
+    private float dashTimeLeft; // Ê£ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+    private bool isDashing; // ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Ú³ï¿½ï¿½
 
     public float CurrentMoveSpeed 
     { get
@@ -229,13 +229,13 @@ public class PlayerController : MonoBehaviour
         {
             if (dashTimeLeft > 0)
             {
-                rb.velocity = new Vector2(transform.localScale.x * dashSpeed, rb.velocity.y); // Î¬³Ö³å´ÌËÙ¶È
-                dashTimeLeft -= Time.fixedDeltaTime; // ¼õÉÙÊ£Óà³å´ÌÊ±¼ä
+                rb.velocity = new Vector2(transform.localScale.x * dashSpeed, rb.velocity.y); // Î¬ï¿½Ö³ï¿½ï¿½ï¿½Ù¶ï¿½
+                dashTimeLeft -= Time.fixedDeltaTime; // ï¿½ï¿½ï¿½ï¿½Ê£ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
             }
             else
             {
                 isDashing = false;
-                rb.velocity = new Vector2(0, rb.velocity.y); // ³å´Ì½áÊøºóÖØÖÃË®Æ½ËÙ¶È
+                rb.velocity = new Vector2(0, rb.velocity.y); // ï¿½ï¿½Ì½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë®Æ½ï¿½Ù¶ï¿½
             }
         }
         else
@@ -393,7 +393,7 @@ public class PlayerController : MonoBehaviour
     {
         isDashing = true;
         dashTimeLeft = dashDuration;
-        rb.velocity = new Vector2(transform.localScale.x * dashSpeed, rb.velocity.y); // ¸ù¾ÝÍæ¼Ò³¯ÏòÉèÖÃ³å´Ì·½Ïò
+        rb.velocity = new Vector2(transform.localScale.x * dashSpeed, rb.velocity.y); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã³ï¿½Ì·ï¿½ï¿½ï¿½
     }
 
 
