@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody2D),typeof(TouchingDirections),typeof(Damageable))]
+[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
 public class PlayerController : MonoBehaviour
 {
     public float walkSpeed = 5f;
@@ -27,17 +27,19 @@ public class PlayerController : MonoBehaviour
     private float dashTimeLeft; // ʣ����ʱ��
     private bool isDashing; // �Ƿ����ڳ��
 
-    public float CurrentMoveSpeed 
-    { get
-        {   if (CanMove)
+    public float CurrentMoveSpeed
+    {
+        get
+        {
+            if (CanMove)
             {
                 if (IsMoving && !touchingDirections.IsOnWall)
                 {
                     if (touchingDirections.IsGrounded)
                     {
-                        
+
                         return walkSpeed;
-                        
+
                     }
                     else
                     {
@@ -53,7 +55,7 @@ public class PlayerController : MonoBehaviour
             {
                 return 0;
             }
-            
+
         }
     }
 
@@ -91,9 +93,13 @@ public class PlayerController : MonoBehaviour
     //}
 
     public bool _isFacingRight = true;
-    public bool IsFacingRight { get { return _isFacingRight; } private set {
+    public bool IsFacingRight
+    {
+        get { return _isFacingRight; }
+        private set
+        {
 
-            if (_isFacingRight != value) 
+            if (_isFacingRight != value)
             {
                 transform.localScale *= new Vector2(-1, 1);
             }
@@ -102,7 +108,8 @@ public class PlayerController : MonoBehaviour
     }
 
     public bool CanMove
-    {   get
+    {
+        get
         {
             return animator.GetBool(AnimationStrings.canMove);
         }
@@ -110,11 +117,11 @@ public class PlayerController : MonoBehaviour
 
     public bool IsAlive
     {
-        get 
+        get
         {
             return animator.GetBool(AnimationStrings.isAlive);
         }
-    
+
     }
 
     public float Skill01Cooldown
@@ -186,7 +193,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -211,6 +218,14 @@ public class PlayerController : MonoBehaviour
         {
             //Debug.Log("OnMoveHolding~~~~~~~~~~~~~~~~~~~~");
             Moving(moveInput);
+        }
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            BattleTestManager.Instance.GMTimeScale(0.2f);
+        }
+        else
+        {
+            BattleTestManager.Instance.GMTimeScale(1f);
         }
 
     }
@@ -253,7 +268,7 @@ public class PlayerController : MonoBehaviour
     }
 
     public void OnMove(InputAction.CallbackContext context)
-	{
+    {
         moveInput = context.ReadValue<Vector2>();
 
         if (context.started)
@@ -263,7 +278,7 @@ public class PlayerController : MonoBehaviour
             isOnMoveHolding = true;
         }
 
-         if (context.performed)
+        if (context.performed)
         {
             isOnMoveHolding = true;
             //Debug.Log("performed~~~~~~~~~~~~~~~~~~~~");
@@ -330,14 +345,14 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger(AnimationStrings.jumpTrigger);
             rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
         }
- 
+
     }
     public void OnAttack(InputAction.CallbackContext context)
     {
         if (context.started)
         {
             animator.SetTrigger(AnimationStrings.attackTrigger);
-            
+
         }
 
     }
@@ -349,9 +364,9 @@ public class PlayerController : MonoBehaviour
         if (context.started && Skill01Cooldown <= 0)
         {
             animator.SetTrigger(AnimationStrings.skill01Tap);
-            SpellSkill01.Invoke();  
+            SpellSkill01.Invoke();
         }
-        
+
         if (context.canceled)
         {
             animator.SetTrigger(AnimationStrings.skill01Release);
@@ -363,7 +378,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnSkill02(InputAction.CallbackContext context)
     {
- 
+
         if (context.started && Skill02Cooldown <= 0)
         {
             animator.SetTrigger(AnimationStrings.skill02Tap);
@@ -375,7 +390,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-   public void OnSkill03(InputAction.CallbackContext context)
+    public void OnSkill03(InputAction.CallbackContext context)
     {
 
         if (context.started && Skill03Cooldown <= 0)
