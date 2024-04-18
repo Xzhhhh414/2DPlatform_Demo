@@ -21,11 +21,11 @@ public class PlayerController : MonoBehaviour
     public UnityEvent SpellSkill02;
     public UnityEvent SpellSkill03;
 
-    //dash�߼�ĿǰֻΪ��̼��ܷ���
-    private float dashSpeed = 75f; // ����ٶ�
-    private float dashDuration = 0.1f; // ��̳���ʱ�䣬��λ��
-    private float dashTimeLeft; // ʣ����ʱ��
-    private bool isDashing; // �Ƿ����ڳ��
+    //dash逻辑目前只为冲刺技能服务
+    private float dashSpeed = 75f; // 冲刺速度
+    private float dashDuration = 0.1f; // 冲刺持续时间，单位秒
+    private float dashTimeLeft; // 剩余冲刺时间
+    private bool isDashing; // 是否正在冲刺
 
     public float CurrentMoveSpeed
     {
@@ -244,13 +244,13 @@ public class PlayerController : MonoBehaviour
         {
             if (dashTimeLeft > 0)
             {
-                rb.velocity = new Vector2(transform.localScale.x * dashSpeed, rb.velocity.y); // ά�ֳ���ٶ�
-                dashTimeLeft -= Time.fixedDeltaTime; // ����ʣ����ʱ��
+                rb.velocity = new Vector2(transform.localScale.x * dashSpeed, rb.velocity.y); // 维持冲刺速度
+                dashTimeLeft -= Time.fixedDeltaTime; // 减少剩余冲刺时间
             }
             else
             {
                 isDashing = false;
-                rb.velocity = new Vector2(0, rb.velocity.y); // ��̽���������ˮƽ�ٶ�
+                rb.velocity = new Vector2(0, rb.velocity.y); // 冲刺结束后重置水平速度
             }
         }
         else
