@@ -21,7 +21,11 @@ public class PlayerController : MonoBehaviour
     public UnityEvent SpellSkill02;
     public UnityEvent SpellSkill03;
 
-
+    //dash逻辑目前只为冲刺技能服务
+    private float dashSpeed = 350f; // 冲刺速度
+    private float dashDuration = 0.02f; // 冲刺持续时间，单位秒
+    private float dashTimeLeft; // 剩余冲刺时间
+    private bool isDashing; // 是否正在冲刺
 
     public float CurrentMoveSpeed 
     { get
@@ -221,14 +225,30 @@ public class PlayerController : MonoBehaviour
             rb.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
         }
 
-
-        //if (!damageable.LockVelocity)
-        //{
+        if (isDashing)
+        {
+            if (dashTimeLeft > 0)
+            {
+                rb.velocity = new Vector2(transform.localScale.x * dashSpeed, rb.velocity.y); // 维持冲刺速度
+                dashTimeLeft -= Time.fixedDeltaTime; // 减少剩余冲刺时间
+            }
+            else
+            {
+                isDashing = false;
+                rb.velocity = new Vector2(0, rb.velocity.y); // 冲刺结束后重置水平速度
+            }
+        }
+        else
+        {
+            //if (!damageable.LockVelocity)
+            //{
             rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
-        //}
+            //}
 
-        animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
-        
+            animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
+
+        }
+
 
     }
 
@@ -351,6 +371,8 @@ public class PlayerController : MonoBehaviour
             SpellSkill02.Invoke();
         }
 
+
+
     }
 
    public void OnSkill03(InputAction.CallbackContext context)
@@ -360,8 +382,18 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetTrigger(AnimationStrings.skill03Tap);
             SpellSkill03.Invoke();
+
+            StartDash();
         }
 
+    }
+
+
+    private void StartDash()
+    {
+        isDashing = true;
+        dashTimeLeft = dashDuration;
+        rb.velocity = new Vector2(transform.localScale.x * dashSpeed, rb.velocity.y); // 根据玩家朝向设置冲刺方向
     }
 
 
