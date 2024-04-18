@@ -13,12 +13,24 @@ public class BattleTestManager
             }
             return _instance;
         }
+    }
+    public float TimeScale = 0.2f;
 
+    public void GMTimeScale()
+    {
+        if(Time.timeScale == 1f)
+        {
+            Time.timeScale = TimeScale;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
     }
 
-    public void GMTimeScale(float scale = 0.1f)
+    public void ResetTimeScale()
     {
-        Time.timeScale = scale;
+        Time.timeScale = 1f;
     }
 
 }
