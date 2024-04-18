@@ -18,7 +18,7 @@ public class BattleTestManager
 
     public void GMTimeScale()
     {
-        if(Time.timeScale == 1f)
+        if(Time.timeScale != TimeScale)
         {
             Time.timeScale = TimeScale;
         }

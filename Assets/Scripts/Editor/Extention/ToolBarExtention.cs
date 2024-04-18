@@ -2,6 +2,7 @@ using System;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityToolbarExtender;
 
 [InitializeOnLoad]
@@ -13,13 +14,22 @@ public class ToolBarExtention
         ToolbarExtender.LeftToolbarGUI.Add(StartGameToolBar);
     }
 
+    static string preScenePath = "";
     private static void StartGameToolBar()
     {
+        // EditorApplication.playModeStateChanged += (PlayModeStateChange state) =>
+        // {
+        //     if (state == PlayModeStateChange.EnteredEditMode)
+        //     {
+        //         EditorSceneManager.OpenScene(preScenePath);
+        //     }
+        // };
         GUILayout.FlexibleSpace();
         if (GUILayout.Button("开始游戏", EditorStyles.toolbarButton, GUILayout.Width(100)))
         {
-            if (!UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.Equals("GameplayScene"))
+            if (!SceneManager.GetActiveScene().name.Equals("GameplayScene"))
             {
+                preScenePath = SceneManager.GetActiveScene().path;
                 EditorSceneManager.OpenScene("Assets/Scenes/GameplayScene.unity");
             }
             EditorApplication.ExecuteMenuItem("Edit/Play");
