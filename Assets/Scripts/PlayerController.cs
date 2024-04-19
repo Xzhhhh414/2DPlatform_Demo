@@ -219,11 +219,12 @@ public class PlayerController : MonoBehaviour
             //Debug.Log("OnMoveHolding~~~~~~~~~~~~~~~~~~~~");
             Moving(moveInput);
         }
+#if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             BattleTestManager.Instance.GMTimeScale();
         }
-        
+#endif
 
     }
     private void FixedUpdate()

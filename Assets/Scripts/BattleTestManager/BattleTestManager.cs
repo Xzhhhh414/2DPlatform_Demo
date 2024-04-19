@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEngine;
 
 public class BattleTestManager
@@ -18,7 +19,7 @@ public class BattleTestManager
 
     public void GMTimeScale()
     {
-        if(Time.timeScale != TimeScale)
+        if (Time.timeScale != TimeScale)
         {
             Time.timeScale = TimeScale;
         }
@@ -34,3 +35,4 @@ public class BattleTestManager
     }
 
 }
+#endif

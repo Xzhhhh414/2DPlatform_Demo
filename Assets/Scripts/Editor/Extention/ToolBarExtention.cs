@@ -17,16 +17,11 @@ public class ToolBarExtention
     static string preScenePath = "";
     private static void StartGameToolBar()
     {
-        // EditorApplication.playModeStateChanged += (PlayModeStateChange state) =>
-        // {
-        //     if (state == PlayModeStateChange.EnteredEditMode)
-        //     {
-        //         EditorSceneManager.OpenScene(preScenePath);
-        //     }
-        // };
+
         GUILayout.FlexibleSpace();
         if (GUILayout.Button("开始游戏", EditorStyles.toolbarButton, GUILayout.Width(100)))
         {
+            EditorApplication.playModeStateChanged += OnStartGameButtonClicked;
             if (!SceneManager.GetActiveScene().name.Equals("GameplayScene"))
             {
                 preScenePath = SceneManager.GetActiveScene().path;
@@ -35,11 +30,20 @@ public class ToolBarExtention
             EditorApplication.ExecuteMenuItem("Edit/Play");
         }
     }
-
+    private static void OnStartGameButtonClicked(PlayModeStateChange state)
+    {
+        if (state == PlayModeStateChange.EnteredEditMode)
+        {
+            EditorSceneManager.OpenScene(preScenePath);
+            
+            EditorApplication.playModeStateChanged -= OnStartGameButtonClicked;
+        }
+    }
     private static void TimeScaleToolBar()
     {
         GUILayout.BeginHorizontal();
         GUILayout.Label("TimeScale:", GUILayout.Width(70));
+        //Time.timeScale = EditorGUILayout.FloatField(Time.timeScale, GUILayout.Width(40));
         if (GUILayout.Button("1", EditorStyles.toolbarButton, GUILayout.Width(30)))
         {
             BattleTestManager.Instance.TimeScale = 1f;
