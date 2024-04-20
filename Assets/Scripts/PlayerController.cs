@@ -12,8 +12,8 @@ public class PlayerController : MonoBehaviour
     //public float runSpeed = 8f;
     public float airWalkSpeed = 3f;
     public float jumpImpulse = 10f;
-    public Vector2 moveInput;
-    public bool isOnMoveHolding = false;
+    private Vector2 moveInput;
+    private bool isOnMoveHolding = false;
     TouchingDirections touchingDirections;
     Damageable damageable;
 
