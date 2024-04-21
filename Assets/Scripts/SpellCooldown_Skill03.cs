@@ -9,7 +9,6 @@ using System;
 public class SpellCooldown_Skill03 : MonoBehaviour
 {
     PlayerController playerController;
-    //Attack attack;
 
     [SerializeField]
     private Image imageCooldown;
@@ -17,13 +16,20 @@ public class SpellCooldown_Skill03 : MonoBehaviour
     private TMP_Text textCoolDown;
     [SerializeField]
     private Image imageEdge;
+    [SerializeField]
+    private Button skill03Button;
+    [SerializeField]
+    private Sprite spriteOriginal;
+    [SerializeField]
+    private Sprite spriteClearCD;
 
     //variables for cooldownTimer
     private bool isCooldown = false;
     private float cooldownTime = 5.0f;
     private float cooldownTimer = 0.0f;
-    //private bool clearCDTrigger;
-
+    private int buttonState = 1;
+    
+    
     private void Awake()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -32,7 +38,7 @@ public class SpellCooldown_Skill03 : MonoBehaviour
             Debug.Log("No Player found in the scene");
         }
         playerController = player.GetComponent<PlayerController>();
-        //attack = attack.GetComponent<Attack>();
+
 
     }
 
@@ -43,12 +49,14 @@ public class SpellCooldown_Skill03 : MonoBehaviour
         textCoolDown.gameObject.SetActive(false);
         imageEdge.gameObject.SetActive(false);
         imageCooldown.fillAmount = 0.0f;
+
+        SetSkill03ButtonImage();
     }
 
     private void OnEnable()
     {
         playerController.SpellSkill03.AddListener(UseSpell);
-        //attack.ClearCooldown.AddListener(TrigClearSkill03CD);
+        playerController.skill03ClearCDSucces.AddListener(ChangeBtnState);
     }
 
 
@@ -94,6 +102,9 @@ public class SpellCooldown_Skill03 : MonoBehaviour
 
     public void UseSpell()
     {
+        buttonState = 1;
+        SetSkill03ButtonImage();
+
         if (isCooldown)
         {
             //µã»÷¼¼ÄÜ¼ü
@@ -110,10 +121,36 @@ public class SpellCooldown_Skill03 : MonoBehaviour
 
     }
 
-    private void TrigClearSkill03CD()
+    private void ChangeBtnState()
     {
-        //clearCDTrigger = true;
+        buttonState = 2;
+        SetSkill03ButtonImage();
     }
+
+
+
+    private void SetSkill03ButtonImage()
+    {
+        Image buttonImage = skill03Button.GetComponent<Image>();
+
+        if (buttonState == 1)
+        {
+            buttonImage.sprite = spriteOriginal;
+
+        }else if (buttonState == 2) 
+        {
+            buttonImage.sprite = spriteClearCD;
+        }
+
+        if (buttonImage = null)
+        {
+            buttonImage.sprite = spriteOriginal;
+        }
+        
+        
+
+    }
+
 
 
 }

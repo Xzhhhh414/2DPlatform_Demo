@@ -430,7 +430,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c67fbf9375ad5c34399c2849430ca7f7, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -499,3 +499,6 @@ MonoBehaviour:
   imageCooldown: {fileID: 6979776749132524560}
   textCoolDown: {fileID: 4234814288956135798}
   imageEdge: {fileID: 1452833950086267370}
+  skill03Button: {fileID: 6940026655441002438}
+  spriteOriginal: {fileID: 21300000, guid: c67fbf9375ad5c34399c2849430ca7f7, type: 3}
+  spriteClearCD: {fileID: 21300000, guid: 9e7fba19fec27384faf3758bc825037f, type: 3}

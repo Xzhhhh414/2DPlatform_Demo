@@ -16495,6 +16495,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1952900286 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2459547441786800012, guid: 972ec411fafc1474481bb36d57f181f6, type: 3}
+  m_PrefabInstance: {fileID: 4042735601151912601}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2003513244 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8198951932485516424, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
@@ -25120,10 +25131,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2459547441786800012, guid: 972ec411fafc1474481bb36d57f181f6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173557498742503134, guid: 972ec411fafc1474481bb36d57f181f6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8858682519578526793, guid: 972ec411fafc1474481bb36d57f181f6, type: 3}
       propertyPath: m_Name
       value: GameCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8999305405135695189, guid: 972ec411fafc1474481bb36d57f181f6, type: 3}
+      propertyPath: skill03Button
+      value: 
+      objectReference: {fileID: 1952900286}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

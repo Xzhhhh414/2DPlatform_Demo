@@ -15,6 +15,7 @@ public class Attack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //Debug.Log("OnTriggerEnter2D!!!!!");
         Damageable damageable = collision.GetComponent<Damageable>();
 
         if (damageable != null)
@@ -26,13 +27,20 @@ public class Attack : MonoBehaviour
             if (gotHit)
             {
                 //Debug.Log(collision.name + "hit for" + attackDamage);
-            }
 
-            if (canClearCooldown)
+                if (canClearCooldown)
+                {
+                    //Debug.Log("ClearCooldown Invoke");
+                    ClearCooldown.Invoke();
+
+                }
+            }
+            else
             {
-                ClearCooldown.Invoke();
-
+               // Debug.Log("No Damage");
             }
+
+
         }
     }
 

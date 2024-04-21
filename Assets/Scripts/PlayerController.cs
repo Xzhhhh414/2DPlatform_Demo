@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public UnityEvent SpellSkill01;
     public UnityEvent SpellSkill02;
     public UnityEvent SpellSkill03;
+    public UnityEvent skill03ClearCDSucces;
 
     //skill03的技能逻辑
     private float dashSpeed = 75f; // 冲刺速度
@@ -30,13 +31,18 @@ public class PlayerController : MonoBehaviour
     private bool isDashing; // 是否正在冲刺
     private LayerMask wallLayerMask;  //冲刺检测的墙面layer
     private bool clearCDTrigger = false; //可清CD的触发器
-    private int clearCDMaxTime = 2; //一轮清CD最大次数
-    private bool isSetSkill03CDLag = false; 
+    private float clearCDTriggerTimeLeft;//窗口时间的倒计时
+    private float clearCDTriggerDuration = 2f;//命中后可继续使用技能的窗口时间
+    private bool SettingSkill03CD = false; 
     private float lagTimeLeft;//剩余释放技能后进CD的时间
     private float lagDuration = 0.1f;//释放技能后是否进CD的延迟时间
-    private bool isSetSkill03StunLag = false;
+    private bool SettingSkill03StunLag = false;
     private float stunTimeLeft;//连续释放的间隔时间的倒计时
     private float stunTimeDuration = 0.2f;//连续释放的间隔时间
+    private int clearCDTimeLeft ; //当前轮技能清CD剩余次数
+    private int clearCDMaxTime = 2; //当前轮技能清CD最大次数
+    private bool hitDamage = false;//技能初始状态是没命中
+
 
     public float CurrentMoveSpeed
     {
@@ -217,7 +223,8 @@ public class PlayerController : MonoBehaviour
     }
     private void Start()
     {
-       wallLayerMask = LayerMask.GetMask("Ground");
+        wallLayerMask = LayerMask.GetMask("Ground");
+        clearCDTimeLeft = clearCDMaxTime;
     }
 
 
@@ -242,7 +249,7 @@ public class PlayerController : MonoBehaviour
  
         }
 
-        if (isSetSkill03CDLag)
+        if (SettingSkill03CD)
         {
             if (lagTimeLeft > 0)
             {
@@ -250,22 +257,45 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                if (clearCDTrigger)
+                if (clearCDTrigger && clearCDTimeLeft >= 0 && hitDamage)
                 {
+                    //Debug.Log("clearCDTrigger====" + clearCDTrigger);
+                    //Debug.Log("clearCDTimeLeft====" + clearCDTimeLeft);
                     Skill03Cooldown = 0;
+                    skill03ClearCDSucces.Invoke();
+                    lagTimeLeft = lagDuration;
                 }
                 else
                 {
                     Skill03Cooldown = 5;
+                    clearCDTimeLeft = clearCDMaxTime;
                     SpellSkill03.Invoke();
+                    SettingSkill03CD = false;
 
                 }
-                isSetSkill03CDLag = false;
-                clearCDTrigger = false;
+
+
             }
         }
 
-        if (isSetSkill03StunLag)
+
+        if (clearCDTrigger)
+        {
+            
+            if (clearCDTriggerTimeLeft > 0)
+            {
+                clearCDTriggerTimeLeft -= Time.deltaTime;
+
+            }
+            else
+            {
+                clearCDTrigger = false;
+
+            }
+        }
+
+
+        if (SettingSkill03StunLag)
         {
             if (stunTimeLeft > 0)
             {
@@ -275,12 +305,10 @@ public class PlayerController : MonoBehaviour
             else
             {
                 animator.SetBool(AnimationStrings.skill03StunFinished, true);
-                isSetSkill03StunLag = false;
+                SettingSkill03StunLag = false;
 
             }
         }
-
-   
 
 
 
@@ -290,12 +318,16 @@ public class PlayerController : MonoBehaviour
             Moving(moveInput);
         }
 
-#if UNITY_EDITOR
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            BattleTestManager.Instance.GMTimeScale();
-        }
-#endif
+
+
+        #if UNITY_EDITOR
+                if (Input.GetKeyDown(KeyCode.LeftShift))
+                {
+                    BattleTestManager.Instance.GMTimeScale();
+                }
+        #endif
+
+
 
     }
     private void FixedUpdate()
@@ -503,15 +535,21 @@ public class PlayerController : MonoBehaviour
 
     private void TrigClearSkill03CD()
     {
+        hitDamage = true;
         clearCDTrigger = true;
+        clearCDTriggerTimeLeft = clearCDTriggerDuration;
+        clearCDTimeLeft -= 1;
     }
 
     private void SetSkill03Cooldown()
     {
-        isSetSkill03CDLag = true;
+
+        SettingSkill03CD = true;
         lagTimeLeft = lagDuration;
-        isSetSkill03StunLag = true;
+        SettingSkill03StunLag = true;
         stunTimeLeft = stunTimeDuration;
+        hitDamage = false;
+
     }
 
 

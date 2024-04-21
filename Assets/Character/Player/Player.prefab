@@ -639,7 +639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a5cb8f3f3195a4fbe2fac3034cef82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 30
+  attackDamage: 15
   knockback: {x: 0.5, y: 0.5}
   canClearCooldown: 1
   ClearCooldown:
@@ -969,7 +969,6 @@ GameObject:
   - component: {fileID: 6842670586402314811}
   - component: {fileID: 5646727627007476385}
   - component: {fileID: 5493665764848477191}
-  - component: {fileID: 1115463557619649417}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -1104,6 +1103,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   SpellSkill03:
+    m_PersistentCalls:
+      m_Calls: []
+  skill03ClearCDSucces:
     m_PersistentCalls:
       m_Calls: []
   _IsMoving: 0
@@ -1408,20 +1410,6 @@ MonoBehaviour:
   _isAlive: 1
   hitInterval: 0
   hitIntervalTime: 0.25
---- !u!114 &1115463557619649417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8577367491070427345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65209737d5614734eb8812630200c8f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  launchPoint: {fileID: 5424188767339078681}
-  projectilePrefab: {fileID: 6404216589559677070, guid: 173e79705aa177c45a7268d441d79580, type: 3}
 --- !u!1 &8783133434536609512
 GameObject:
   m_ObjectHideFlags: 0
