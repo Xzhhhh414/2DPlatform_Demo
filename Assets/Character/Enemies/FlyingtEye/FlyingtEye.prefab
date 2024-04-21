@@ -190,8 +190,8 @@ MonoBehaviour:
   _maxHealth: 50
   _health: 50
   _isAlive: 1
-  isInvincible: 0
-  invincibilityTime: 0
+  hitInterval: 0
+  hitIntervalTime: 0.25
 --- !u!95 &204077961074298661
 Animator:
   serializedVersion: 5
@@ -315,8 +315,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a5cb8f3f3195a4fbe2fac3034cef82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 20
+  attackDamage: 8
   knockback: {x: 1, y: 0}
+  canClearCooldown: 0
+  ClearCooldown:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7347298008799011483
 GameObject:
   m_ObjectHideFlags: 0
