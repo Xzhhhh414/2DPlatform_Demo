@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -16,16 +17,26 @@ public class PlayerController : MonoBehaviour
     private bool isOnMoveHolding = false;
     TouchingDirections touchingDirections;
     Damageable damageable;
+    Attack attackSkill03;
 
     public UnityEvent SpellSkill01;
     public UnityEvent SpellSkill02;
     public UnityEvent SpellSkill03;
 
-    //dash逻辑目前只为冲刺技能服务
+    //skill03的技能逻辑
     private float dashSpeed = 75f; // 冲刺速度
     private float dashDuration = 0.1f; // 冲刺持续时间，单位秒
     private float dashTimeLeft; // 剩余冲刺时间
     private bool isDashing; // 是否正在冲刺
+    private LayerMask wallLayerMask;  //冲刺检测的墙面layer
+    private bool clearCDTrigger = false; //可清CD的触发器
+    private int clearCDMaxTime = 2; //一轮清CD最大次数
+    private bool isSetSkill03CDLag = false; 
+    private float lagTimeLeft;//剩余释放技能后进CD的时间
+    private float lagDuration = 0.1f;//释放技能后是否进CD的延迟时间
+    private bool isSetSkill03StunLag = false;
+    private float stunTimeLeft;//连续释放的间隔时间的倒计时
+    private float stunTimeDuration = 0.2f;//连续释放的间隔时间
 
     public float CurrentMoveSpeed
     {
@@ -176,6 +187,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public bool Skill03StunFinished
+    {
+        get
+        {
+            return animator.GetBool(AnimationStrings.skill03StunFinished);
+        }
+    }
+
 
     Rigidbody2D rb;
     Animator animator;
@@ -188,13 +207,21 @@ public class PlayerController : MonoBehaviour
         touchingDirections = GetComponent<TouchingDirections>();
         damageable = GetComponent<Damageable>();
 
-    }
+        GameObject skill03 = GameObject.Find("skill03_rush");
+        if (skill03 == null)
+        {
+            Debug.Log("No skill03_rush found in the scene");
+        }
+        attackSkill03 = skill03.GetComponent<Attack>();
 
-    // Start is called before the first frame update
-    void Start()
+    }
+    private void Start()
     {
-
+       wallLayerMask = LayerMask.GetMask("Ground");
     }
+
+
+
 
     // Update is called once per frame
     void Update()
@@ -212,13 +239,57 @@ public class PlayerController : MonoBehaviour
         if (Skill03Cooldown > 0)
         {
             Skill03Cooldown -= Time.deltaTime;
+ 
         }
+
+        if (isSetSkill03CDLag)
+        {
+            if (lagTimeLeft > 0)
+            {
+                lagTimeLeft -= Time.deltaTime;
+            }
+            else
+            {
+                if (clearCDTrigger)
+                {
+                    Skill03Cooldown = 0;
+                }
+                else
+                {
+                    Skill03Cooldown = 5;
+                    SpellSkill03.Invoke();
+
+                }
+                isSetSkill03CDLag = false;
+                clearCDTrigger = false;
+            }
+        }
+
+        if (isSetSkill03StunLag)
+        {
+            if (stunTimeLeft > 0)
+            {
+                stunTimeLeft -= Time.deltaTime;
+
+            }
+            else
+            {
+                animator.SetBool(AnimationStrings.skill03StunFinished, true);
+                isSetSkill03StunLag = false;
+
+            }
+        }
+
+   
+
+
 
         if (isOnMoveHolding)
         {
             //Debug.Log("OnMoveHolding~~~~~~~~~~~~~~~~~~~~");
             Moving(moveInput);
         }
+
 #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
@@ -240,15 +311,27 @@ public class PlayerController : MonoBehaviour
 
         if (isDashing)
         {
-            if (dashTimeLeft > 0)
+
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right * transform.localScale.x, 2f, wallLayerMask);
+            if (hit.collider != null)
             {
-                rb.velocity = new Vector2(transform.localScale.x * dashSpeed, rb.velocity.y); // 维持冲刺速度
-                dashTimeLeft -= Time.fixedDeltaTime; // 减少剩余冲刺时间
+                //Debug.Log("检测墙体生效！！！！！！！！");
+                // 如果检测到墙体，则停止冲刺
+                isDashing = false;
+                rb.velocity = new Vector2(0, rb.velocity.y);
             }
             else
             {
-                isDashing = false;
-                rb.velocity = new Vector2(0, rb.velocity.y); // 冲刺结束后重置水平速度
+                if (dashTimeLeft > 0)
+                {
+                    rb.velocity = new Vector2(transform.localScale.x * dashSpeed, rb.velocity.y); // 维持冲刺速度
+                    dashTimeLeft -= Time.fixedDeltaTime; // 减少剩余冲刺时间
+                }
+                else
+                {
+                    isDashing = false;
+                    rb.velocity = new Vector2(0, rb.velocity.y); // 冲刺结束后重置水平速度
+                }
             }
         }
         else
@@ -261,9 +344,15 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
 
         }
+    }
 
+    private void OnEnable()
+    {
+        attackSkill03.ClearCooldown.AddListener(TrigClearSkill03CD);
 
     }
+
+
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -380,7 +469,6 @@ public class PlayerController : MonoBehaviour
         if (context.started && Skill02Cooldown <= 0)
         {
             animator.SetTrigger(AnimationStrings.skill02Tap);
-
             SpellSkill02.Invoke();
         }
 
@@ -391,12 +479,15 @@ public class PlayerController : MonoBehaviour
     public void OnSkill03(InputAction.CallbackContext context)
     {
 
-        if (context.started && Skill03Cooldown <= 0)
+        if (context.started && Skill03Cooldown <= 0 && Skill03StunFinished)
         {
             animator.SetTrigger(AnimationStrings.skill03Tap);
-            SpellSkill03.Invoke();
 
             StartDash();
+
+            SetSkill03Cooldown();
+            animator.SetBool(AnimationStrings.skill03StunFinished, false);
+
         }
 
     }
@@ -406,7 +497,21 @@ public class PlayerController : MonoBehaviour
     {
         isDashing = true;
         dashTimeLeft = dashDuration;
-        rb.velocity = new Vector2(transform.localScale.x * dashSpeed, rb.velocity.y); // ������ҳ������ó�̷���
+        rb.velocity = new Vector2(transform.localScale.x * dashSpeed, rb.velocity.y); // 冲刺保留Y轴速度
+    }
+
+
+    private void TrigClearSkill03CD()
+    {
+        clearCDTrigger = true;
+    }
+
+    private void SetSkill03Cooldown()
+    {
+        isSetSkill03CDLag = true;
+        lagTimeLeft = lagDuration;
+        isSetSkill03StunLag = true;
+        stunTimeLeft = stunTimeDuration;
     }
 
 

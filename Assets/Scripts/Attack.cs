@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Attack : MonoBehaviour
 {
     public int attackDamage ;
     public Vector2 knockback = Vector2.zero;
+
+    public bool canClearCooldown;
+    public UnityEvent ClearCooldown;
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -18,8 +23,16 @@ public class Attack : MonoBehaviour
 
             bool gotHit = damageable.Hit(attackDamage, deliveredKnockback);
 
-            if(gotHit)
-            Debug.Log(collision.name + "hit for" + attackDamage);
+            if (gotHit)
+            {
+                //Debug.Log(collision.name + "hit for" + attackDamage);
+            }
+
+            if (canClearCooldown)
+            {
+                ClearCooldown.Invoke();
+
+            }
         }
     }
 

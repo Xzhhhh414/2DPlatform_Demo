@@ -109,6 +109,7 @@ public class Damageable : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+
     private void Update()
     {
 

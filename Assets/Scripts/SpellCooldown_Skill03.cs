@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Net.NetworkInformation;
-
+using System;
 
 public class SpellCooldown_Skill03 : MonoBehaviour
 {
     PlayerController playerController;
-
+    //Attack attack;
 
     [SerializeField]
     private Image imageCooldown;
@@ -22,7 +22,7 @@ public class SpellCooldown_Skill03 : MonoBehaviour
     private bool isCooldown = false;
     private float cooldownTime = 5.0f;
     private float cooldownTimer = 0.0f;
-
+    //private bool clearCDTrigger;
 
     private void Awake()
     {
@@ -32,8 +32,11 @@ public class SpellCooldown_Skill03 : MonoBehaviour
             Debug.Log("No Player found in the scene");
         }
         playerController = player.GetComponent<PlayerController>();
+        //attack = attack.GetComponent<Attack>();
 
     }
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,9 +48,12 @@ public class SpellCooldown_Skill03 : MonoBehaviour
     private void OnEnable()
     {
         playerController.SpellSkill03.AddListener(UseSpell);
+        //attack.ClearCooldown.AddListener(TrigClearSkill03CD);
     }
 
-  
+
+
+
 
 
     // Update is called once per frame
@@ -103,4 +109,11 @@ public class SpellCooldown_Skill03 : MonoBehaviour
         }
 
     }
+
+    private void TrigClearSkill03CD()
+    {
+        //clearCDTrigger = true;
+    }
+
+
 }

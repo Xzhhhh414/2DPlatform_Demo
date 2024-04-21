@@ -102,6 +102,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 25
   knockback: {x: 2.5, y: 0}
+  canClearCooldown: 0
+  ClearCooldown:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2518172833478220632
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,6 +203,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 15
   knockback: {x: 0, y: 0}
+  canClearCooldown: 0
+  ClearCooldown:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2870687447323060451
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,6 +305,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 30
   knockback: {x: 1.5, y: 0}
+  canClearCooldown: 0
+  ClearCooldown:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5244544144875778800
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,6 +437,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 20
   knockback: {x: 0, y: 1.5}
+  canClearCooldown: 0
+  ClearCooldown:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5772479327754245111
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,6 +539,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 27
   knockback: {x: 1, y: 0.5}
+  canClearCooldown: 0
+  ClearCooldown:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7118996619779536036
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,7 +608,7 @@ PolygonCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 4.51, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -620,7 +640,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 30
-  knockback: {x: 0.5, y: 5}
+  knockback: {x: 0.5, y: 0.5}
+  canClearCooldown: 1
+  ClearCooldown:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7288052657773257048
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,6 +742,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 50
   knockback: {x: 2.5, y: 1.5}
+  canClearCooldown: 0
+  ClearCooldown:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7300039818860810853
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,6 +847,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 20
   knockback: {x: 1.5, y: 0}
+  canClearCooldown: 0
+  ClearCooldown:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8466580319061042151
 GameObject:
   m_ObjectHideFlags: 0
@@ -916,6 +948,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 10
   knockback: {x: 0, y: 0}
+  canClearCooldown: 0
+  ClearCooldown:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8577367491070427345
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,10 +997,10 @@ Transform:
   - {fileID: 8963731616385824594}
   - {fileID: 1457502768239191321}
   - {fileID: 381184654017228825}
-  - {fileID: 7689512603009516231}
   - {fileID: 6853647544146025658}
   - {fileID: 7016126394080851370}
   - {fileID: 4752606125743456318}
+  - {fileID: 7689512603009516231}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &758846839772726439
@@ -1058,11 +1094,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0b1cb2a71eae694a8979da9b0aed90c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 9
-  airWalkSpeed: 5
+  walkSpeed: 8
+  airWalkSpeed: 6
   jumpImpulse: 15
-  moveInput: {x: 0, y: 0}
-  isOnMoveHolding: 0
   SpellSkill01:
     m_PersistentCalls:
       m_Calls: []
@@ -1301,8 +1335,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.061767578, y: -0.38}
-  m_Size: {x: 0.9611702, y: 2.117487}
+  m_Offset: {x: 0.0305202, y: -0.38}
+  m_Size: {x: 1.1236567, y: 2.117487}
   m_Direction: 0
 --- !u!114 &5646727627007476385
 MonoBehaviour:
@@ -1488,3 +1522,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 22
   knockback: {x: 0, y: 0}
+  canClearCooldown: 0
+  ClearCooldown:
+    m_PersistentCalls:
+      m_Calls: []
