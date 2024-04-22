@@ -131,7 +131,7 @@ public class TouchingDirections : MonoBehaviour
                     }
                     break;
                 case CollisionDirection.Horiziontal:
-                    if (distance.normal.y < 0 && distance.distance >= -0.01)
+                    if (distance.normal.y <= 0 && distance.distance >= -0.01)
                     {
                         return true;
                     }
