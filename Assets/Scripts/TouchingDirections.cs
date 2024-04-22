@@ -108,7 +108,7 @@ public class TouchingDirections : MonoBehaviour
             IsOnWall = false;
         }
         IsOnCeiling = touchingCol.Cast(Vector2.up, castFliter, ceilingHits, ceilingDistance) > 0;
-        Debug.Log(IsOnWall);
+        //Debug.Log(IsOnWall);
     }
 
     bool CollisionDetector()
