@@ -25221,6 +25221,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1608644600609233539, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646727627007476385, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
+      propertyPath: contactFilter.useLayerMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646727627007476385, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
+      propertyPath: contactFilter.layerMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646727627007476385, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
+      propertyPath: contactFilter.useOutsideNormalAngle
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8198951932485516424, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.31

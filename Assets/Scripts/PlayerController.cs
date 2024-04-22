@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     TouchingDirections touchingDirections;
     Damageable damageable;
     Attack attackSkill03;
+    CapsuleCollider2D capsule;
 
     public UnityEvent SpellSkill01;
     public UnityEvent SpellSkill02;
@@ -33,13 +34,13 @@ public class PlayerController : MonoBehaviour
     private bool clearCDTrigger = false; //可清CD的触发器
     private float clearCDTriggerTimeLeft;//窗口时间的倒计时
     private float clearCDTriggerDuration = 2f;//命中后可继续使用技能的窗口时间
-    private bool SettingSkill03CD = false; 
+    private bool SettingSkill03CD = false;
     private float lagTimeLeft;//剩余释放技能后进CD的时间
     private float lagDuration = 0.1f;//释放技能后是否进CD的延迟时间
     private bool SettingSkill03StunLag = false;
     private float stunTimeLeft;//连续释放的间隔时间的倒计时
     private float stunTimeDuration = 0.2f;//连续释放的间隔时间
-    private int clearCDTimeLeft ; //当前轮技能清CD剩余次数
+    private int clearCDTimeLeft; //当前轮技能清CD剩余次数
     private int clearCDMaxTime = 2; //当前轮技能清CD最大次数
     private bool hitDamage = false;//技能初始状态是没命中
 
@@ -225,6 +226,7 @@ public class PlayerController : MonoBehaviour
     {
         wallLayerMask = LayerMask.GetMask("Ground");
         clearCDTimeLeft = clearCDMaxTime;
+        capsule = GetComponent<CapsuleCollider2D>();
     }
 
 
@@ -246,7 +248,7 @@ public class PlayerController : MonoBehaviour
         if (Skill03Cooldown > 0)
         {
             Skill03Cooldown -= Time.deltaTime;
- 
+
         }
 
         if (SettingSkill03CD)
@@ -281,7 +283,7 @@ public class PlayerController : MonoBehaviour
 
         if (clearCDTrigger)
         {
-            
+
             if (clearCDTriggerTimeLeft > 0)
             {
                 clearCDTriggerTimeLeft -= Time.deltaTime;
@@ -320,14 +322,14 @@ public class PlayerController : MonoBehaviour
 
 
 
-        #if UNITY_EDITOR
-                if (Input.GetKeyDown(KeyCode.LeftShift))
-                {
-                    BattleTestManager.Instance.GMTimeScale();
-                }
-        #endif
+#if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            BattleTestManager.Instance.GMTimeScale();
+        }
+#endif
 
-
+        
 
     }
     private void FixedUpdate()
@@ -559,4 +561,5 @@ public class PlayerController : MonoBehaviour
     {
         //rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
     }
+
 }

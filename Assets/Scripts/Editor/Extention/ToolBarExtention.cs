@@ -21,9 +21,9 @@ public class ToolBarExtention
         GUILayout.FlexibleSpace();
         if (GUILayout.Button("开始游戏", EditorStyles.toolbarButton, GUILayout.Width(100)))
         {
-            EditorApplication.playModeStateChanged += OnStartGameButtonClicked;
             if (!SceneManager.GetActiveScene().name.Equals("GameplayScene"))
             {
+                EditorApplication.playModeStateChanged += OnStartGameButtonClicked;
                 preScenePath = SceneManager.GetActiveScene().path;
                 EditorSceneManager.OpenScene("Assets/Scenes/GameplayScene.unity");
             }
@@ -35,7 +35,7 @@ public class ToolBarExtention
         if (state == PlayModeStateChange.EnteredEditMode)
         {
             EditorSceneManager.OpenScene(preScenePath);
-            
+
             EditorApplication.playModeStateChanged -= OnStartGameButtonClicked;
         }
     }

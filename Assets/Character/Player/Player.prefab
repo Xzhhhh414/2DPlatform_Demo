@@ -1079,7 +1079,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &2999302699537840522
 MonoBehaviour:
@@ -1372,6 +1372,20 @@ MonoBehaviour:
   _isGrounded: 0
   _isOnWall: 0
   _isOnWCeiling: 0
+  contactFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
 --- !u!114 &5493665764848477191
 MonoBehaviour:
   m_ObjectHideFlags: 0
