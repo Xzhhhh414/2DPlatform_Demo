@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 1643534007564350675}
   - component: {fileID: 6970840597294661560}
   - component: {fileID: 4537913735646046649}
-  - component: {fileID: 2780055544664725192}
+  - component: {fileID: 8412200646028367998}
   - component: {fileID: 3739353946498540055}
   - component: {fileID: 6235004766465508083}
   - component: {fileID: 9051693973942563693}
@@ -226,8 +226,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &2780055544664725192
-CapsuleCollider2D:
+--- !u!61 &8412200646028367998
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -258,9 +258,19 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09700358, y: -0.009570241}
-  m_Size: {x: 0.9645221, y: 2.276388}
-  m_Direction: 0
+  m_Offset: {x: -0.09271717, y: 0.0018217564}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.47, y: 0.23}
+    oldSize: {x: 7.5, y: 5}
+    newSize: {x: 7.5, y: 5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.96429825, y: 2.342317}
+  m_EdgeRadius: 0
 --- !u!114 &3739353946498540055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,6 +321,20 @@ MonoBehaviour:
   _isGrounded: 0
   _isOnWall: 0
   _isOnWCeiling: 0
+  contactFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
 --- !u!95 &9051693973942563693
 Animator:
   serializedVersion: 5
@@ -368,8 +392,8 @@ MonoBehaviour:
   _maxHealth: 100
   _health: 100
   _isAlive: 1
-  isInvincible: 0
-  invincibilityTime: 0
+  hitInterval: 0
+  hitIntervalTime: 0.25
 --- !u!1 &5885092043841135857
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,3 +586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 5
   knockback: {x: 3, y: 1.5}
+  canClearCooldown: 0
+  ClearCooldown:
+    m_PersistentCalls:
+      m_Calls: []
