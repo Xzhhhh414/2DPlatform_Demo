@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -95,49 +96,53 @@ public class TouchingDirections : MonoBehaviour
     void FixedUpdate()
     {
         if (touchingCol.Cast(Vector2.down, castFliter, groundHits, groundDistance) > 0)
-        {
-            IsGrounded = CollisionDetector(CollisionDirection.Horiziontal);
-        }
+            IsGrounded = CollisionDetector(groundHits, CollisionDirection.Horiziontal);
         else
-        {
             IsGrounded = false;
-        }
-        //IsOnWall = touchingCol.Cast(wallCheckDirection, castFliter, wallHits, wallDistance) > 0;
         if (touchingCol.Cast(wallCheckDirection, castFliter, wallHits, wallDistance) > 0)
-        {
-            IsOnWall = CollisionDetector(CollisionDirection.Vertical);
-        }
+            IsOnWall = CollisionDetector(wallHits, CollisionDirection.Vertical);
         else
-        {
             IsOnWall = false;
-        }
         IsOnCeiling = touchingCol.Cast(Vector2.up, castFliter, ceilingHits, ceilingDistance) > 0;
     }
-
-    bool CollisionDetector(CollisionDirection direction)
+    private void LateUpdate()
     {
-        var resultsCount = touchingCol.OverlapCollider(contactFilter, results);
-        ColliderDistance2D distance;
-        for (int i = 0; i < resultsCount; i++)
-        {
-            distance = touchingCol.Distance(results[i]);
+        Array.Clear(groundHits, 0, groundHits.Length);
+        Array.Clear(wallHits, 0, wallHits.Length);
+    }
 
-            switch (direction)
+    bool CollisionDetector(RaycastHit2D[] hits, CollisionDirection direction)
+    {
+        foreach (var hit in hits)
+        {
+            if (hit.collider != null)
             {
-                case CollisionDirection.Vertical:
-                    if (distance.normal.x != 0 && distance.distance >= -0.01)
-                    {
-                        return true;
-                    }
-                    break;
-                case CollisionDirection.Horiziontal:
-                    if (distance.normal.y <= 0 && distance.distance >= -0.01)
-                    {
-                        return true;
-                    }
-                    break;
+                var distance = touchingCol.Distance(hit.collider);
+                if (distance.distance < -0.01)
+                    continue;
+                switch (direction)
+                {
+                    case CollisionDirection.Vertical:
+                        if (hit.collider.tag == "One Way")
+                        {
+                            continue;
+                        }
+                        if (hit.normal.x != 0)
+                        {
+                            return true;
+                        }
+                        break;
+                    case CollisionDirection.Horiziontal:
+
+                        if (hit.normal.y > 0)
+                        {
+                            return true;
+                        }
+                        break;
+                }
             }
         }
         return false;
     }
+
 }
