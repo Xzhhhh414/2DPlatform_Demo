@@ -87,12 +87,16 @@ public class TouchingDirections : MonoBehaviour
 
     public ContactFilter2D contactFilter;
     private Collider2D[] results = new Collider2D[5];
-    // Update is called once per frame
+    enum CollisionDirection
+    {
+        Horiziontal = 1,
+        Vertical,
+    }// Update is called once per frame
     void FixedUpdate()
     {
         if (touchingCol.Cast(Vector2.down, castFliter, groundHits, groundDistance) > 0)
         {
-            IsGrounded = CollisionDetector();
+            IsGrounded = CollisionDetector(CollisionDirection.Horiziontal);
         }
         else
         {
@@ -101,29 +105,37 @@ public class TouchingDirections : MonoBehaviour
         //IsOnWall = touchingCol.Cast(wallCheckDirection, castFliter, wallHits, wallDistance) > 0;
         if (touchingCol.Cast(wallCheckDirection, castFliter, wallHits, wallDistance) > 0)
         {
-            IsOnWall = CollisionDetector();
+            IsOnWall = CollisionDetector(CollisionDirection.Vertical);
         }
         else
         {
             IsOnWall = false;
         }
         IsOnCeiling = touchingCol.Cast(Vector2.up, castFliter, ceilingHits, ceilingDistance) > 0;
-        Debug.Log(IsOnWall);
     }
 
-    bool CollisionDetector()
+    bool CollisionDetector(CollisionDirection direction)
     {
         var resultsCount = touchingCol.OverlapCollider(contactFilter, results);
+        ColliderDistance2D distance;
         for (int i = 0; i < resultsCount; i++)
         {
-            ColliderDistance2D distance = touchingCol.Distance(results[i]);
-            if (distance.distance < -0.01)
+            distance = touchingCol.Distance(results[i]);
+
+            switch (direction)
             {
-                return false;
-            }
-            else
-            {
-                return true;
+                case CollisionDirection.Vertical:
+                    if (distance.normal.x != 0 && distance.distance >= -0.01)
+                    {
+                        return true;
+                    }
+                    break;
+                case CollisionDirection.Horiziontal:
+                    if (distance.normal.y < 0 && distance.distance >= -0.01)
+                    {
+                        return true;
+                    }
+                    break;
             }
         }
         return false;
