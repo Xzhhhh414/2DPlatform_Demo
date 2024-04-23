@@ -61,11 +61,9 @@ public class Attack : MonoBehaviour
 
     IEnumerator ChangAnimationSpeed(float newSpeed, float duration, Animator animator)
     {
-        float originalSpeed = animator.speed;
         animator.speed = newSpeed;
-
         yield return new WaitForSeconds(duration);
-        animator.speed = originalSpeed;
+        animator.speed = 1;
     }
 
 
