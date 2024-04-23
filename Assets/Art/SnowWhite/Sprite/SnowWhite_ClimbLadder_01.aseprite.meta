@@ -1,0 +1,1452 @@
+fileFormatVersion: 2
+guid: c1adeb419eaa7c54886cf1c79c94952d
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: SnowWhite_ClimbLadder_01_Frame_0
+    originalName: 
+    pivot: {x: 0.46153852, y: -0.02777778}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 139
+      width: 13
+      height: 36
+    spriteID: def3a25d6bf126f428d3436dfe0e2712
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 139}
+  - name: SnowWhite_ClimbLadder_01_Frame_1
+    originalName: 
+    pivot: {x: 0.42857146, y: -0.02777778}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 50
+      y: 4
+      width: 14
+      height: 36
+    spriteID: a711048d3bf857c4b9da7bed14ebd9c7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 50, y: 4}
+  - name: SnowWhite_ClimbLadder_01_Frame_2
+    originalName: 
+    pivot: {x: 0.42857146, y: -0.02777778}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 50
+      y: 48
+      width: 14
+      height: 36
+    spriteID: e20a2c10740b1ea45953a2639b40b8d9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 50, y: 48}
+  - name: SnowWhite_ClimbLadder_01_Frame_3
+    originalName: 
+    pivot: {x: 0.40000007, y: -0.02857143}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 136
+      width: 15
+      height: 35
+    spriteID: 7e8c7daeb69af15438f6a0925e481383
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 136}
+  - name: SnowWhite_ClimbLadder_01_Frame_4
+    originalName: 
+    pivot: {x: 0.40000007, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 4
+      width: 15
+      height: 36
+    spriteID: 6301da692b5af6b458caebacdca64a4e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 4}
+  - name: SnowWhite_ClimbLadder_01_Frame_5
+    originalName: 
+    pivot: {x: 0.40000007, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 48
+      width: 15
+      height: 36
+    spriteID: 4140a852387553c4c88ed25b0d7359b0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 48}
+  - name: SnowWhite_ClimbLadder_01_Frame_6
+    originalName: 
+    pivot: {x: 0.40000007, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 15
+      height: 37
+    spriteID: a7a9a833c411a61438936ca0a65b0bb6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: SnowWhite_ClimbLadder_01_Frame_7
+    originalName: 
+    pivot: {x: 0.40000007, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 49
+      width: 15
+      height: 37
+    spriteID: 63dbfecf25f99d347868d8a5602b54f6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 49}
+  - name: SnowWhite_ClimbLadder_01_Frame_8
+    originalName: 
+    pivot: {x: 0.40000007, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 94
+      width: 15
+      height: 37
+    spriteID: 6ab457415076afc44b278eec678a25b4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 94}
+  - name: SnowWhite_ClimbLadder_01_Frame_9
+    originalName: 
+    pivot: {x: 0.40000007, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 139
+      width: 15
+      height: 37
+    spriteID: 63bad81aa77bcf44e970eb87f57bcb9e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 139}
+  - name: SnowWhite_ClimbLadder_01_Frame_10
+    originalName: 
+    pivot: {x: 0.40000007, y: -0.02777778}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 92
+      width: 15
+      height: 36
+    spriteID: f8899ec34c020b14193ed3d795db560c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 92}
+  - name: SnowWhite_ClimbLadder_01_Frame_11
+    originalName: 
+    pivot: {x: 0.40000007, y: -0.027027026}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 184
+      width: 15
+      height: 37
+    spriteID: 2832f9fd096e95945ac0ada0135fb36e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 184}
+  - name: SnowWhite_ClimbLadder_01_Frame_12
+    originalName: 
+    pivot: {x: 0.42857146, y: -0.027027026}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 179
+      width: 14
+      height: 37
+    spriteID: f39e0c0566f1c424f81fd1910cc95814
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 179}
+  - name: SnowWhite_ClimbLadder_01_Frame_13
+    originalName: 
+    pivot: {x: 0.38461542, y: -0.027027026}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 50
+      y: 92
+      width: 13
+      height: 37
+    spriteID: 5ea461162e5b01b42ae8c737dce4e38d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 50, y: 92}
+  - name: SnowWhite_ClimbLadder_01_Frame_14
+    originalName: 
+    pivot: {x: 0.38461542, y: -0.027027026}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 50
+      y: 137
+      width: 13
+      height: 37
+    spriteID: 5a37b0ef2011f3a4ea004d355f0e4594
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 50, y: 137}
+  - name: SnowWhite_ClimbLadder_01_Frame_15
+    originalName: 
+    pivot: {x: 0.38461542, y: -0.027027026}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 50
+      y: 182
+      width: 13
+      height: 37
+    spriteID: e42c212f47d46a74cb45b3c110921880
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 50, y: 182}
+  - name: SnowWhite_ClimbLadder_01_Frame_16
+    originalName: 
+    pivot: {x: 0.38461542, y: -0.027027026}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 4
+      width: 13
+      height: 37
+    spriteID: 74d7518040c34ef458712de09acc711a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 4}
+  - name: SnowWhite_ClimbLadder_01_Frame_17
+    originalName: 
+    pivot: {x: 0.38461542, y: -0.027027026}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 49
+      width: 13
+      height: 37
+    spriteID: a4ca920e8b9303646ac7672e28140c90
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 49}
+  - name: SnowWhite_ClimbLadder_01_Frame_18
+    originalName: 
+    pivot: {x: 0.38461542, y: -0.05714286}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 114
+      y: 138
+      width: 13
+      height: 35
+    spriteID: 95e7f77f4854a254f85d76437ad3b649
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 114, y: 138}
+  - name: SnowWhite_ClimbLadder_01_Frame_19
+    originalName: 
+    pivot: {x: 0.38461542, y: -0.05714286}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 114
+      y: 181
+      width: 13
+      height: 35
+    spriteID: 913c72b716f4b28408b1b7518dd722a8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 114, y: 181}
+  - name: SnowWhite_ClimbLadder_01_Frame_20
+    originalName: 
+    pivot: {x: 0.38461542, y: -0.05714286}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 135
+      y: 4
+      width: 13
+      height: 35
+    spriteID: 5015707fbea345a4fb44a2feb134777f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 135, y: 4}
+  - name: SnowWhite_ClimbLadder_01_Frame_21
+    originalName: 
+    pivot: {x: 0.38461542, y: -0.05714286}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 135
+      y: 47
+      width: 13
+      height: 35
+    spriteID: 3553b25646fe6a74b8af893cc828742e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 135, y: 47}
+  - name: SnowWhite_ClimbLadder_01_Frame_22
+    originalName: 
+    pivot: {x: 0.4166667, y: -0.02777778}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 156
+      y: 94
+      width: 12
+      height: 36
+    spriteID: ab76ba2dee0d28743953fd8635743010
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 156, y: 94}
+  - name: SnowWhite_ClimbLadder_01_Frame_23
+    originalName: 
+    pivot: {x: 0.4166667, y: -0.02777778}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 156
+      y: 138
+      width: 12
+      height: 36
+    spriteID: 4abb27a583c992543a264ee936ff5a5a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 156, y: 138}
+  - name: SnowWhite_ClimbLadder_01_Frame_24
+    originalName: 
+    pivot: {x: 0.4166667, y: -0.02777778}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 156
+      y: 182
+      width: 12
+      height: 36
+    spriteID: c8d25112279bf27409ab162cad20bd23
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 156, y: 182}
+  - name: SnowWhite_ClimbLadder_01_Frame_25
+    originalName: 
+    pivot: {x: 0.46153852, y: -0.02777778}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 183
+      width: 13
+      height: 36
+    spriteID: a5dda1ef0a0c2394188a61fd28c616db
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 183}
+  - name: SnowWhite_ClimbLadder_01_Frame_26
+    originalName: 
+    pivot: {x: 0.46153852, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 94
+      width: 13
+      height: 37
+    spriteID: ca19900ce64eedd4d96759080e1b7211
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 94}
+  - name: SnowWhite_ClimbLadder_01_Frame_27
+    originalName: 
+    pivot: {x: 0.46153852, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 139
+      width: 13
+      height: 37
+    spriteID: 410b04c397a974c4593e1517876990ec
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 139}
+  - name: SnowWhite_ClimbLadder_01_Frame_28
+    originalName: 
+    pivot: {x: 0.46153852, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 184
+      width: 13
+      height: 37
+    spriteID: 372df70e427e816449ccc364512d226b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 184}
+  - name: SnowWhite_ClimbLadder_01_Frame_29
+    originalName: 
+    pivot: {x: 0.46153852, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 4
+      width: 13
+      height: 37
+    spriteID: 708179065945d0c43a0d340d064305f3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 4}
+  - name: SnowWhite_ClimbLadder_01_Frame_30
+    originalName: 
+    pivot: {x: 0.46153852, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 49
+      width: 13
+      height: 37
+    spriteID: 9f72c8f9ecb9ce04a8e859a43cdd2159
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 49}
+  - name: SnowWhite_ClimbLadder_01_Frame_31
+    originalName: 
+    pivot: {x: 0.46153852, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 94
+      width: 13
+      height: 37
+    spriteID: bb3382cec37ac504e8a1f558acd70123
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 94}
+  - name: SnowWhite_ClimbLadder_01_Frame_32
+    originalName: 
+    pivot: {x: 0.46153852, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 114
+      y: 4
+      width: 13
+      height: 36
+    spriteID: 7902fdefaf36b474f89aa2ffaf74c643
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 114, y: 4}
+  - name: SnowWhite_ClimbLadder_01_Frame_33
+    originalName: 
+    pivot: {x: 0.4166667, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 114
+      y: 92
+      width: 12
+      height: 38
+    spriteID: a4cd86aa9a523634cb1a7541156e902b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 114, y: 92}
+  - name: SnowWhite_ClimbLadder_01_Frame_34
+    originalName: 
+    pivot: {x: 0.45454547, y: -0.027027026}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 176
+      y: 90
+      width: 11
+      height: 37
+    spriteID: 426bbcb972541454da6c9c083a46e784
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 176, y: 90}
+  - name: SnowWhite_ClimbLadder_01_Frame_35
+    originalName: 
+    pivot: {x: 0.45454547, y: -0.027027026}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 176
+      y: 135
+      width: 11
+      height: 37
+    spriteID: 7031ba7d426c2514fb5bc04e9501025c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 176, y: 135}
+  - name: SnowWhite_ClimbLadder_01_Frame_36
+    originalName: 
+    pivot: {x: 0.45454547, y: -0.027027026}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 176
+      y: 180
+      width: 11
+      height: 37
+    spriteID: 968679ad0300b7f47a14b019066c3469
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 176, y: 180}
+  - name: SnowWhite_ClimbLadder_01_Frame_37
+    originalName: 
+    pivot: {x: 0.45454547, y: -0.027027026}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 196
+      y: 4
+      width: 11
+      height: 37
+    spriteID: 66a8582f12552d54c9f886bd6db7c2e4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 196, y: 4}
+  - name: SnowWhite_ClimbLadder_01_Frame_38
+    originalName: 
+    pivot: {x: 0.45454547, y: -0.027027026}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 196
+      y: 49
+      width: 11
+      height: 37
+    spriteID: e66193a3869f2e547a48f0de2fcc38c3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 196, y: 49}
+  - name: SnowWhite_ClimbLadder_01_Frame_39
+    originalName: 
+    pivot: {x: 0.50000006, y: -0.027027026}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 156
+      y: 4
+      width: 12
+      height: 37
+    spriteID: 924b375894efecb4db02316026a9a50c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 156, y: 4}
+  - name: SnowWhite_ClimbLadder_01_Frame_40
+    originalName: 
+    pivot: {x: 0.50000006, y: -0.027027026}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 156
+      y: 49
+      width: 12
+      height: 37
+    spriteID: 0641af0b610214549b93db21fd91556b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 156, y: 49}
+  - name: SnowWhite_ClimbLadder_01_Frame_41
+    originalName: 
+    pivot: {x: 0.50000006, y: -0.02777778}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 176
+      y: 4
+      width: 12
+      height: 36
+    spriteID: a94858b6c5bdbf943acc155a1b0d05bd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 176, y: 4}
+  - name: SnowWhite_ClimbLadder_01_Frame_42
+    originalName: 
+    pivot: {x: 0.50000006, y: -0.058823533}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 176
+      y: 48
+      width: 12
+      height: 34
+    spriteID: 7c8d97173f359c544858b7c6bd2a9d01
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 176, y: 48}
+  - name: SnowWhite_ClimbLadder_01_Frame_43
+    originalName: 
+    pivot: {x: 0.46153852, y: -0.05714286}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 135
+      y: 90
+      width: 13
+      height: 35
+    spriteID: 97d3d22e59baaa04e93a6b1ecdc97bd1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 135, y: 90}
+  - name: SnowWhite_ClimbLadder_01_Frame_44
+    originalName: 
+    pivot: {x: 0.46153852, y: -0.05714286}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 135
+      y: 133
+      width: 13
+      height: 35
+    spriteID: 9a36addb81ea1424ebd39057483d4ae5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 135, y: 133}
+  - name: SnowWhite_ClimbLadder_01_Frame_45
+    originalName: 
+    pivot: {x: 0.46153852, y: -0.05714286}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 135
+      y: 176
+      width: 13
+      height: 35
+    spriteID: 06efb8748d0c34749aadabe80c552431
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 135, y: 176}
+  - name: SnowWhite_ClimbLadder_01_Frame_46
+    originalName: 
+    pivot: {x: 0.46153852, y: -0.02777778}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 114
+      y: 48
+      width: 13
+      height: 36
+    spriteID: c88fe81090c5e7547b6014620283b69d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 114, y: 48}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -551279898
+    name: SnowWhite_ClimbLadder_01
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: SnowWhite_ClimbLadder_01_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 30
+        y: 1
+        width: 13
+        height: 36
+      spriteId: def3a25d6bf126f428d3436dfe0e2712
+    - name: SnowWhite_ClimbLadder_01_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 30
+        y: 1
+        width: 14
+        height: 36
+      spriteId: a711048d3bf857c4b9da7bed14ebd9c7
+    - name: SnowWhite_ClimbLadder_01_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 30
+        y: 1
+        width: 14
+        height: 36
+      spriteId: e20a2c10740b1ea45953a2639b40b8d9
+    - name: SnowWhite_ClimbLadder_01_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 30
+        y: 1
+        width: 15
+        height: 35
+      spriteId: 7e8c7daeb69af15438f6a0925e481383
+    - name: SnowWhite_ClimbLadder_01_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 30
+        y: 0
+        width: 15
+        height: 36
+      spriteId: 6301da692b5af6b458caebacdca64a4e
+    - name: SnowWhite_ClimbLadder_01_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 30
+        y: 0
+        width: 15
+        height: 36
+      spriteId: 4140a852387553c4c88ed25b0d7359b0
+    - name: SnowWhite_ClimbLadder_01_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 30
+        y: 0
+        width: 15
+        height: 37
+      spriteId: a7a9a833c411a61438936ca0a65b0bb6
+    - name: SnowWhite_ClimbLadder_01_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 30
+        y: 0
+        width: 15
+        height: 37
+      spriteId: 63dbfecf25f99d347868d8a5602b54f6
+    - name: SnowWhite_ClimbLadder_01_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 30
+        y: 0
+        width: 15
+        height: 37
+      spriteId: 6ab457415076afc44b278eec678a25b4
+    - name: SnowWhite_ClimbLadder_01_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 30
+        y: 0
+        width: 15
+        height: 37
+      spriteId: 63bad81aa77bcf44e970eb87f57bcb9e
+    - name: SnowWhite_ClimbLadder_01_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 30
+        y: 1
+        width: 15
+        height: 36
+      spriteId: f8899ec34c020b14193ed3d795db560c
+    - name: SnowWhite_ClimbLadder_01_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 30
+        y: 1
+        width: 15
+        height: 37
+      spriteId: 2832f9fd096e95945ac0ada0135fb36e
+    - name: SnowWhite_ClimbLadder_01_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 30
+        y: 1
+        width: 14
+        height: 37
+      spriteId: f39e0c0566f1c424f81fd1910cc95814
+    - name: SnowWhite_ClimbLadder_01_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 31
+        y: 1
+        width: 13
+        height: 37
+      spriteId: 5ea461162e5b01b42ae8c737dce4e38d
+    - name: SnowWhite_ClimbLadder_01_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 31
+        y: 1
+        width: 13
+        height: 37
+      spriteId: 5a37b0ef2011f3a4ea004d355f0e4594
+    - name: SnowWhite_ClimbLadder_01_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 31
+        y: 1
+        width: 13
+        height: 37
+      spriteId: e42c212f47d46a74cb45b3c110921880
+    - name: SnowWhite_ClimbLadder_01_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 31
+        y: 1
+        width: 13
+        height: 37
+      spriteId: 74d7518040c34ef458712de09acc711a
+    - name: SnowWhite_ClimbLadder_01_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 31
+        y: 1
+        width: 13
+        height: 37
+      spriteId: a4ca920e8b9303646ac7672e28140c90
+    - name: SnowWhite_ClimbLadder_01_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 31
+        y: 2
+        width: 13
+        height: 35
+      spriteId: 95e7f77f4854a254f85d76437ad3b649
+    - name: SnowWhite_ClimbLadder_01_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 31
+        y: 2
+        width: 13
+        height: 35
+      spriteId: 913c72b716f4b28408b1b7518dd722a8
+    - name: SnowWhite_ClimbLadder_01_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 31
+        y: 2
+        width: 13
+        height: 35
+      spriteId: 5015707fbea345a4fb44a2feb134777f
+    - name: SnowWhite_ClimbLadder_01_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 31
+        y: 2
+        width: 13
+        height: 35
+      spriteId: 3553b25646fe6a74b8af893cc828742e
+    - name: SnowWhite_ClimbLadder_01_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 31
+        y: 1
+        width: 12
+        height: 36
+      spriteId: ab76ba2dee0d28743953fd8635743010
+    - name: SnowWhite_ClimbLadder_01_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 31
+        y: 1
+        width: 12
+        height: 36
+      spriteId: 4abb27a583c992543a264ee936ff5a5a
+    - name: SnowWhite_ClimbLadder_01_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 31
+        y: 1
+        width: 12
+        height: 36
+      spriteId: c8d25112279bf27409ab162cad20bd23
+    - name: SnowWhite_ClimbLadder_01_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 30
+        y: 1
+        width: 13
+        height: 36
+      spriteId: a5dda1ef0a0c2394188a61fd28c616db
+    - name: SnowWhite_ClimbLadder_01_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 30
+        y: 0
+        width: 13
+        height: 37
+      spriteId: ca19900ce64eedd4d96759080e1b7211
+    - name: SnowWhite_ClimbLadder_01_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 30
+        y: 0
+        width: 13
+        height: 37
+      spriteId: 410b04c397a974c4593e1517876990ec
+    - name: SnowWhite_ClimbLadder_01_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 30
+        y: 0
+        width: 13
+        height: 37
+      spriteId: 372df70e427e816449ccc364512d226b
+    - name: SnowWhite_ClimbLadder_01_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 30
+        y: 0
+        width: 13
+        height: 37
+      spriteId: 708179065945d0c43a0d340d064305f3
+    - name: SnowWhite_ClimbLadder_01_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 30
+        y: 0
+        width: 13
+        height: 37
+      spriteId: 9f72c8f9ecb9ce04a8e859a43cdd2159
+    - name: SnowWhite_ClimbLadder_01_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 30
+        y: 0
+        width: 13
+        height: 37
+      spriteId: bb3382cec37ac504e8a1f558acd70123
+    - name: SnowWhite_ClimbLadder_01_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 30
+        y: 0
+        width: 13
+        height: 36
+      spriteId: 7902fdefaf36b474f89aa2ffaf74c643
+    - name: SnowWhite_ClimbLadder_01_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 31
+        y: 0
+        width: 12
+        height: 38
+      spriteId: a4cd86aa9a523634cb1a7541156e902b
+    - name: SnowWhite_ClimbLadder_01_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 31
+        y: 1
+        width: 11
+        height: 37
+      spriteId: 426bbcb972541454da6c9c083a46e784
+    - name: SnowWhite_ClimbLadder_01_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 31
+        y: 1
+        width: 11
+        height: 37
+      spriteId: 7031ba7d426c2514fb5bc04e9501025c
+    - name: SnowWhite_ClimbLadder_01_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 31
+        y: 1
+        width: 11
+        height: 37
+      spriteId: 968679ad0300b7f47a14b019066c3469
+    - name: SnowWhite_ClimbLadder_01_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 31
+        y: 1
+        width: 11
+        height: 37
+      spriteId: 66a8582f12552d54c9f886bd6db7c2e4
+    - name: SnowWhite_ClimbLadder_01_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 31
+        y: 1
+        width: 11
+        height: 37
+      spriteId: e66193a3869f2e547a48f0de2fcc38c3
+    - name: SnowWhite_ClimbLadder_01_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 30
+        y: 1
+        width: 12
+        height: 37
+      spriteId: 924b375894efecb4db02316026a9a50c
+    - name: SnowWhite_ClimbLadder_01_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 30
+        y: 1
+        width: 12
+        height: 37
+      spriteId: 0641af0b610214549b93db21fd91556b
+    - name: SnowWhite_ClimbLadder_01_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 30
+        y: 1
+        width: 12
+        height: 36
+      spriteId: a94858b6c5bdbf943acc155a1b0d05bd
+    - name: SnowWhite_ClimbLadder_01_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 30
+        y: 2
+        width: 12
+        height: 34
+      spriteId: 7c8d97173f359c544858b7c6bd2a9d01
+    - name: SnowWhite_ClimbLadder_01_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 30
+        y: 2
+        width: 13
+        height: 35
+      spriteId: 97d3d22e59baaa04e93a6b1ecdc97bd1
+    - name: SnowWhite_ClimbLadder_01_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 30
+        y: 2
+        width: 13
+        height: 35
+      spriteId: 9a36addb81ea1424ebd39057483d4ae5
+    - name: SnowWhite_ClimbLadder_01_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: 30
+        y: 2
+        width: 13
+        height: 35
+      spriteId: 06efb8748d0c34749aadabe80c552431
+    - name: SnowWhite_ClimbLadder_01_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 30
+        y: 1
+        width: 13
+        height: 36
+      spriteId: c88fe81090c5e7547b6014620283b69d
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 72, y: 48}
