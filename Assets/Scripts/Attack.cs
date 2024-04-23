@@ -12,12 +12,18 @@ public class Attack : MonoBehaviour
     public int attackDamage;
     public Vector2 knockback = Vector2.zero;
 
-    public bool canClearCooldown;
-    public UnityEvent ClearCooldown;
+
     public float stunRatio = 0.1f;
     private Animator animator;
     Coroutine coroutine1;
     Coroutine coroutine2;
+
+    public bool canClearCooldown;
+    public UnityEvent ClearCooldown;
+    private float lagDuration = 0.2f;//加个计时，命中多个目标只算1次
+    private float lagLeftTime;
+    private bool hitValid = true;
+
 
     private void Start()
     {
@@ -43,9 +49,12 @@ public class Attack : MonoBehaviour
                 coroutine1 = StartCoroutine(ChangAnimationSpeed(0.01f, stunRatio, animator));
                 coroutine2 = StartCoroutine(ChangAnimationSpeed(0.01f, stunRatio, collision.transform.GetComponent<Animator>()));
                 //Debug.Log(collision.name + "hit for" + attackDamage);
-                if (canClearCooldown)
+
+                if (canClearCooldown && hitValid)
                 {
-                    //Debug.Log("ClearCooldown Invoke");
+                    Debug.Log("ClearCooldown Invoke");
+                    hitValid = false;
+                    lagLeftTime = lagDuration;
                     ClearCooldown.Invoke();
 
                 }
@@ -66,5 +75,21 @@ public class Attack : MonoBehaviour
         animator.speed = 1;
     }
 
+    private void Update()
+    {
+        if (!hitValid)
+        {
+            if (lagLeftTime > 0)
+            {
+                lagLeftTime -= Time.deltaTime;
+            }
+            else
+            {
+                hitValid = true;
+                lagLeftTime = lagDuration;
+            }
+        }
+       
+    }
 
 }
