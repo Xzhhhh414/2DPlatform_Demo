@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Rendering;
 
 public class Damageable : MonoBehaviour
 {
@@ -11,7 +12,11 @@ public class Damageable : MonoBehaviour
     public UnityEvent<int, int> healthChanged;
 
     Animator animator;
-    
+    SpriteRenderer sprite;
+    Color originalColorOfSprite;
+
+    Coroutine coroutine;
+
     [SerializeField]
     private int _maxHealth = 100;
     public int MaxHealth
@@ -31,13 +36,13 @@ public class Damageable : MonoBehaviour
     public int Health
     {
         get
-        { 
+        {
             return _health;
         }
         set
         {
             _health = value;
-            healthChanged?.Invoke(_health,MaxHealth);
+            healthChanged?.Invoke(_health, MaxHealth);
 
             if (_health <= 0)
             {
@@ -61,7 +66,7 @@ public class Damageable : MonoBehaviour
             Debug.Log("IsAlive set " + value);
 
             if (value == false)
-            { 
+            {
                 damagebleDeath.Invoke();
             }
         }
@@ -107,6 +112,8 @@ public class Damageable : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
+        originalColorOfSprite = sprite.color;
     }
 
 
@@ -126,17 +133,21 @@ public class Damageable : MonoBehaviour
 
     }
 
-    public bool Hit(int damage,Vector2 knockback) 
+    public bool Hit(int damage, Vector2 knockback)
     {
-        if (IsAlive && !hitInterval && !IsBlocking && !IsInvincible) 
+        if (IsAlive && !hitInterval && !IsBlocking && !IsInvincible)
         {
             Health -= damage;
             hitInterval = true;
 
             animator.SetTrigger(AnimationStrings.hitTrigger);
+            if (coroutine != null) StopCoroutine(coroutine);
+            coroutine = StartCoroutine(ChangeColorTemp(sprite, originalColorOfSprite, Color.red));
             LockVelocity = true;
-            damageableHit?.Invoke(damage,knockback);
+            damageableHit?.Invoke(damage, knockback);
             CharacterEvents.characterDamaged.Invoke(gameObject, damage);
+
+
 
             return true;
         }
@@ -162,5 +173,15 @@ public class Damageable : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    IEnumerator ChangeColorTemp(SpriteRenderer sprite, Color oriColor, Color newColor)
+    {
+
+        sprite.color = newColor;
+
+        yield return new WaitForSeconds(0.7f);
+
+        sprite.color = oriColor;
     }
 }
