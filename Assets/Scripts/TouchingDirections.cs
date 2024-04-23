@@ -127,7 +127,7 @@ public class TouchingDirections : MonoBehaviour
                         {
                             continue;
                         }
-                        if (hit.normal.x != 0)
+                        if (hit.normal.x == 1 || hit.normal.x == -1)
                         {
                             return true;
                         }

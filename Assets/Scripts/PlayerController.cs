@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
@@ -18,7 +20,15 @@ public class PlayerController : MonoBehaviour
     TouchingDirections touchingDirections;
     Damageable damageable;
     Attack attackSkill03;
-    CapsuleCollider2D capsule;
+    BoxCollider2D bCollider;
+    Vector2 normalPerp = Vector2.one;
+    Vector2 normalPerpFront;
+    Vector2 normalPerpBack;
+    bool isOnSlope;
+    [SerializeField]
+    private float slopeDistance = 0.01f;
+
+
 
     public UnityEvent SpellSkill01;
     public UnityEvent SpellSkill02;
@@ -226,7 +236,7 @@ public class PlayerController : MonoBehaviour
     {
         wallLayerMask = LayerMask.GetMask("Ground");
         clearCDTimeLeft = clearCDMaxTime;
-        capsule = GetComponent<CapsuleCollider2D>();
+        bCollider = GetComponent<BoxCollider2D>();
     }
 
 
@@ -333,6 +343,7 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        CheckSlope();
         if (LockInAir)
         {
             rb.constraints = RigidbodyConstraints2D.FreezePositionY | rb.constraints;
@@ -369,14 +380,127 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            //if (!damageable.LockVelocity)
-            //{
-            rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
-            //}
-
+            //rb.velocity = new Vector2(CurrentMoveSpeed * normalPerp.x * -moveInput.x, CurrentMoveSpeed * normalPerp.y * moveInput.x);
+            if (isOnSlope)
+            {
+                rb.velocity = new Vector2(CurrentMoveSpeed * normalPerp.x * -moveInput.x, CurrentMoveSpeed * normalPerp.y * -moveInput.x);
+            }
+            else
+            {
+                rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
+            }
             animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
 
         }
+    }
+    //private void CheckSlope()
+    //{
+    //    Vector3 rayStartPointFront = IsFacingRight ? new Vector3(bCollider.bounds.max.x, bCollider.bounds.min.y) : new Vector3(bCollider.bounds.min.x, bCollider.bounds.min.y);
+    //    Vector3 rayStartPointBack = IsFacingRight ? new Vector3(bCollider.bounds.min.x, bCollider.bounds.min.y) : new Vector3(bCollider.bounds.max.x, bCollider.bounds.min.y);
+
+    //    RaycastHit2D hitFront = Physics2D.Raycast(rayStartPointFront, Vector2.down, slopeDistance, wallLayerMask);
+    //    RaycastHit2D hitBack = Physics2D.Raycast(rayStartPointBack, Vector2.down, slopeDistance, wallLayerMask);
+    //    if (hitFront)
+    //    {
+    //        Debug.DrawRay(hitFront.point, hitFront.normal, Color.red);
+    //        normalPerpFront = Vector2.Perpendicular(hitFront.normal).normalized;
+    //        Debug.DrawRay(hitFront.point, normalPerpFront, Color.green);
+    //    }
+    //    if (hitBack)
+    //    {
+    //        Debug.DrawRay(hitBack.point, hitBack.normal, Color.red);
+    //        normalPerpBack = Vector2.Perpendicular(hitBack.normal).normalized;
+    //        Debug.DrawRay(hitBack.point, normalPerpBack, Color.green);
+    //    }
+    //    if (hitFront.normal == Vector2.up)
+    //    {
+    //        if (hitBack.normal == Vector2.zero)
+    //        {
+    //            isOnSlope = false;
+    //        }
+    //        else if (hitBack.normal != Vector2.up && Vector2.Angle(hitFront.normal, hitBack.normal) < 180)
+    //        {
+    //            isOnSlope = true;
+    //            normalPerp = normalPerpBack;
+    //        }
+    //        else if (hitBack.normal != Vector2.up && Vector2.Angle(hitFront.normal, hitBack.normal) > 180)
+    //        {
+    //            isOnSlope = false;
+    //        }
+    //    }
+    //    else if (hitBack.normal == Vector2.up)
+    //    {
+    //        if (hitFront.normal == Vector2.zero)
+    //        {
+    //            isOnSlope = false;
+    //        }
+    //        else if (hitFront.normal != Vector2.up && Vector2.Angle(hitFront.normal, hitBack.normal) < 180)
+    //        {
+    //            isOnSlope = true;
+    //            normalPerp = normalPerpFront;
+    //        }
+    //        else if (hitFront.normal != Vector2.up && Vector2.Angle(hitFront.normal, hitBack.normal) > 180)
+    //        {
+    //            isOnSlope = false;
+    //        }
+    //    }
+    //    //if (hitFront.normal != Vector2.up && hitFront.normal != Vector2.zero)
+    //    //{
+    //    //    isOnSlope = true;
+    //    //    normalPerp = normalPerpFront;
+    //    //}
+    //    //else if (hitBack.normal != Vector2.up && hitBack.normal != Vector2.zero)
+    //    //{
+    //    //    isOnSlope = true;
+    //    //    normalPerp = normalPerpBack;
+    //    //}
+    //    else
+    //    {
+    //        isOnSlope = false;
+    //    }
+    //}
+    private void CheckSlope()
+    {
+        Vector3 rayStartPointFront = IsFacingRight ? new Vector3(bCollider.bounds.max.x, bCollider.bounds.min.y) : new Vector3(bCollider.bounds.min.x, bCollider.bounds.min.y);
+        Vector3 rayStartPointBack = IsFacingRight ? new Vector3(bCollider.bounds.min.x, bCollider.bounds.min.y) : new Vector3(bCollider.bounds.max.x, bCollider.bounds.min.y);
+
+        RaycastHit2D hitFront = Physics2D.Raycast(rayStartPointFront, Vector2.down, slopeDistance, wallLayerMask);
+        RaycastHit2D hitBack = Physics2D.Raycast(rayStartPointBack, Vector2.down, slopeDistance, wallLayerMask);
+
+        normalPerpFront = hitFront ? Vector2.Perpendicular(hitFront.normal).normalized : Vector2.zero;
+        normalPerpBack = hitBack ? Vector2.Perpendicular(hitBack.normal).normalized : Vector2.zero;
+
+        isOnSlope = CheckIsOnSlope(hitFront, hitBack);
+    }
+
+    private bool CheckIsOnSlope(RaycastHit2D hitFront, RaycastHit2D hitBack)
+    {
+        if (hitFront.normal == Vector2.up)
+        {
+            if (hitBack.normal == Vector2.zero || (hitBack.normal != Vector2.up && Vector2.Angle(hitFront.normal, hitBack.normal) > 180))
+            {
+                return false;
+            }
+            else if (hitBack.normal != Vector2.up && Vector2.Angle(hitFront.normal, hitBack.normal) < 180)
+            {
+                normalPerp = normalPerpBack;
+                return true;
+            }
+        }
+        else if (hitBack.normal == Vector2.up)
+        {
+            if (hitFront.normal == Vector2.zero || (hitFront.normal != Vector2.up && Vector2.Angle(hitFront.normal, hitBack.normal) > 180))
+            {
+                return false;
+            }
+            else if (hitFront.normal != Vector2.up && Vector2.Angle(hitFront.normal, hitBack.normal) < 180)
+            {
+                normalPerp = normalPerpFront;
+                return true;
+            }
+        }
+
+        return false;
     }
 
     private void OnEnable()
@@ -384,7 +508,6 @@ public class PlayerController : MonoBehaviour
         attackSkill03.ClearCooldown.AddListener(TrigClearSkill03CD);
 
     }
-
 
 
     public void OnMove(InputAction.CallbackContext context)
