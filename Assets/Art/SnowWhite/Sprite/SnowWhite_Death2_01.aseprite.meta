@@ -1,0 +1,500 @@
+fileFormatVersion: 2
+guid: 88a979b7993fc184186b8b0fd9b3d993
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: SnowWhite_Death2_01_Frame_0
+    originalName: 
+    pivot: {x: 0.4666667, y: -0.23809524}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 116
+      width: 30
+      height: 21
+    spriteID: 5e486202f1d857b43bfbb76177919c6f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 116}
+  - name: SnowWhite_Death2_01_Frame_1
+    originalName: 
+    pivot: {x: 0.5294118, y: -0.75}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 217
+      width: 34
+      height: 16
+    spriteID: 2b86518b99b304e4abacee685f73cb0f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 217}
+  - name: SnowWhite_Death2_01_Frame_2
+    originalName: 
+    pivot: {x: 0.47368422, y: -0.73333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 194
+      width: 38
+      height: 15
+    spriteID: cec01e3c1c059f54d8dd722671a229ce
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 194}
+  - name: SnowWhite_Death2_01_Frame_3
+    originalName: 
+    pivot: {x: 0.4857143, y: -0.23076923}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 51
+      y: 27
+      width: 35
+      height: 13
+    spriteID: 0ec6477ff34557544bbb2cc5db45f7bb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 51, y: 27}
+  - name: SnowWhite_Death2_01_Frame_4
+    originalName: 
+    pivot: {x: 0.4722222, y: -0.2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 51
+      y: 4
+      width: 36
+      height: 15
+    spriteID: fb0b2a7b9def41748b9d4e9253f4b441
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 51, y: 4}
+  - name: SnowWhite_Death2_01_Frame_5
+    originalName: 
+    pivot: {x: 0.4722222, y: -0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 170
+      width: 36
+      height: 16
+    spriteID: bec4d9245abcbbe40aca5b1d52db177e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 170}
+  - name: SnowWhite_Death2_01_Frame_6
+    originalName: 
+    pivot: {x: 0.45945945, y: -0.23529413}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 145
+      width: 37
+      height: 17
+    spriteID: 804221816de10714e97a208c9e60d906
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 145}
+  - name: SnowWhite_Death2_01_Frame_7
+    originalName: 
+    pivot: {x: 0.46153846, y: -0.20000002}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 39
+      height: 20
+    spriteID: a8eb9bc04524a31439569bcac4090f0c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: SnowWhite_Death2_01_Frame_8
+    originalName: 
+    pivot: {x: 0.4473684, y: -0.20000002}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 60
+      width: 38
+      height: 20
+    spriteID: 140afaa0ac774c5459031375a3c3af53
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 60}
+  - name: SnowWhite_Death2_01_Frame_9
+    originalName: 
+    pivot: {x: 0.4473684, y: -0.15}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 88
+      width: 38
+      height: 20
+    spriteID: d217de2d2b78cb44b83c35bc2c05388b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 88}
+  - name: SnowWhite_Death2_01_Frame_10
+    originalName: 
+    pivot: {x: 0.46153846, y: -0.050000004}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 32
+      width: 39
+      height: 20
+    spriteID: 11445b3df58499b438ba360dfe65b23b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 32}
+  - name: SnowWhite_Death2_01_Frame_11
+    originalName: 
+    pivot: {x: 0.46341464, y: -0.09090909}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 51
+      y: 48
+      width: 41
+      height: 11
+    spriteID: ea5ae57b44669e1429ba8104d7dfc000
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 51, y: 48}
+  - name: SnowWhite_Death2_01_Frame_12
+    originalName: 
+    pivot: {x: 0.45238096, y: -0.10000001}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 51
+      y: 67
+      width: 42
+      height: 10
+    spriteID: ee692d4db217bf645acdd4fa8ea5af4f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 51, y: 67}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -325535079
+    name: SnowWhite_Death2_01
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: SnowWhite_Death2_01_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 22
+        y: 5
+        width: 30
+        height: 21
+      spriteId: 5e486202f1d857b43bfbb76177919c6f
+    - name: SnowWhite_Death2_01_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 18
+        y: 12
+        width: 34
+        height: 16
+      spriteId: 2b86518b99b304e4abacee685f73cb0f
+    - name: SnowWhite_Death2_01_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 18
+        y: 11
+        width: 38
+        height: 15
+      spriteId: cec01e3c1c059f54d8dd722671a229ce
+    - name: SnowWhite_Death2_01_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 19
+        y: 3
+        width: 35
+        height: 13
+      spriteId: 0ec6477ff34557544bbb2cc5db45f7bb
+    - name: SnowWhite_Death2_01_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 19
+        y: 3
+        width: 36
+        height: 15
+      spriteId: fb0b2a7b9def41748b9d4e9253f4b441
+    - name: SnowWhite_Death2_01_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 19
+        y: 4
+        width: 36
+        height: 16
+      spriteId: bec4d9245abcbbe40aca5b1d52db177e
+    - name: SnowWhite_Death2_01_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 19
+        y: 4
+        width: 37
+        height: 17
+      spriteId: 804221816de10714e97a208c9e60d906
+    - name: SnowWhite_Death2_01_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 18
+        y: 4
+        width: 39
+        height: 20
+      spriteId: a8eb9bc04524a31439569bcac4090f0c
+    - name: SnowWhite_Death2_01_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 19
+        y: 4
+        width: 38
+        height: 20
+      spriteId: 140afaa0ac774c5459031375a3c3af53
+    - name: SnowWhite_Death2_01_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 19
+        y: 3
+        width: 38
+        height: 20
+      spriteId: d217de2d2b78cb44b83c35bc2c05388b
+    - name: SnowWhite_Death2_01_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 18
+        y: 1
+        width: 39
+        height: 20
+      spriteId: 11445b3df58499b438ba360dfe65b23b
+    - name: SnowWhite_Death2_01_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 17
+        y: 1
+        width: 41
+        height: 11
+      spriteId: ea5ae57b44669e1429ba8104d7dfc000
+    - name: SnowWhite_Death2_01_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 17
+        y: 1
+        width: 42
+        height: 10
+      spriteId: ee692d4db217bf645acdd4fa8ea5af4f
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 72, y: 48}
