@@ -398,16 +398,20 @@ public class PlayerController : MonoBehaviour
         {
             if (isOnSlope && !isJumping)
             {
-                if(moveInput.x != 0)
+                if (moveInput.x != 0)
                     rb.velocity = new Vector2(CurrentMoveSpeed * normalPerp.x * -moveInput.x, CurrentMoveSpeed * normalPerp.y * -moveInput.x);
                 else
                     rb.velocity = new Vector2(0, 0);
             }
             else
             {
-                rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
+                if (touchingDirections.IsGrounded && !isJumping)
+                    rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, 0);
+                else
+                    rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
                 animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
             }
+            Debug.Log(rb.velocity);
 
         }
         if (rb.velocity.y < 0 && touchingDirections.IsGrounded)
