@@ -1104,7 +1104,9 @@ MonoBehaviour:
   walkSpeed: 8
   airWalkSpeed: 6
   jumpImpulse: 15
-  slopeDistance: 0.01
+  normalPerp: {x: 1, y: 1}
+  isOnSlope: 0
+  slopeDistance: 0.06
   SpellSkill01:
     m_PersistentCalls:
       m_Calls: []
@@ -1119,6 +1121,7 @@ MonoBehaviour:
       m_Calls: []
   _IsMoving: 0
   _isFacingRight: 1
+  isJumping: 0
 --- !u!114 &6420420121662775390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1340,7 +1343,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  groundDistance: 0.05
+  groundDistance: 0.2
   wallDistance: 0.2
   ceilingDistance: 0.05
   _isGrounded: 0
