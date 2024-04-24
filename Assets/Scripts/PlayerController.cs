@@ -29,9 +29,10 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     Vector2 normalPerp = Vector2.one;
+    [SerializeField]
     bool isOnSlope;
     [SerializeField]
-    private float slopeDistance = 0.01f;
+    private float slopeDistance = 0.06f;
 
 
 
@@ -395,17 +396,25 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if (isOnSlope)
+            if (isOnSlope && !isJumping)
             {
-                rb.velocity = new Vector2(CurrentMoveSpeed * normalPerp.x * -moveInput.x, CurrentMoveSpeed * normalPerp.y * -moveInput.x);
+                if(moveInput.x != 0)
+                    rb.velocity = new Vector2(CurrentMoveSpeed * normalPerp.x * -moveInput.x, CurrentMoveSpeed * normalPerp.y * -moveInput.x);
+                else
+                    rb.velocity = new Vector2(0, 0);
             }
             else
             {
                 rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
+                animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
             }
-            animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
 
         }
+        if (rb.velocity.y < 0 && touchingDirections.IsGrounded)
+        {
+            isJumping = false;
+        }
+
     }
     Vector2 normalPerpRight;
     Vector2 normalPerpLeft;
@@ -433,10 +442,16 @@ public class PlayerController : MonoBehaviour
         if (hitFront)
         {
             isOnSlope = true;
+            normalPerp = Vector2.Perpendicular(hitFront.normal).normalized;
         }
         else if (hitBack)
         {
             isOnSlope = true;
+            normalPerp = Vector2.Perpendicular(hitBack.normal).normalized;
+        }
+        else
+        {
+            isOnSlope = false;
         }
 
         if (!IsNormalVertical(hitRight.normal, Vector2.up) && hitRight.normal != Vector2.zero)
@@ -551,12 +566,14 @@ public class PlayerController : MonoBehaviour
     //        IsRunning = false;
     //    }
     //}
-
+    [SerializeField]
+    bool isJumping;
     public void OnJump(InputAction.CallbackContext context)
     {
         //Debug.Log("CanJump===="+ CanJump());
         if (context.started && CanMove && CanJump())
         {
+            isJumping = true;
             if (touchingDirections.IsGrounded)
             {
                 airJumpsLeft = maxAirJumps; // 如果在地面上，重置空中跳跃次数
