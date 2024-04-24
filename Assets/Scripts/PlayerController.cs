@@ -17,10 +17,14 @@ public class PlayerController : MonoBehaviour
     public float jumpImpulse = 10f;
     private Vector2 moveInput;
     private bool isOnMoveHolding = false;
+
     TouchingDirections touchingDirections;
     Damageable damageable;
     Attack attackSkill03;
     BoxCollider2D bCollider;
+    Rigidbody2D rb;
+    Animator animator;
+
     Vector2 normalPerp = Vector2.one;
     Vector2 normalPerpFront;
     Vector2 normalPerpBack;
@@ -212,9 +216,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public bool CanAttack
+    {
+        get
+        {
+            return animator.GetBool(AnimationStrings.canAttack);
+        }
+    }
 
-    Rigidbody2D rb;
-    Animator animator;
+
+
 
 
     private void Awake()
@@ -592,7 +603,7 @@ public class PlayerController : MonoBehaviour
     }
     public void OnAttack(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.started && CanAttack)
         {
             animator.SetTrigger(AnimationStrings.attackTrigger);
 
@@ -604,7 +615,7 @@ public class PlayerController : MonoBehaviour
     {
         animator.ResetTrigger(AnimationStrings.skill01Release);
 
-        if (context.started && Skill01Cooldown <= 0)
+        if (context.started && Skill01Cooldown <= 0 && CanAttack)
         {
             animator.SetTrigger(AnimationStrings.skill01Tap);
             SpellSkill01.Invoke();
@@ -622,7 +633,7 @@ public class PlayerController : MonoBehaviour
     public void OnSkill02(InputAction.CallbackContext context)
     {
 
-        if (context.started && Skill02Cooldown <= 0)
+        if (context.started && Skill02Cooldown <= 0 && CanAttack)
         {
             animator.SetTrigger(AnimationStrings.skill02Tap);
             SpellSkill02.Invoke();
@@ -635,7 +646,7 @@ public class PlayerController : MonoBehaviour
     public void OnSkill03(InputAction.CallbackContext context)
     {
 
-        if (context.started && Skill03Cooldown <= 0 && Skill03StunFinished)
+        if (context.started && Skill03Cooldown <= 0 && Skill03StunFinished && CanAttack)
         {
             animator.SetTrigger(AnimationStrings.skill03Tap);
 
