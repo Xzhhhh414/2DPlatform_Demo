@@ -31,10 +31,6 @@ public class Attack : MonoBehaviour
         Damageable damageable = collision.GetComponent<Damageable>();
         if (damageable != null)
         {
-            if (damageableCoroutines.ContainsKey(damageable) && damageableCoroutines[damageable] != null)
-            {
-                StopCoroutine(damageableCoroutines[damageable]);
-            }
 
             Vector2 deliveredKnockback = transform.parent.localScale.x > 0 ? knockback : new Vector2(-knockback.x, knockback.y);
 
@@ -42,6 +38,10 @@ public class Attack : MonoBehaviour
 
             if (gotHit)
             {
+                if (damageableCoroutines.ContainsKey(damageable) && damageableCoroutines[damageable] != null)
+                {
+                    StopCoroutine(damageableCoroutines[damageable]);
+                }
 
                 damageableCoroutines[damageable] = StartCoroutine(ChangAnimationSpeed(0.01f, stunRatio, animator, collision.GetComponent<Animator>()));
                 //Debug.Log(collision.name + "hit for" + attackDamage);
