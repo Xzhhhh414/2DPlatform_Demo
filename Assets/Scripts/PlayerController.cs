@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     //public float runSpeed = 8f;
     public float airWalkSpeed = 3f;
     public float jumpImpulse = 10f;
+    private int maxAirJumps = 1; // 设置最大的空中跳跃次数
+    private int airJumpsLeft; // 记录剩余的空中跳跃次数
     private Vector2 moveInput;
     private bool isOnMoveHolding = false;
 
@@ -248,6 +250,7 @@ public class PlayerController : MonoBehaviour
         wallLayerMask = LayerMask.GetMask("Ground");
         clearCDTimeLeft = clearCDMaxTime;
         bCollider = GetComponent<BoxCollider2D>();
+        airJumpsLeft = maxAirJumps; // 初始化剩余的空中跳跃次数
     }
 
 
@@ -594,13 +597,28 @@ public class PlayerController : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (context.started && touchingDirections.IsGrounded && CanMove)
+        //Debug.Log("CanJump===="+ CanJump());
+        if (context.started  && CanMove && CanJump())
         {
+            if (touchingDirections.IsGrounded)
+            {
+                airJumpsLeft = maxAirJumps; // 如果在地面上，重置空中跳跃次数
+            }
+
             animator.SetTrigger(AnimationStrings.jumpTrigger);
             rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
+            airJumpsLeft -= 1;
         }
-
+    
     }
+
+    private bool CanJump()
+    {
+        return touchingDirections.IsGrounded || airJumpsLeft > 0; 
+    }
+
+  
+
     public void OnAttack(InputAction.CallbackContext context)
     {
         if (context.started && CanAttack)

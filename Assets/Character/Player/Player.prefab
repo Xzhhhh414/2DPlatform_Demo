@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 25
   knockback: {x: 2.5, y: 0}
+  stunRatio: 0.3
   canClearCooldown: 0
   ClearCooldown:
     m_PersistentCalls:
@@ -203,6 +204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 15
   knockback: {x: 0, y: 0}
+  stunRatio: 0.1
   canClearCooldown: 0
   ClearCooldown:
     m_PersistentCalls:
@@ -305,6 +307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 30
   knockback: {x: 1.5, y: 0}
+  stunRatio: 0.1
   canClearCooldown: 0
   ClearCooldown:
     m_PersistentCalls:
@@ -437,6 +440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 20
   knockback: {x: 0, y: 1.5}
+  stunRatio: 0.1
   canClearCooldown: 0
   ClearCooldown:
     m_PersistentCalls:
@@ -539,6 +543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 27
   knockback: {x: 1, y: 0.5}
+  stunRatio: 0.1
   canClearCooldown: 0
   ClearCooldown:
     m_PersistentCalls:
@@ -640,6 +645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 15
   knockback: {x: 0.5, y: 0.5}
+  stunRatio: 0.1
   canClearCooldown: 1
   ClearCooldown:
     m_PersistentCalls:
@@ -741,6 +747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 50
   knockback: {x: 2.5, y: 1.5}
+  stunRatio: 0.1
   canClearCooldown: 0
   ClearCooldown:
     m_PersistentCalls:
@@ -846,6 +853,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 20
   knockback: {x: 1.5, y: 0}
+  stunRatio: 0.2
   canClearCooldown: 0
   ClearCooldown:
     m_PersistentCalls:
@@ -947,6 +955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 10
   knockback: {x: 0, y: 0}
+  stunRatio: 0.1
   canClearCooldown: 0
   ClearCooldown:
     m_PersistentCalls:
@@ -1095,6 +1104,7 @@ MonoBehaviour:
   walkSpeed: 8
   airWalkSpeed: 6
   jumpImpulse: 15
+  slopeDistance: 0.01
   SpellSkill01:
     m_PersistentCalls:
       m_Calls: []
@@ -1533,6 +1543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 22
   knockback: {x: 0, y: 0}
+  stunRatio: 0.1
   canClearCooldown: 0
   ClearCooldown:
     m_PersistentCalls:
