@@ -126,8 +126,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 162
-      y: 93
+      x: 87
+      y: 48
       width: 20
       height: 26
     spriteID: 673b74aa673ef21439c927d8319550d6
@@ -138,7 +138,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 162, y: 93}
+    uvTransform: {x: 60, y: 45}
   - name: SnowWhite_JumpAir_01_Frame_1
     originalName: 
     pivot: {x: 0.5652174, y: -0.06451613}
@@ -146,8 +146,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 72
-      y: 93
+      x: 4
+      y: 92
       width: 23
       height: 31
     spriteID: b374a5c5452cd06458e41c3073b8ff6a
@@ -158,17 +158,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 72, y: 93}
+    uvTransform: {x: -19, y: 90}
   - name: SnowWhite_JumpAir_01_Frame_2
     originalName: 
-    pivot: {x: 0.62068963, y: -0.083333336}
+    pivot: {x: 0.6666667, y: -0.083333336}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
+      x: 90
       y: 4
-      width: 29
+      width: 33
       height: 36
     spriteID: 15e547ccea75c8347a80394d965db157
     spriteBone: []
@@ -178,17 +178,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 76, y: 1}
   - name: SnowWhite_JumpAir_01_Frame_3
     originalName: 
-    pivot: {x: 0.57142854, y: -0.11111112}
+    pivot: {x: 0.6666666, y: -0.11111112}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 41
+      x: 4
       y: 4
-      width: 28
+      width: 36
       height: 36
     spriteID: 9945e7ac47ce7c345b932a60210e8c6a
     spriteBone: []
@@ -198,18 +198,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 41, y: 4}
+    uvTransform: {x: -8, y: 0}
   - name: SnowWhite_JumpAir_01_Frame_4
     originalName: 
-    pivot: {x: 0.5555556, y: -0.14285715}
+    pivot: {x: 0.67647064, y: -0.1388889}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 148
+      x: 48
       y: 4
-      width: 27
-      height: 35
+      width: 34
+      height: 36
     spriteID: 958c2013f6b82a6439365263b544ee97
     spriteBone: []
     spriteOutline: []
@@ -218,18 +218,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 148, y: 4}
+    uvTransform: {x: 35, y: -1}
   - name: SnowWhite_JumpAir_01_Frame_5
     originalName: 
-    pivot: {x: 0.52000004, y: -0.14285715}
+    pivot: {x: 0.67647064, y: -0.24242425}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 216
-      y: 4
-      width: 25
-      height: 35
+      x: 45
+      y: 48
+      width: 34
+      height: 33
     spriteID: 630cf81e71557504589b215614c2d9a7
     spriteBone: []
     spriteOutline: []
@@ -238,17 +238,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 216, y: 4}
+    uvTransform: {x: 32, y: 40}
   - name: SnowWhite_JumpAir_01_Frame_6
     originalName: 
-    pivot: {x: 0.45833337, y: -0.11111112}
+    pivot: {x: 0.69696975, y: -0.11111112}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 40
+      x: 4
       y: 48
-      width: 24
+      width: 33
       height: 36
     spriteID: f4963fe04c89a84449e7c21d23a458f6
     spriteBone: []
@@ -258,187 +258,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 40, y: 48}
-  - name: SnowWhite_JumpAir_01_Frame_7
-    originalName: 
-    pivot: {x: 0.4090909, y: -0.08108108}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 103
-      y: 48
-      width: 22
-      height: 37
-    spriteID: d436395609110fc408d55cf552c7a215
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 103, y: 48}
-  - name: SnowWhite_JumpAir_01_Frame_8
-    originalName: 
-    pivot: {x: 0.42857143, y: -0.08108108}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 133
-      y: 48
-      width: 21
-      height: 37
-    spriteID: 9c6f15966e5a95a43a9473803f09ce69
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 133, y: 48}
-  - name: SnowWhite_JumpAir_01_Frame_9
-    originalName: 
-    pivot: {x: 0.39999998, y: -0.08108108}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 162
-      y: 48
-      width: 20
-      height: 37
-    spriteID: b8eac524f0ac83944a304fdf7d1f06f1
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 162, y: 48}
-  - name: SnowWhite_JumpAir_01_Frame_10
-    originalName: 
-    pivot: {x: 0.39999998, y: -0.08108108}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 190
-      y: 48
-      width: 20
-      height: 37
-    spriteID: d0cd2ddac5c919b439418f73ff0830f1
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 190, y: 48}
-  - name: SnowWhite_JumpAir_01_Frame_11
-    originalName: 
-    pivot: {x: 0.4782609, y: -0.1081081}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 72
-      y: 48
-      width: 23
-      height: 37
-    spriteID: 6242db893a7b47945b2caa3ab10bd7fe
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 72, y: 48}
-  - name: SnowWhite_JumpAir_01_Frame_12
-    originalName: 
-    pivot: {x: 0.52000004, y: -0.1388889}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 183
-      y: 4
-      width: 25
-      height: 36
-    spriteID: 7919d7ef456299f4cb3d203246998eed
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 183, y: 4}
-  - name: SnowWhite_JumpAir_01_Frame_13
-    originalName: 
-    pivot: {x: 0.5555556, y: -0.1388889}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 113
-      y: 4
-      width: 27
-      height: 36
-    spriteID: ab5c50a47828b904585a0b757ceb2502
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 113, y: 4}
-  - name: SnowWhite_JumpAir_01_Frame_14
-    originalName: 
-    pivot: {x: 0.57142854, y: -0.1388889}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 77
-      y: 4
-      width: 28
-      height: 36
-    spriteID: adc1abf896f16584caa7c174242bab61
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 77, y: 4}
-  - name: SnowWhite_JumpAir_01_Frame_15
-    originalName: 
-    pivot: {x: 0.57142854, y: -0.1081081}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 48
-      width: 28
-      height: 37
-    spriteID: 7a1e8033109ef224e8b114363eb88962
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 48}
+    uvTransform: {x: -9, y: 44}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -451,131 +271,59 @@ ScriptedImporter:
     - name: SnowWhite_JumpAir_01_Frame_0
       frameIndex: 0
       cellRect:
-        x: 27
-        y: 3
-        width: 20
-        height: 26
+        x: 0
+        y: 0
+        width: 72
+        height: 48
       spriteId: 673b74aa673ef21439c927d8319550d6
     - name: SnowWhite_JumpAir_01_Frame_1
       frameIndex: 1
       cellRect:
-        x: 23
-        y: 2
-        width: 23
-        height: 31
+        x: 0
+        y: 0
+        width: 72
+        height: 48
       spriteId: b374a5c5452cd06458e41c3073b8ff6a
     - name: SnowWhite_JumpAir_01_Frame_2
       frameIndex: 2
       cellRect:
-        x: 18
-        y: 3
-        width: 29
-        height: 36
+        x: 0
+        y: 0
+        width: 72
+        height: 48
       spriteId: 15e547ccea75c8347a80394d965db157
     - name: SnowWhite_JumpAir_01_Frame_3
       frameIndex: 3
       cellRect:
-        x: 20
-        y: 4
-        width: 28
-        height: 36
+        x: 0
+        y: 0
+        width: 72
+        height: 48
       spriteId: 9945e7ac47ce7c345b932a60210e8c6a
     - name: SnowWhite_JumpAir_01_Frame_4
       frameIndex: 4
       cellRect:
-        x: 21
-        y: 5
-        width: 27
-        height: 35
+        x: 0
+        y: 0
+        width: 72
+        height: 48
       spriteId: 958c2013f6b82a6439365263b544ee97
     - name: SnowWhite_JumpAir_01_Frame_5
       frameIndex: 5
       cellRect:
-        x: 23
-        y: 5
-        width: 25
-        height: 35
+        x: 0
+        y: 0
+        width: 72
+        height: 48
       spriteId: 630cf81e71557504589b215614c2d9a7
     - name: SnowWhite_JumpAir_01_Frame_6
       frameIndex: 6
       cellRect:
-        x: 25
-        y: 4
-        width: 24
-        height: 36
+        x: 0
+        y: 0
+        width: 72
+        height: 48
       spriteId: f4963fe04c89a84449e7c21d23a458f6
-    - name: SnowWhite_JumpAir_01_Frame_7
-      frameIndex: 7
-      cellRect:
-        x: 27
-        y: 3
-        width: 22
-        height: 37
-      spriteId: d436395609110fc408d55cf552c7a215
-    - name: SnowWhite_JumpAir_01_Frame_8
-      frameIndex: 8
-      cellRect:
-        x: 27
-        y: 3
-        width: 21
-        height: 37
-      spriteId: 9c6f15966e5a95a43a9473803f09ce69
-    - name: SnowWhite_JumpAir_01_Frame_9
-      frameIndex: 9
-      cellRect:
-        x: 28
-        y: 3
-        width: 20
-        height: 37
-      spriteId: b8eac524f0ac83944a304fdf7d1f06f1
-    - name: SnowWhite_JumpAir_01_Frame_10
-      frameIndex: 10
-      cellRect:
-        x: 28
-        y: 3
-        width: 20
-        height: 37
-      spriteId: d0cd2ddac5c919b439418f73ff0830f1
-    - name: SnowWhite_JumpAir_01_Frame_11
-      frameIndex: 11
-      cellRect:
-        x: 25
-        y: 4
-        width: 23
-        height: 37
-      spriteId: 6242db893a7b47945b2caa3ab10bd7fe
-    - name: SnowWhite_JumpAir_01_Frame_12
-      frameIndex: 12
-      cellRect:
-        x: 23
-        y: 5
-        width: 25
-        height: 36
-      spriteId: 7919d7ef456299f4cb3d203246998eed
-    - name: SnowWhite_JumpAir_01_Frame_13
-      frameIndex: 13
-      cellRect:
-        x: 21
-        y: 5
-        width: 27
-        height: 36
-      spriteId: ab5c50a47828b904585a0b757ceb2502
-    - name: SnowWhite_JumpAir_01_Frame_14
-      frameIndex: 14
-      cellRect:
-        x: 20
-        y: 5
-        width: 28
-        height: 36
-      spriteId: adc1abf896f16584caa7c174242bab61
-    - name: SnowWhite_JumpAir_01_Frame_15
-      frameIndex: 15
-      cellRect:
-        x: 20
-        y: 4
-        width: 28
-        height: 37
-      spriteId: 7a1e8033109ef224e8b114363eb88962
     linkedCells: []
     parentIndex: -1
   platformSettings: []
