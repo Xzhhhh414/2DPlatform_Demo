@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 7035301661928864031}
   - component: {fileID: 8259341479368238504}
   - component: {fileID: 994484952992675662}
-  - component: {fileID: 1007574369893642511}
   - component: {fileID: 3776726363771770472}
   - component: {fileID: 3010806923254081562}
   - component: {fileID: 5469986155384830715}
+  - component: {fileID: 4336419884711203400}
   m_Layer: 8
-  m_Name: Goblin
+  m_Name: FireDemon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -816356762, guid: aa5c66504cbe8f3469683dd2c5463e4b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 670c7542c67481d43a9cc8c42956fe69, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -151,40 +151,19 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.76}
+  m_Offset: {x: -0.09282875, y: -2.3999774}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.375, y: 9.375}
+    oldSize: {x: 18, y: 10}
     newSize: {x: 9.375, y: 9.375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.31, y: 1.79}
+  m_Size: {x: 3.0428061, y: 5.0699544}
   m_EdgeRadius: 0
---- !u!95 &1007574369893642511
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4242114885219933664}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a9453933988541d46bd5bf9e1cb16edc, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &3776726363771770472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,7 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkAcceleration: 70
-  maxSpeed: 10
+  maxSpeed: 5
   walkStopRate: 4
   attackZone: {fileID: 5764638468449584650}
   cliffDetectionZone: {fileID: 549912458742963074}
@@ -275,6 +254,27 @@ MonoBehaviour:
   _isAlive: 1
   hitInterval: 0
   hitIntervalTime: 0.25
+--- !u!95 &4336419884711203400
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4242114885219933664}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4277d65d98d12924b9f0b3a4a0febd3e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8616695409890074737
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,7 +341,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.2, y: -0.63}
+  m_Offset: {x: 3.74, y: -2.6086962}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -352,7 +352,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.65, y: 2}
+  m_Size: {x: 5.249209, y: 4.382608}
   m_EdgeRadius: 0
 --- !u!114 &5764638468449584650
 MonoBehaviour:
@@ -479,7 +479,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.12, y: -2.18}
+  m_Offset: {x: 1.81, y: -4.41}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -490,5 +490,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.8452842, y: 1}
   m_EdgeRadius: 0
