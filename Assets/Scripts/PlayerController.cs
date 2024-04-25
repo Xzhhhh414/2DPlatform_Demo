@@ -592,13 +592,13 @@ public class PlayerController : MonoBehaviour
             if (touchingDirections.IsGrounded)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpImpulse_OnGround);
-                Debug.Log("rb.velocity====" + rb.velocity);
+                //Debug.Log("rb.velocity====" + rb.velocity);
             }
             else
             {
                
                 rb.velocity = new Vector2(rb.velocity.x, jumpImpulse_InAir);
-                Debug.Log("rb.velocity===="+ rb.velocity);
+                //Debug.Log("rb.velocity===="+ rb.velocity);
             }
 
             airJumpsLeft -= 1;
