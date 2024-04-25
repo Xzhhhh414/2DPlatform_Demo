@@ -251,8 +251,6 @@ public class PlayerController : MonoBehaviour
         clearCDTimeLeft = clearCDMaxTime;
         bCollider = GetComponent<BoxCollider2D>();
         airJumpsLeft = maxAirJumps; // 初始化剩余的空中跳跃次数
-        matrerial = new PhysicsMaterial2D();
-        rb.sharedMaterial = matrerial;
     }
 
 
@@ -417,7 +415,6 @@ public class PlayerController : MonoBehaviour
                     rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
                 animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
             }
-            //Debug.Log(rb.velocity);
 
         }
         if (rb.velocity.y < 0 && touchingDirections.IsGrounded)
@@ -428,7 +425,6 @@ public class PlayerController : MonoBehaviour
     }
     Vector2 normalPerpRight;
     Vector2 normalPerpLeft;
-    PhysicsMaterial2D matrerial;
     private void CheckSlope()
     {
         Vector3 rightPoint = new Vector3(bCollider.bounds.max.x, bCollider.bounds.min.y);
