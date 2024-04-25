@@ -1103,7 +1103,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 8
   airWalkSpeed: 6
-  jumpImpulse: 15
+  jumpImpulse_OnGround: 15
+  jumpImpulse_InAir: 12
   normalPerp: {x: 1, y: 1}
   isOnSlope: 0
   slopeDistance: 0.2

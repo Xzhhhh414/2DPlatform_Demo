@@ -11,10 +11,11 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
 public class PlayerController : MonoBehaviour
 {
-    public float walkSpeed = 5f;
+    public float walkSpeed ;
     //public float runSpeed = 8f;
-    public float airWalkSpeed = 3f;
-    public float jumpImpulse = 10f;
+    public float airWalkSpeed ;
+    public float jumpImpulse_OnGround ;
+    public float jumpImpulse_InAir;
     private int maxAirJumps = 1; // 设置最大的空中跳跃次数
     private int airJumpsLeft; // 记录剩余的空中跳跃次数
     private Vector2 moveInput;
@@ -586,11 +587,21 @@ public class PlayerController : MonoBehaviour
         if (context.started && CanMove && CanJump && HaveJumpTimes())
         {
             isJumping = true;
-
             animator.SetTrigger(AnimationStrings.jumpTrigger);
-            rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
-            airJumpsLeft -= 1;
 
+            if (touchingDirections.IsGrounded)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpImpulse_OnGround);
+                Debug.Log("rb.velocity====" + rb.velocity);
+            }
+            else
+            {
+               
+                rb.velocity = new Vector2(rb.velocity.x, jumpImpulse_InAir);
+                Debug.Log("rb.velocity===="+ rb.velocity);
+            }
+
+            airJumpsLeft -= 1;
         }
 
     }
@@ -598,7 +609,7 @@ public class PlayerController : MonoBehaviour
     private bool HaveJumpTimes()
     {
 
-        return touchingDirections.IsGrounded || airJumpsLeft > 0;
+        return touchingDirections.IsGrounded  || airJumpsLeft > 0;
     }
 
 
