@@ -347,6 +347,12 @@ public class PlayerController : MonoBehaviour
         }
 
 
+        if (touchingDirections.IsGrounded)
+        {
+            airJumpsLeft = maxAirJumps; // 如果在地面上，重置空中跳跃次数
+        }
+
+
 
 #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -570,6 +576,7 @@ public class PlayerController : MonoBehaviour
     //        IsRunning = false;
     //    }
     //}
+
     [SerializeField]
     bool isJumping;
     public void OnJump(InputAction.CallbackContext context)
@@ -577,23 +584,21 @@ public class PlayerController : MonoBehaviour
         if (context.started && CanMove && CanJump())
         {
             //Debug.Log("CanJump===="+ CanJump());
-            //Debug.Log("airJumpsLeft====" + airJumpsLeft);
+            //Debug.Log("airJumpsLeftStart====" + airJumpsLeft);
             isJumping = true;
-            if (touchingDirections.IsGrounded)
-            {
-                airJumpsLeft = maxAirJumps; // 如果在地面上，重置空中跳跃次数
-            }
 
             animator.SetTrigger(AnimationStrings.jumpTrigger);
             rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
             airJumpsLeft -= 1;
+
         }
 
     }
 
     private bool CanJump()
     {
-        return touchingDirections.IsGrounded || airJumpsLeft >= 0;
+        //Debug.Log("airJumpsLeftCanJump====" + airJumpsLeft);
+        return touchingDirections.IsGrounded || airJumpsLeft > 0;
     }
 
 
