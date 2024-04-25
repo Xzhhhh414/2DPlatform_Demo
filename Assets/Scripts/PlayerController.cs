@@ -225,7 +225,13 @@ public class PlayerController : MonoBehaviour
             return animator.GetBool(AnimationStrings.canAttack);
         }
     }
-
+    public bool CanJump
+    {
+        get
+        {
+            return animator.GetBool(AnimationStrings.canJump);
+        }
+    }
 
 
 
@@ -577,10 +583,8 @@ public class PlayerController : MonoBehaviour
     bool isJumping;
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (context.started && CanMove && CanJump())
+        if (context.started && CanMove && CanJump && HaveJumpTimes())
         {
-            //Debug.Log("CanJump===="+ CanJump());
-            //Debug.Log("airJumpsLeftStart====" + airJumpsLeft);
             isJumping = true;
 
             animator.SetTrigger(AnimationStrings.jumpTrigger);
@@ -591,9 +595,9 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private bool CanJump()
+    private bool HaveJumpTimes()
     {
-        //Debug.Log("airJumpsLeftCanJump====" + airJumpsLeft);
+
         return touchingDirections.IsGrounded || airJumpsLeft > 0;
     }
 
