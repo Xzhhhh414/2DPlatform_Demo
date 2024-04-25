@@ -411,7 +411,7 @@ public class PlayerController : MonoBehaviour
                     rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
                 animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
             }
-            Debug.Log(rb.velocity);
+            //Debug.Log(rb.velocity);
 
         }
         if (rb.velocity.y < 0 && touchingDirections.IsGrounded)
@@ -574,9 +574,10 @@ public class PlayerController : MonoBehaviour
     bool isJumping;
     public void OnJump(InputAction.CallbackContext context)
     {
-        //Debug.Log("CanJump===="+ CanJump());
         if (context.started && CanMove && CanJump())
         {
+            //Debug.Log("CanJump===="+ CanJump());
+            //Debug.Log("airJumpsLeft====" + airJumpsLeft);
             isJumping = true;
             if (touchingDirections.IsGrounded)
             {
@@ -592,7 +593,7 @@ public class PlayerController : MonoBehaviour
 
     private bool CanJump()
     {
-        return touchingDirections.IsGrounded || airJumpsLeft > 0;
+        return touchingDirections.IsGrounded || airJumpsLeft >= 0;
     }
 
 
