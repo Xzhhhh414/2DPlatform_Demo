@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections),typeof(Damageable))]
-public class Knight : MonoBehaviour
+[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
+public class Knight : Character
 {
     public float walkAcceleration = 3f;
     public float maxSpeed = 3f;
@@ -13,7 +13,7 @@ public class Knight : MonoBehaviour
     public DetectionZone cliffDetectionZone;
 
 
-    Rigidbody2D rb;
+    //Rigidbody2D rb;
     TouchingDirections touchingDirections;
     Animator animator;
     Damageable damageable;
@@ -24,47 +24,58 @@ public class Knight : MonoBehaviour
     private WalkalbeDirection _walkDirection;
     private Vector2 walkDirectionVector = Vector2.right;
 
-   public WalkalbeDirection WalkDirection
+    public WalkalbeDirection WalkDirection
     {
         get { return _walkDirection; }
-        set {
-            if (_walkDirection != value) 
+        set
+        {
+            if (_walkDirection != value)
             {
-                gameObject.transform.localScale = new Vector2(gameObject.transform.localScale.x * -1,gameObject.transform.localScale.y);
+                gameObject.transform.localScale = new Vector2(gameObject.transform.localScale.x * -1, gameObject.transform.localScale.y);
 
                 if (value == WalkalbeDirection.Right)
                 {
                     walkDirectionVector = Vector2.right;
-                } else if (value == WalkalbeDirection.Left) 
+                }
+                else if (value == WalkalbeDirection.Left)
                 {
                     walkDirectionVector = Vector2.left;
                 }
             }
-            _walkDirection = value; }
+            _walkDirection = value;
+        }
     }
 
     public bool _hasTarget = false;
 
-    public bool HasTarget { get { return _hasTarget; } private set 
+    public bool HasTarget
+    {
+        get { return _hasTarget; }
+        private set
         {
             _hasTarget = value;
             animator.SetBool(AnimationStrings.hasTarget, value);
         }
     }
 
-    public bool CanMove 
+    public bool CanMove
     {
-        get 
+        get
         {
             return animator.GetBool(AnimationStrings.canMove);
         }
     }
 
-    public float AttackCooldown { get {
+    public float AttackCooldown
+    {
+        get
+        {
             return animator.GetFloat(AnimationStrings.attackCooldown);
-        } private set {
-            animator.SetFloat(AnimationStrings.attackCooldown, Mathf.Max(value,0));
-        } 
+        }
+        private set
+        {
+            animator.SetFloat(AnimationStrings.attackCooldown, Mathf.Max(value, 0));
+        }
     }
 
     private void Awake()
@@ -90,7 +101,7 @@ public class Knight : MonoBehaviour
     private void FixedUpdate()
     {
 
-        if (touchingDirections.IsGrounded && touchingDirections.IsOnWall )
+        if (touchingDirections.IsGrounded && touchingDirections.IsOnWall)
         {
             FlipDirection();
         }
@@ -113,17 +124,18 @@ public class Knight : MonoBehaviour
         else if (WalkDirection == WalkalbeDirection.Left)
         {
             WalkDirection = WalkalbeDirection.Right;
-        }else
+        }
+        else
         {
             Debug.LogError("Current walkable direction is not set to legal values of right or left");
         }
-    
+
     }
 
-    public void OnHit(int damage, Vector2 knockback)
-    {
-        rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
-    }
+    //public void OnHit(int damage, Vector2 knockback)
+    //{
+    //    rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y) * KnockBackRate;
+    //}
 
     public void OnCLiffDetected()
     {

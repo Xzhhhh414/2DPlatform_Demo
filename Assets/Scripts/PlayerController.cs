@@ -9,12 +9,12 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
-public class PlayerController : MonoBehaviour
+public class PlayerController : Character
 {
-    public float walkSpeed ;
+    public float walkSpeed;
     //public float runSpeed = 8f;
-    public float airWalkSpeed ;
-    public float jumpImpulse_OnGround ;
+    public float airWalkSpeed;
+    public float jumpImpulse_OnGround;
     public float jumpImpulse_InAir;
     private int maxAirJumps = 1; // 设置最大的空中跳跃次数
     private int airJumpsLeft; // 记录剩余的空中跳跃次数
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     Damageable damageable;
     Attack attackSkill03;
     BoxCollider2D bCollider;
-    Rigidbody2D rb;
+
     Animator animator;
 
     [SerializeField]
@@ -596,7 +596,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-               
+
                 rb.velocity = new Vector2(rb.velocity.x, jumpImpulse_InAir);
                 //Debug.Log("rb.velocity===="+ rb.velocity);
             }
@@ -609,7 +609,7 @@ public class PlayerController : MonoBehaviour
     private bool HaveJumpTimes()
     {
 
-        return touchingDirections.IsGrounded  || airJumpsLeft > 0;
+        return touchingDirections.IsGrounded || airJumpsLeft > 0;
     }
 
 
@@ -699,13 +699,7 @@ public class PlayerController : MonoBehaviour
         hitDamage = false;
 
     }
-
-
-
-
-    public void OnHit(int damage, Vector2 knockback)
+    protected override void OnHit(int damage, Vector2 knockback)
     {
-        //rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
     }
-
 }

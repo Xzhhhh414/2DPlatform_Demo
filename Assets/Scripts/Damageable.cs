@@ -20,8 +20,6 @@ public class Damageable : MonoBehaviour
 
     [SerializeField]
     private int _maxHealth = 100;
-    [SerializeField, Label("ÊÜ»÷ÊÇ·ñÓÐ»÷ÍË")]
-    private bool isLockVelocityOnHit = true;
     public int MaxHealth
     {
         get
