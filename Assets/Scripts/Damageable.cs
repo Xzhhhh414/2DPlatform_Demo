@@ -133,7 +133,6 @@ public class Damageable : MonoBehaviour
 
             timeSinceHit += Time.deltaTime;
         }
-        Debug.Log(LockVelocity);
 
     }
 
