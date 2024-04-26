@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Rendering;
@@ -19,6 +20,8 @@ public class Damageable : MonoBehaviour
 
     [SerializeField]
     private int _maxHealth = 100;
+    [SerializeField, Label("ÊÜ»÷ÊÇ·ñÓÐ»÷ÍË")]
+    private bool isLockVelocityOnHit = true;
     public int MaxHealth
     {
         get
@@ -130,6 +133,7 @@ public class Damageable : MonoBehaviour
 
             timeSinceHit += Time.deltaTime;
         }
+        Debug.Log(LockVelocity);
 
     }
 
@@ -143,7 +147,7 @@ public class Damageable : MonoBehaviour
             animator.SetTrigger(AnimationStrings.hitTrigger);
             if (coroutine != null) StopCoroutine(coroutine);
             coroutine = StartCoroutine(ChangeColorTemp(sprite, originalColorOfSprite, Color.red));
-            LockVelocity = true;
+            //LockVelocity = true;
             damageableHit?.Invoke(damage, knockback);
             CharacterEvents.characterDamaged.Invoke(gameObject, damage);
 
