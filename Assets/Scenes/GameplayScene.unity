@@ -1346,17 +1346,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f009c31a2f96fd448b9456a2812b9979, type: 3}
---- !u!114 &1952900286 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2459547441786800012, guid: 972ec411fafc1474481bb36d57f181f6, type: 3}
-  m_PrefabInstance: {fileID: 4042735601151912601}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2003513244 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8198951932485516424, guid: b530a8bd4cd508b459a00bfd3771f706, type: 3}
@@ -16345,14 +16334,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1224768604367202881, guid: eeba4726f8924594ebde136241476065, type: 3}
-      propertyPath: _serializedBlackboard
-      value: '{"_variables":{}}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 1224768604367202881, guid: eeba4726f8924594ebde136241476065, type: 3}
-      propertyPath: _serializedVariables.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2101386779949669353, guid: eeba4726f8924594ebde136241476065, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -16754,22 +16735,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2459547441786800012, guid: 972ec411fafc1474481bb36d57f181f6, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3173557498742503134, guid: 972ec411fafc1474481bb36d57f181f6, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8858682519578526793, guid: 972ec411fafc1474481bb36d57f181f6, type: 3}
       propertyPath: m_Name
       value: GameCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 8999305405135695189, guid: 972ec411fafc1474481bb36d57f181f6, type: 3}
-      propertyPath: skill03Button
-      value: 
-      objectReference: {fileID: 1952900286}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16811,6 +16780,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Background
       objectReference: {fileID: 0}
+    - target: {fileID: 1084906003713753640, guid: 4ff9bf05478d89547964153140698052, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084906003713753640, guid: 4ff9bf05478d89547964153140698052, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2790147251291863785, guid: 4ff9bf05478d89547964153140698052, type: 3}
       propertyPath: cam
       value: 
@@ -16819,6 +16796,22 @@ PrefabInstance:
       propertyPath: followTarget
       value: 
       objectReference: {fileID: 2003513244}
+    - target: {fileID: 3106177961270260766, guid: 4ff9bf05478d89547964153140698052, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3106177961270260766, guid: 4ff9bf05478d89547964153140698052, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3106177961270260766, guid: 4ff9bf05478d89547964153140698052, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -22.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3106177961270260766, guid: 4ff9bf05478d89547964153140698052, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3409563182972541114, guid: 4ff9bf05478d89547964153140698052, type: 3}
       propertyPath: cam
       value: 
@@ -16827,13 +16820,29 @@ PrefabInstance:
       propertyPath: followTarget
       value: 
       objectReference: {fileID: 2003513244}
+    - target: {fileID: 4375215467446163910, guid: 4ff9bf05478d89547964153140698052, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765425368844117251, guid: 4ff9bf05478d89547964153140698052, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765425368844117251, guid: 4ff9bf05478d89547964153140698052, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765425368844117251, guid: 4ff9bf05478d89547964153140698052, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.88
+      objectReference: {fileID: 0}
     - target: {fileID: 7187710133189058686, guid: 4ff9bf05478d89547964153140698052, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7187710133189058686, guid: 4ff9bf05478d89547964153140698052, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 7187710133189058686, guid: 4ff9bf05478d89547964153140698052, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16899,6 +16908,18 @@ PrefabInstance:
       propertyPath: followTarget
       value: 
       objectReference: {fileID: 2003513244}
+    - target: {fileID: 8638798578170478420, guid: 4ff9bf05478d89547964153140698052, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8638798578170478420, guid: 4ff9bf05478d89547964153140698052, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8638798578170478420, guid: 4ff9bf05478d89547964153140698052, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.07
+      objectReference: {fileID: 0}
     - target: {fileID: 8958952549038240397, guid: 4ff9bf05478d89547964153140698052, type: 3}
       propertyPath: cam
       value: 
