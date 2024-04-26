@@ -283,6 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2480eac51eb21f1419f3797330c72087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockBackRate: 1
   walkAcceleration: 30
   maxSpeed: 3
   walkStopRate: 0.05
@@ -393,7 +394,7 @@ MonoBehaviour:
   _health: 100
   _isAlive: 1
   hitInterval: 0
-  hitIntervalTime: 0.25
+  hitIntervalTime: 0
 --- !u!1 &5885092043841135857
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,6 +587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 5
   knockback: {x: 3, y: 1.5}
+  stunRatio: 0.1
   canClearCooldown: 0
   ClearCooldown:
     m_PersistentCalls:
