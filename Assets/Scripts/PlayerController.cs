@@ -427,7 +427,7 @@ public class PlayerController : Character
             {
                 if (touchingDirections.IsGrounded && !isJumping)
                     rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, 0);
-                else
+                else if(moveInput.x != 0)
                     rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
                 animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
             }
@@ -752,9 +752,10 @@ public class PlayerController : Character
         {
             isGrabbing = false;
             distanceJoint2D.enabled = false;
-            grabDetection.enabled = false;
-            Debug.DrawRay(transform.position, grabPosition - (Vector2)transform.position, Color.red, 5f);
-            rb.AddForce((grabPosition.normalized - (Vector2)transform.position).normalized * grabPoint.Force, ForceMode2D.Impulse);
+            // grabDetection.enabled = false;
+            Debug.DrawRay(grabPosition, (grabPosition.normalized - (Vector2)transform.position.normalized) * 200, Color.red, 5f);
+            var dir = grabPosition - (Vector2)transform.position;
+            rb.AddForce(dir.normalized * grabPoint.Force, ForceMode2D.Impulse);
         }
 
     }

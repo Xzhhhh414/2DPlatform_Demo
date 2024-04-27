@@ -15,6 +15,23 @@ public class GrabDetection : MonoBehaviour
     }
     [HideInInspector]
     public List<Collider2D> colliders = new List<Collider2D>();
+    float duration = 0.1f;
+    float currrntTime;
+    float startTime;
+    float endTime;
+    private void OnEnable()
+    {
+        startTime = Time.time;
+        endTime = startTime + duration;
+    }
+
+    private void Update()
+    {
+        if (Time.time > endTime)
+        {
+            GetComponent<CircleCollider2D>().enabled = false;
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
