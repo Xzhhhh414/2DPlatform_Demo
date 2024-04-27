@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    [SerializeField, Label("±»»÷·ÉµÄÏµÊý")]
+    [SerializeField, Label("ï¿½ï¿½ï¿½ï¿½ï¿½Éµï¿½Ïµï¿½ï¿½")]
     protected float KnockBackRate = 1f;
 
     protected Rigidbody2D rb;

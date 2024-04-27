@@ -258,6 +258,13 @@ public class PlayerController : Character
         clearCDTimeLeft = clearCDMaxTime;
         bCollider = GetComponent<BoxCollider2D>();
         airJumpsLeft = maxAirJumps; // 初始化剩余的空中跳跃次数
+        distanceJoint2D = GetComponent<DistanceJoint2D>();
+        distanceJoint2D.enabled = false;
+        distanceJoint2D.autoConfigureDistance = false;
+        springJoint2D = GetComponent<SpringJoint2D>();
+        springJoint2D.enabled = false;
+        springJoint2D.autoConfigureDistance = false;
+        grabDetection = GetComponentInChildren<GrabDetection>();
     }
 
 
@@ -358,7 +365,8 @@ public class PlayerController : Character
         }
 
 
-
+        if (Input.GetKeyDown(KeyCode.Q))
+            isGrabbing = true;
 #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
@@ -371,6 +379,7 @@ public class PlayerController : Character
     private void FixedUpdate()
     {
         CheckSlope();
+        Grabable(isGrabbing);
         if (LockInAir)
         {
             rb.constraints = RigidbodyConstraints2D.FreezePositionY | rb.constraints;
@@ -702,4 +711,52 @@ public class PlayerController : Character
     protected override void OnHit(int damage, Vector2 knockback)
     {
     }
+
+    # region Grab
+    private DistanceJoint2D distanceJoint2D;
+    private GrabDetection grabDetection;
+    private SpringJoint2D springJoint2D;
+    private Vector2 grabPosition;
+    private bool isGrabbing;
+    private float grabDistance;
+    [SerializeField, Label("钩爪速度")]
+    float garbSpeed = 1f;
+    private GrabPoint grabPoint;
+    void Grabable(bool executeable)
+    {
+        if (!executeable) return;
+        grabDetection.enabled = true;
+        if (grabDetection.IsDecteted)
+        {
+            var tempDis = float.MaxValue;
+            for (var i = 0; i < grabDetection.colliders.Count; i++)
+            {
+                grabDistance = Vector2.Distance(grabDetection.colliders[i].transform.position, transform.position);
+                if (grabDistance < tempDis)
+                {
+                    tempDis = grabDistance;
+                    grabPosition = grabDetection.colliders[i].transform.position;
+                    grabPoint = grabDetection.colliders[i].GetComponent<GrabPoint>();
+                }
+            }
+            if (grabPosition != default(Vector2))
+            {
+                distanceJoint2D.connectedAnchor = grabPosition;
+                distanceJoint2D.distance = Mathf.Lerp(grabDistance, 0, (grabDistance / grabDistance - Time.deltaTime * garbSpeed));
+                distanceJoint2D.enabled = true;
+            }
+
+        }
+        var newDistance = Vector2.Distance(grabPosition, transform.position);
+        if (newDistance <= 2f)
+        {
+            isGrabbing = false;
+            distanceJoint2D.enabled = false;
+            grabDetection.enabled = false;
+            Debug.DrawRay(transform.position, grabPosition - (Vector2)transform.position, Color.red, 5f);
+            rb.AddForce((grabPosition.normalized - (Vector2)transform.position).normalized * grabPoint.Force, ForceMode2D.Impulse);
+        }
+
+    }
+    #endregion
 }
