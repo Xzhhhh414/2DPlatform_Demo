@@ -1,3 +1,4 @@
+using FlowCanvas.Nodes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -263,7 +264,7 @@ public class PlayerController : Character
         distanceJoint2D.autoConfigureDistance = false;
         grabDetection = GetComponentInChildren<GrabDetection>();
         lineRenderer = GetComponent<LineRenderer>();
-        lineRenderer.positionCount = 2;
+        lineRenderer.positionCount = 40;
         lineRenderer.enabled = false;
     }
 
@@ -715,6 +716,9 @@ public class PlayerController : Character
     }
 
     # region Grab
+    public AnimationCurve animationCurve;
+    public AnimationCurve ropeProgressionCurve;
+
     private DistanceJoint2D distanceJoint2D;
     private GrabDetection grabDetection;
     private SpringJoint2D springJoint2D;
@@ -722,15 +726,25 @@ public class PlayerController : Character
     private bool startGrab;
     private bool isGrabbing;
     private float grabDistance;
-    [SerializeField, Label("钩爪速度")]
-    float garbSpeed = 1f;
+    [SerializeField, Label("钩爪射出的速度")]
+    float grabSpeed = 1f;
+    float progress = 0;//辅助计算绳子射出速度的值
     private GrabPoint grabPoint;
     private LineRenderer lineRenderer;
+    private int resolution = 40;//绳子的总节点数
+    [SerializeField, Label("绳子的曲度")]
+    float startwaveRate = 4;
+    float waveRate = 1;
+    [SerializeField,Label("从曲绳到直绳的时间")]
+    float ropeSetRope = 1;
     void Grabable()
     {
+
         if (!startGrab) return;
         if (grabDetection.IsDecteted && !isGrabbing)
         {
+            waveRate = startwaveRate;
+            lineRenderer.positionCount = resolution;
             var tempDis = float.MaxValue;
             for (var i = 0; i < grabDetection.colliders.Count; i++)
             {
@@ -745,18 +759,32 @@ public class PlayerController : Character
             if (grabPosition != default(Vector2))
             {
                 isGrabbing = true;
+                isJumping = false;
                 rb.gravityScale = 0;
-                lineRenderer.enabled = true;
-                lineRenderer.SetPosition(0, transform.position);
-                lineRenderer.SetPosition(1, grabPosition);
+                //DrawStraightLine();
+                //DrawCurveRope();
                 distanceJoint2D.connectedAnchor = grabPosition;
-                distanceJoint2D.distance = Mathf.Lerp(grabDistance, 0, (grabDistance / grabDistance - Time.deltaTime * garbSpeed));
+                distanceJoint2D.distance = grabDistance;
                 distanceJoint2D.enabled = true;
             }
 
         }
-
-        lineRenderer.SetPosition(0, transform.position);
+        if (isGrabbing)
+        {
+            progress += Time.deltaTime;
+            distanceJoint2D.distance = Mathf.Lerp(grabDistance, 0, progress * grabSpeed);
+            lineRenderer.enabled = true;
+            waveRate -= Time.deltaTime * ropeSetRope;
+            if (waveRate > 0)
+                DrawCurveRope();
+            else
+            {
+                waveRate = 0;
+                DrawStraightLine();
+            }
+            //DrawStraightLine();
+        }
+        //lineRenderer.SetPosition(0, transform.position);
         var newDistance = Vector2.Distance(grabPosition, transform.position);
         if (newDistance <= 2f)
         {
@@ -767,8 +795,29 @@ public class PlayerController : Character
             rb.AddForce(dir.normalized * grabPoint.Force, ForceMode2D.Impulse);
             startGrab = false;
             lineRenderer.enabled = false;
+            progress = 0;
         }
 
+    }
+
+    void DrawStraightLine()
+    {
+        if (lineRenderer.positionCount != 2) { lineRenderer.positionCount = 2; }
+        lineRenderer.SetPosition(0, transform.position);
+        lineRenderer.SetPosition(1, grabPosition);
+    }
+
+    void DrawCurveRope()
+    {
+        for (int i = 0; i < resolution; i++)
+        {
+            float x = (float)i / ((float)resolution - 1f);
+            float y = animationCurve.Evaluate(x);
+            Vector2 offset = Vector2.Perpendicular((grabPosition - (Vector2)transform.position).normalized * y) * waveRate;
+            Vector2 tragetPosition = Vector2.Lerp(transform.position, grabPosition, x) + offset;
+            Vector2 currentPosition = Vector2.Lerp(transform.position, tragetPosition, progress * grabSpeed);
+            lineRenderer.SetPosition(i, currentPosition);
+        }
     }
     #endregion
 }
