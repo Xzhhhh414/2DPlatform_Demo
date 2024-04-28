@@ -312,6 +312,87 @@ MonoBehaviour:
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &3016906431358750926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3420291356726664882}
+  - component: {fileID: 5380963715523182790}
+  - component: {fileID: 5251999912522784824}
+  m_Layer: 14
+  m_Name: GrabDetection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3420291356726664882
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3016906431358750926}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8198951932485516424}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &5380963715523182790
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3016906431358750926}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 7
+--- !u!114 &5251999912522784824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3016906431358750926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 310153922b6e44757b8069e9f9d88334, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliders: []
 --- !u!1 &3746784634852691085
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,6 +1376,8 @@ GameObject:
   - component: {fileID: 5646727627007476385}
   - component: {fileID: 5493665764848477191}
   - component: {fileID: 4717282881302430149}
+  - component: {fileID: 6882391051196661106}
+  - component: {fileID: 1188892632827969819}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -1329,6 +1412,7 @@ Transform:
   - {fileID: 7016126394080851370}
   - {fileID: 4752606125743456318}
   - {fileID: 7689512603009516231}
+  - {fileID: 3420291356726664882}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &758846839772726439
@@ -1445,6 +1529,7 @@ MonoBehaviour:
   _IsMoving: 0
   _isFacingRight: 1
   isJumping: 0
+  garbSpeed: 1
 --- !u!114 &6420420121662775390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1671,7 +1756,7 @@ MonoBehaviour:
   ceilingDistance: 0.05
   _isGrounded: 0
   _isOnWall: 0
-  _isOnWCeiling: 0
+  _isOnWCeiling: 1
   contactFilter:
     useTriggers: 0
     useLayerMask: 1
@@ -1769,6 +1854,47 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2362537, y: 2.1425292}
   m_EdgeRadius: 0.02
+--- !u!232 &6882391051196661106
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8577367491070427345}
+  m_Enabled: 0
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 1
+  m_Distance: 39.62125
+  m_MaxDistanceOnly: 0
+--- !u!231 &1188892632827969819
+SpringJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8577367491070427345}
+  m_Enabled: 0
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 0
+  m_Distance: 39.62125
+  m_DampingRatio: 0
+  m_Frequency: 1
 --- !u!1 &8783133434536609512
 GameObject:
   m_ObjectHideFlags: 0
