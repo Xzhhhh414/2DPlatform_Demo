@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GrabDetection : MonoBehaviour
@@ -15,29 +16,39 @@ public class GrabDetection : MonoBehaviour
     }
     [HideInInspector]
     public List<Collider2D> colliders = new List<Collider2D>();
+    public CircleCollider2D circleCollider2D;
     float duration = 0.1f;
-    float currrntTime;
-    float startTime;
-    float endTime;
-    private void OnEnable()
+    private void Start()
     {
-        startTime = Time.time;
-        endTime = startTime + duration;
+        circleCollider2D = GetComponent<CircleCollider2D>();
+        circleCollider2D.enabled = false;
     }
 
     private void Update()
     {
-        if (Time.time > endTime)
+        if (circleCollider2D.enabled)
         {
-            GetComponent<CircleCollider2D>().enabled = false;
+            duration -= Time.deltaTime;
+        }
+        else
+        {
+            IsDecteted = false;
+            colliders.Clear();
+        }
+        if (duration <= 0)
+        {
+            circleCollider2D.enabled = false;
+            duration = 0.1f;
         }
     }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("GrabPoint"))
         {
-            colliders.Add(other);
+            if (!colliders.Contains(other))
+                colliders.Add(other);
         }
     }
     private void OnTriggerExit2D(Collider2D other)
@@ -50,7 +61,5 @@ public class GrabDetection : MonoBehaviour
     }
     private void OnDisable()
     {
-        IsDecteted = false;
-        colliders.Clear();
     }
 }

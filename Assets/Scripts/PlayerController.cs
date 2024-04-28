@@ -261,10 +261,10 @@ public class PlayerController : Character
         distanceJoint2D = GetComponent<DistanceJoint2D>();
         distanceJoint2D.enabled = false;
         distanceJoint2D.autoConfigureDistance = false;
-        springJoint2D = GetComponent<SpringJoint2D>();
-        springJoint2D.enabled = false;
-        springJoint2D.autoConfigureDistance = false;
         grabDetection = GetComponentInChildren<GrabDetection>();
+        lineRenderer = GetComponent<LineRenderer>();
+        lineRenderer.positionCount = 2;
+        lineRenderer.enabled = false;
     }
 
 
@@ -364,9 +364,11 @@ public class PlayerController : Character
             airJumpsLeft = maxAirJumps; // 如果在地面上，重置空中跳跃次数
         }
 
-
         if (Input.GetKeyDown(KeyCode.Q))
-            isGrabbing = true;
+        {
+            grabDetection.circleCollider2D.enabled = true;
+            startGrab = true;
+        }
 #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
@@ -379,7 +381,7 @@ public class PlayerController : Character
     private void FixedUpdate()
     {
         CheckSlope();
-        Grabable(isGrabbing);
+        Grabable();
         if (LockInAir)
         {
             rb.constraints = RigidbodyConstraints2D.FreezePositionY | rb.constraints;
@@ -427,7 +429,7 @@ public class PlayerController : Character
             {
                 if (touchingDirections.IsGrounded && !isJumping)
                     rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, 0);
-                else if(moveInput.x != 0)
+                else if (moveInput.x != 0)
                     rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
                 animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
             }
@@ -717,16 +719,17 @@ public class PlayerController : Character
     private GrabDetection grabDetection;
     private SpringJoint2D springJoint2D;
     private Vector2 grabPosition;
+    private bool startGrab;
     private bool isGrabbing;
     private float grabDistance;
     [SerializeField, Label("钩爪速度")]
     float garbSpeed = 1f;
     private GrabPoint grabPoint;
-    void Grabable(bool executeable)
+    private LineRenderer lineRenderer;
+    void Grabable()
     {
-        if (!executeable) return;
-        grabDetection.enabled = true;
-        if (grabDetection.IsDecteted)
+        if (!startGrab) return;
+        if (grabDetection.IsDecteted && !isGrabbing)
         {
             var tempDis = float.MaxValue;
             for (var i = 0; i < grabDetection.colliders.Count; i++)
@@ -741,21 +744,29 @@ public class PlayerController : Character
             }
             if (grabPosition != default(Vector2))
             {
+                isGrabbing = true;
+                rb.gravityScale = 0;
+                lineRenderer.enabled = true;
+                lineRenderer.SetPosition(0, transform.position);
+                lineRenderer.SetPosition(1, grabPosition);
                 distanceJoint2D.connectedAnchor = grabPosition;
                 distanceJoint2D.distance = Mathf.Lerp(grabDistance, 0, (grabDistance / grabDistance - Time.deltaTime * garbSpeed));
                 distanceJoint2D.enabled = true;
             }
 
         }
+
+        lineRenderer.SetPosition(0, transform.position);
         var newDistance = Vector2.Distance(grabPosition, transform.position);
         if (newDistance <= 2f)
         {
             isGrabbing = false;
             distanceJoint2D.enabled = false;
-            // grabDetection.enabled = false;
-            Debug.DrawRay(grabPosition, (grabPosition.normalized - (Vector2)transform.position.normalized) * 200, Color.red, 5f);
+            grabDetection.circleCollider2D.enabled = false;
             var dir = grabPosition - (Vector2)transform.position;
             rb.AddForce(dir.normalized * grabPoint.Force, ForceMode2D.Impulse);
+            startGrab = false;
+            lineRenderer.enabled = false;
         }
 
     }
