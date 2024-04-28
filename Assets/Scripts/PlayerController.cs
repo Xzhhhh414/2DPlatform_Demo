@@ -493,14 +493,14 @@ public class PlayerController : Character
         {
             isOnSlope = false;
         }
-        if (isOnSlope && moveInput.x == 0)
-        {
-            rb.gravityScale = 0;
-        }
-        else
-        {
-            rb.gravityScale = 4;
-        }
+        // if (isOnSlope && moveInput.x == 0)
+        // {
+        //     rb.gravityScale = 0;
+        // }
+        // else
+        // {
+        //     rb.gravityScale = 4;
+        // }
 
     }
     bool IsNormalVertical(Vector2 normal, Vector2 reference)
@@ -722,7 +722,7 @@ public class PlayerController : Character
     private DistanceJoint2D distanceJoint2D;
     private GrabDetection grabDetection;
     private SpringJoint2D springJoint2D;
-    private Vector2 grabPosition;
+    private Vector2 grabPosition = Vector2.negativeInfinity;
     private bool startGrab;
     private bool isGrabbing;
     private float grabDistance;
@@ -735,11 +735,10 @@ public class PlayerController : Character
     [SerializeField, Label("绳子的曲度")]
     float startwaveRate = 4;
     float waveRate = 1;
-    [SerializeField,Label("从曲绳到直绳的时间")]
+    [SerializeField, Label("从曲绳到直绳的时间")]
     float ropeSetRope = 1;
     void Grabable()
     {
-
         if (!startGrab) return;
         if (grabDetection.IsDecteted && !isGrabbing)
         {
@@ -756,16 +755,22 @@ public class PlayerController : Character
                     grabPoint = grabDetection.colliders[i].GetComponent<GrabPoint>();
                 }
             }
-            if (grabPosition != default(Vector2))
+            if (grabPosition != Vector2.negativeInfinity)
             {
                 isGrabbing = true;
                 isJumping = false;
                 rb.gravityScale = 0;
-                //DrawStraightLine();
-                //DrawCurveRope();
                 distanceJoint2D.connectedAnchor = grabPosition;
                 distanceJoint2D.distance = grabDistance;
                 distanceJoint2D.enabled = true;
+            }
+            else
+            {
+                isGrabbing = false;
+                distanceJoint2D.enabled = false;
+                grabDetection.circleCollider2D.enabled = false;
+                startGrab = false;
+                rb.gravityScale = 4;
             }
 
         }
@@ -782,22 +787,21 @@ public class PlayerController : Character
                 waveRate = 0;
                 DrawStraightLine();
             }
-            //DrawStraightLine();
-        }
-        //lineRenderer.SetPosition(0, transform.position);
-        var newDistance = Vector2.Distance(grabPosition, transform.position);
-        if (newDistance <= 2f)
-        {
-            isGrabbing = false;
-            distanceJoint2D.enabled = false;
-            grabDetection.circleCollider2D.enabled = false;
-            var dir = grabPosition - (Vector2)transform.position;
-            rb.AddForce(dir.normalized * grabPoint.Force, ForceMode2D.Impulse);
-            startGrab = false;
-            lineRenderer.enabled = false;
-            progress = 0;
-        }
 
+            var newDistance = Vector2.Distance(grabPosition, transform.position);
+            if (newDistance <= 0.5f)
+            {
+                isGrabbing = false;
+                distanceJoint2D.enabled = false;
+                grabDetection.circleCollider2D.enabled = false;
+                var dir = grabPosition - (Vector2)transform.position;
+                rb.AddForce(dir.normalized * grabPoint.Force, ForceMode2D.Impulse);
+                rb.gravityScale = 4;
+                startGrab = false;
+                lineRenderer.enabled = false;
+                progress = 0;
+            }
+        }
     }
 
     void DrawStraightLine()
