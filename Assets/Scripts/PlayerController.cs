@@ -417,7 +417,7 @@ public class PlayerController : Character
                 }
             }
         }
-        else
+        else if (!isGrabbing)
         {
             if (isOnSlope && !isJumping)
             {
@@ -760,6 +760,7 @@ public class PlayerController : Character
                 isGrabbing = true;
                 isJumping = false;
                 rb.gravityScale = 0;
+                rb.velocity = Vector2.zero;
                 distanceJoint2D.connectedAnchor = grabPosition;
                 distanceJoint2D.distance = grabDistance;
                 distanceJoint2D.enabled = true;
@@ -776,14 +777,15 @@ public class PlayerController : Character
         }
         if (isGrabbing)
         {
+            rb.gravityScale = 0;
             progress += Time.deltaTime;
-            distanceJoint2D.distance = Mathf.Lerp(grabDistance, 0, progress * grabSpeed);
             lineRenderer.enabled = true;
             waveRate -= Time.deltaTime * ropeSetRope;
             if (waveRate > 0)
                 DrawCurveRope();
             else
             {
+                distanceJoint2D.distance = Mathf.Lerp(grabDistance, 0, progress * grabSpeed);
                 waveRate = 0;
                 DrawStraightLine();
             }
