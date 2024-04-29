@@ -1,7 +1,12 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UIElements;
+using System;
+using JetBrains.Annotations;
 
 public class Attack : MonoBehaviour
 {
@@ -18,11 +23,32 @@ public class Attack : MonoBehaviour
     private float lagLeftTime;
     private bool hitValid = true;
 
+    private CinemachineImpulseSource impulseSource;
+    [SerializeField, Label("震屏发生的帧数")]
+    private int impulseFrameIndex = -100;
+    private int currentFrame;
+    private int totalFrame;
+    private AnimationClip currentClip;
+
+    [Label("动作片段")]
+    public AnimationClip preClip;
+    [SerializeField, Label("震动速度")]
+    Vector2 shakeVelocity;
+    [SerializeField, Label("震动幅度"), Range(0, 100)]
+    float shakeScpoe = 1;
+
 
     private void Start()
     {
-
         animator = GetComponentInParent<Animator>();
+        if (impulseFrameIndex >= 0 && preClip != null)
+        {
+            impulseSource = this.AddComponent<CinemachineImpulseSource>();
+            CinemachineImpulseDefinition definition = new CinemachineImpulseDefinition();
+            definition.m_ImpulseShape = CinemachineImpulseDefinition.ImpulseShapes.Bump;
+            definition.m_ImpulseType = CinemachineImpulseDefinition.ImpulseTypes.Uniform;
+            impulseSource.m_ImpulseDefinition = definition;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -83,6 +109,24 @@ public class Attack : MonoBehaviour
                 hitValid = true;
                 lagLeftTime = lagDuration;
             }
+        }
+        ImpulseScreen();
+
+    }
+
+    void ImpulseScreen()
+    {
+        currentClip = animator.GetCurrentAnimatorClipInfo(0)[0].clip;
+        if (preClip == null || currentClip == null) return;
+        if (!currentClip.name.Equals(preClip.name) || impulseFrameIndex < 0) return;
+        totalFrame = Mathf.RoundToInt(currentClip.length * currentClip.frameRate);
+        var clipNormalizedTime = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+        currentFrame = Mathf.RoundToInt(clipNormalizedTime % 1 * totalFrame);
+        if (impulseFrameIndex >= 0 && impulseFrameIndex == currentFrame && impulseSource != null)
+        {
+            //impulseSource.GenerateImpulse(shakeDirection * shakeScpoe);
+            impulseSource.GenerateImpulse();
+            Debug.Log(currentClip.name + ":" + currentFrame + "/" + totalFrame + "屏幕震动了");
         }
 
     }
