@@ -376,8 +376,6 @@ public class PlayerController : Character
             BattleTestManager.Instance.GMTimeScale();
         }
 #endif
-
-
     }
     private void FixedUpdate()
     {
@@ -431,7 +429,13 @@ public class PlayerController : Character
                 if (touchingDirections.IsGrounded && !isJumping)
                     rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, 0);
                 else if (moveInput.x != 0)
-                    rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
+                {
+                    var tempVelocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
+                    if (rb.velocity.magnitude <= tempVelocity.magnitude || rb.velocity.x * moveInput.x < 0)
+                    {
+                        rb.velocity = tempVelocity;
+                    }
+                }
                 animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
             }
 
