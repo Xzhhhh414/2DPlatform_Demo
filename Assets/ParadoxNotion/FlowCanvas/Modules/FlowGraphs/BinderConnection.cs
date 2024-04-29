@@ -227,8 +227,8 @@ namespace FlowCanvas
                 }
             }
 
-            //the id is missing...
-            Logger.LogError(string.Format("Input Port with ID '{0}' is missing on node {1}", targetPortID, targetNode.name), LogTag.VALIDATION, targetNode);
+            //the id is missing... 
+            //Logger.LogError(string.Format("Input Port with ID '{0}' is missing on node {1}", targetPortID, targetNode.name), LogTag.VALIDATION, targetNode);
             var target = targetNode as FlowNode;
             Port missingPort = null;
             if ( bindingType == typeof(Flow) ) {
