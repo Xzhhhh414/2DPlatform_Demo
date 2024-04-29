@@ -26,6 +26,11 @@ public class SpellCooldown_Skill01 : MonoBehaviour
 
     private void Awake()
     {
+
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player == null)
         {
@@ -33,16 +38,15 @@ public class SpellCooldown_Skill01 : MonoBehaviour
         }
         playerController = player.GetComponent<PlayerController>();
 
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
         textCoolDown.gameObject.SetActive(false);
         imageEdge.gameObject.SetActive(false);
         imageCooldown.fillAmount = 0.0f;
+
+        CallOnEnableMethods();
+
     }
 
-    private void OnEnable()
+    private void CallOnEnableMethods()
     {
         playerController.SpellSkill01.AddListener(UseSpell);
     }

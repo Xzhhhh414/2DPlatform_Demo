@@ -4,11 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Net.NetworkInformation;
-using System;
 
-public class SpellCooldown_Skill03 : MonoBehaviour
+
+public class SpellCooldown_Skill02 : MonoBehaviour
 {
     PlayerController playerController;
+
 
     [SerializeField]
     private Image imageCooldown;
@@ -16,21 +17,19 @@ public class SpellCooldown_Skill03 : MonoBehaviour
     private TMP_Text textCoolDown;
     [SerializeField]
     private Image imageEdge;
-    [SerializeField]
-    private Button skill03Button;
-    [SerializeField]
-    private Sprite spriteOriginal;
-    [SerializeField]
-    private Sprite spriteClearCD;
 
     //variables for cooldownTimer
     private bool isCooldown = false;
     private float cooldownTime = 5.0f;
     private float cooldownTimer = 0.0f;
-    private int buttonState = 1;
-    
-    
+
+
     private void Awake()
+    {
+
+    }
+    // Start is called before the first frame update
+    void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player == null)
@@ -39,29 +38,19 @@ public class SpellCooldown_Skill03 : MonoBehaviour
         }
         playerController = player.GetComponent<PlayerController>();
 
-
-    }
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
         textCoolDown.gameObject.SetActive(false);
         imageEdge.gameObject.SetActive(false);
         imageCooldown.fillAmount = 0.0f;
 
-        SetSkill03ButtonImage();
+        CallOnEnableMethods();
     }
 
-    private void OnEnable()
+    private void CallOnEnableMethods()
     {
-        playerController.SpellSkill03.AddListener(UseSpell);
-        playerController.skill03ClearCDSucces.AddListener(ChangeBtnState);
+        playerController.SpellSkill02.AddListener(UseSpell);
     }
 
-
-
-
+  
 
 
     // Update is called once per frame
@@ -102,9 +91,6 @@ public class SpellCooldown_Skill03 : MonoBehaviour
 
     public void UseSpell()
     {
-        buttonState = 1;
-        SetSkill03ButtonImage();
-
         if (isCooldown)
         {
             //µã»÷¼¼ÄÜ¼ü
@@ -120,37 +106,4 @@ public class SpellCooldown_Skill03 : MonoBehaviour
         }
 
     }
-
-    private void ChangeBtnState()
-    {
-        buttonState = 2;
-        SetSkill03ButtonImage();
-    }
-
-
-
-    private void SetSkill03ButtonImage()
-    {
-        Image buttonImage = skill03Button.GetComponent<Image>();
-
-        if (buttonState == 1)
-        {
-            buttonImage.sprite = spriteOriginal;
-
-        }else if (buttonState == 2) 
-        {
-            buttonImage.sprite = spriteClearCD;
-        }
-
-        if (buttonImage = null)
-        {
-            buttonImage.sprite = spriteOriginal;
-        }
-        
-        
-
-    }
-
-
-
 }
