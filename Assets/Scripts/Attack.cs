@@ -124,9 +124,7 @@ public class Attack : MonoBehaviour
         currentFrame = Mathf.RoundToInt(clipNormalizedTime % 1 * totalFrame);
         if (impulseFrameIndex >= 0 && impulseFrameIndex == currentFrame && impulseSource != null)
         {
-            //impulseSource.GenerateImpulse(shakeDirection * shakeScpoe);
-            impulseSource.GenerateImpulse();
-            Debug.Log(currentClip.name + ":" + currentFrame + "/" + totalFrame + "屏幕震动了");
+            impulseSource.GenerateImpulse(shakeVelocity * shakeScpoe);
         }
 
     }
