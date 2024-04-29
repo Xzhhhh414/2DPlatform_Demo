@@ -440,7 +440,7 @@ public class PlayerController : Character
             }
 
         }
-        if (rb.velocity.y < 0 && touchingDirections.IsGrounded)
+        if (rb.velocity.y <= 0 && touchingDirections.IsGrounded)
         {
             isJumping = false;
         }
