@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 557980142714836978}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 82.366066, y: -7, z: 0}
+  m_LocalPosition: {x: 82.366066, y: -6.5, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxFactorX: 0.5
-  parallaxFactorY: 0.5
+  parallaxFactorY: 0.8
 --- !u!1 &941534710824572871
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,8 +225,8 @@ Transform:
   m_GameObject: {fileID: 3668605265904629732}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.95, y: -3.08, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalPosition: {x: 17.95, y: -1.87, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7187710133189058686}
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxFactorX: 1
-  parallaxFactorY: 0.5
+  parallaxFactorY: 0.9
 --- !u!1 &4062276775265211610
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,7 +395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxFactorX: 1
-  parallaxFactorY: 0.5
+  parallaxFactorY: 0.9
 --- !u!1 &4375215467446163910
 GameObject:
   m_ObjectHideFlags: 0
