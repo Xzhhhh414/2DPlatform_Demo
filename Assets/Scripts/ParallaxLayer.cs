@@ -5,14 +5,19 @@ using UnityEngine;
 
 public class ParallaxLayer : MonoBehaviour
 {
-    public float parallaxFactor;
+    public float parallaxFactorX;
+    public float parallaxFactorY;
 
-    public void Move(float delta)
+    public void MoveX(float deltaX)
     {
         Vector3 newPos = transform.localPosition;
-        newPos.x -= delta * parallaxFactor;
-
+        newPos.x -= deltaX * parallaxFactorX;
         transform.localPosition = newPos;
     }
-
+    public void MoveY(float deltaY)
+    {
+        Vector3 newPos = transform.localPosition;
+        newPos.y -= deltaY * parallaxFactorY;
+        transform.localPosition = newPos;
+    }
 }
