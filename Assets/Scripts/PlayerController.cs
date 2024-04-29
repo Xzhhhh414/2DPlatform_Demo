@@ -379,7 +379,7 @@ public class PlayerController : Character
     }
     private void FixedUpdate()
     {
-        CheckSlope();
+        //CheckSlope();
         Grabable();
         if (LockInAir)
         {
