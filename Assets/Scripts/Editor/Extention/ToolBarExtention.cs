@@ -1,4 +1,3 @@
-using System;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -39,6 +38,7 @@ public class ToolBarExtention
             EditorApplication.playModeStateChanged -= OnStartGameButtonClicked;
         }
     }
+    public static bool isMinDamage;
     private static void TimeScaleToolBar()
     {
         GUILayout.BeginHorizontal();
@@ -61,6 +61,12 @@ public class ToolBarExtention
             BattleTestManager.Instance.TimeScale = 0.5f;
             BattleTestManager.Instance.GMTimeScale();
             Application.runInBackground = true;
+        }
+        GUI.color = isMinDamage ? Color.green : Color.white;
+        if (GUILayout.Button("最小伤害", EditorStyles.toolbarButton, GUILayout.Width(70)))
+        {
+            isMinDamage = !isMinDamage;
+            BattleTestManager.Instance.isMinDamage = isMinDamage;
         }
         GUILayout.EndHorizontal();
     }

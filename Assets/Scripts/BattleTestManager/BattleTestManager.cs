@@ -15,6 +15,7 @@ public class BattleTestManager
             return _instance;
         }
     }
+    #region 游戏时间控制
     public float TimeScale = 0.2f;
 
     public void GMTimeScale()
@@ -33,6 +34,11 @@ public class BattleTestManager
     {
         Time.timeScale = 1f;
     }
+    #endregion
+
+    #region 最小伤害控制
+    public bool isMinDamage;
+    #endregion
 
 }
 #endif

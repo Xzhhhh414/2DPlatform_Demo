@@ -6,7 +6,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UIElements;
 using System;
-using JetBrains.Annotations;
 
 public class Attack : MonoBehaviour
 {
@@ -36,6 +35,7 @@ public class Attack : MonoBehaviour
     Vector2 shakeVelocity;
     [SerializeField, Label("震动幅度"), Range(0, 100)]
     float shakeScpoe = 1;
+    int _attackDamage;
 
 
     private void Start()
@@ -49,10 +49,22 @@ public class Attack : MonoBehaviour
             definition.m_ImpulseType = CinemachineImpulseDefinition.ImpulseTypes.Uniform;
             impulseSource.m_ImpulseDefinition = definition;
         }
+        _attackDamage = attackDamage;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+#if UNITY_EDITOR
+        if (BattleTestManager.Instance.isMinDamage)
+        {
+            _attackDamage = 1;
+        }
+        else
+        {
+            _attackDamage = attackDamage;
+        }
+#endif
+
         //Debug.Log("OnTriggerEnter2D!!!!!");
         Damageable damageable = collision.GetComponent<Damageable>();
         if (damageable != null)
@@ -60,7 +72,7 @@ public class Attack : MonoBehaviour
 
             Vector2 deliveredKnockback = transform.parent.localScale.x > 0 ? knockback : new Vector2(-knockback.x, knockback.y);
 
-            bool gotHit = damageable.Hit(attackDamage, deliveredKnockback);
+            bool gotHit = damageable.Hit(_attackDamage, deliveredKnockback);
 
             if (gotHit)
             {
@@ -69,7 +81,7 @@ public class Attack : MonoBehaviour
                     StopCoroutine(damageableCoroutines[damageable]);
                 }
 
-                damageableCoroutines[damageable] = StartCoroutine(ChangAnimationSpeed(0.01f, stunRatio, animator, collision.GetComponent<Animator>()));
+                damageableCoroutines[damageable] = StartCoroutine(ChangAnimationSpeed(0f, stunRatio, animator, collision.GetComponent<Animator>()));
                 //Debug.Log(collision.name + "hit for" + attackDamage);
 
                 if (canClearCooldown && hitValid)
