@@ -30,13 +30,6 @@ public class SetCinemachine : FlowNode
 
     }
 
-    //void DoSet()
-    //{ 
-    
-    //}
-
-
-
     private void Call(Cinemachine.CinemachineVirtualCamera virtualCamera, Transform followTarget, Transform lookAtTarget)
     {
 

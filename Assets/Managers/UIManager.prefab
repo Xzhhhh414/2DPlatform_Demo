@@ -87,10 +87,6 @@ MonoBehaviour:
     m_ActionName: Player/Attack[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: a671d70f-d976-400f-b143-0f85ac6b3c4f
-    m_ActionName: Player/Run[/Keyboard/leftShift]
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 2f063798-2e3a-4d29-b6a5-a143f0e23d1f
     m_ActionName: Player/Jump[/Keyboard/space]
   - m_PersistentCalls:
@@ -153,6 +149,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: b8319dd5-a5cd-46fe-9bd9-852607b2e155
     m_ActionName: UI/Escape[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 20c038ff-577e-4fd2-8444-fd3f74b8d0b3
+    m_ActionName: Player/Skill02[/Keyboard/g]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 92852e48-1a42-4b11-a9ea-9d46c4e16fc3
+    m_ActionName: Player/Skill03[/Keyboard/h]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: UI

@@ -13,7 +13,7 @@ public class UIManager : MonoBehaviour
     public Canvas gameCanvas;
 
 
-    public void Awake()
+    public void Start()
     {
         gameCanvas = FindObjectOfType<Canvas>();
 
