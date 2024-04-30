@@ -93,7 +93,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.0641073}
+  m_Offset: {x: 0, y: -0.01}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 8672496328714748678}
   - component: {fileID: 3025744860956657632}
   m_Layer: 8
-  m_Name: GreenMachine
+  m_Name: BlueMachine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -140,12 +140,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.476338, y: -1.8381819, z: 0}
-  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 429346695189150405}
   - {fileID: 6047386832346151958}
-  - {fileID: 7738303571595627772}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6970840597294661560
@@ -189,7 +188,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -403663133, guid: 787ed1cfe989b7746a15284262ce6690, type: 3}
+  m_Sprite: {fileID: 1800354001, guid: 9ad1df5709d096141ab1850b769d1dba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -259,7 +258,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.53, y: -1.16}
+  m_Offset: {x: 0.38, y: -1.19}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.3, y: 0.5}
@@ -270,7 +269,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.77, y: 3.67}
+  m_Size: {x: 2.57, y: 3.67}
   m_EdgeRadius: 0
 --- !u!114 &3739353946498540055
 MonoBehaviour:
@@ -286,7 +285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KnockBackRate: 1
   walkAcceleration: 30
-  maxSpeed: 2.5
+  maxSpeed: 5
   walkStopRate: 0.05
   attackZone: {fileID: 7541528397675991433}
   cliffDetectionZone: {fileID: 6455040145224500777}
@@ -347,7 +346,7 @@ Animator:
   m_GameObject: {fileID: 3522140399348579629}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e0b1ef2527da4314582154afbb41f170, type: 2}
+  m_Controller: {fileID: 9100000, guid: b2d53fa015c8f32498c3e42fed5f7bf3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -408,7 +407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65209737d5614734eb8812630200c8f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchPoint: {fileID: 7738303571595627772}
+  launchPoint: {fileID: 0}
   projectilePrefab: {fileID: 1297957505154827435, guid: caadfa3d6591ad84885fcfde89568155, type: 3}
 --- !u!1 &5885092043841135857
 GameObject:
@@ -504,34 +503,3 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   dectectedColliders: []
---- !u!1 &7781292337927834346
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7738303571595627772}
-  m_Layer: 8
-  m_Name: Bullet
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7738303571595627772
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7781292337927834346}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.8, y: -0.18, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1643534007564350675}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
