@@ -1,0 +1,584 @@
+fileFormatVersion: 2
+guid: 2153da32dc1908c4799c5c8780ad9b53
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: metalfly_show_Frame_4
+    originalName: 
+    pivot: {x: 0.45454547, y: -0.32352942}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 90
+      y: 4
+      width: 33
+      height: 34
+    spriteID: d3fd9ec0bb17c2940bf7e8d364ee9181
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 81, y: -7}
+  - name: metalfly_show_Frame_5
+    originalName: 
+    pivot: {x: 0.46875, y: -0.36363637}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 171
+      y: 4
+      width: 32
+      height: 33
+    spriteID: b6992e4012fc6e941aa9ed17bad14f03
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 162, y: -8}
+  - name: metalfly_show_Frame_6
+    originalName: 
+    pivot: {x: 0.46875, y: -0.32352942}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 131
+      y: 4
+      width: 32
+      height: 34
+    spriteID: cbf3f3457fdac8448831af7f0d07def8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 122, y: -7}
+  - name: metalfly_show_Frame_7
+    originalName: 
+    pivot: {x: 0.46875, y: -0.36363637}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 211
+      y: 4
+      width: 32
+      height: 33
+    spriteID: 36352daec941b764a89b06e073b9f2cf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: -8}
+  - name: metalfly_show_Frame_8
+    originalName: 
+    pivot: {x: 0.46875, y: -0.36363637}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 47
+      width: 32
+      height: 33
+    spriteID: fa9df20a13ef40c4c84e455d9d9bda87
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -5, y: 35}
+  - name: metalfly_show_Frame_9
+    originalName: 
+    pivot: {x: 0.46875, y: -0.375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 44
+      y: 47
+      width: 32
+      height: 32
+    spriteID: d16e6d7a2d46ec844801cd5bf0fd24c8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 35, y: 35}
+  - name: metalfly_show_Frame_10
+    originalName: 
+    pivot: {x: 0.50000006, y: -0.45161292}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 121
+      y: 47
+      width: 28
+      height: 31
+    spriteID: fa98570694ebfdc45abfe35a6250f5b9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 111, y: 33}
+  - name: metalfly_show_Frame_11
+    originalName: 
+    pivot: {x: 0.41379312, y: -0.45161292}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 84
+      y: 47
+      width: 29
+      height: 31
+    spriteID: 56a269eb454ea7d47808f03e34611d47
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 33}
+  - name: metalfly_show_Frame_12
+    originalName: 
+    pivot: {x: 0.44444445, y: -0.5357143}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 205
+      y: 47
+      width: 27
+      height: 28
+    spriteID: 7f7bd9bfbddbb1646b51a745680ff418
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 193, y: 32}
+  - name: metalfly_show_Frame_13
+    originalName: 
+    pivot: {x: 0.5, y: -0.8947368}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 157
+      y: 47
+      width: 40
+      height: 19
+    spriteID: 603b1e90009ad804bbcdd83da3a53214
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 153, y: 30}
+  - name: metalfly_show_Frame_14
+    originalName: 
+    pivot: {x: 0.41176474, y: -0.9473684}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 35
+      y: 88
+      width: 17
+      height: 19
+    spriteID: 47861e04b378c264390c84b83e7d2bbc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 18, y: 70}
+  - name: metalfly_show_Frame_15
+    originalName: 
+    pivot: {x: 0.41176474, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 88
+      width: 17
+      height: 19
+    spriteID: e4730851f05c8044da221b37d50125ee
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 43, y: 69}
+  - name: metalfly_show_Frame_0
+    originalName: 
+    pivot: {x: 0.5833334, y: -2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 240
+      y: 47
+      width: 12
+      height: 12
+    spriteID: 32708697053e1c14980cae56e0c49502
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 240, y: 47}
+  - name: metalfly_show_Frame_1
+    originalName: 
+    pivot: {x: 0.5217391, y: -0.8636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 88
+      width: 23
+      height: 22
+    spriteID: 599829ebe9b8ecd4f8168ac9a3cf8bf9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 88}
+  - name: metalfly_show_Frame_2
+    originalName: 
+    pivot: {x: 0.45714283, y: -0.32352942}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 4
+      width: 35
+      height: 34
+    spriteID: bb3e95b87432f5a4aacf6529ceb947fd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 4}
+  - name: metalfly_show_Frame_3
+    originalName: 
+    pivot: {x: 0.45714283, y: -0.28571427}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 35
+      height: 35
+    spriteID: 1fe6e894ec0622349b2fed30e41bbf3f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1208929522
+    name: metalfly_show
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: metalfly_show_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 0
+        y: 0
+        width: 48
+        height: 57
+      spriteId: d3fd9ec0bb17c2940bf7e8d364ee9181
+    - name: metalfly_show_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 0
+        y: 0
+        width: 48
+        height: 57
+      spriteId: b6992e4012fc6e941aa9ed17bad14f03
+    - name: metalfly_show_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 0
+        y: 0
+        width: 48
+        height: 57
+      spriteId: cbf3f3457fdac8448831af7f0d07def8
+    - name: metalfly_show_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 0
+        y: 0
+        width: 48
+        height: 57
+      spriteId: 36352daec941b764a89b06e073b9f2cf
+    - name: metalfly_show_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 0
+        y: 0
+        width: 48
+        height: 57
+      spriteId: fa9df20a13ef40c4c84e455d9d9bda87
+    - name: metalfly_show_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 0
+        y: 0
+        width: 48
+        height: 57
+      spriteId: d16e6d7a2d46ec844801cd5bf0fd24c8
+    - name: metalfly_show_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 0
+        y: 0
+        width: 48
+        height: 57
+      spriteId: fa98570694ebfdc45abfe35a6250f5b9
+    - name: metalfly_show_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 0
+        y: 0
+        width: 48
+        height: 57
+      spriteId: 56a269eb454ea7d47808f03e34611d47
+    - name: metalfly_show_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 0
+        y: 0
+        width: 48
+        height: 57
+      spriteId: 7f7bd9bfbddbb1646b51a745680ff418
+    - name: metalfly_show_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 0
+        y: 0
+        width: 48
+        height: 57
+      spriteId: 603b1e90009ad804bbcdd83da3a53214
+    - name: metalfly_show_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 0
+        y: 0
+        width: 48
+        height: 57
+      spriteId: 47861e04b378c264390c84b83e7d2bbc
+    - name: metalfly_show_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 0
+        y: 0
+        width: 48
+        height: 57
+      spriteId: e4730851f05c8044da221b37d50125ee
+    - name: metalfly_show_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 17
+        y: 24
+        width: 12
+        height: 12
+      spriteId: 32708697053e1c14980cae56e0c49502
+    - name: metalfly_show_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 12
+        y: 19
+        width: 23
+        height: 22
+      spriteId: 599829ebe9b8ecd4f8168ac9a3cf8bf9
+    - name: metalfly_show_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 8
+        y: 11
+        width: 35
+        height: 34
+      spriteId: bb3e95b87432f5a4aacf6529ceb947fd
+    - name: metalfly_show_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 8
+        y: 10
+        width: 35
+        height: 35
+      spriteId: 1fe6e894ec0622349b2fed30e41bbf3f
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 48, y: 57}
