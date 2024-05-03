@@ -1,11 +1,4 @@
-using FlowCanvas.Nodes;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Assertions.Must;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
@@ -62,7 +55,10 @@ public class PlayerController : Character
     private int clearCDMaxTime = 2; //当前轮技能清CD最大次数
     private bool hitDamage = false;//技能初始状态是没命中
 
-
+    #region 特殊Y轴速度
+    public float specialY = 0f;
+    public bool isUsingSpecialY = false;
+    #endregion
     public float CurrentMoveSpeed
     {
         get
@@ -427,6 +423,11 @@ public class PlayerController : Character
                     rb.velocity = tempVelocity;
                 }
             }
+            if (isUsingSpecialY)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, 0);
+                rb.AddForce(Vector2.up * specialY, ForceMode2D.Impulse);
+            }
             animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
 
         }
@@ -639,7 +640,6 @@ public class PlayerController : Character
 
     private DistanceJoint2D distanceJoint2D;
     private GrabDetection grabDetection;
-    private SpringJoint2D springJoint2D;
     private Vector2 grabPosition = Vector2.negativeInfinity;
     private bool startGrab;
     private bool isGrabbing;
