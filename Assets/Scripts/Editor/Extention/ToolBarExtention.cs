@@ -28,6 +28,16 @@ public class ToolBarExtention
             }
             EditorApplication.ExecuteMenuItem("Edit/Play");
         }
+        if (GUILayout.Button("开始界面", EditorStyles.toolbarButton, GUILayout.Width(100)))
+        {
+            if (!SceneManager.GetActiveScene().name.Equals("MainMenuScene"))
+            {
+                EditorApplication.playModeStateChanged += OnStartGameButtonClicked;
+                preScenePath = SceneManager.GetActiveScene().path;
+                EditorSceneManager.OpenScene("Assets/Scenes/MainMenuScene.unity");
+            }
+            EditorApplication.ExecuteMenuItem("Edit/Play");
+        }
     }
     private static void OnStartGameButtonClicked(PlayModeStateChange state)
     {
