@@ -110,8 +110,8 @@ AnimatorStateTransition:
   m_IsExit: 0
   serializedVersion: 3
   m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 0.8
+  m_TransitionOffset: 0.0085691605
+  m_ExitTime: 0.5000001
   m_HasExitTime: 1
   m_HasFixedDuration: 0
   m_InterruptionSource: 0
@@ -2309,25 +2309,31 @@ AnimatorStateMachine:
   - {fileID: 7758823623988154476}
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: 5173254929578911379}
-    second:
-    - {fileID: 7378909565868572476}
-    - {fileID: 8295121369064485957}
-    - {fileID: 2175779389567176461}
   - first: {fileID: 46337963410232463}
     second:
     - {fileID: -4663311409197217181}
     - {fileID: -2397146785725100399}
-  - first: {fileID: 6731722125119614965}
-    second:
-    - {fileID: 7948694477583728422}
-    - {fileID: 2706132527473151291}
-    - {fileID: 7980191354860116819}
   - first: {fileID: -4762254416604418544}
     second:
     - {fileID: 566032035248257259}
     - {fileID: 4454710943086286767}
     - {fileID: -7722690406805486186}
+  - first: {fileID: 6572446221699202233}
+    second:
+    - {fileID: 5760675610134621280}
+    - {fileID: 1883825535638113048}
+    - {fileID: -8054644707130142779}
+    - {fileID: 5555749165458886270}
+  - first: {fileID: 5173254929578911379}
+    second:
+    - {fileID: 7378909565868572476}
+    - {fileID: 8295121369064485957}
+    - {fileID: 2175779389567176461}
+  - first: {fileID: 6731722125119614965}
+    second:
+    - {fileID: 7948694477583728422}
+    - {fileID: 2706132527473151291}
+    - {fileID: 7980191354860116819}
   - first: {fileID: -2035006683117913989}
     second:
     - {fileID: 6257376976225309954}
@@ -2340,12 +2346,6 @@ AnimatorStateMachine:
   - first: {fileID: -5194446042978193186}
     second:
     - {fileID: 6258911788799322516}
-  - first: {fileID: 6572446221699202233}
-    second:
-    - {fileID: 5760675610134621280}
-    - {fileID: 1883825535638113048}
-    - {fileID: -8054644707130142779}
-    - {fileID: 5555749165458886270}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 930, y: 80, z: 0}
   m_EntryPosition: {x: -80, y: 110, z: 0}

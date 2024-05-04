@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -58,6 +60,11 @@ public class PlayerController : Character
     #region 特殊Y轴速度
     public float specialY = 0f;
     public bool isUsingSpecialY = false;
+    #endregion
+    #region 命中修改y轴
+    private bool isHitModifyY = false;
+    private float hitModifyY = 0;
+    private List<Attack> attacks = new();
     #endregion
     public float CurrentMoveSpeed
     {
@@ -248,6 +255,7 @@ public class PlayerController : Character
         }
         attackSkill03 = skill03.GetComponent<Attack>();
 
+        attacks.AddRange(GetComponentsInChildren<Attack>());
     }
     private void Start()
     {
@@ -262,10 +270,17 @@ public class PlayerController : Character
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.positionCount = 40;
         lineRenderer.enabled = false;
+        foreach (var attack in attacks)
+        {
+            attack.ModifyY += ModifyYOnHit;
+        }
     }
 
-
-
+    private void ModifyYOnHit(bool arg1, float arg2)
+    {
+        isHitModifyY = arg1;
+        hitModifyY = arg2;
+    }
 
     // Update is called once per frame
     void Update()
@@ -427,6 +442,12 @@ public class PlayerController : Character
             {
                 rb.velocity = new Vector2(rb.velocity.x, 0);
                 rb.AddForce(Vector2.up * specialY, ForceMode2D.Impulse);
+            }
+            if (isHitModifyY)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, 0);
+                rb.AddForce(Vector2.up * hitModifyY, ForceMode2D.Impulse);
+                isHitModifyY = false;
             }
             animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
 

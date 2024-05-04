@@ -111,6 +111,10 @@ MonoBehaviour:
   preClip: {fileID: 0}
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 0
+  hitModifyY: 0
+  modifyY: 0
+  hitFreezeXY: 0
+  freezeXY: {x: 0, y: 0}
 --- !u!1 &2518172833478220632
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,6 +221,10 @@ MonoBehaviour:
   preClip: {fileID: 0}
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 0
+  hitModifyY: 0
+  modifyY: 0
+  hitFreezeXY: 0
+  freezeXY: {x: 0, y: 0}
 --- !u!1 &2870687447323060451
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,6 +332,10 @@ MonoBehaviour:
   preClip: {fileID: 0}
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 0
+  hitModifyY: 0
+  modifyY: 0
+  hitFreezeXY: 0
+  freezeXY: {x: 0, y: 0}
 --- !u!1 &3016906431358750926
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,6 +528,10 @@ MonoBehaviour:
   preClip: {fileID: 0}
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 0
+  hitModifyY: 0
+  modifyY: 0
+  hitFreezeXY: 0
+  freezeXY: {x: 0, y: 0}
 --- !u!1 &5152496736033966815
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,6 +642,10 @@ MonoBehaviour:
   preClip: {fileID: 7400000, guid: fa6e5eccb1e15e84db2348e48a995e6b, type: 2}
   shakeVelocity: {x: 0, y: 0.3}
   shakeScpoe: 0.1
+  hitModifyY: 0
+  modifyY: 0
+  hitFreezeXY: 0
+  freezeXY: {x: 0, y: 0}
 --- !u!1 &5244544144875778800
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,6 +783,10 @@ MonoBehaviour:
   preClip: {fileID: 0}
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 0
+  hitModifyY: 0
+  modifyY: 0
+  hitFreezeXY: 0
+  freezeXY: {x: 0, y: 0}
 --- !u!1 &5772479327754245111
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,9 +891,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   impulseFrameIndex: -100
-  preClip: {fileID: 0}
+  preClip: {fileID: 7400000, guid: 85fa60c66fc086a45b5bda3805a82f5f, type: 2}
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 0
+  hitModifyY: 0
+  modifyY: 0
+  hitFreezeXY: 1
+  freezeXY: {x: 0, y: 8}
 --- !u!1 &7118996619779536036
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,6 +1004,10 @@ MonoBehaviour:
   preClip: {fileID: 0}
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 0
+  hitModifyY: 0
+  modifyY: 0
+  hitFreezeXY: 0
+  freezeXY: {x: 0, y: 0}
 --- !u!1 &7288052657773257048
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,6 +1114,10 @@ MonoBehaviour:
   preClip: {fileID: 0}
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 0
+  hitModifyY: 0
+  modifyY: 0
+  hitFreezeXY: 0
+  freezeXY: {x: 0, y: 0}
 --- !u!1 &7300039818860810853
 GameObject:
   m_ObjectHideFlags: 0
@@ -1192,6 +1228,10 @@ MonoBehaviour:
   preClip: {fileID: 0}
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 0
+  hitModifyY: 0
+  modifyY: 0
+  hitFreezeXY: 0
+  freezeXY: {x: 0, y: 0}
 --- !u!1 &8028601760769503917
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,6 +1342,10 @@ MonoBehaviour:
   preClip: {fileID: 0}
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 0
+  hitModifyY: 0
+  modifyY: 0
+  hitFreezeXY: 0
+  freezeXY: {x: 0, y: 0}
 --- !u!1 &8466580319061042151
 GameObject:
   m_ObjectHideFlags: 0
@@ -1408,6 +1452,10 @@ MonoBehaviour:
   preClip: {fileID: 0}
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 0
+  hitModifyY: 0
+  modifyY: 0
+  hitFreezeXY: 0
+  freezeXY: {x: 0, y: 0}
 --- !u!1 &8577367491070427345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1572,6 +1620,8 @@ MonoBehaviour:
   skill03ClearCDSucces:
     m_PersistentCalls:
       m_Calls: []
+  specialY: 0
+  isUsingSpecialY: 0
   _IsMoving: 0
   _isFacingRight: 1
   isJumping: 0
@@ -2243,6 +2293,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   impulseFrameIndex: -100
-  preClip: {fileID: 0}
+  preClip: {fileID: 7400000, guid: 89508d94aeb59da4d94aea3dbaa30837, type: 2}
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 0
+  hitModifyY: 0
+  modifyY: 0
+  hitFreezeXY: 1
+  freezeXY: {x: 2, y: 8}

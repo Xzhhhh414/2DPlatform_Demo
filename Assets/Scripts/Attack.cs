@@ -37,16 +37,34 @@ public class Attack : MonoBehaviour
     float shakeScpoe = 1;
     int _attackDamage;
 
+    #region 命中修改y轴
+    [SerializeField, Label("是否命中修改Y轴")]
+    private bool hitModifyY = false;
+    [SerializeField, Label("修改Y轴的值")]
+    private float modifyY = 0;
+    public Action<bool, float> ModifyY;
+    #endregion
+    #region 命中冻结XY轴
+    [SerializeField, Label("是否命中冻结XY轴")]
+    private bool hitFreezeXY = false;
+    private bool _hitFreezeXY = false;
+    [SerializeField, Label("冻结的帧数范围")]
+    private Vector2 freezeXY = Vector2.zero;
+    private Rigidbody2D rb;
+    #endregion
 
     private void Start()
     {
         animator = GetComponentInParent<Animator>();
+        rb = GetComponentInParent<Rigidbody2D>();
         if (impulseFrameIndex >= 0 && preClip != null)
         {
             impulseSource = this.AddComponent<CinemachineImpulseSource>();
-            CinemachineImpulseDefinition definition = new CinemachineImpulseDefinition();
-            definition.m_ImpulseShape = CinemachineImpulseDefinition.ImpulseShapes.Bump;
-            definition.m_ImpulseType = CinemachineImpulseDefinition.ImpulseTypes.Uniform;
+            CinemachineImpulseDefinition definition = new()
+            {
+                m_ImpulseShape = CinemachineImpulseDefinition.ImpulseShapes.Bump,
+                m_ImpulseType = CinemachineImpulseDefinition.ImpulseTypes.Uniform
+            };
             impulseSource.m_ImpulseDefinition = definition;
         }
         _attackDamage = attackDamage;
@@ -82,6 +100,14 @@ public class Attack : MonoBehaviour
                 }
 
                 damageableCoroutines[damageable] = StartCoroutine(ChangAnimationSpeed(0f, stunRatio, animator, collision.GetComponent<Animator>()));
+                if (hitModifyY)
+                {
+                    ModifyY?.Invoke(hitModifyY, modifyY);
+                }
+                if (hitFreezeXY)
+                {
+                    _hitFreezeXY = true;
+                }
                 //Debug.Log(collision.name + "hit for" + attackDamage);
 
                 if (canClearCooldown && hitValid)
@@ -123,22 +149,50 @@ public class Attack : MonoBehaviour
             }
         }
         ImpulseScreen();
-
+    }
+    private void FixedUpdate()
+    {
+        if (_hitFreezeXY)
+            FreezeXY();
     }
 
     void ImpulseScreen()
     {
-        currentClip = animator.GetCurrentAnimatorClipInfo(0)[0].clip;
-        if (preClip == null || currentClip == null) return;
-        if (!currentClip.name.Equals(preClip.name) || impulseFrameIndex < 0) return;
-        totalFrame = Mathf.RoundToInt(currentClip.length * currentClip.frameRate);
-        var clipNormalizedTime = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
-        currentFrame = Mathf.RoundToInt(clipNormalizedTime % 1 * totalFrame);
-        if (impulseFrameIndex >= 0 && impulseFrameIndex == currentFrame && impulseSource != null)
+        if (impulseFrameIndex < 0 || !IsInFrameRange(impulseFrameIndex, impulseFrameIndex) || impulseSource != null)
+            return;
+        if (impulseFrameIndex == currentFrame)
         {
             impulseSource.GenerateImpulse(shakeVelocity * shakeScpoe);
         }
+    }
+    void FreezeXY()
+    {
+        if (IsInFrameRange((int)freezeXY.x, (int)freezeXY.y))
+        {
+            rb.gravityScale = 0;
+            rb.velocity = Vector2.zero;
+        }
+        else
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
+            rb.gravityScale = 4;
+            _hitFreezeXY = false;
+        }
+    }
+    bool IsInFrameRange(int startFrame, int endFrame)
+    {
+        currentClip = animator.GetCurrentAnimatorClipInfo(0)[0].clip;
+        if (preClip == null || currentClip == null || !currentClip.name.Equals(preClip.name))
+            return false;
+        totalFrame = Mathf.RoundToInt(currentClip.length * currentClip.frameRate);
+        var clipNormalizedTime = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+        currentFrame = Mathf.RoundToInt(clipNormalizedTime % 1 * totalFrame);
+        return currentFrame >= startFrame && currentFrame <= endFrame;
+    }
 
+    private void OnDisable()
+    {
+        _hitFreezeXY = false;
     }
 
 }
