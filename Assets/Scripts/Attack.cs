@@ -183,8 +183,6 @@ public class Attack : MonoBehaviour
             return false;
         totalFrame = Mathf.RoundToInt(currentClip.length * currentClip.frameRate);
         var clipNormalizedTime = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
-        var isInRightClip = animator.GetCurrentAnimatorStateInfo(0).IsName("player_attack_3");
-        var clipProgression = clipNormalizedTime % 1 * totalFrame;
         currentFrame = Mathf.RoundToInt(clipNormalizedTime % 1 * totalFrame);
         return currentFrame >= startFrame && currentFrame <= endFrame;
     }
