@@ -537,7 +537,7 @@ public class PlayerController : Character
     bool isJumping;
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (context.started && CanMove && CanJump && HaveJumpTimes())
+        if (context.performed && CanMove && CanJump && HaveJumpTimes())
         {
             animator.SetTrigger(AnimationStrings.jumpTrigger);
 
