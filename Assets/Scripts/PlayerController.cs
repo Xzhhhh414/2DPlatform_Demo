@@ -256,18 +256,18 @@ public class PlayerController : Character
         attackSkill03 = skill03.GetComponent<Attack>();
 
         attacks.AddRange(GetComponentsInChildren<Attack>());
+        bCollider = GetComponent<BoxCollider2D>();
+        distanceJoint2D = GetComponent<DistanceJoint2D>();
+        grabDetection = GetComponentInChildren<GrabDetection>();
+        lineRenderer = GetComponent<LineRenderer>();
     }
     private void Start()
     {
         wallLayerMask = LayerMask.GetMask("Ground");
         clearCDTimeLeft = clearCDMaxTime;
-        bCollider = GetComponent<BoxCollider2D>();
         airJumpsLeft = maxAirJumps; // 初始化剩余的空中跳跃次数
-        distanceJoint2D = GetComponent<DistanceJoint2D>();
         distanceJoint2D.enabled = false;
         distanceJoint2D.autoConfigureDistance = false;
-        grabDetection = GetComponentInChildren<GrabDetection>();
-        lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.positionCount = 40;
         lineRenderer.enabled = false;
         foreach (var attack in attacks)
