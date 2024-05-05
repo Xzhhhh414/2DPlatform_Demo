@@ -568,10 +568,10 @@ public class PlayerController : Character
 
     public void OnAttack(InputAction.CallbackContext context)
     {
-        if (context.started && CanAttack)
+        if (context.performed && CanAttack)
         {
-            animator.SetTrigger(AnimationStrings.attackTrigger);
-
+            // animator.SetTrigger(AnimationStrings.attackTrigger);
+            animator.SetTriggerByTime(AnimationStrings.attackTrigger, 0.5f);
         }
 
     }

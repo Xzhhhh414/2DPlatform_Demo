@@ -148,22 +148,19 @@ public class Attack : MonoBehaviour
                 lagLeftTime = lagDuration;
             }
         }
-        ImpulseScreen();
     }
     private void FixedUpdate()
     {
+        ImpulseScreen();
         if (_hitFreezeXY)
             FreezeXY();
     }
 
     void ImpulseScreen()
     {
-        if (impulseFrameIndex < 0 || !IsInFrameRange(impulseFrameIndex, impulseFrameIndex) || impulseSource != null)
+        if (impulseFrameIndex < 0 || !IsInFrameRange(impulseFrameIndex, impulseFrameIndex) || impulseSource == null)
             return;
-        if (impulseFrameIndex == currentFrame)
-        {
-            impulseSource.GenerateImpulse(shakeVelocity * shakeScpoe);
-        }
+        impulseSource.GenerateImpulse(shakeVelocity * shakeScpoe);
     }
     void FreezeXY()
     {
@@ -186,6 +183,8 @@ public class Attack : MonoBehaviour
             return false;
         totalFrame = Mathf.RoundToInt(currentClip.length * currentClip.frameRate);
         var clipNormalizedTime = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+        var isInRightClip = animator.GetCurrentAnimatorStateInfo(0).IsName("player_attack_3");
+        var clipProgression = clipNormalizedTime % 1 * totalFrame;
         currentFrame = Mathf.RoundToInt(clipNormalizedTime % 1 * totalFrame);
         return currentFrame >= startFrame && currentFrame <= endFrame;
     }
