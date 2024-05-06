@@ -177,9 +177,9 @@ public class Damageable : MonoBehaviour
         return false;
     }
 
-    [SerializeField, Label("�ܻ���ɫʱ��")]
+    [SerializeField, Label("受击颜色时长")]
     private float changeColorTime = 0.7f;
-    [SerializeField, Label("�ܻ�����ɫ")]
+    [SerializeField, Label("受击颜色")]
     private Color hurtColor = Color.red;
     IEnumerator ChangeColorTemp(SpriteRenderer sprite, Color oriColor, Color newColor)
     {
