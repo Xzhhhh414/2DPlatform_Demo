@@ -570,8 +570,8 @@ public class PlayerController : Character
     {
         if (context.performed && CanAttack)
         {
-            // animator.SetTrigger(AnimationStrings.attackTrigger);
-            animator.SetTriggerByTime(AnimationStrings.attackTrigger, 1f);
+             animator.SetTrigger(AnimationStrings.attackTrigger);
+            //animator.SetTriggerByTime(AnimationStrings.attackTrigger, 1f);
         }
 
     }
