@@ -181,7 +181,7 @@ public class Damageable : MonoBehaviour
 
         sprite.color = newColor;
 
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.4f);
 
         sprite.color = oriColor;
     }

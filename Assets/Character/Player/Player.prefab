@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 25
   knockback: {x: 0.2, y: 0}
-  stunRatio: 0.15
+  stunRatio: 0.1
   canClearCooldown: 0
   ClearCooldown:
     m_PersistentCalls:
@@ -1219,7 +1219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 20
   knockback: {x: 0, y: 0}
-  stunRatio: 0.1
+  stunRatio: 0.06
   canClearCooldown: 0
   ClearCooldown:
     m_PersistentCalls:
