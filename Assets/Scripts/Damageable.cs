@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Rendering;
@@ -143,7 +144,7 @@ public class Damageable : MonoBehaviour
 
             animator.SetTrigger(AnimationStrings.hitTrigger);
             if (coroutine != null) StopCoroutine(coroutine);
-            coroutine = StartCoroutine(ChangeColorTemp(sprite, originalColorOfSprite, Color.red));
+            coroutine = StartCoroutine(ChangeColorTemp(sprite, originalColorOfSprite, hurtColor));
             //LockVelocity = true;
             damageableHit?.Invoke(damage, knockback);
             CharacterEvents.characterDamaged.Invoke(gameObject, damage);
@@ -176,12 +177,16 @@ public class Damageable : MonoBehaviour
         return false;
     }
 
+    [SerializeField, Label("受击颜色时长")]
+    private float changeColorTime = 0.7f;
+    [SerializeField, Label("受击的颜色")]
+    private Color hurtColor = Color.red;
     IEnumerator ChangeColorTemp(SpriteRenderer sprite, Color oriColor, Color newColor)
     {
 
         sprite.color = newColor;
 
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(changeColorTime);
 
         sprite.color = oriColor;
     }
