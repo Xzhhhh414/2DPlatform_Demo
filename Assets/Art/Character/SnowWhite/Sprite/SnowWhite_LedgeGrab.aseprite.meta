@@ -1,0 +1,416 @@
+fileFormatVersion: 2
+guid: 6829a8655b893e44984d0b92aefd079d
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: SnowWhite_LedgeGrab_Frame_0
+    originalName: 
+    pivot: {x: 0.5609756, y: -0.84615386}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 42
+      y: 4
+      width: 41
+      height: 26
+    spriteID: 10170ebb57713d348b4b0156ec3acb92
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 42, y: 4}
+  - name: SnowWhite_LedgeGrab_Frame_1
+    originalName: 
+    pivot: {x: 0.5897436, y: -0.91999996}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 42
+      y: 38
+      width: 39
+      height: 25
+    spriteID: f773526ecf5b80b4ebbfed3224666874
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 42, y: 38}
+  - name: SnowWhite_LedgeGrab_Frame_2
+    originalName: 
+    pivot: {x: 0.6000001, y: -0.7777778}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 42
+      y: 71
+      width: 35
+      height: 27
+    spriteID: cdc168e7f634ff64484e4ef68e1747c6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 42, y: 71}
+  - name: SnowWhite_LedgeGrab_Frame_3
+    originalName: 
+    pivot: {x: 0.61290324, y: -0.6206897}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 42
+      y: 150
+      width: 31
+      height: 29
+    spriteID: c829bc7f11dd18f4c90370039bc3c3cc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 42, y: 150}
+  - name: SnowWhite_LedgeGrab_Frame_4
+    originalName: 
+    pivot: {x: 0.6153846, y: -0.45161286}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 42
+      y: 187
+      width: 26
+      height: 31
+    spriteID: 9d64fca088b81cd48b16eb5811900310
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 42, y: 187}
+  - name: SnowWhite_LedgeGrab_Frame_5
+    originalName: 
+    pivot: {x: 0.61904764, y: -0.34375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 136
+      width: 21
+      height: 32
+    spriteID: ee11dd808d4ff0b4fa7e8326bb0e4bc0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 136}
+  - name: SnowWhite_LedgeGrab_Frame_6
+    originalName: 
+    pivot: {x: 0.7391304, y: -0.27272728}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 95
+      width: 23
+      height: 33
+    spriteID: a05c1ddbecb33754db2d08cdddd1dfbb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 95}
+  - name: SnowWhite_LedgeGrab_Frame_7
+    originalName: 
+    pivot: {x: 0.76923084, y: -0.16666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 42
+      y: 106
+      width: 26
+      height: 36
+    spriteID: 0871023ecd22acf4aa4b27b8bf7df5f3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 42, y: 106}
+  - name: SnowWhite_LedgeGrab_Frame_8
+    originalName: 
+    pivot: {x: 0.7931034, y: -0.13513513}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 50
+      width: 29
+      height: 37
+    spriteID: 3df95cda40f18ad488944f30665bf473
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 50}
+  - name: SnowWhite_LedgeGrab_Frame_9
+    originalName: 
+    pivot: {x: 0.8333333, y: -0.10526316}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 30
+      height: 38
+    spriteID: dc281ae695f787d4fa75fc2681f8c2c5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1807583122
+    name: SnowWhite_LedgeGrab
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: SnowWhite_LedgeGrab_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 13
+        y: 22
+        width: 41
+        height: 26
+      spriteId: 10170ebb57713d348b4b0156ec3acb92
+    - name: SnowWhite_LedgeGrab_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 13
+        y: 23
+        width: 39
+        height: 25
+      spriteId: f773526ecf5b80b4ebbfed3224666874
+    - name: SnowWhite_LedgeGrab_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 15
+        y: 21
+        width: 35
+        height: 27
+      spriteId: cdc168e7f634ff64484e4ef68e1747c6
+    - name: SnowWhite_LedgeGrab_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 17
+        y: 18
+        width: 31
+        height: 29
+      spriteId: c829bc7f11dd18f4c90370039bc3c3cc
+    - name: SnowWhite_LedgeGrab_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 20
+        y: 14
+        width: 26
+        height: 31
+      spriteId: 9d64fca088b81cd48b16eb5811900310
+    - name: SnowWhite_LedgeGrab_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 23
+        y: 11
+        width: 21
+        height: 32
+      spriteId: ee11dd808d4ff0b4fa7e8326bb0e4bc0
+    - name: SnowWhite_LedgeGrab_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 19
+        y: 9
+        width: 23
+        height: 33
+      spriteId: a05c1ddbecb33754db2d08cdddd1dfbb
+    - name: SnowWhite_LedgeGrab_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 16
+        y: 6
+        width: 26
+        height: 36
+      spriteId: 0871023ecd22acf4aa4b27b8bf7df5f3
+    - name: SnowWhite_LedgeGrab_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 13
+        y: 5
+        width: 29
+        height: 37
+      spriteId: 3df95cda40f18ad488944f30665bf473
+    - name: SnowWhite_LedgeGrab_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 11
+        y: 4
+        width: 30
+        height: 38
+      spriteId: dc281ae695f787d4fa75fc2681f8c2c5
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 72, y: 48}
