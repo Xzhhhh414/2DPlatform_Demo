@@ -130,6 +130,8 @@ MonoBehaviour:
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"Player":{"_name":"Player","_id":"f4770db1-2d1b-4783-a301-d485a72bdffd","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"VCam":{"_name":"VCam","_id":"bc8ba7a9-1740-4ec1-804b-726afb022943","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"GameCanvas":{"_name":"GameCanvas","_id":"5316690d-13a2-4482-9281-f2e8f7df34d5","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"BackGround":{"_name":"BackGround","_id":"b341d73d-4590-4c14-a6de-4938319f2e84","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"SceneGrid":{"_name":"SceneGrid","_id":"68820b5b-b941-406b-bdaa-bc433cc0e3e3","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
   _objectReferences: []
   _serializedVariables:
@@ -155,5 +157,11 @@ MonoBehaviour:
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
     _references: []
   - _json: '{"_name":"GameCanvas","_id":"5316690d-13a2-4482-9281-f2e8f7df34d5","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references: []
+  - _json: '{"_name":"BackGround","_id":"b341d73d-4590-4c14-a6de-4938319f2e84","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references: []
+  - _json: '{"_name":"SceneGrid","_id":"68820b5b-b941-406b-bdaa-bc433cc0e3e3","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
     _references: []
