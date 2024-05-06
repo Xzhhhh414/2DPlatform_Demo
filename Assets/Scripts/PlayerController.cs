@@ -33,10 +33,10 @@ public class PlayerController : Character
 
 
 
-    public UnityEvent SpellSkill01;
-    public UnityEvent SpellSkill02;
-    public UnityEvent SpellSkill03;
-    public UnityEvent skill03ClearCDSucces;
+    [HideInInspector] public UnityEvent SpellSkill01;
+    [HideInInspector] public UnityEvent SpellSkill02;
+    [HideInInspector] public UnityEvent SpellSkill03;
+    [HideInInspector] public UnityEvent skill03ClearCDSucces;
 
     //skill03的技能逻辑
     private float dashSpeed = 75f; // 冲刺速度
@@ -66,6 +66,7 @@ public class PlayerController : Character
     private float hitModifyY = 0;
     private List<Attack> attacks = new();
     #endregion
+
     public float CurrentMoveSpeed
     {
         get
@@ -238,8 +239,7 @@ public class PlayerController : Character
         }
     }
 
-
-
+    public bool CanGrab { get => animator.GetBool(AnimationStrings.canGrab); }
 
     private void Awake()
     {
@@ -376,11 +376,11 @@ public class PlayerController : Character
             airJumpsLeft = maxAirJumps; // 如果在地面上，重置空中跳跃次数
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            grabDetection.circleCollider2D.enabled = true;
-            startGrab = true;
-        }
+        //if (Input.GetKeyDown(KeyCode.Q))
+        //{
+        //    grabDetection.circleCollider2D.enabled = true;
+        //    startGrab = true;
+        //}
 #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
@@ -679,8 +679,10 @@ public class PlayerController : Character
     void Grabable()
     {
         if (!startGrab) return;
+
         if (grabDetection.IsDecteted && !isGrabbing)
         {
+            animator.SetTriggerByTime(AnimationStrings.grabTrigger, 1f);
             waveRate = startwaveRate;
             lineRenderer.positionCount = resolution;
             var tempDis = float.MaxValue;
@@ -713,7 +715,7 @@ public class PlayerController : Character
             }
 
         }
-        if (isGrabbing)
+        else if (isGrabbing)
         {
             rb.gravityScale = 0;
             progress += Time.deltaTime;
@@ -742,6 +744,9 @@ public class PlayerController : Character
                 progress = 0;
             }
         }
+        else
+        {
+        }
     }
 
     void DrawStraightLine()
@@ -763,6 +768,17 @@ public class PlayerController : Character
             lineRenderer.SetPosition(i, currentPosition);
         }
     }
+
+    public void OnGrabSope(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            grabDetection.circleCollider2D.enabled = true;
+            if (!CanGrab) return;
+            startGrab = true;
+        }
+    }
+
     #endregion
 
 
