@@ -132,7 +132,7 @@ MonoBehaviour:
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"GameCanvas":{"_name":"GameCanvas","_id":"5316690d-13a2-4482-9281-f2e8f7df34d5","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"BackGround":{"_name":"BackGround","_id":"b341d73d-4590-4c14-a6de-4938319f2e84","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"SceneGrid":{"_name":"SceneGrid","_id":"68820b5b-b941-406b-bdaa-bc433cc0e3e3","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
-    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"PlayerBornPosList11":{"_value":[null,null,null,null],"_name":"PlayerBornPosList11","_id":"f90c5abd-a055-4c5d-8e62-fd9b6dc54787","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"PlayerBornPos":{"_value":[null,null,null,null,null,null,null,null,null],"_name":"PlayerBornPos","_id":"f90c5abd-a055-4c5d-8e62-fd9b6dc54787","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
   _objectReferences: []
@@ -167,7 +167,7 @@ MonoBehaviour:
   - _json: '{"_name":"SceneGrid","_id":"68820b5b-b941-406b-bdaa-bc433cc0e3e3","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
     _references: []
-  - _json: '{"_value":[null,null,null,null],"_name":"PlayerBornPosList11","_id":"f90c5abd-a055-4c5d-8e62-fd9b6dc54787","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
+  - _json: '{"_value":[null,null,null,null,null,null,null,null,null],"_name":"PlayerBornPos","_id":"f90c5abd-a055-4c5d-8e62-fd9b6dc54787","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
