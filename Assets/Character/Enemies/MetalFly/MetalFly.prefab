@@ -156,6 +156,8 @@ MonoBehaviour:
   _isAlive: 1
   hitInterval: 0
   hitIntervalTime: 0.25
+  changeColorTime: 0.7
+  hurtColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!95 &204077961074298661
 Animator:
   serializedVersion: 5
@@ -229,10 +231,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.19249964, y: -0.19249928}
+  m_Offset: {x: 0.29, y: 0.31}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.32}
     oldSize: {x: 3, y: 3.5625}
     newSize: {x: 9.375, y: 9.375}
     adaptiveTilingThreshold: 0.5
@@ -240,7 +242,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5003233, y: 1.7952135}
+  m_Size: {x: 1.29, y: 1.23}
   m_EdgeRadius: 0
 --- !u!1 &7347298008799011483
 GameObject:
@@ -306,7 +308,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.16543841, y: -1.4661994}
+  m_Offset: {x: 0.16543841, y: -0.41}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -400,6 +402,6 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.050007343, y: -1.02}
-  m_Size: {x: 2.13, y: 2.48}
+  m_Offset: {x: 0.050007343, y: -0.56}
+  m_Size: {x: 2.92, y: 2.48}
   m_Direction: 0
