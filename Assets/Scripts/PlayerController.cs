@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
 public class PlayerController : Character
@@ -570,7 +571,7 @@ public class PlayerController : Character
     {
         if (context.performed && CanAttack)
         {
-             //animator.SetTrigger(AnimationStrings.attackTrigger);
+            //animator.SetTrigger(AnimationStrings.attackTrigger);
             animator.SetTriggerByTime(AnimationStrings.attackTrigger, 0.3f);
         }
 
@@ -723,11 +724,21 @@ public class PlayerController : Character
             waveRate -= Time.deltaTime * ropeSetRope;
             if (waveRate > 0)
                 DrawCurveRope();
-            else
+            else if (!IsInterruptGrab())
             {
                 distanceJoint2D.distance = Mathf.Lerp(grabDistance, 0, progress * grabSpeed);
                 waveRate = 0;
                 DrawStraightLine();
+            }
+            else
+            {
+                isGrabbing = false;
+                distanceJoint2D.enabled = false;
+                grabDetection.circleCollider2D.enabled = false;
+                startGrab = false;
+                lineRenderer.enabled = false;
+                progress = 0;
+                rb.gravityScale = 4;
             }
 
             var newDistance = Vector2.Distance(grabPosition, transform.position);
@@ -736,17 +747,40 @@ public class PlayerController : Character
                 isGrabbing = false;
                 distanceJoint2D.enabled = false;
                 grabDetection.circleCollider2D.enabled = false;
-                var dir = grabPosition - (Vector2)transform.position;
-                rb.AddForce(dir.normalized * grabPoint.Force, ForceMode2D.Impulse);
-                rb.gravityScale = 4;
                 startGrab = false;
                 lineRenderer.enabled = false;
                 progress = 0;
+                var dir = grabPosition - (Vector2)transform.position;
+                rb.AddForce(dir.normalized * grabPoint.Force, ForceMode2D.Impulse);
+                rb.gravityScale = 4;
             }
         }
         else
         {
         }
+    }
+    bool IsInterruptGrab()
+    {
+        Vector2[] boundsPoints = new[] {
+            new Vector2(bCollider.bounds.min.x,bCollider.bounds.min.y),
+            new Vector2(bCollider.bounds.min.x,bCollider.bounds.max.y),
+            new Vector2(bCollider.bounds.max.x,bCollider.bounds.min.y),
+            new Vector2(bCollider.bounds.max.x,bCollider.bounds.max.y),
+        };
+        foreach (var boundsPoint in boundsPoints)
+        {
+            Vector2 direction = grabPosition - boundsPoint;
+            RaycastHit2D[] hits = Physics2D.RaycastAll(boundsPoint, direction, Vector2.Distance(grabPosition, boundsPoint));
+            foreach (var hit in hits)
+            {
+                if (hit.collider != null && hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+                {
+                    return true;
+                }
+            }
+
+        }
+        return false;
     }
 
     void DrawStraightLine()
