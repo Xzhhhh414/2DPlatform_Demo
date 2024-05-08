@@ -136,8 +136,22 @@ MonoBehaviour:
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"GroundMonsterBornPos":{"_value":[],"_name":"GroundMonsterBornPos","_id":"3a8cc78a-08e6-49ee-9d9a-c2e1aaf7f788","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"GroundMonster":{"_value":[1,2,3],"_name":"GroundMonster","_id":"6cf0244d-072b-43b8-8f9d-0d8c7b5fee79","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"AirMonster":{"_value":[4,5],"_name":"AirMonster","_id":"3d053d5e-231d-4fc7-aad7-8b181835deab","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"Boss":{"_value":[6],"_name":"Boss","_id":"6ff2fa93-c814-46f4-b856-feb2b971cbb7","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"SpawnIntervals":{"_value":10.0,"_name":"SpawnIntervals","_id":"bfb3fd36-0b5d-483b-8db8-eeb6b97449ed","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
-  _objectReferences: []
+  _objectReferences:
+  - {fileID: 0}
+  - {fileID: 3522140399348579629, guid: 30af61295a6d09c4ea84c11b2b319792, type: 3}
+  - {fileID: 3522140399348579629, guid: d79cc18f18441dc4f9585162fa433bae, type: 3}
+  - {fileID: 3522140399348579629, guid: d121635b24ae8c34c9b6a0265c439007, type: 3}
+  - {fileID: 76009870517717507, guid: f7e4c6d27afc4b14a94af4c8bb5640ef, type: 3}
+  - {fileID: 76009870517717507, guid: a1ba08e85c339d342bbe5195cde56e5b, type: 3}
+  - {fileID: 4242114885219933664, guid: 26717c519f9044f45abcaffdbf1d01ab, type: 3}
   _serializedVariables:
   - _json: '{"_name":"GameStart","_id":"e8f6f58c-ed1c-4223-b1aa-cfffc43c6912","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
@@ -175,5 +189,29 @@ MonoBehaviour:
     _references: []
   - _json: '{"_value":[],"_name":"GroundMonsterBornPos","_id":"3a8cc78a-08e6-49ee-9d9a-c2e1aaf7f788","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_value":[1,2,3],"_name":"GroundMonster","_id":"6cf0244d-072b-43b8-8f9d-0d8c7b5fee79","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 3522140399348579629, guid: 30af61295a6d09c4ea84c11b2b319792, type: 3}
+    - {fileID: 3522140399348579629, guid: d79cc18f18441dc4f9585162fa433bae, type: 3}
+    - {fileID: 3522140399348579629, guid: d121635b24ae8c34c9b6a0265c439007, type: 3}
+  - _json: '{"_value":[1,2],"_name":"AirMonster","_id":"3d053d5e-231d-4fc7-aad7-8b181835deab","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 76009870517717507, guid: f7e4c6d27afc4b14a94af4c8bb5640ef, type: 3}
+    - {fileID: 76009870517717507, guid: a1ba08e85c339d342bbe5195cde56e5b, type: 3}
+  - _json: '{"_value":[1],"_name":"Boss","_id":"6ff2fa93-c814-46f4-b856-feb2b971cbb7","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 4242114885219933664, guid: 26717c519f9044f45abcaffdbf1d01ab, type: 3}
+  - _json: '{"_value":10.0,"_name":"SpawnIntervals","_id":"bfb3fd36-0b5d-483b-8db8-eeb6b97449ed","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
