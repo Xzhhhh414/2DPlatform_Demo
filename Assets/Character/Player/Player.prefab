@@ -903,6 +903,37 @@ MonoBehaviour:
   modifyY: 0
   hitFreezeXY: 1
   freezeXY: {x: 0, y: 8}
+--- !u!1 &6175486903741763352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5229715028158953874}
+  m_Layer: 7
+  m_Name: GrabbingHand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5229715028158953874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6175486903741763352}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8198951932485516424}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7118996619779536036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1517,6 +1548,7 @@ Transform:
   - {fileID: 4752606125743456318}
   - {fileID: 7689512603009516231}
   - {fileID: 3420291356726664882}
+  - {fileID: 5229715028158953874}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &758846839772726439
@@ -1746,6 +1778,7 @@ MonoBehaviour:
   grabSpeed: 7
   startwaveRate: 4
   ropeSetRope: 20
+  grabbingHand: {fileID: 0}
 --- !u!114 &6420420121662775390
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -261,6 +261,7 @@ public class PlayerController : Character
         distanceJoint2D = GetComponent<DistanceJoint2D>();
         grabDetection = GetComponentInChildren<GrabDetection>();
         lineRenderer = GetComponent<LineRenderer>();
+        grabbingHand = transform.Find("GrabbingHand");
     }
     private void Start()
     {
@@ -269,6 +270,7 @@ public class PlayerController : Character
         airJumpsLeft = maxAirJumps; // 初始化剩余的空中跳跃次数
         distanceJoint2D.enabled = false;
         distanceJoint2D.autoConfigureDistance = false;
+        distanceJoint2D.anchor = grabbingHand.position;
         lineRenderer.positionCount = 40;
         lineRenderer.enabled = false;
         foreach (var attack in attacks)
@@ -677,6 +679,8 @@ public class PlayerController : Character
     float waveRate = 1;
     [SerializeField, Label("从曲绳到直绳的时间")]
     float ropeSetRope = 1;
+    [SerializeField, Label("钩爪手")]
+    Transform grabbingHand;
     void Grabable()
     {
         if (!startGrab) return;
@@ -689,7 +693,7 @@ public class PlayerController : Character
             var tempDis = float.MaxValue;
             for (var i = 0; i < grabDetection.colliders.Count; i++)
             {
-                grabDistance = Vector2.Distance(grabDetection.colliders[i].transform.position, transform.position);
+                grabDistance = Vector2.Distance(grabDetection.colliders[i].transform.position, grabbingHand.position);
                 if (grabDistance < tempDis)
                 {
                     tempDis = grabDistance;
@@ -714,7 +718,6 @@ public class PlayerController : Character
                 startGrab = false;
                 rb.gravityScale = 4;
             }
-
         }
         else if (isGrabbing)
         {
@@ -741,7 +744,7 @@ public class PlayerController : Character
                 rb.gravityScale = 4;
             }
 
-            var newDistance = Vector2.Distance(grabPosition, transform.position);
+            var newDistance = Vector2.Distance(grabPosition, grabbingHand.position);
             if (newDistance <= 0.5f)
             {
                 isGrabbing = false;
@@ -750,7 +753,7 @@ public class PlayerController : Character
                 startGrab = false;
                 lineRenderer.enabled = false;
                 progress = 0;
-                var dir = grabPosition - (Vector2)transform.position;
+                var dir = grabPosition - (Vector2)grabbingHand.position;
                 rb.AddForce(dir.normalized * grabPoint.Force, ForceMode2D.Impulse);
                 rb.gravityScale = 4;
             }
@@ -786,7 +789,7 @@ public class PlayerController : Character
     void DrawStraightLine()
     {
         if (lineRenderer.positionCount != 2) { lineRenderer.positionCount = 2; }
-        lineRenderer.SetPosition(0, transform.position);
+        lineRenderer.SetPosition(0, grabbingHand.position);
         lineRenderer.SetPosition(1, grabPosition);
     }
 
@@ -796,9 +799,9 @@ public class PlayerController : Character
         {
             float x = (float)i / ((float)resolution - 1f);
             float y = animationCurve.Evaluate(x);
-            Vector2 offset = Vector2.Perpendicular((grabPosition - (Vector2)transform.position).normalized * y) * waveRate;
-            Vector2 tragetPosition = Vector2.Lerp(transform.position, grabPosition, x) + offset;
-            Vector2 currentPosition = Vector2.Lerp(transform.position, tragetPosition, progress * grabSpeed);
+            Vector2 offset = Vector2.Perpendicular((grabPosition - (Vector2)grabbingHand.position).normalized * y) * waveRate;
+            Vector2 tragetPosition = Vector2.Lerp(grabbingHand.position, grabPosition, x) + offset;
+            Vector2 currentPosition = Vector2.Lerp(grabbingHand.position, tragetPosition, progress * grabSpeed);
             lineRenderer.SetPosition(i, currentPosition);
         }
     }
