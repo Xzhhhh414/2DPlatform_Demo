@@ -73,7 +73,7 @@ public class FlyingEye : MonoBehaviour
         {
             if (CanMove)
             {
-                Flight();
+                //Flight();
             }
             else
             {
