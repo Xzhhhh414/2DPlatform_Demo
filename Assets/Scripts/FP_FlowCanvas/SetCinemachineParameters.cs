@@ -7,6 +7,7 @@ using ParadoxNotion.Design;
 using ParadoxNotion;
 using UnityEngine.Experimental.AI;
 
+[Category("FP 2DAction")]
 public class SetCinemachine : FlowNode
 {
  

@@ -6,6 +6,9 @@ using FlowCanvas;
 using ParadoxNotion.Design;
 using ParadoxNotion;
 
+
+
+[Category("FP 2DAction")]
 public class FindChildObject : FlowNode
 {
  
