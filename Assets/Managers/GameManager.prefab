@@ -122,28 +122,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _parentBlackboard: {fileID: 0}
-  _serializedBlackboard: '{"_variables":{"GameStart":{"_name":"GameStart","_id":"e8f6f58c-ed1c-4223-b1aa-cfffc43c6912","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"BattleTime":{"_name":"BattleTime","_id":"6d81ce1f-5f0e-4327-bca3-32cc2706eeac","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"StartTime":{"_name":"StartTime","_id":"a288b1c2-3e5b-4f05-8f4a-fae3c744183a","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"BattleTime_Minute":{"_name":"BattleTime_Minute","_id":"4d971806-2741-4155-ad5e-26a984c27dbb","$type":"NodeCanvas.Framework.Variable`1[[System.String,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"BattleTime_Second":{"_name":"BattleTime_Second","_id":"c9628f0b-754d-4f43-9e97-0c6a51b355be","$type":"NodeCanvas.Framework.Variable`1[[System.String,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"Player":{"_name":"Player","_id":"f4770db1-2d1b-4783-a301-d485a72bdffd","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
-    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"VCam":{"_name":"VCam","_id":"bc8ba7a9-1740-4ec1-804b-726afb022943","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
-    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"GameCanvas":{"_name":"GameCanvas","_id":"5316690d-13a2-4482-9281-f2e8f7df34d5","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
-    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"BackGround":{"_name":"BackGround","_id":"b341d73d-4590-4c14-a6de-4938319f2e84","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
-    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"SceneGrid":{"_name":"SceneGrid","_id":"68820b5b-b941-406b-bdaa-bc433cc0e3e3","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
-    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"PlayerBornPos":{"_value":[],"_name":"PlayerBornPos","_id":"f90c5abd-a055-4c5d-8e62-fd9b6dc54787","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
+  _serializedBlackboard: "{\"_variables\":{\"GameStart\":{\"_name\":\"GameStart\",\"_id\":\"e8f6f58c-ed1c-4223-b1aa-cfffc43c6912\",\"$type\":\"NodeCanvas.Framework.Variable`1[[System.Boolean,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\"},\"BattleTime\":{\"_name\":\"BattleTime\",\"_id\":\"6d81ce1f-5f0e-4327-bca3-32cc2706eeac\",\"$type\":\"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\"},\"StartTime\":{\"_name\":\"StartTime\",\"_id\":\"a288b1c2-3e5b-4f05-8f4a-fae3c744183a\",\"$type\":\"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\"},\"BattleTime_Minute\":{\"_name\":\"BattleTime_Minute\",\"_id\":\"4d971806-2741-4155-ad5e-26a984c27dbb\",\"$type\":\"NodeCanvas.Framework.Variable`1[[System.String,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\"},\"BattleTime_Second\":{\"_name\":\"BattleTime_Second\",\"_id\":\"c9628f0b-754d-4f43-9e97-0c6a51b355be\",\"$type\":\"NodeCanvas.Framework.Variable`1[[System.String,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\"},\"Player\":{\"_name\":\"Player\",\"_id\":\"f4770db1-2d1b-4783-a301-d485a72bdffd\",\"$type\":\"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\"},\"VCam\":{\"_name\":\"VCam\",\"_id\":\"bc8ba7a9-1740-4ec1-804b-726afb022943\",\"$type\":\"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\"},\"GameCanvas\":{\"_name\":\"GameCanvas\",\"_id\":\"5316690d-13a2-4482-9281-f2e8f7df34d5\",\"$type\":\"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\"},\"BackGround\":{\"_name\":\"BackGround\",\"_id\":\"b341d73d-4590-4c14-a6de-4938319f2e84\",\"$type\":\"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\"},\"SceneGrid\":{\"_name\":\"SceneGrid\",\"_id\":\"68820b5b-b941-406b-bdaa-bc433cc0e3e3\",\"$type\":\"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\"},\"PlayerBornPos\":{\"_value\":[],\"_name\":\"PlayerBornPos\",\"_id\":\"f90c5abd-a055-4c5d-8e62-fd9b6dc54787\",\"$type\":\"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"GroundMonsterBornPos":{"_value":[],"_name":"GroundMonsterBornPos","_id":"3a8cc78a-08e6-49ee-9d9a-c2e1aaf7f788","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\"},\"GroundMonsterBornPos\":{\"_value\":[],\"_name\":\"GroundMonsterBornPos\",\"_id\":\"3a8cc78a-08e6-49ee-9d9a-c2e1aaf7f788\",\"$type\":\"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"GroundMonster":{"_value":[1,2,3],"_name":"GroundMonster","_id":"6cf0244d-072b-43b8-8f9d-0d8c7b5fee79","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\"},\"GroundMonster\":{\"_value\":[1,2,3],\"_name\":\"GroundMonster\",\"_id\":\"6cf0244d-072b-43b8-8f9d-0d8c7b5fee79\",\"$type\":\"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"AirMonster":{"_value":[4,5],"_name":"AirMonster","_id":"3d053d5e-231d-4fc7-aad7-8b181835deab","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\"},\"AirMonster\":{\"_value\":[4,5],\"_name\":\"AirMonster\",\"_id\":\"3d053d5e-231d-4fc7-aad7-8b181835deab\",\"$type\":\"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"Boss":{"_value":[6],"_name":"Boss","_id":"6ff2fa93-c814-46f4-b856-feb2b971cbb7","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\"},\"Boss\":{\"_value\":[6],\"_name\":\"Boss\",\"_id\":\"6ff2fa93-c814-46f4-b856-feb2b971cbb7\",\"$type\":\"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"SpawnIntervals":{"_value":10.0,"_name":"SpawnIntervals","_id":"bfb3fd36-0b5d-483b-8db8-eeb6b97449ed","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\"},\"\u5237\u602A\u95F4\u9694\":{\"_value\":20.0,\"_name\":\"\\u5237\\u602a\\u95f4\\u9694\",\"_id\":\"bfb3fd36-0b5d-483b-8db8-eeb6b97449ed\",\"$type\":\"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]\"}}}"
   _objectReferences:
   - {fileID: 0}
   - {fileID: 3522140399348579629, guid: 30af61295a6d09c4ea84c11b2b319792, type: 3}
@@ -212,6 +212,6 @@ MonoBehaviour:
     _references:
     - {fileID: 0}
     - {fileID: 4242114885219933664, guid: 26717c519f9044f45abcaffdbf1d01ab, type: 3}
-  - _json: '{"_value":10.0,"_name":"SpawnIntervals","_id":"bfb3fd36-0b5d-483b-8db8-eeb6b97449ed","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+  - _json: '{"_value":20.0,"_name":"\u5237\u602a\u95f4\u9694","_id":"bfb3fd36-0b5d-483b-8db8-eeb6b97449ed","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
