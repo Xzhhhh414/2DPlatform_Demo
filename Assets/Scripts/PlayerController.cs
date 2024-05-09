@@ -270,7 +270,7 @@ public class PlayerController : Character
         airJumpsLeft = maxAirJumps; // 初始化剩余的空中跳跃次数
         distanceJoint2D.enabled = false;
         distanceJoint2D.autoConfigureDistance = false;
-        distanceJoint2D.anchor = grabbingHand.position;
+        //distanceJoint2D.anchor = grabbingHand.position;
         lineRenderer.positionCount = 40;
         lineRenderer.enabled = false;
         foreach (var attack in attacks)
@@ -707,6 +707,7 @@ public class PlayerController : Character
                 rb.gravityScale = 0;
                 rb.velocity = Vector2.zero;
                 distanceJoint2D.connectedAnchor = grabPosition;
+                distanceJoint2D.anchor = transform.InverseTransformPoint(grabbingHand.position);
                 distanceJoint2D.distance = grabDistance;
                 distanceJoint2D.enabled = true;
             }
