@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6829a8655b893e44984d0b92aefd079d
+guid: d7725a49c3f10bb48ad762a401724f69
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,18 +119,158 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: SnowWhite_LedgeGrab_Frame_0
+  - name: Special_Effect_Frame_0
     originalName: 
-    pivot: {x: 0.5609756, y: -0.6923077}
+    pivot: {x: 0.56578946, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 42
+      x: 107
+      y: 108
+      width: 76
+      height: 85
+    spriteID: a514e6f733897c94eae94565c7514c00
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 108}
+  - name: Special_Effect_Frame_1
+    originalName: 
+    pivot: {x: 0.5064935, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 107
+      y: 201
+      width: 77
+      height: 78
+    spriteID: 9adf2f24acc00784cbc1e4d4c3a62f5f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 98, y: 201}
+  - name: Special_Effect_Frame_2
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 107
+      y: 287
+      width: 87
+      height: 66
+    spriteID: fa115b9d2cd7e544a8d62ce550eabc71
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 98, y: 287}
+  - name: Special_Effect_Frame_3
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 107
+      y: 361
+      width: 87
+      height: 63
+    spriteID: 22594945fca5f1c4e967c203fd017739
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 98, y: 361}
+  - name: Special_Effect_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 420
+      width: 88
+      height: 82
+    spriteID: d651dc5a1ba8e76468c2cc62d12e75f2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 420}
+  - name: Special_Effect_Frame_5
+    originalName: 
+    pivot: {x: 0.47826087, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 108
+      width: 92
+      height: 96
+    spriteID: ecce6925a362b2d46927ecd9560431af
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 108}
+  - name: Special_Effect_Frame_6
+    originalName: 
+    pivot: {x: 0.47826087, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 212
+      width: 92
+      height: 96
+    spriteID: 0b486a2677247564a818e0e2ad661c3f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 212}
+  - name: Special_Effect_Frame_7
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 107
       y: 4
-      width: 41
-      height: 26
-    spriteID: 10170ebb57713d348b4b0156ec3acb92
+      width: 87
+      height: 96
+    spriteID: 7a7244cba21123a4d98ffe2de19e9cbc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -138,179 +278,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 42, y: 4}
-  - name: SnowWhite_LedgeGrab_Frame_1
+    uvTransform: {x: 98, y: 4}
+  - name: Special_Effect_Frame_8
     originalName: 
-    pivot: {x: 0.5897436, y: -0.76}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 42
-      y: 38
-      width: 39
-      height: 25
-    spriteID: f773526ecf5b80b4ebbfed3224666874
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 42, y: 38}
-  - name: SnowWhite_LedgeGrab_Frame_2
-    originalName: 
-    pivot: {x: 0.6000001, y: -0.6296296}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 42
-      y: 71
-      width: 35
-      height: 27
-    spriteID: cdc168e7f634ff64484e4ef68e1747c6
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 42, y: 71}
-  - name: SnowWhite_LedgeGrab_Frame_3
-    originalName: 
-    pivot: {x: 0.61290324, y: -0.4827586}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 42
-      y: 150
-      width: 31
-      height: 29
-    spriteID: c829bc7f11dd18f4c90370039bc3c3cc
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 42, y: 150}
-  - name: SnowWhite_LedgeGrab_Frame_4
-    originalName: 
-    pivot: {x: 0.6153846, y: -0.32258064}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 42
-      y: 187
-      width: 26
-      height: 31
-    spriteID: 9d64fca088b81cd48b16eb5811900310
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 42, y: 187}
-  - name: SnowWhite_LedgeGrab_Frame_5
-    originalName: 
-    pivot: {x: 0.61904764, y: -0.21875}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 136
-      width: 21
-      height: 32
-    spriteID: ee11dd808d4ff0b4fa7e8326bb0e4bc0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 136}
-  - name: SnowWhite_LedgeGrab_Frame_6
-    originalName: 
-    pivot: {x: 0.7391304, y: -0.15151516}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 95
-      width: 23
-      height: 33
-    spriteID: a05c1ddbecb33754db2d08cdddd1dfbb
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 95}
-  - name: SnowWhite_LedgeGrab_Frame_7
-    originalName: 
-    pivot: {x: 0.76923084, y: -0.05555556}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 42
-      y: 106
-      width: 26
-      height: 36
-    spriteID: 0871023ecd22acf4aa4b27b8bf7df5f3
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 42, y: 106}
-  - name: SnowWhite_LedgeGrab_Frame_8
-    originalName: 
-    pivot: {x: 0.7931034, y: -0.027027026}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 50
-      width: 29
-      height: 37
-    spriteID: 3df95cda40f18ad488944f30665bf473
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 50}
-  - name: SnowWhite_LedgeGrab_Frame_9
-    originalName: 
-    pivot: {x: 0.8333333, y: 0}
+    pivot: {x: 0.49473685, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 30
-      height: 38
-    spriteID: dc281ae695f787d4fa75fc2681f8c2c5
+      width: 95
+      height: 96
+    spriteID: 68467f361e5c3f04cbdac5556119568e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -318,99 +298,119 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 3, y: 4}
+  - name: Special_Effect_Frame_9
+    originalName: 
+    pivot: {x: 0.47777778, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 316
+      width: 90
+      height: 96
+    spriteID: e44de39dbab16454c81506f5a4aebcb7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: -1, y: 316}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1807583122
-    name: SnowWhite_LedgeGrab
+    guid: -2023005763
+    name: Special_Effect
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: SnowWhite_LedgeGrab_Frame_0
+    - name: Special_Effect_Frame_0
       frameIndex: 0
       cellRect:
-        x: 13
-        y: 18
-        width: 41
-        height: 26
-      spriteId: 10170ebb57713d348b4b0156ec3acb92
-    - name: SnowWhite_LedgeGrab_Frame_1
+        x: 0
+        y: 0
+        width: 96
+        height: 96
+      spriteId: a514e6f733897c94eae94565c7514c00
+    - name: Special_Effect_Frame_1
       frameIndex: 1
       cellRect:
-        x: 13
-        y: 19
-        width: 39
-        height: 25
-      spriteId: f773526ecf5b80b4ebbfed3224666874
-    - name: SnowWhite_LedgeGrab_Frame_2
+        x: 0
+        y: 0
+        width: 96
+        height: 96
+      spriteId: 9adf2f24acc00784cbc1e4d4c3a62f5f
+    - name: Special_Effect_Frame_2
       frameIndex: 2
       cellRect:
-        x: 15
-        y: 17
-        width: 35
-        height: 27
-      spriteId: cdc168e7f634ff64484e4ef68e1747c6
-    - name: SnowWhite_LedgeGrab_Frame_3
+        x: 0
+        y: 0
+        width: 96
+        height: 96
+      spriteId: fa115b9d2cd7e544a8d62ce550eabc71
+    - name: Special_Effect_Frame_3
       frameIndex: 3
       cellRect:
-        x: 17
-        y: 14
-        width: 31
-        height: 29
-      spriteId: c829bc7f11dd18f4c90370039bc3c3cc
-    - name: SnowWhite_LedgeGrab_Frame_4
+        x: 0
+        y: 0
+        width: 96
+        height: 96
+      spriteId: 22594945fca5f1c4e967c203fd017739
+    - name: Special_Effect_Frame_4
       frameIndex: 4
       cellRect:
-        x: 20
-        y: 10
-        width: 26
-        height: 31
-      spriteId: 9d64fca088b81cd48b16eb5811900310
-    - name: SnowWhite_LedgeGrab_Frame_5
+        x: 0
+        y: 0
+        width: 96
+        height: 96
+      spriteId: d651dc5a1ba8e76468c2cc62d12e75f2
+    - name: Special_Effect_Frame_5
       frameIndex: 5
       cellRect:
-        x: 23
-        y: 7
-        width: 21
-        height: 32
-      spriteId: ee11dd808d4ff0b4fa7e8326bb0e4bc0
-    - name: SnowWhite_LedgeGrab_Frame_6
+        x: 0
+        y: 0
+        width: 96
+        height: 96
+      spriteId: ecce6925a362b2d46927ecd9560431af
+    - name: Special_Effect_Frame_6
       frameIndex: 6
       cellRect:
-        x: 19
-        y: 5
-        width: 23
-        height: 33
-      spriteId: a05c1ddbecb33754db2d08cdddd1dfbb
-    - name: SnowWhite_LedgeGrab_Frame_7
+        x: 0
+        y: 0
+        width: 96
+        height: 96
+      spriteId: 0b486a2677247564a818e0e2ad661c3f
+    - name: Special_Effect_Frame_7
       frameIndex: 7
       cellRect:
-        x: 16
-        y: 2
-        width: 26
-        height: 36
-      spriteId: 0871023ecd22acf4aa4b27b8bf7df5f3
-    - name: SnowWhite_LedgeGrab_Frame_8
+        x: 0
+        y: 0
+        width: 96
+        height: 96
+      spriteId: 7a7244cba21123a4d98ffe2de19e9cbc
+    - name: Special_Effect_Frame_8
       frameIndex: 8
       cellRect:
-        x: 13
-        y: 1
-        width: 29
-        height: 37
-      spriteId: 3df95cda40f18ad488944f30665bf473
-    - name: SnowWhite_LedgeGrab_Frame_9
+        x: 0
+        y: 0
+        width: 96
+        height: 96
+      spriteId: 68467f361e5c3f04cbdac5556119568e
+    - name: Special_Effect_Frame_9
       frameIndex: 9
       cellRect:
-        x: 11
+        x: 0
         y: 0
-        width: 30
-        height: 38
-      spriteId: dc281ae695f787d4fa75fc2681f8c2c5
+        width: 96
+        height: 96
+      spriteId: e44de39dbab16454c81506f5a4aebcb7
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 72, y: 48}
+  canvasSize: {x: 96, y: 96}
