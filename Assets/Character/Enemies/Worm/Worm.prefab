@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 5235077439562364842}
   m_Layer: 8
   m_Name: Worm
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -396,6 +396,8 @@ MonoBehaviour:
   _isAlive: 1
   hitInterval: 0
   hitIntervalTime: 0
+  changeColorTime: 0.7
+  hurtColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &5235077439562364842
 MonoBehaviour:
   m_ObjectHideFlags: 0
