@@ -1,9 +1,7 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
-using UnityEngine.Rendering;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
 public class PlayerController : Character
@@ -509,7 +507,7 @@ public class PlayerController : Character
 
     private void SetFacingDirection(Vector2 moveInput)
     {
-        if (CanChangeDIR)
+        if (CanChangeDIR && !isGrabbing)
         {
             if (moveInput.x > 0 && !IsFacingRight)
             {
@@ -762,6 +760,7 @@ public class PlayerController : Character
                 var dir = grabPosition - (Vector2)grabbingHand.position;
                 rb.AddForce(dir.normalized * grabPoint.Force, ForceMode2D.Impulse);
                 rb.gravityScale = 4;
+                animator.Play("player_falling");
             }
         }
         else
