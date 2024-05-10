@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 8672496328714748678}
   m_Layer: 8
   m_Name: Bringer
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -394,6 +394,8 @@ MonoBehaviour:
   _isAlive: 1
   hitInterval: 0
   hitIntervalTime: 0
+  changeColorTime: 0.7
+  hurtColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &5885092043841135857
 GameObject:
   m_ObjectHideFlags: 0

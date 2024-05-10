@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1045608046857043527}
   m_Layer: 8
   m_Name: FlyingtEye
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,6 +157,8 @@ MonoBehaviour:
   _isAlive: 1
   hitInterval: 0
   hitIntervalTime: 0.25
+  changeColorTime: 0.7
+  hurtColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!95 &204077961074298661
 Animator:
   serializedVersion: 5
@@ -332,6 +334,14 @@ MonoBehaviour:
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
+  impulseFrameIndex: -100
+  preClip: {fileID: 0}
+  shakeVelocity: {x: 0, y: 0}
+  shakeScpoe: 1
+  hitModifyY: 0
+  modifyY: 0
+  hitFreezeXY: 0
+  freezeXY: {x: 0, y: 0}
 --- !u!1 &7347298008799011483
 GameObject:
   m_ObjectHideFlags: 0

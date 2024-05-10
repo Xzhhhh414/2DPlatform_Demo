@@ -1594,7 +1594,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 1
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -2301,7 +2301,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 1
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -2783,7 +2783,7 @@ AnimatorStateMachine:
     m_Position: {x: -90, y: 90, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 8029323534123012513}
-    m_Position: {x: -80, y: -60, z: 0}
+    m_Position: {x: -70, y: -100, z: 0}
   m_AnyStateTransitions:
   - {fileID: 1074350721126063405}
   - {fileID: 4794988567512325173}
@@ -2802,6 +2802,11 @@ AnimatorStateMachine:
     - {fileID: 7948694477583728422}
     - {fileID: 2706132527473151291}
     - {fileID: 7980191354860116819}
+  - first: {fileID: 46337963410232463}
+    second:
+    - {fileID: -4663311409197217181}
+    - {fileID: -2397146785725100399}
+    - {fileID: 1974424313907057413}
   - first: {fileID: 6572446221699202233}
     second:
     - {fileID: 5760675610134621280}
@@ -2813,11 +2818,6 @@ AnimatorStateMachine:
     - {fileID: 566032035248257259}
     - {fileID: 4454710943086286767}
     - {fileID: -7722690406805486186}
-  - first: {fileID: 46337963410232463}
-    second:
-    - {fileID: -4663311409197217181}
-    - {fileID: -2397146785725100399}
-    - {fileID: 1974424313907057413}
   - first: {fileID: 8029323534123012513}
     second:
     - {fileID: -1500280520824352525}
@@ -3597,7 +3597,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 1
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -5046,7 +5046,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 1
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1

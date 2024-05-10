@@ -1,9 +1,7 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
-using UnityEngine.Rendering;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
 public class PlayerController : Character
@@ -270,7 +268,7 @@ public class PlayerController : Character
         airJumpsLeft = maxAirJumps; // 初始化剩余的空中跳跃次数
         distanceJoint2D.enabled = false;
         distanceJoint2D.autoConfigureDistance = false;
-        distanceJoint2D.anchor = grabbingHand.position;
+        //distanceJoint2D.anchor = grabbingHand.position;
         lineRenderer.positionCount = 40;
         lineRenderer.enabled = false;
         foreach (var attack in attacks)
@@ -509,7 +507,7 @@ public class PlayerController : Character
 
     private void SetFacingDirection(Vector2 moveInput)
     {
-        if (CanChangeDIR)
+        if (CanChangeDIR && !isGrabbing)
         {
             if (moveInput.x > 0 && !IsFacingRight)
             {
@@ -703,10 +701,16 @@ public class PlayerController : Character
             }
             if (grabPosition != Vector2.negativeInfinity)
             {
+                var dir = grabPosition - (Vector2)grabbingHand.position;
+                if (dir.x > 0f)
+                    IsFacingRight = true;
+                else
+                    IsFacingRight = false;
                 isGrabbing = true;
                 rb.gravityScale = 0;
                 rb.velocity = Vector2.zero;
                 distanceJoint2D.connectedAnchor = grabPosition;
+                distanceJoint2D.anchor = transform.InverseTransformPoint(grabbingHand.position);
                 distanceJoint2D.distance = grabDistance;
                 distanceJoint2D.enabled = true;
             }
@@ -756,6 +760,7 @@ public class PlayerController : Character
                 var dir = grabPosition - (Vector2)grabbingHand.position;
                 rb.AddForce(dir.normalized * grabPoint.Force, ForceMode2D.Impulse);
                 rb.gravityScale = 4;
+                animator.Play("player_falling");
             }
         }
         else
