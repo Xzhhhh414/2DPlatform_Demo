@@ -53,6 +53,15 @@ public class Attack : MonoBehaviour
     private Rigidbody2D rb;
     #endregion
 
+    [SerializeField]
+    List<Damageable> beHitCharacterList = new();
+    public bool reHit = false;
+    public int reHitFrameIndex = -1;
+    private int LastFrame = -1;
+
+    int lastStateHash = 0;
+    AnimatorStateInfo stateInfo;
+
     private void Start()
     {
         animator = GetComponentInParent<Animator>();
@@ -70,8 +79,9 @@ public class Attack : MonoBehaviour
         _attackDamage = attackDamage;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
+        //Debug.Log("TriggerEnter2D");
 #if UNITY_EDITOR
         if (BattleTestManager.Instance.isMinDamage)
         {
@@ -87,6 +97,12 @@ public class Attack : MonoBehaviour
         Damageable damageable = collision.GetComponent<Damageable>();
         if (damageable != null)
         {
+            if (IsInFrameRange(reHitFrameIndex, reHitFrameIndex) && reHit)
+            {
+                beHitCharacterList.Clear();
+            }
+            if (beHitCharacterList.Contains(damageable)) return;
+            beHitCharacterList.Add(damageable);
 
             Vector2 deliveredKnockback = transform.parent.localScale.x > 0 ? knockback : new Vector2(-knockback.x, knockback.y);
 
@@ -148,9 +164,16 @@ public class Attack : MonoBehaviour
                 lagLeftTime = lagDuration;
             }
         }
+        stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        if (stateInfo.shortNameHash != lastStateHash)
+        {
+            beHitCharacterList.Clear();
+            lastStateHash = stateInfo.shortNameHash;
+        }
     }
     private void FixedUpdate()
     {
+
         ImpulseScreen();
         if (_hitFreezeXY)
             FreezeXY();
@@ -183,13 +206,20 @@ public class Attack : MonoBehaviour
             return false;
         totalFrame = Mathf.RoundToInt(currentClip.length * currentClip.frameRate);
         var clipNormalizedTime = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
-        currentFrame = Mathf.RoundToInt(clipNormalizedTime % 1 * totalFrame);
+        currentFrame = Mathf.FloorToInt(clipNormalizedTime % 1 * totalFrame);
+        Debug.Log(currentFrame);
+        if (currentFrame == LastFrame)
+        {
+            return false;
+        }
+        LastFrame = currentFrame;
         return currentFrame >= startFrame && currentFrame <= endFrame;
     }
 
     private void OnDisable()
     {
         _hitFreezeXY = false;
+        beHitCharacterList.Clear();
     }
 
 }

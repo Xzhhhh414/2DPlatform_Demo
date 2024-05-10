@@ -65,6 +65,8 @@ public class PlayerController : Character
     private float hitModifyY = 0;
     private List<Attack> attacks = new();
     #endregion
+    int lastStateHash = 0;
+    AnimatorStateInfo stateInfo;
 
     public float CurrentMoveSpeed
     {
@@ -286,6 +288,16 @@ public class PlayerController : Character
     // Update is called once per frame
     void Update()
     {
+        //stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        //if (stateInfo.shortNameHash != lastStateHash)
+        //{
+        //    foreach (var attack in attacks)
+        //    {
+        //        attack.beHitCharacterList.Clear();
+        //        lastStateHash = stateInfo.shortNameHash;
+        //    }
+        //}
+
         if (Skill01Cooldown > 0)
         {
             Skill01Cooldown -= Time.deltaTime;

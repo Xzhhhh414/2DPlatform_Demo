@@ -122,16 +122,16 @@ public class Damageable : MonoBehaviour
     private void Update()
     {
 
-        if (hitInterval)
-        {
-            if (timeSinceHit > hitIntervalTime)
-            {
-                hitInterval = false;
-                timeSinceHit = 0;
-            }
+        //if (hitInterval)
+        //{
+        //    if (timeSinceHit > hitIntervalTime)
+        //    {
+        //        hitInterval = false;
+        //        timeSinceHit = 0;
+        //    }
 
-            timeSinceHit += Time.deltaTime;
-        }
+        //    timeSinceHit += Time.deltaTime;
+        //}
 
     }
 
@@ -140,7 +140,7 @@ public class Damageable : MonoBehaviour
         if (IsAlive && !hitInterval && !IsBlocking && !IsInvincible)
         {
             Health -= damage;
-            hitInterval = true;
+            //hitInterval = true;
 
             animator.SetTrigger(AnimationStrings.hitTrigger);
             if (coroutine != null) StopCoroutine(coroutine);
