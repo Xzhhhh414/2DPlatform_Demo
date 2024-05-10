@@ -51,14 +51,16 @@ public class Attack : MonoBehaviour
     [SerializeField, Label("冻结的帧数范围")]
     private Vector2 freezeXY = Vector2.zero;
     private Rigidbody2D rb;
+    bool isInFrameRangeResultOfFreeze;
     #endregion
-
+    #region ReHit
     [SerializeField]
     List<Damageable> beHitCharacterList = new();
     public bool reHit = false;
     public int reHitFrameIndex = -1;
     private int LastFrame = -1;
-
+    bool isInFrameRangeResultOfReHit;
+    #endregion
     int lastStateHash = 0;
     AnimatorStateInfo stateInfo;
 
@@ -79,7 +81,7 @@ public class Attack : MonoBehaviour
         _attackDamage = attackDamage;
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         //Debug.Log("TriggerEnter2D");
 #if UNITY_EDITOR
@@ -94,51 +96,50 @@ public class Attack : MonoBehaviour
 #endif
 
         //Debug.Log("OnTriggerEnter2D!!!!!");
+        // Damageable damageable = collision.GetComponent<Damageable>();
+        // if (damageable != null)
+        // {
+        //     beHitCharacterList.Add(damageable);
+        // }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
         Damageable damageable = collision.GetComponent<Damageable>();
-        if (damageable != null)
+        if (damageable == null) return;
+        if (hitFreezeXY)
         {
-            if (IsInFrameRange(reHitFrameIndex, reHitFrameIndex) && reHit)
+            _hitFreezeXY = true;
+        }
+        if (isInFrameRangeResultOfReHit && reHit)
+        {
+            beHitCharacterList.Clear();
+        }
+        if (beHitCharacterList.Contains(damageable)) return;
+        Vector2 deliveredKnockback = transform.parent.localScale.x > 0 ? knockback : new Vector2(-knockback.x, knockback.y);
+        bool gotHit = damageable.Hit(_attackDamage, deliveredKnockback);
+        if (gotHit)
+        {
+            if (damageableCoroutines.ContainsKey(damageable) && damageableCoroutines[damageable] != null)
             {
-                beHitCharacterList.Clear();
+                StopCoroutine(damageableCoroutines[damageable]);
             }
-            if (beHitCharacterList.Contains(damageable)) return;
-            beHitCharacterList.Add(damageable);
 
-            Vector2 deliveredKnockback = transform.parent.localScale.x > 0 ? knockback : new Vector2(-knockback.x, knockback.y);
-
-            bool gotHit = damageable.Hit(_attackDamage, deliveredKnockback);
-
-            if (gotHit)
+            damageableCoroutines[damageable] = StartCoroutine(ChangAnimationSpeed(0f, stunRatio, animator, collision.GetComponent<Animator>()));
+            if (hitModifyY)
             {
-                if (damageableCoroutines.ContainsKey(damageable) && damageableCoroutines[damageable] != null)
-                {
-                    StopCoroutine(damageableCoroutines[damageable]);
-                }
-
-                damageableCoroutines[damageable] = StartCoroutine(ChangAnimationSpeed(0f, stunRatio, animator, collision.GetComponent<Animator>()));
-                if (hitModifyY)
-                {
-                    ModifyY?.Invoke(hitModifyY, modifyY);
-                }
-                if (hitFreezeXY)
-                {
-                    _hitFreezeXY = true;
-                }
-                //Debug.Log(collision.name + "hit for" + attackDamage);
-
-                if (canClearCooldown && hitValid)
-                {
-                    Debug.Log("ClearCooldown Invoke");
-                    hitValid = false;
-                    lagLeftTime = lagDuration;
-                    ClearCooldown.Invoke();
-                }
+                ModifyY?.Invoke(hitModifyY, modifyY);
             }
-            else
+            //Debug.Log(collision.name + "hit for" + attackDamage);
+            if (canClearCooldown && hitValid)
             {
-                // Debug.Log("No Damage");
+                Debug.Log("ClearCooldown Invoke");
+                hitValid = false;
+                lagLeftTime = lagDuration;
+                ClearCooldown.Invoke();
             }
         }
+        beHitCharacterList.Add(damageable);
     }
 
     IEnumerator ChangAnimationSpeed(float newSpeed, float duration, Animator myAnimator, Animator otherAnimator)
@@ -164,17 +165,19 @@ public class Attack : MonoBehaviour
                 lagLeftTime = lagDuration;
             }
         }
+        isInFrameRangeResultOfFreeze = IsInFrameRange((int)freezeXY.x, (int)freezeXY.y);
+        isInFrameRangeResultOfReHit = IsInFrameRange(reHitFrameIndex, reHitFrameIndex, true);
         stateInfo = animator.GetCurrentAnimatorStateInfo(0);
         if (stateInfo.shortNameHash != lastStateHash)
         {
             beHitCharacterList.Clear();
             lastStateHash = stateInfo.shortNameHash;
         }
+        ImpulseScreen();
     }
     private void FixedUpdate()
     {
 
-        ImpulseScreen();
         if (_hitFreezeXY)
             FreezeXY();
     }
@@ -187,7 +190,7 @@ public class Attack : MonoBehaviour
     }
     void FreezeXY()
     {
-        if (IsInFrameRange((int)freezeXY.x, (int)freezeXY.y))
+        if (isInFrameRangeResultOfFreeze)
         {
             rb.gravityScale = 0;
             rb.velocity = Vector2.zero;
@@ -199,7 +202,7 @@ public class Attack : MonoBehaviour
             _hitFreezeXY = false;
         }
     }
-    bool IsInFrameRange(int startFrame, int endFrame)
+    bool IsInFrameRange(int startFrame, int endFrame, bool perFrame = false)
     {
         currentClip = animator.GetCurrentAnimatorClipInfo(0)[0].clip;
         if (preClip == null || currentClip == null || !currentClip.name.Equals(preClip.name))
@@ -207,7 +210,7 @@ public class Attack : MonoBehaviour
         totalFrame = Mathf.RoundToInt(currentClip.length * currentClip.frameRate);
         var clipNormalizedTime = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
         currentFrame = Mathf.FloorToInt(clipNormalizedTime % 1 * totalFrame);
-        if (currentFrame == LastFrame)
+        if (perFrame && currentFrame == LastFrame)
         {
             return false;
         }
