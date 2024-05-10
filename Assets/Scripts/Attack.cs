@@ -207,7 +207,6 @@ public class Attack : MonoBehaviour
         totalFrame = Mathf.RoundToInt(currentClip.length * currentClip.frameRate);
         var clipNormalizedTime = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
         currentFrame = Mathf.FloorToInt(clipNormalizedTime % 1 * totalFrame);
-        Debug.Log(currentFrame);
         if (currentFrame == LastFrame)
         {
             return false;
@@ -218,6 +217,7 @@ public class Attack : MonoBehaviour
 
     private void OnDisable()
     {
+        Debug.Log("Attack OnDisable");
         _hitFreezeXY = false;
         beHitCharacterList.Clear();
     }
