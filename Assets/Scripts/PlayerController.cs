@@ -703,6 +703,11 @@ public class PlayerController : Character
             }
             if (grabPosition != Vector2.negativeInfinity)
             {
+                var dir = grabPosition - (Vector2)grabbingHand.position;
+                if (dir.x > 0f)
+                    IsFacingRight = true;
+                else
+                    IsFacingRight = false;
                 isGrabbing = true;
                 rb.gravityScale = 0;
                 rb.velocity = Vector2.zero;
