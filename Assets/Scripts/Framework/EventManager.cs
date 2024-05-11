@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System;
 
-public enum EventType
+public enum CustomEventType
 {
     ReHit,
 }
@@ -32,10 +32,10 @@ public class EventManager : Singleton<EventManager>
             this.action -= action;
         }
     }
-    Dictionary<EventType, IEventInfo> eventDic = new();
+    Dictionary<CustomEventType, IEventInfo> eventDic = new();
 
     #region 添加事件监听
-    public void AddListener(EventType type, Action action)
+    public void AddListener(CustomEventType type, Action action)
     {
         if (eventDic.ContainsKey(type))
         {
@@ -48,7 +48,7 @@ public class EventManager : Singleton<EventManager>
             eventDic.Add(type, eventInfo);
         }
     }
-    public void AddListener<T>(EventType type, Action<T> action)
+    public void AddListener<T>(CustomEventType type, Action<T> action)
     {
         if (eventDic.ContainsKey(type))
         {
@@ -65,14 +65,14 @@ public class EventManager : Singleton<EventManager>
     #endregion
 
     #region 移除事件监听
-    public void RemoveListener(EventType type, Action action)
+    public void RemoveListener(CustomEventType type, Action action)
     {
         if (eventDic.ContainsKey(type))
         {
             (eventDic[type] as EventInfo).action -= action;
         }
     }
-    public void RemoveListener<T>(EventType type, Action<T> action)
+    public void RemoveListener<T>(CustomEventType type, Action<T> action)
     {
         if (eventDic.ContainsKey(type))
         {
@@ -82,14 +82,14 @@ public class EventManager : Singleton<EventManager>
     #endregion
 
     #region 触发事件
-    public void TriggerEvent(EventType type)
+    public void TriggerEvent(CustomEventType type)
     {
         if (eventDic.ContainsKey(type))
         {
             (eventDic[type] as EventInfo).action?.Invoke();
         }
     }
-    public void TriggerEvent<T>(EventType type, T arg)
+    public void TriggerEvent<T>(CustomEventType type, T arg)
     {
         if (eventDic.ContainsKey(type))
         {
@@ -99,7 +99,7 @@ public class EventManager : Singleton<EventManager>
     #endregion
 
     #region 移除事件
-    public void RemoveEvent(EventType type)
+    public void RemoveEvent(CustomEventType type)
     {
         if (eventDic.ContainsKey(type))
         {

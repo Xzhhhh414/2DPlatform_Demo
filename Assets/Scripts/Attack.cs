@@ -199,7 +199,7 @@ public class Attack : MonoBehaviour
             _hitFreezeXY = false;
         }
     }
-      int GetCurrentFrame()
+    int GetCurrentFrame()
     {
         currentClip = animator.GetCurrentAnimatorClipInfo(0)[0].clip;
         if (preClip == null || currentClip == null || !currentClip.name.Equals(preClip.name))
@@ -231,7 +231,7 @@ public class Attack : MonoBehaviour
 
     void ReHitCurrentFrame()
     {
-
+        beHitCharacterList.Clear();
     }
 
 }

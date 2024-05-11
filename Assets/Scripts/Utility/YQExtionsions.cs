@@ -31,7 +31,7 @@ public static class YQExtionsions
         animator.ResetTrigger(triggerName);
     }
 
-    public static void TriggerEvent(this object sender, EventType type)
+    public static void TriggerEvent(this object sender, CustomEventType type)
     {
         EventManager.Instance.TriggerEvent(type);
     }
