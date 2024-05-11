@@ -56,10 +56,7 @@ public class Attack : MonoBehaviour
     #region ReHit
     [SerializeField]
     List<Damageable> beHitCharacterList = new();
-    public bool reHit = false;
-    public int reHitFrameIndex = -1;
     private int LastFrame = -1;
-    bool isInFrameRangeResultOfReHit;
     #endregion
     int lastStateHash = 0;
     AnimatorStateInfo stateInfo;
@@ -103,10 +100,6 @@ public class Attack : MonoBehaviour
         {
             _hitFreezeXY = true;
         }
-        if (isInFrameRangeResultOfReHit && reHit)
-        {
-            beHitCharacterList.Clear();
-        }
         if (beHitCharacterList.Contains(damageable)) return;
         Vector2 deliveredKnockback = transform.parent.localScale.x > 0 ? knockback : new Vector2(-knockback.x, knockback.y);
         bool gotHit = damageable.Hit(_attackDamage, deliveredKnockback);
@@ -125,7 +118,7 @@ public class Attack : MonoBehaviour
             //Debug.Log(collision.name + "hit for" + attackDamage);
             if (canClearCooldown && hitValid)
             {
-               // Debug.Log("ClearCooldown Invoke");
+                // Debug.Log("ClearCooldown Invoke");
                 hitValid = false;
                 lagLeftTime = lagDuration;
                 //ClearCooldown.Invoke();
@@ -159,11 +152,6 @@ public class Attack : MonoBehaviour
             }
         }
         isInFrameRangeResultOfFreeze = IsInFrameRange((int)freezeXY.x, (int)freezeXY.y);
-        var curF = GetCurrentFrame();
-        if (LastFrame == curF)
-            isInFrameRangeResultOfReHit = false;
-        else
-            isInFrameRangeResultOfReHit = IsInFrameRange(reHitFrameIndex, reHitFrameIndex);
         stateInfo = animator.GetCurrentAnimatorStateInfo(0);
         if (stateInfo.shortNameHash != lastStateHash)
         {
@@ -230,7 +218,7 @@ public class Attack : MonoBehaviour
         beHitCharacterList.Clear();
     }
 
-    void ReHitCurrentFrame()
+    public void ReHitCurrentFrame()
     {
         beHitCharacterList.Clear();
     }

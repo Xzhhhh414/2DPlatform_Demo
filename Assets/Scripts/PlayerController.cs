@@ -839,6 +839,13 @@ public class PlayerController : Character
 
     #endregion
 
+    void ReHit()
+    {
+        foreach (var attack in attacks)
+        {
+            attack.ReHitCurrentFrame();
+        }
+    }
 
     #region 废弃
     #region 斜坡判定
