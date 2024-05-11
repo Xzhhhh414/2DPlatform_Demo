@@ -42,16 +42,17 @@ public class SpellCooldown_Skill01 : MonoBehaviour
         imageEdge.gameObject.SetActive(false);
         imageCooldown.fillAmount = 0.0f;
 
-        CallOnEnableMethods();
+        //CallOnEnableMethods();
+        EventManager.Instance.AddListener(CustomEventType.Skill01CoolDown, UseSpell);
 
     }
 
     private void CallOnEnableMethods()
     {
-        playerController.SpellSkill01.AddListener(UseSpell);
+        //playerController.SpellSkill01.AddListener(UseSpell);
     }
 
-  
+
 
 
     // Update is called once per frame
@@ -86,7 +87,7 @@ public class SpellCooldown_Skill01 : MonoBehaviour
             textCoolDown.text = Mathf.RoundToInt(cooldownTimer).ToString();
             imageCooldown.fillAmount = cooldownTimer / cooldownTime;
 
-            imageEdge.transform.localEulerAngles = new Vector3(0,0,360.0f*(cooldownTimer / cooldownTime));
+            imageEdge.transform.localEulerAngles = new Vector3(0, 0, 360.0f * (cooldownTimer / cooldownTime));
         }
     }
 
@@ -103,7 +104,7 @@ public class SpellCooldown_Skill01 : MonoBehaviour
 
             imageEdge.gameObject.SetActive(true);
             cooldownTimer = cooldownTime;
-            
+
         }
 
     }

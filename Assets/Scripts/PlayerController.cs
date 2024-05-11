@@ -596,7 +596,8 @@ public class PlayerController : Character
         if (context.started && Skill01Cooldown <= 0 && CanAttack)
         {
             animator.SetTrigger(AnimationStrings.skill01Tap);
-            SpellSkill01.Invoke();
+            //SpellSkill01.Invoke();
+            EventManager.Instance.TriggerEvent(CustomEventType.Skill01CoolDown);
         }
 
         if (context.canceled)
