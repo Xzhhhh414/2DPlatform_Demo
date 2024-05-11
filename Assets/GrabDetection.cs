@@ -19,25 +19,25 @@ public class GrabDetection : MonoBehaviour
     private void Start()
     {
         circleCollider2D = GetComponent<CircleCollider2D>();
-        circleCollider2D.enabled = false;
+        circleCollider2D.enabled = true;
     }
 
     private void Update()
     {
-        if (circleCollider2D.enabled)
-        {
-            duration -= Time.deltaTime;
-        }
-        else
-        {
-            IsDecteted = false;
-            colliders.Clear();
-        }
-        if (duration <= 0)
-        {
-            circleCollider2D.enabled = false;
-            duration = 0.1f;
-        }
+        // if (circleCollider2D.enabled)
+        // {
+        //     duration -= Time.deltaTime;
+        // }
+        // else
+        // {
+        //     IsDecteted = false;
+        //     colliders.Clear();
+        // }
+        // if (duration <= 0)
+        // {
+        //     circleCollider2D.enabled = false;
+        //     duration = 0.1f;
+        // }
     }
 
 

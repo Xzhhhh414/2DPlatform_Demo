@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
@@ -277,6 +276,14 @@ public class PlayerController : Character
         {
             attack.ModifyY += ModifyYOnHit;
         }
+        detectionGradient.SetKeys(
+            new GradientColorKey[] { new GradientColorKey(Color.cyan, 0.0f), new GradientColorKey(Color.cyan, 0.5f), new GradientColorKey(Color.cyan, 1.0f) },
+            new GradientAlphaKey[] { new GradientAlphaKey(0.0f, 0.0f), new GradientAlphaKey(0.7f, 0.7f), new GradientAlphaKey(1.0f, 1.0f) }
+        );
+        grabGradient.SetKeys(
+            new GradientColorKey[] { new GradientColorKey(Color.cyan, 0.0f), new GradientColorKey(Color.cyan, 1.0f) },
+            new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.0f), new GradientAlphaKey(1.0f, 1.0f) }
+        );
     }
 
     private void ModifyYOnHit(bool arg1, float arg2)
@@ -695,15 +702,13 @@ public class PlayerController : Character
     float ropeSetRope = 1;
     [SerializeField, Label("钩爪手")]
     Transform grabbingHand;
+    Gradient detectionGradient = new();
+    Gradient grabGradient = new();
     void Grabable()
     {
-        if (!startGrab) return;
-
         if (grabDetection.IsDecteted && !isGrabbing)
         {
-            animator.SetTriggerByTime(AnimationStrings.grabTrigger, 1f);
-            waveRate = startwaveRate;
-            lineRenderer.positionCount = resolution;
+
             var tempDis = float.MaxValue;
             for (var i = 0; i < grabDetection.colliders.Count; i++)
             {
@@ -715,6 +720,25 @@ public class PlayerController : Character
                     grabPoint = grabDetection.colliders[i].GetComponent<GrabPoint>();
                 }
             }
+            if (IsInterruptGrab())
+            {
+                lineRenderer.enabled = false;
+                startGrab = false;
+                return;
+            }
+            lineRenderer.startWidth = 0.1f;
+            lineRenderer.endWidth = 0.1f;
+            lineRenderer.colorGradient = detectionGradient;
+            lineRenderer.positionCount = 2;
+            lineRenderer.SetPosition(0, grabbingHand.position);
+            lineRenderer.SetPosition(1, grabPosition);
+            lineRenderer.enabled = true;
+
+            if (!startGrab) return;
+            lineRenderer.enabled = false;
+            animator.SetTriggerByTime(AnimationStrings.grabTrigger, 1f);
+            waveRate = startwaveRate;
+            lineRenderer.positionCount = resolution;
             if (grabPosition != Vector2.negativeInfinity)
             {
                 var dir = grabPosition - (Vector2)grabbingHand.position;
@@ -734,7 +758,7 @@ public class PlayerController : Character
             {
                 isGrabbing = false;
                 distanceJoint2D.enabled = false;
-                grabDetection.circleCollider2D.enabled = false;
+                // grabDetection.circleCollider2D.enabled = false;
                 startGrab = false;
                 rb.gravityScale = 4;
             }
@@ -743,6 +767,9 @@ public class PlayerController : Character
         {
             rb.gravityScale = 0;
             progress += Time.deltaTime;
+            lineRenderer.startWidth = 0.26f;
+            lineRenderer.endWidth = 0.26f;
+            lineRenderer.colorGradient = grabGradient;
             lineRenderer.enabled = true;
             waveRate -= Time.deltaTime * ropeSetRope;
             if (waveRate > 0)
@@ -757,7 +784,7 @@ public class PlayerController : Character
             {
                 isGrabbing = false;
                 distanceJoint2D.enabled = false;
-                grabDetection.circleCollider2D.enabled = false;
+                // grabDetection.circleCollider2D.enabled = false;
                 startGrab = false;
                 lineRenderer.enabled = false;
                 progress = 0;
@@ -769,7 +796,7 @@ public class PlayerController : Character
             {
                 isGrabbing = false;
                 distanceJoint2D.enabled = false;
-                grabDetection.circleCollider2D.enabled = false;
+                // grabDetection.circleCollider2D.enabled = false;
                 startGrab = false;
                 lineRenderer.enabled = false;
                 progress = 0;
@@ -781,6 +808,8 @@ public class PlayerController : Character
         }
         else
         {
+            lineRenderer.enabled = false;
+            startGrab = false;
         }
     }
     bool IsInterruptGrab()
@@ -831,7 +860,7 @@ public class PlayerController : Character
     {
         if (context.performed)
         {
-            grabDetection.circleCollider2D.enabled = true;
+            // grabDetection.circleCollider2D.enabled = true;
             if (!CanGrab) return;
             startGrab = true;
         }
