@@ -32,10 +32,10 @@ public class PlayerController : Character
 
 
 
-    [HideInInspector] public UnityEvent SpellSkill01;
-    [HideInInspector] public UnityEvent SpellSkill02;
-    [HideInInspector] public UnityEvent SpellSkill03;
-    [HideInInspector] public UnityEvent skill03ClearCDSucces;
+    //[HideInInspector] public UnityEvent SpellSkill01;
+    //[HideInInspector] public UnityEvent SpellSkill02;
+    //[HideInInspector] public UnityEvent SpellSkill03;
+    //[HideInInspector] public UnityEvent Skill03ClearCDSuccess;
 
     //skill03的技能逻辑
     private float dashSpeed = 75f; // 冲刺速度
@@ -327,14 +327,16 @@ public class PlayerController : Character
                     //Debug.Log("clearCDTrigger====" + clearCDTrigger);
                     //Debug.Log("clearCDTimeLeft====" + clearCDTimeLeft);
                     Skill03Cooldown = 0;
-                    skill03ClearCDSucces.Invoke();
+                    //skill03ClearCDSuccess.Invoke();
+                    EventManager.Instance.TriggerEvent(CustomEventType.Skill03ClearCDSuccess);
                     lagTimeLeft = lagDuration;
                 }
                 else
                 {
                     Skill03Cooldown = 5;
                     clearCDTimeLeft = clearCDMaxTime;
-                    SpellSkill03.Invoke();
+                    //SpellSkill03.Invoke();
+                    EventManager.Instance.TriggerEvent(CustomEventType.SpellSkill03);
                     SettingSkill03CD = false;
 
                 }
@@ -470,8 +472,8 @@ public class PlayerController : Character
 
     private void OnEnable()
     {
-        attackSkill03.ClearCooldown.AddListener(TrigClearSkill03CD);
-
+        //attackSkill03.ClearCooldown.AddListener(TrigClearSkill03CD);
+        EventManager.Instance.AddListener(CustomEventType.Skill03ClearCooldown, TrigClearSkill03CD);
     }
 
 
@@ -597,7 +599,7 @@ public class PlayerController : Character
         {
             animator.SetTrigger(AnimationStrings.skill01Tap);
             //SpellSkill01.Invoke();
-            EventManager.Instance.TriggerEvent(CustomEventType.Skill01CoolDown);
+            EventManager.Instance.TriggerEvent(CustomEventType.SpellSkill01);
         }
 
         if (context.canceled)
@@ -615,7 +617,8 @@ public class PlayerController : Character
         if (context.started && Skill02Cooldown <= 0 && CanAttack)
         {
             animator.SetTrigger(AnimationStrings.skill02Tap);
-            SpellSkill02.Invoke();
+            //SpellSkill02.Invoke();
+            EventManager.Instance.TriggerEvent(CustomEventType.SpellSkill02);
         }
 
 

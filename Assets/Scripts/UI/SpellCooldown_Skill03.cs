@@ -50,16 +50,19 @@ public class SpellCooldown_Skill03 : MonoBehaviour
         imageEdge.gameObject.SetActive(false);
         imageCooldown.fillAmount = 0.0f;
 
-        CallOnEnableMethods();
+        //CallOnEnableMethods();
+        EventManager.Instance.AddListener(CustomEventType.SpellSkill03, UseSpell);
+        EventManager.Instance.AddListener(CustomEventType.Skill03ClearCDSuccess, ChangeBtnState);
+
         SetSkill03ButtonImage();
 
     }
 
-    private void CallOnEnableMethods()
-    {
-        playerController.SpellSkill03.AddListener(UseSpell);
-        playerController.skill03ClearCDSucces.AddListener(ChangeBtnState);
-    }
+    //private void CallOnEnableMethods()
+    //{
+    //    playerController.SpellSkill03.AddListener(UseSpell);
+    //    playerController.skill03ClearCDSuccess.AddListener(ChangeBtnState);
+    //}
 
 
 

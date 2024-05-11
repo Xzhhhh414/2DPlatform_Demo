@@ -42,13 +42,14 @@ public class SpellCooldown_Skill02 : MonoBehaviour
         imageEdge.gameObject.SetActive(false);
         imageCooldown.fillAmount = 0.0f;
 
-        CallOnEnableMethods();
+        //CallOnEnableMethods();
+        EventManager.Instance.AddListener(CustomEventType.SpellSkill02, UseSpell);
     }
 
-    private void CallOnEnableMethods()
-    {
-        playerController.SpellSkill02.AddListener(UseSpell);
-    }
+    //private void CallOnEnableMethods()
+    //{
+    //    playerController.SpellSkill02.AddListener(UseSpell);
+    //}
 
   
 

@@ -125,10 +125,11 @@ public class Attack : MonoBehaviour
             //Debug.Log(collision.name + "hit for" + attackDamage);
             if (canClearCooldown && hitValid)
             {
-                Debug.Log("ClearCooldown Invoke");
+               // Debug.Log("ClearCooldown Invoke");
                 hitValid = false;
                 lagLeftTime = lagDuration;
-                ClearCooldown.Invoke();
+                //ClearCooldown.Invoke();
+                EventManager.Instance.TriggerEvent(CustomEventType.Skill03ClearCooldown);
             }
         }
         beHitCharacterList.Add(damageable);

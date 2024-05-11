@@ -43,7 +43,7 @@ public class SpellCooldown_Skill01 : MonoBehaviour
         imageCooldown.fillAmount = 0.0f;
 
         //CallOnEnableMethods();
-        EventManager.Instance.AddListener(CustomEventType.Skill01CoolDown, UseSpell);
+        EventManager.Instance.AddListener(CustomEventType.SpellSkill01, UseSpell);
 
     }
 

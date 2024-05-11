@@ -4,7 +4,11 @@ using System;
 public enum CustomEventType
 {
     ReHit,
-    Skill01CoolDown,
+    SpellSkill01,
+    SpellSkill02,
+    SpellSkill03,
+    Skill03ClearCDSuccess,
+    Skill03ClearCooldown,
 }
 public class EventManager : Singleton<EventManager>
 {
