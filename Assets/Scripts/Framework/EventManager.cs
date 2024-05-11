@@ -9,6 +9,7 @@ public enum CustomEventType
     SpellSkill03,
     Skill03ClearCDSuccess,
     Skill03ClearCooldown,
+    CanInteractObject, //可以与场景物件交互的状态
 }
 public class EventManager : Singleton<EventManager>
 {
