@@ -83,7 +83,6 @@ public class Attack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log("TriggerEnter2D");
 #if UNITY_EDITOR
         if (BattleTestManager.Instance.isMinDamage)
         {
@@ -94,13 +93,6 @@ public class Attack : MonoBehaviour
             _attackDamage = attackDamage;
         }
 #endif
-
-        //Debug.Log("OnTriggerEnter2D!!!!!");
-        // Damageable damageable = collision.GetComponent<Damageable>();
-        // if (damageable != null)
-        // {
-        //     beHitCharacterList.Add(damageable);
-        // }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -166,13 +158,18 @@ public class Attack : MonoBehaviour
             }
         }
         isInFrameRangeResultOfFreeze = IsInFrameRange((int)freezeXY.x, (int)freezeXY.y);
-        isInFrameRangeResultOfReHit = IsInFrameRange(reHitFrameIndex, reHitFrameIndex, true);
+        var curF = GetCurrentFrame();
+        if (LastFrame == curF)
+            isInFrameRangeResultOfReHit = false;
+        else
+            isInFrameRangeResultOfReHit = IsInFrameRange(reHitFrameIndex, reHitFrameIndex);
         stateInfo = animator.GetCurrentAnimatorStateInfo(0);
         if (stateInfo.shortNameHash != lastStateHash)
         {
             beHitCharacterList.Clear();
             lastStateHash = stateInfo.shortNameHash;
         }
+        UpdateLastFrame();
         ImpulseScreen();
     }
     private void FixedUpdate()
@@ -202,20 +199,27 @@ public class Attack : MonoBehaviour
             _hitFreezeXY = false;
         }
     }
-    bool IsInFrameRange(int startFrame, int endFrame, bool perFrame = false)
+      int GetCurrentFrame()
     {
         currentClip = animator.GetCurrentAnimatorClipInfo(0)[0].clip;
         if (preClip == null || currentClip == null || !currentClip.name.Equals(preClip.name))
-            return false;
+            return -1;
         totalFrame = Mathf.RoundToInt(currentClip.length * currentClip.frameRate);
         var clipNormalizedTime = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
-        currentFrame = Mathf.FloorToInt(clipNormalizedTime % 1 * totalFrame);
-        if (perFrame && currentFrame == LastFrame)
-        {
+        return Mathf.FloorToInt(clipNormalizedTime % 1 * totalFrame);
+    }
+
+    bool IsInFrameRange(int startFrame, int endFrame)
+    {
+        int currentFrame = GetCurrentFrame();
+        if (currentFrame == -1)
             return false;
-        }
-        LastFrame = currentFrame;
         return currentFrame >= startFrame && currentFrame <= endFrame;
+    }
+
+    void UpdateLastFrame()
+    {
+        LastFrame = GetCurrentFrame();
     }
 
     private void OnDisable()
@@ -223,6 +227,11 @@ public class Attack : MonoBehaviour
         Debug.Log("Attack OnDisable");
         _hitFreezeXY = false;
         beHitCharacterList.Clear();
+    }
+
+    void ReHitCurrentFrame()
+    {
+
     }
 
 }

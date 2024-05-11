@@ -30,4 +30,9 @@ public static class YQExtionsions
         }
         animator.ResetTrigger(triggerName);
     }
+
+    public static void TriggerEvent(this object sender, EventType type)
+    {
+        EventManager.Instance.TriggerEvent(type);
+    }
 }
