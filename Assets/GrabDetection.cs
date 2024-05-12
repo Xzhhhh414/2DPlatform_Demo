@@ -15,31 +15,11 @@ public class GrabDetection : MonoBehaviour
     [HideInInspector]
     public List<Collider2D> colliders = new List<Collider2D>();
     public CircleCollider2D circleCollider2D;
-    float duration = 0.1f;
     private void Start()
     {
         circleCollider2D = GetComponent<CircleCollider2D>();
         circleCollider2D.enabled = true;
     }
-
-    private void Update()
-    {
-        // if (circleCollider2D.enabled)
-        // {
-        //     duration -= Time.deltaTime;
-        // }
-        // else
-        // {
-        //     IsDecteted = false;
-        //     colliders.Clear();
-        // }
-        // if (duration <= 0)
-        // {
-        //     circleCollider2D.enabled = false;
-        //     duration = 0.1f;
-        // }
-    }
-
 
     private void OnTriggerEnter2D(Collider2D other)
     {

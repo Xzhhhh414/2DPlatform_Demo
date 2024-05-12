@@ -64,7 +64,7 @@ public class PlayerController : Character
     private float hitModifyY = 0;
     private List<Attack> attacks = new();
     #endregion
-    int lastStateHash = 0;
+    
     AnimatorStateInfo stateInfo;
 
     public float CurrentMoveSpeed
