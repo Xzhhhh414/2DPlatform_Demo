@@ -483,6 +483,11 @@ public class PlayerController : Character
         EventManager.Instance.AddListener(CustomEventType.Skill03ClearCooldown, TrigClearSkill03CD);
     }
 
+    private void OnDisable()
+    {
+        //attackSkill03.ClearCooldown.AddListener(TrigClearSkill03CD);
+        EventManager.Instance.RemoveListener(CustomEventType.Skill03ClearCooldown, TrigClearSkill03CD);
+    }
 
     public void OnMove(InputAction.CallbackContext context)
     {

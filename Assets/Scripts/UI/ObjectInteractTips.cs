@@ -1,32 +1,55 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ObjectInteractTips : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    public Text tipsText;
+       
+
     void Start()
     {
-        EventManager.Instance.AddListener(CustomEventType.CanInteractObject, ShowTips);
-        EventManager.Instance.AddListener(CustomEventType.CanInteractObject, HideTips);
+        EventManager.Instance.AddListener(CustomEventType.InteractObjectIn, ShowTips);
+        EventManager.Instance.AddListener(CustomEventType.InteractObjectOut, HideTips);
 
     }
-
-    private void HideTips()
+    void OnDestroy()
     {
-        throw new NotImplementedException();
+        EventManager.Instance.RemoveListener(CustomEventType.InteractObjectIn, ShowTips);
+        EventManager.Instance.RemoveListener(CustomEventType.InteractObjectOut, HideTips);
     }
 
     private void ShowTips()
     {
-        throw new NotImplementedException();
+        if (tipsText != null) // 检查 Text 组件是否为空
+        {
+
+            tipsText.text = "按E键开启Boss挑战";
+        }
+        else
+        {
+            Debug.LogError("Text component is missing in ObjectInteractTips");
+
+        }
+
     }
-
-
-    // Update is called once per frame
-    void Update()
+    private void HideTips()
     {
-        
+        if (tipsText != null) // 检查 Text 组件是否为空
+        {
+
+            tipsText.text = "";
+        }
+        else
+        {
+            Debug.LogError("Text component is missing in ObjectInteractTips");
+
+        }
+
     }
+
 }

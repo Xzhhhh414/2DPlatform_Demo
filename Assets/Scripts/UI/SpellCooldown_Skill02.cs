@@ -51,7 +51,10 @@ public class SpellCooldown_Skill02 : MonoBehaviour
     //    playerController.SpellSkill02.AddListener(UseSpell);
     //}
 
-  
+    void OnDestroy()
+    {
+        EventManager.Instance.RemoveListener(CustomEventType.SpellSkill02, UseSpell);
+    }
 
 
     // Update is called once per frame

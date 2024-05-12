@@ -6,7 +6,6 @@ public class NpcGenerator : MonoBehaviour
 {
   
 
-    private bool canUse = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +23,7 @@ public class NpcGenerator : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            canUse = true;
-            //Debug.Log("canUse==="+ canUse);
+            EventManager.Instance.TriggerEvent(CustomEventType.InteractObjectIn);
         }
 
     }
@@ -34,8 +32,7 @@ public class NpcGenerator : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            canUse = false;
-            //Debug.Log("canUse===" + canUse);
+            EventManager.Instance.TriggerEvent(CustomEventType.InteractObjectOut);
         }
 
     }

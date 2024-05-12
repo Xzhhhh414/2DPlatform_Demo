@@ -55,7 +55,7 @@ public class SpellCooldown_Skill03 : MonoBehaviour
         EventManager.Instance.AddListener(CustomEventType.Skill03ClearCDSuccess, ChangeBtnState);
 
         SetSkill03ButtonImage();
-
+        
     }
 
     //private void CallOnEnableMethods()
@@ -64,7 +64,11 @@ public class SpellCooldown_Skill03 : MonoBehaviour
     //    playerController.skill03ClearCDSuccess.AddListener(ChangeBtnState);
     //}
 
-
+    void OnDestroy()
+    {
+        EventManager.Instance.RemoveListener(CustomEventType.SpellSkill03, UseSpell);
+        EventManager.Instance.RemoveListener(CustomEventType.Skill03ClearCDSuccess, ChangeBtnState);
+    }
 
 
 
