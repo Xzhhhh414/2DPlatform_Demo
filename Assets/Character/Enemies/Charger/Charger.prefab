@@ -500,8 +500,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6955226867373264452}
-  - component: {fileID: 8724271512655164848}
   - component: {fileID: 9099796461835725559}
+  - component: {fileID: 112570538823974101}
   m_Layer: 10
   m_Name: Charge
   m_TagString: Untagged
@@ -524,8 +524,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1643534007564350675}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &8724271512655164848
-PolygonCollider2D:
+--- !u!114 &9099796461835725559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8594359537583065321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8a5cb8f3f3195a4fbe2fac3034cef82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 15
+  knockback: {x: 4, y: 2.5}
+  stunRatio: 0.03
+  canClearCooldown: 0
+  ClearCooldown:
+    m_PersistentCalls:
+      m_Calls: []
+  impulseFrameIndex: -100
+  preClip: {fileID: 0}
+  shakeVelocity: {x: 0, y: 0}
+  shakeScpoe: 1
+  hitModifyY: 0
+  modifyY: 0
+  hitFreezeXY: 0
+  freezeXY: {x: 0, y: 0}
+  beHitCharacterList: []
+  reHit: 0
+  reHitFrameIndex: -1
+--- !u!61 &112570538823974101
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -556,7 +586,7 @@ PolygonCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -3.31, y: -0.28}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -566,42 +596,6 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.28417444, y: 1.4215511}
-      - {x: -2.164864, y: 1.3804381}
-      - {x: -1.267816, y: 0.15021193}
-      - {x: -1.5845857, y: -0.82918346}
-      - {x: 0.504531, y: -1.0635078}
-      - {x: 0.7626436, y: 0.019267261}
-  m_UseDelaunayMesh: 0
---- !u!114 &9099796461835725559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8594359537583065321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8a5cb8f3f3195a4fbe2fac3034cef82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackDamage: 5
-  knockback: {x: 3, y: 1.5}
-  stunRatio: 0.1
-  canClearCooldown: 0
-  ClearCooldown:
-    m_PersistentCalls:
-      m_Calls: []
-  impulseFrameIndex: -100
-  preClip: {fileID: 0}
-  shakeVelocity: {x: 0, y: 0}
-  shakeScpoe: 1
-  hitModifyY: 0
-  modifyY: 0
-  hitFreezeXY: 0
-  freezeXY: {x: 0, y: 0}
-  beHitCharacterList: []
-  reHit: 0
-  reHitFrameIndex: -1
+  serializedVersion: 2
+  m_Size: {x: 1.79, y: 1}
+  m_EdgeRadius: 0
