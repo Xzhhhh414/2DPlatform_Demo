@@ -881,6 +881,16 @@ public class PlayerController : Character
         }
     }
 
+
+    public void OnObjectInteract(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            EventManager.Instance.TriggerEvent(CustomEventType.AttemptInteractObject);
+        }
+    }
+
+
     #region 废弃
     #region 斜坡判定
     //Vector2 normalPerpRight;

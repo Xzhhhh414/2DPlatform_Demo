@@ -11,6 +11,7 @@ public enum CustomEventType
     Skill03ClearCooldown,
     InteractObjectIn, //进入场景物件交互范围
     InteractObjectOut, //离开场景物件交互范围
+    AttemptInteractObject, //玩家按下场景交互输入
 }
 public class EventManager : Singleton<EventManager>
 {

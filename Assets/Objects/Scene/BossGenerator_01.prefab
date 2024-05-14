@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4484378081436706960}
   - component: {fileID: 7993529130426914925}
   m_Layer: 12
-  m_Name: BossGenerator
+  m_Name: BossGenerator_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,3 +143,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60a4c96cf230d77409978c697a4c9cd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flowScript: {fileID: 11400000, guid: 2076324da50798f42b6a49612cff3f2c, type: 2}
