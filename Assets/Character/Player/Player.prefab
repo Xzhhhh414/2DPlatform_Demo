@@ -2069,8 +2069,8 @@ MonoBehaviour:
   healthChanged:
     m_PersistentCalls:
       m_Calls: []
-  _maxHealth: 100
-  _health: 100
+  _maxHealth: 10000
+  _health: 10000
   _isAlive: 1
   hitInterval: 0
   hitIntervalTime: 0.25

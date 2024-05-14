@@ -286,7 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KnockBackRate: 1
   walkAcceleration: 50
-  maxSpeed: 11
+  maxSpeed: 5.8
   walkStopRate: 3
   attackZone: {fileID: 7541528397675991433}
   cliffDetectionZone: {fileID: 6455040145224500777}
@@ -370,8 +370,8 @@ MonoBehaviour:
   healthChanged:
     m_PersistentCalls:
       m_Calls: []
-  _maxHealth: 100
-  _health: 100
+  _maxHealth: 310
+  _health: 310
   _isAlive: 1
   hitInterval: 0
   hitIntervalTime: 0
@@ -596,7 +596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a5cb8f3f3195a4fbe2fac3034cef82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 12
+  attackDamage: 13
   knockback: {x: 0, y: 0}
   stunRatio: 0.1
   canClearCooldown: 0

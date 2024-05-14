@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a5cb8f3f3195a4fbe2fac3034cef82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 10
+  attackDamage: 14
   knockback: {x: 0, y: 0}
   stunRatio: 0.03
   canClearCooldown: 0
@@ -212,8 +212,6 @@ MonoBehaviour:
   hitFreezeXY: 0
   freezeXY: {x: 0, y: 0}
   beHitCharacterList: []
-  reHit: 0
-  reHitFrameIndex: -1
 --- !u!1 &3522140399348579629
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,8 +497,8 @@ MonoBehaviour:
   healthChanged:
     m_PersistentCalls:
       m_Calls: []
-  _maxHealth: 1000
-  _health: 1000
+  _maxHealth: 100
+  _health: 100
   _isAlive: 1
   hitInterval: 0
   hitIntervalTime: 0
