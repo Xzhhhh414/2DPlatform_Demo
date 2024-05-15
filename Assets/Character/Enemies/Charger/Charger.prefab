@@ -395,7 +395,7 @@ MonoBehaviour:
   _isAlive: 1
   hitInterval: 0
   hitIntervalTime: 0
-  changeColorTime: 0.7
+  changeColorTime: 0
   hurtColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &5885092043841135857
 GameObject:
@@ -552,8 +552,6 @@ MonoBehaviour:
   hitFreezeXY: 0
   freezeXY: {x: 0, y: 0}
   beHitCharacterList: []
-  reHit: 0
-  reHitFrameIndex: -1
 --- !u!61 &112570538823974101
 BoxCollider2D:
   m_ObjectHideFlags: 0

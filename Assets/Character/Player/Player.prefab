@@ -641,7 +641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 20
   knockback: {x: 1.5, y: 0}
-  stunRatio: 0.2
+  stunRatio: 0.1
   canClearCooldown: 0
   ClearCooldown:
     m_PersistentCalls:
@@ -907,7 +907,7 @@ MonoBehaviour:
   shakeScpoe: 0
   hitModifyY: 0
   modifyY: 0
-  hitFreezeXY: 1
+  hitFreezeXY: 0
   freezeXY: {x: 0, y: 8}
   beHitCharacterList: []
 --- !u!1 &6175486903741763352
@@ -1265,7 +1265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 20
   knockback: {x: 0, y: 0}
-  stunRatio: 0.06
+  stunRatio: 0.08
   canClearCooldown: 0
   ClearCooldown:
     m_PersistentCalls:
@@ -2090,8 +2090,8 @@ MonoBehaviour:
   _isAlive: 1
   hitInterval: 0
   hitIntervalTime: 0.25
-  changeColorTime: 0.7
-  hurtColor: {r: 1, g: 0, b: 0, a: 1}
+  changeColorTime: 0.1
+  hurtColor: {r: 1, g: 0, b: 0, a: 0.7176471}
 --- !u!61 &4717282881302430149
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2372,6 +2372,6 @@ MonoBehaviour:
   shakeScpoe: 0
   hitModifyY: 0
   modifyY: 0
-  hitFreezeXY: 1
-  freezeXY: {x: 0, y: 8}
+  hitFreezeXY: 0
+  freezeXY: {x: 0, y: 0}
   beHitCharacterList: []
