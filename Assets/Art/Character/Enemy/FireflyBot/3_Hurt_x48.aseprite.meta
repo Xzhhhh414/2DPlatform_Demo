@@ -126,9 +126,9 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 128
+      x: 135
       y: 4
-      width: 104
+      width: 115
       height: 108
     spriteID: 92781d59b89c36b4d927daf4954f800f
     spriteBone: []
@@ -138,7 +138,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 88, y: -44}
+    uvTransform: {x: 95, y: -44}
   - name: 3_Hurt_x48_Frame_1
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -146,9 +146,9 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 128
-      y: 120
-      width: 104
+      x: 4
+      y: 4
+      width: 123
       height: 108
     spriteID: 122ff689dba22f940a991113fb43b185
     spriteBone: []
@@ -158,7 +158,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 88, y: 72}
+    uvTransform: {x: -36, y: -44}
   - name: 3_Hurt_x48_Frame_2
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -167,9 +167,9 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
-      width: 116
-      height: 100
+      y: 120
+      width: 123
+      height: 103
     spriteID: 5400da4186156d046967a6712d624133
     spriteBone: []
     spriteOutline: []
@@ -178,7 +178,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -44, y: -44}
+    uvTransform: {x: -44, y: 72}
   - name: 3_Hurt_x48_Frame_3
     originalName: 
     pivot: {x: 0.5, y: 0}
@@ -187,9 +187,9 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 112
-      width: 116
-      height: 100
+      y: 231
+      width: 123
+      height: 103
     spriteID: 114cbd8e3d369e24ba0f3badf543ae64
     spriteBone: []
     spriteOutline: []
@@ -198,7 +198,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -44, y: 64}
+    uvTransform: {x: -44, y: 183}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
