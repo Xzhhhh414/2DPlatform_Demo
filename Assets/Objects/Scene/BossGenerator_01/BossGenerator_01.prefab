@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2836052006912207197}
   - component: {fileID: 4484378081436706960}
   - component: {fileID: 7993529130426914925}
+  - component: {fileID: -7780556346147408747}
   m_Layer: 12
   m_Name: BossGenerator_01
   m_TagString: Untagged
@@ -144,3 +145,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flowScript: {fileID: 11400000, guid: 2076324da50798f42b6a49612cff3f2c, type: 2}
+--- !u!95 &-7780556346147408747
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334565279754142242}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 49582ff21fe97ba408c5f24f42db84b8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
