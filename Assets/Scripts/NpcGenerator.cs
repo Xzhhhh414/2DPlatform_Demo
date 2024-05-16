@@ -7,19 +7,20 @@ using FlowCanvas;
 
 public class NpcGenerator : MonoBehaviour
 {
-    public FlowScript flowScript; // ¶ÔFlowScript¶ÔÏóµÄÒýÓÃ
+    public FlowScript flowScript; // ï¿½ï¿½FlowScriptï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    Animator animator;
     private bool canInteract = false;
+    private bool readyToSpawn = false;
+    private float spwanWaitTime;
 
     [SerializeField]
-    private bool isOpened ;
+    private bool isOpened = false;
 
-    Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
-        isOpened = animator.GetBool("isOpen");
         EventManager.Instance.AddListener(CustomEventType.AttemptInteractObject, AttemptInteract);
     }
 
@@ -32,48 +33,56 @@ public class NpcGenerator : MonoBehaviour
 
     private void Update()
     {
-        if (isOpened)
+        if (readyToSpawn)
         {
-            
+            if (spwanWaitTime > 0)
+            {
+                spwanWaitTime -= Time.deltaTime;
+            }
+            else
+            {
+                SpawnBossInFlowCanvas();
+
+            }
         }
+
     }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !isOpened)
         {
-            //if (isOpened!)
-            //{
-                canInteract = true;
-                EventManager.Instance.TriggerEvent(CustomEventType.InteractObjectIn);
-            //}
+            canInteract = true;
+            EventManager.Instance.TriggerEvent(CustomEventType.InteractObjectIn);
         }
 
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !isOpened)
         {
-            //if (isOpened!)
-            //{
-                canInteract = false;
-                EventManager.Instance.TriggerEvent(CustomEventType.InteractObjectOut);
-            //}
+            canInteract = false;
+            EventManager.Instance.TriggerEvent(CustomEventType.InteractObjectOut);
 
         }
 
     }
 
-
+    
     public void AttemptInteract()
     {
-        // È·±£Íæ¼ÒÓë´«ËÍÃÅ´¦ÓÚ½»»¥×´Ì¬
+        // È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë´«ï¿½ï¿½ï¿½Å´ï¿½ï¿½Ú½ï¿½ï¿½ï¿½×´Ì¬
         if (canInteract)
         {
             animator.SetTrigger("Opening");
-            SpawnBossInFlowCanvas();
+            EventManager.Instance.TriggerEvent(CustomEventType.InteractObjectOut);
+
+            isOpened = true;
+            spwanWaitTime = 1f;
+            readyToSpawn = true;
+
         }
     }
 
@@ -83,6 +92,6 @@ public class NpcGenerator : MonoBehaviour
         //Debug.Log("Boss Summoned!");
 
         NodeCanvas.Framework.Graph.SendGlobalEvent("SpwanBoss", 0, flowScript);
-        isOpened = true;
+        readyToSpawn = false;
     }
 }
