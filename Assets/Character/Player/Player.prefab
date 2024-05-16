@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 25
-  knockback: {x: 0.2, y: 0}
+  knockback: {x: 2.5, y: 0}
   stunRatio: 0.1
   canClearCooldown: 0
   ClearCooldown:
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 15
-  knockback: {x: 0, y: 0}
+  knockback: {x: -5, y: 1}
   stunRatio: 0.1
   canClearCooldown: 0
   ClearCooldown:
@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 30
-  knockback: {x: 1.5, y: 0}
+  knockback: {x: 6, y: 0}
   stunRatio: 0.1
   canClearCooldown: 0
   ClearCooldown:
@@ -524,7 +524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 5
-  knockback: {x: 0, y: 0.2}
+  knockback: {x: 0, y: 1.3}
   stunRatio: 0
   canClearCooldown: 0
   ClearCooldown:
@@ -640,7 +640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 20
-  knockback: {x: 1.5, y: 0}
+  knockback: {x: 0, y: 3.5}
   stunRatio: 0.1
   canClearCooldown: 0
   ClearCooldown:
@@ -783,7 +783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 20
-  knockback: {x: 0, y: 1.5}
+  knockback: {x: 0, y: 6}
   stunRatio: 0.1
   canClearCooldown: 0
   ClearCooldown:
@@ -895,7 +895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 27
-  knockback: {x: 1, y: 0.5}
+  knockback: {x: 3.5, y: 0}
   stunRatio: 0.1
   canClearCooldown: 0
   ClearCooldown:
@@ -1037,7 +1037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 15
-  knockback: {x: 0.5, y: 0.5}
+  knockback: {x: 2, y: 5}
   stunRatio: 0.1
   canClearCooldown: 1
   ClearCooldown:
@@ -1149,7 +1149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 50
-  knockback: {x: 2.5, y: 1.5}
+  knockback: {x: 5, y: 6}
   stunRatio: 0.1
   canClearCooldown: 0
   ClearCooldown:
@@ -1264,7 +1264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 20
-  knockback: {x: 0, y: 0}
+  knockback: {x: 2, y: 0}
   stunRatio: 0.08
   canClearCooldown: 0
   ClearCooldown:
@@ -1379,7 +1379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 5
-  knockback: {x: 0, y: 0.2}
+  knockback: {x: 0, y: 1.3}
   stunRatio: 0
   canClearCooldown: 0
   ClearCooldown:
@@ -1491,7 +1491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 10
-  knockback: {x: 0, y: 0}
+  knockback: {x: 4, y: 0.5}
   stunRatio: 0.1
   canClearCooldown: 0
   ClearCooldown:
@@ -2360,7 +2360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 22
-  knockback: {x: 0, y: 0}
+  knockback: {x: 3, y: 0}
   stunRatio: 0.1
   canClearCooldown: 0
   ClearCooldown:

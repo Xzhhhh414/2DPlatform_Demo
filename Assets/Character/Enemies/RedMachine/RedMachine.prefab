@@ -287,7 +287,7 @@ MonoBehaviour:
   KnockBackRate: 1
   walkAcceleration: 50
   maxSpeed: 5.8
-  walkStopRate: 3
+  walkStopRate: 0.01
   attackZone: {fileID: 7541528397675991433}
   cliffDetectionZone: {fileID: 6455040145224500777}
   _hasTarget: 0
@@ -319,7 +319,7 @@ MonoBehaviour:
     maxNormalAngle: 0
   groundDistance: 0.05
   wallDistance: 0.2
-  ceilingDistance: 0.05
+  ceilingDistance: 0.02
   _isGrounded: 0
   _isOnWall: 0
   _isOnWCeiling: 0
