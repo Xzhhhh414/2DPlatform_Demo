@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 91e2b743559c204449d1a9ee6fa8fe15
+guid: 650f7a01302e7a24c84277280531003c
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,78 +119,38 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Hurt_Frame_0
+  - name: Hurt1_Frame_0
     originalName: 
-    pivot: {x: 0.625, y: 0}
+    pivot: {x: 0.6769231, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 75
+      width: 65
+      height: 66
+    spriteID: 199c6ab5e46a98949827ce19633bfdb5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 75}
+  - name: Hurt1_Frame_1
+    originalName: 
+    pivot: {x: 0.6619718, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 72
-      height: 80
-    spriteID: 5285410872efc1f44a528680651b85fc
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 1, y: 4}
-  - name: Hurt_Frame_1
-    originalName: 
-    pivot: {x: 0.60273975, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 84
-      y: 4
-      width: 72
-      height: 77
-    spriteID: 615d05265680e5b4fb8694e18d571ff0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 80, y: 4}
-  - name: Hurt_Frame_2
-    originalName: 
-    pivot: {x: 0.625, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 92
-      width: 72
-      height: 80
-    spriteID: 13e1dfcd57fc5ef408ee2f5dbc1f71a0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 1, y: 92}
-  - name: Hurt_Frame_3
-    originalName: 
-    pivot: {x: 0.5774648, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 180
       width: 71
-      height: 72
-    spriteID: ab7bfc4f64aa8644fb9640548d96e08e
+      height: 63
+    spriteID: 0ab32390cbf33ad4d91c15ec23b364e2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -198,19 +158,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -3, y: 180}
-  - name: Hurt_Frame_4
+    uvTransform: {x: 3, y: 4}
+  - name: Hurt1_Frame_2
     originalName: 
-    pivot: {x: 0.5972222, y: 0}
+    pivot: {x: 0.6769231, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 84
-      y: 89
-      width: 72
-      height: 77
-    spriteID: 42f3d60f2a97e4447857d5c2ee80451a
+      x: 77
+      y: 75
+      width: 65
+      height: 66
+    spriteID: 7f209eb2404b1404794050aed9806d85
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -218,56 +178,96 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 79, y: 89}
+    uvTransform: {x: 73, y: 75}
+  - name: Hurt1_Frame_3
+    originalName: 
+    pivot: {x: 0.6615385, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 150
+      y: 75
+      width: 65
+      height: 63
+    spriteID: 3b49807c8c9cc8f45832ffa6640abce0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 145, y: 75}
+  - name: Hurt1_Frame_4
+    originalName: 
+    pivot: {x: 0.6615385, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 83
+      y: 4
+      width: 65
+      height: 61
+    spriteID: 84515368bb01a3b49919a3ea7d4db21a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 78, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -201808745
-    name: Hurt
+    guid: 1259670074
+    name: Hurt1
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Hurt_Frame_0
+    - name: Hurt1_Frame_0
       frameIndex: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 96
-      spriteId: 5285410872efc1f44a528680651b85fc
-    - name: Hurt_Frame_1
+      spriteId: 199c6ab5e46a98949827ce19633bfdb5
+    - name: Hurt1_Frame_1
       frameIndex: 1
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 96
-      spriteId: 615d05265680e5b4fb8694e18d571ff0
-    - name: Hurt_Frame_2
+      spriteId: 0ab32390cbf33ad4d91c15ec23b364e2
+    - name: Hurt1_Frame_2
       frameIndex: 2
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 96
-      spriteId: 13e1dfcd57fc5ef408ee2f5dbc1f71a0
-    - name: Hurt_Frame_3
+      spriteId: 7f209eb2404b1404794050aed9806d85
+    - name: Hurt1_Frame_3
       frameIndex: 3
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 96
-      spriteId: ab7bfc4f64aa8644fb9640548d96e08e
-    - name: Hurt_Frame_4
+      spriteId: 3b49807c8c9cc8f45832ffa6640abce0
+    - name: Hurt1_Frame_4
       frameIndex: 4
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 96
-      spriteId: 42f3d60f2a97e4447857d5c2ee80451a
+      spriteId: 84515368bb01a3b49919a3ea7d4db21a
     linkedCells: []
     parentIndex: -1
   platformSettings: []
