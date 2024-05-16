@@ -1106,7 +1106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca3f392d60f403b4dbebae62e8536e44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boolName: canMove
+  boolName: canJump
   updateOnState: 1
   updateOnStateMachine: 0
   valueOnEnter: 0
@@ -3306,7 +3306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca3f392d60f403b4dbebae62e8536e44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boolName: canMove
+  boolName: canJump
   updateOnState: 1
   updateOnStateMachine: 0
   valueOnEnter: 0
@@ -3773,7 +3773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca3f392d60f403b4dbebae62e8536e44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boolName: canMove
+  boolName: canJump
   updateOnState: 1
   updateOnStateMachine: 0
   valueOnEnter: 0
