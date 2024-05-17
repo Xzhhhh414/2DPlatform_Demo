@@ -33,7 +33,7 @@ MonoBehaviour:
   floatName: skill02Cooldown
   updateOnStateEnter: 0
   updateOnStateExit: 0
-  updateOnStateMachineEnter: 0
+  updateOnStateMachineEnter: 1
   updateOnStateMachineExit: 0
   valueOnEnter: 5
   valueOnExit: 0
@@ -3137,7 +3137,7 @@ AnimatorStateMachine:
     m_Position: {x: 270, y: -210, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: -2035006683117913989}
-    m_Position: {x: 590, y: 90, z: 0}
+    m_Position: {x: 590, y: 100, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 1242422411920305148}
     m_Position: {x: 590, y: -70, z: 0}

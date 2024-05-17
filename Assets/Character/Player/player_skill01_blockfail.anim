@@ -40,7 +40,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.23333333
+        time: 0.2
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -65,19 +65,13 @@ AnimationClip:
       value: {fileID: 21300000, guid: 7ebf616158e2d7a4da4f686b895a9f73, type: 3}
     - time: 0.06666667
       value: {fileID: 21300000, guid: 303e10ba767cdbb4680a7af2462ca3fe, type: 3}
-    - time: 0.1
-      value: {fileID: 21300000, guid: 982f2891be7f3af438a93b3f20a47b3d, type: 3}
     - time: 0.13333334
       value: {fileID: 21300000, guid: 89e54ecc01d61a348811b3d2c97072d1, type: 3}
     - time: 0.16666667
-      value: {fileID: 21300000, guid: 60f788f4c552ae1489fb924c561aed8a, type: 3}
-    - time: 0.2
       value: {fileID: 21300000, guid: a3239623bb626ea42907de2c4ad1d188, type: 3}
-    - time: 0.23333333
+    - time: 0.2
       value: {fileID: 21300000, guid: b2b9fabe5a79263429fc75142405a88a, type: 3}
-    - time: 0.26666668
-      value: {fileID: 21300000, guid: 5181bab690eedac4b8e82073b7b63cc2, type: 3}
-    - time: 0.3
+    - time: 0.23333333
       value: {fileID: 21300000, guid: 81e33e76d324c354d949e730d12a0d3b, type: 3}
     attribute: m_Sprite
     path: 
@@ -113,19 +107,16 @@ AnimationClip:
     - {fileID: 21300000, guid: 33c105660c20c6440859efab34bb8dd9, type: 3}
     - {fileID: 21300000, guid: 7ebf616158e2d7a4da4f686b895a9f73, type: 3}
     - {fileID: 21300000, guid: 303e10ba767cdbb4680a7af2462ca3fe, type: 3}
-    - {fileID: 21300000, guid: 982f2891be7f3af438a93b3f20a47b3d, type: 3}
     - {fileID: 21300000, guid: 89e54ecc01d61a348811b3d2c97072d1, type: 3}
-    - {fileID: 21300000, guid: 60f788f4c552ae1489fb924c561aed8a, type: 3}
     - {fileID: 21300000, guid: a3239623bb626ea42907de2c4ad1d188, type: 3}
     - {fileID: 21300000, guid: b2b9fabe5a79263429fc75142405a88a, type: 3}
-    - {fileID: 21300000, guid: 5181bab690eedac4b8e82073b7b63cc2, type: 3}
     - {fileID: 21300000, guid: 81e33e76d324c354d949e730d12a0d3b, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.33333334
+    m_StopTime: 0.26666668
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -164,7 +155,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.23333333
+        time: 0.2
         value: 0
         inSlope: Infinity
         outSlope: Infinity

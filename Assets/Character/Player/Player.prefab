@@ -213,8 +213,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a5cb8f3f3195a4fbe2fac3034cef82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 15
-  knockback: {x: -5, y: 1}
+  attackDamage: 20
+  knockback: {x: 0, y: -5}
   stunRatio: 0.1
   canClearCooldown: 0
   ClearCooldown:
@@ -333,8 +333,8 @@ MonoBehaviour:
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: -100
-  preClip: {fileID: 0}
+  impulseFrameIndex: 2
+  preClip: {fileID: 7400000, guid: 954e8df226f7e1a48b18467ee9df6768, type: 2}
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 0
   hitModifyY: 0
@@ -782,17 +782,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a5cb8f3f3195a4fbe2fac3034cef82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 20
-  knockback: {x: 0, y: 6}
+  attackDamage: 35
+  knockback: {x: 3, y: 3}
   stunRatio: 0.1
   canClearCooldown: 0
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: -100
-  preClip: {fileID: 0}
-  shakeVelocity: {x: 0, y: 0}
-  shakeScpoe: 0
+  impulseFrameIndex: 18
+  preClip: {fileID: 7400000, guid: 1e746214c7a4c1d4c85f1d5711945238, type: 2}
+  shakeVelocity: {x: 0.2, y: 0.2}
+  shakeScpoe: 0.15
   hitModifyY: 0
   modifyY: 0
   hitFreezeXY: 0
@@ -1155,10 +1155,10 @@ MonoBehaviour:
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: -100
-  preClip: {fileID: 0}
-  shakeVelocity: {x: 0, y: 0}
-  shakeScpoe: 0
+  impulseFrameIndex: 0
+  preClip: {fileID: 7400000, guid: 32857f41b1406cd49a8dfdea30194145, type: 2}
+  shakeVelocity: {x: 0.3, y: 0.3}
+  shakeScpoe: 0.25
   hitModifyY: 0
   modifyY: 0
   hitFreezeXY: 0
@@ -1490,8 +1490,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a5cb8f3f3195a4fbe2fac3034cef82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 10
-  knockback: {x: 4, y: 0.5}
+  attackDamage: 20
+  knockback: {x: 0, y: 5}
   stunRatio: 0.1
   canClearCooldown: 0
   ClearCooldown:
