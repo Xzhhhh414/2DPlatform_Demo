@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2836052006912207197}
   - component: {fileID: 4484378081436706960}
   - component: {fileID: -7780556346147408747}
+  - component: {fileID: 8486793269839729014}
   m_Layer: 12
   m_Name: Money
   m_TagString: Untagged
@@ -118,7 +119,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00046691298, y: 0.7827722}
+  m_Offset: {x: 0.039326012, y: 0.74946433}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -129,7 +130,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9808931, y: 1.5655444}
+  m_Size: {x: 1.5923017, y: 1.4989287}
   m_EdgeRadius: 0
 --- !u!95 &-7780556346147408747
 Animator:
@@ -152,3 +153,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8486793269839729014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334565279754142242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f605c559209c3d40866879bd7976b2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

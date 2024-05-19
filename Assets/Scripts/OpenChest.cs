@@ -1,29 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
-using ParadoxNotion.Design;
 using FlowCanvas;
 
-
-public class NpcGenerator : MonoBehaviour
+public class OpenChest : MonoBehaviour
 {
-    public FlowScript flowScript; // 01ÂÖ≥Âç°ÁöÑflowScript
+    public FlowScript selfFlowCanvas; // ◊‘º∫µƒflowScript
+
     Animator animator;
+    Animator animatorDropingEffect;
+
     private bool canInteract = false;
     private bool readyToSpawn = false;
     private float spwanWaitTime;
 
     [SerializeField]
+    private GameObject droppingEffect;
     private bool isOpened = false;
-
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        animatorDropingEffect = droppingEffect.GetComponent<Animator>();
+
         EventManager.Instance.AddListener(CustomEventType.AttemptInteractObject, AttemptInteract);
     }
-
 
     private void OnDestroy()
     {
@@ -31,7 +34,9 @@ public class NpcGenerator : MonoBehaviour
 
     }
 
-    private void Update()
+
+    // Update is called once per frame
+    void Update()
     {
         if (readyToSpawn)
         {
@@ -45,16 +50,14 @@ public class NpcGenerator : MonoBehaviour
 
             }
         }
-
     }
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && !isOpened)
         {
             canInteract = true;
-            EventManager.Instance.TriggerEvent<string>(CustomEventType.InteractObjectIn, "NpcGenerator");
+            EventManager.Instance.TriggerEvent<string>(CustomEventType.InteractObjectIn, "OpenChest");
         }
 
     }
@@ -67,18 +70,16 @@ public class NpcGenerator : MonoBehaviour
             EventManager.Instance.TriggerEvent(CustomEventType.InteractObjectOut);
 
         }
-
     }
 
-    
     public void AttemptInteract()
     {
 
         if (canInteract)
         {
             animator.SetTrigger("Opening");
+            animatorDropingEffect.SetTrigger("Dropping") ;
             EventManager.Instance.TriggerEvent(CustomEventType.InteractObjectOut);
-
 
             isOpened = true;
             spwanWaitTime = 1f;
@@ -92,7 +93,7 @@ public class NpcGenerator : MonoBehaviour
         //flowScript.SendEvent(eventName);
         //Debug.Log("Boss Summoned!");
 
-        NodeCanvas.Framework.Graph.SendGlobalEvent("SpwanBoss", 0, flowScript);
+        NodeCanvas.Framework.Graph.SendGlobalEvent("RandomResult", 0, selfFlowCanvas);
         readyToSpawn = false;
     }
 }
