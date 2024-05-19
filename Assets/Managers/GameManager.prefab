@@ -148,7 +148,8 @@ MonoBehaviour:
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"MaxMonsterCount":{"_value":30.0,"_name":"MaxMonsterCount","_id":"bb9bf015-fdbe-4e99-ab9c-e83a612929a7","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"BossGeneratorBornPos":{"_value":[],"_name":"BossGeneratorBornPos","_id":"b1b313c8-fcf0-4766-8221-48e4929245bd","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"BackGroundCollider2D":{"_name":"BackGroundCollider2D","_id":"f2650d69-a20d-428b-ad22-d0f886a30324","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Collider2D,
+    UnityEngine.Physics2DModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
   _objectReferences:
   - {fileID: 0}
   - {fileID: 3522140399348579629, guid: 30af61295a6d09c4ea84c11b2b319792, type: 3}
@@ -230,4 +231,7 @@ MonoBehaviour:
   - _json: '{"_value":[],"_name":"BossGeneratorBornPos","_id":"b1b313c8-fcf0-4766-8221-48e4929245bd","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_name":"BackGroundCollider2D","_id":"f2650d69-a20d-428b-ad22-d0f886a30324","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Collider2D,
+      UnityEngine.Physics2DModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
     _references: []
