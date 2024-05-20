@@ -17,7 +17,7 @@ public class SpellCooldown_Skill03 : MonoBehaviour
     [SerializeField]
     private Image imageEdge;
     [SerializeField]
-    private Button skill03Button;
+    private Image skill03Icon;
     [SerializeField]
     private Sprite spriteOriginal;
     [SerializeField]
@@ -140,20 +140,20 @@ public class SpellCooldown_Skill03 : MonoBehaviour
 
     private void SetSkill03ButtonImage()
     {
-        Image buttonImage = skill03Button.GetComponent<Image>();
+        Image IconImage = skill03Icon.GetComponent<Image>();
 
         if (buttonState == 1)
         {
-            buttonImage.sprite = spriteOriginal;
+            IconImage.sprite = spriteOriginal;
 
         }else if (buttonState == 2) 
         {
-            buttonImage.sprite = spriteClearCD;
+            IconImage.sprite = spriteClearCD;
         }
 
-        if (buttonImage = null)
+        if (IconImage = null)
         {
-            buttonImage.sprite = spriteOriginal;
+            IconImage.sprite = spriteOriginal;
         }
         
         
