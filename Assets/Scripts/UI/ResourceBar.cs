@@ -27,17 +27,8 @@ public class ResourceBar : MonoBehaviour
 
     private void MoneyAdd(int number)
     {
-        if (number != null) // 检查 Text 组件是否为空
-        {
-
-            moneyNumber += number;
-            numberText.text = moneyNumber.ToString();
-        }
-        else
-        {
-            Debug.LogError("Text component is missing in ResourceBar");
-
-        }
+        moneyNumber += number;
+        numberText.text = moneyNumber.ToString();
 
     }
 
