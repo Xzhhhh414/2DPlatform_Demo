@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
-using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Rendering;
@@ -52,7 +51,7 @@ public class Damageable : MonoBehaviour
             }
         }
     }
-
+    
     [SerializeField]
     private bool _isAlive = true;
     public bool IsAlive

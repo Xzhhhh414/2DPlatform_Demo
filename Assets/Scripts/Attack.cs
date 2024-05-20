@@ -96,12 +96,15 @@ public class Attack : MonoBehaviour
     {
         Damageable damageable = collision.GetComponent<Damageable>();
         if (damageable == null) return;
+
         if (hitFreezeXY)
         {
             _hitFreezeXY = true;
         }
+
         if (beHitCharacterList.Contains(damageable)) return;
         Vector2 deliveredKnockback = transform.parent.localScale.x > 0 ? knockback : new Vector2(-knockback.x, knockback.y);
+
         bool gotHit = damageable.Hit(_attackDamage, deliveredKnockback);
         if (gotHit)
         {
@@ -213,7 +216,7 @@ public class Attack : MonoBehaviour
 
     private void OnDisable()
     {
-        Debug.Log("Attack OnDisable");
+        //Debug.Log("Attack OnDisable");
         _hitFreezeXY = false;
         beHitCharacterList.Clear();
     }
