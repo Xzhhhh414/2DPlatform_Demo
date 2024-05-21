@@ -200,29 +200,37 @@ public class Damageable : MonoBehaviour
     {
         if (hitEffect != null)
         {
-            Transform nearestHitEffectPos = GetNearestHitEffectPos(hitPosition);
-            Instantiate(hitEffect, nearestHitEffectPos.transform.position, Quaternion.identity);
+            Vector3 nearestHitEffectPos = GetNearestHitEffectPos(hitPosition);
+            Instantiate(hitEffect, nearestHitEffectPos, Quaternion.identity);
 
         }
 
     }
-    private Transform GetNearestHitEffectPos(Vector3 hitPosition)
+    private Vector3 GetNearestHitEffectPos(Vector3 hitPosition)
     {
-        Transform nearestHitEffectPos = null;
+        Vector3 nearestHitEffectPos = Vector3.zero;
         float minDistance = float.MaxValue;
-
         foreach (GameObject hitEffectPosObj in hitEffectPosArray)
         {
-            Transform hitEffectPos = hitEffectPosObj.transform;
-            float distance = Vector3.Distance(hitPosition, hitEffectPos.position);
+            Vector3 hitEffectPos = hitEffectPosObj.transform.position;
+            float distance = Vector3.Distance(hitPosition, hitEffectPos);
             if (distance < minDistance)
             {
                 minDistance = distance;
                 nearestHitEffectPos = hitEffectPos;
             }
         }
+        //Debug.Log("nearestHitEffectPos===="+ nearestHitEffectPos);
 
-        return nearestHitEffectPos;
+        if (nearestHitEffectPos == Vector3.zero)
+        {
+            return hitPosition; //如果没配，就在打击位置播
+        }
+        else
+        {
+            return nearestHitEffectPos;
+        }
+
     }
 
 }
