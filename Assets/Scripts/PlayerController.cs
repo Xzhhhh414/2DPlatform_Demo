@@ -15,7 +15,8 @@ public class PlayerController : Character
     private Vector2 moveInput;
     private bool isOnMoveHolding = false;
     private bool isOnAttackHolding = false;
-    
+    private float attackInputTimer = 0.0f;
+    private float attackInputInterval = 0.2f;
 
     TouchingDirections touchingDirections;
     Damageable damageable;
@@ -402,9 +403,14 @@ public class PlayerController : Character
 
         if (isOnAttackHolding)
         {
-            Attacking();
+            attackInputTimer += Time.deltaTime;
+            if (attackInputTimer >= attackInputInterval)
+            {
+                Attacking();
+                attackInputTimer = 0.0f;
+            }
+  
         }
-
 
 
 #if UNITY_EDITOR
@@ -587,11 +593,11 @@ public class PlayerController : Character
 
     public void OnAttack(InputAction.CallbackContext context)
     {
-        if (context.started)
-        {
-            Attacking();
-            isOnAttackHolding = true;
-        }
+        //if (context.started)
+        //{
+        //  Attacking();
+        //  isOnAttackHolding = true;
+        //}
 
         if (context.performed)
         {
@@ -603,7 +609,7 @@ public class PlayerController : Character
         if (context.canceled)
         {
             isOnAttackHolding = false;
-
+            attackInputTimer = 0.0f;
         }
     }
 
