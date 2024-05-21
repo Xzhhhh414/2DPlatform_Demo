@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Rendering;
+using UnityEngine.UIElements;
 
 public class Damageable : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class Damageable : MonoBehaviour
     Color originalColorOfSprite;
 
     Coroutine coroutine;
+
+
+
 
     [SerializeField]
     private int _maxHealth = 100;
@@ -133,7 +137,7 @@ public class Damageable : MonoBehaviour
 
     }
 
-    public bool Hit(int damage, Vector2 knockback)
+    public bool Hit(int damage, Vector2 knockback, GameObject hitEffect)
     {
         if (IsAlive && !hitInterval && !IsBlocking && !IsInvincible)
         {
@@ -147,7 +151,7 @@ public class Damageable : MonoBehaviour
             damageableHit?.Invoke(damage, knockback);
             CharacterEvents.characterDamaged.Invoke(gameObject, damage);
 
-
+            PlayHitEffect(hitEffect);
 
             return true;
         }
@@ -187,5 +191,19 @@ public class Damageable : MonoBehaviour
         yield return new WaitForSeconds(changeColorTime);
 
         sprite.color = oriColor;
+    }
+
+
+    [SerializeField, Label("爆点特效位置")]
+    private GameObject hitEffectPos;
+    private void PlayHitEffect(GameObject hitEffect)
+    {
+        if (hitEffect != null)
+        {
+            Instantiate(hitEffect, hitEffectPos.transform.position, Quaternion.identity);
+            //hitEffect.transform.SetParent(hitEffectPos.transform, false);
+
+        }
+
     }
 }

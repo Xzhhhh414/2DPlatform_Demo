@@ -10,6 +10,8 @@ public class Projectile : MonoBehaviour
     public Vector2 movespeed = new Vector2(3f, 0);
     public Vector2 knockback = Vector2.zero;
 
+    public GameObject hitEffect;
+
     Rigidbody2D rb;
 
     private void Awake()
@@ -32,7 +34,7 @@ public class Projectile : MonoBehaviour
             Vector2 deliveredKnockback = transform.localScale.x > 0 ? knockback : new Vector2(-knockback.x, knockback.y);
 
             //Vector2 deliveredKnockback = new Vector2(0, 0);
-            bool gotHit = damageable.Hit(damage, deliveredKnockback);
+            bool gotHit = damageable.Hit(damage, deliveredKnockback, hitEffect);
 
             if (gotHit)
                 Debug.Log(collision.name + "hit for" + damage);

@@ -44,6 +44,7 @@ public class Attack : MonoBehaviour
     private float modifyY = 0;
     public Action<bool, float> ModifyY;
     #endregion
+
     #region 命中冻结XY轴
     [SerializeField, Label("是否命中冻结XY轴")]
     private bool hitFreezeXY = false;
@@ -53,13 +54,18 @@ public class Attack : MonoBehaviour
     private Rigidbody2D rb;
     bool isInFrameRangeResultOfFreeze;
     #endregion
+
     #region ReHit
     [SerializeField]
     List<Damageable> beHitCharacterList = new();
     private int LastFrame = -1;
     #endregion
+
     int lastStateHash = 0;
     AnimatorStateInfo stateInfo;
+
+    [SerializeField, Label("爆点特效")]
+    public GameObject hitEffect;
 
     private void Start()
     {
@@ -105,7 +111,7 @@ public class Attack : MonoBehaviour
         if (beHitCharacterList.Contains(damageable)) return;
         Vector2 deliveredKnockback = transform.parent.localScale.x > 0 ? knockback : new Vector2(-knockback.x, knockback.y);
 
-        bool gotHit = damageable.Hit(_attackDamage, deliveredKnockback);
+        bool gotHit = damageable.Hit(_attackDamage, deliveredKnockback, hitEffect);
         if (gotHit)
         {
             if (damageableCoroutines.ContainsKey(damageable) && damageableCoroutines[damageable] != null)
@@ -127,6 +133,8 @@ public class Attack : MonoBehaviour
                 //ClearCooldown.Invoke();
                 EventManager.Instance.TriggerEvent(CustomEventType.Skill03ClearCooldown);
             }
+
+
         }
         beHitCharacterList.Add(damageable);
     }
