@@ -106,7 +106,7 @@ MonoBehaviour:
   hitFreezeXY: 0
   freezeXY: {x: 0, y: 0}
   beHitCharacterList: []
-  hitEffect: {fileID: 0}
+  hitEffect: {fileID: 1007209590339875020, guid: 997c440f0b306b04ea444fc169759c23, type: 3}
 --- !u!1 &1153222320688570553
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 17
   knockback: {x: 0, y: 0}
-  stunRatio: 0.1
+  stunRatio: 0.2
   canClearCooldown: 0
   ClearCooldown:
     m_PersistentCalls:
@@ -306,7 +306,7 @@ MonoBehaviour:
   hitFreezeXY: 0
   freezeXY: {x: 0, y: 0}
   beHitCharacterList: []
-  hitEffect: {fileID: 0}
+  hitEffect: {fileID: 320744395548210819, guid: 3ea7eb38eb4e40a4fb314dbf24e1b998, type: 3}
 --- !u!1 &4197024874121266543
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,7 +499,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09282875, y: 2.52}
+  m_Offset: {x: -0.09282875, y: 2.55}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -774,7 +774,7 @@ MonoBehaviour:
   hitFreezeXY: 0
   freezeXY: {x: 0, y: 0}
   beHitCharacterList: []
-  hitEffect: {fileID: 0}
+  hitEffect: {fileID: 1007209590339875020, guid: 997c440f0b306b04ea444fc169759c23, type: 3}
 --- !u!1 &7556664283905867934
 GameObject:
   m_ObjectHideFlags: 0
