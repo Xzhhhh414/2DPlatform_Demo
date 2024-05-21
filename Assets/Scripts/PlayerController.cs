@@ -733,7 +733,7 @@ public class PlayerController : Character
             }
             lineRenderer.startWidth = 0.1f;
             lineRenderer.endWidth = 0.1f;
-            lineRenderer.colorGradient = detectionGradient;
+            // lineRenderer.colorGradient = detectionGradient;
             lineRenderer.positionCount = 2;
             lineRenderer.SetPosition(0, grabbingHand.position);
             lineRenderer.SetPosition(1, grabPosition);
@@ -772,9 +772,9 @@ public class PlayerController : Character
         {
             rb.gravityScale = 0;
             progress += Time.deltaTime;
-            lineRenderer.startWidth = 0.26f;
-            lineRenderer.endWidth = 0.26f;
-            lineRenderer.colorGradient = grabGradient;
+            lineRenderer.startWidth = 3f;
+            lineRenderer.endWidth = 3f;
+            // lineRenderer.colorGradient = grabGradient;
             lineRenderer.enabled = true;
             waveRate -= Time.deltaTime * ropeSetRope;
             if (waveRate > 0)
