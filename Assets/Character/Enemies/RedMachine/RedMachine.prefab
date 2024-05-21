@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8647569366477899321}
   m_Layer: 8
-  m_Name: HitEffectPos
+  m_Name: HitEffectPos_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -409,7 +409,8 @@ MonoBehaviour:
   hitIntervalTime: 0
   changeColorTime: 0
   hurtColor: {r: 1, g: 0, b: 0, a: 1}
-  hitEffectPos: {fileID: 1103184779572621434}
+  hitEffectPosArray:
+  - {fileID: 1103184779572621434}
 --- !u!114 &3025744860956657632
 MonoBehaviour:
   m_ObjectHideFlags: 0

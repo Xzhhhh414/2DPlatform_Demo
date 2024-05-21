@@ -162,7 +162,8 @@ MonoBehaviour:
   hitIntervalTime: 0.25
   changeColorTime: 0
   hurtColor: {r: 1, g: 0, b: 0, a: 1}
-  hitEffectPos: {fileID: 6044050635972260606}
+  hitEffectPosArray:
+  - {fileID: 6044050635972260606}
 --- !u!95 &204077961074298661
 Animator:
   serializedVersion: 5
