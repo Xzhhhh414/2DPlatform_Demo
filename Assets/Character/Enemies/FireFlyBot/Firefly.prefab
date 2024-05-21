@@ -39,6 +39,7 @@ Transform:
   - {fileID: 2031294376905247443}
   - {fileID: 3140747520124482719}
   - {fileID: 6848087802950485580}
+  - {fileID: 2909520365676860352}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7551012797831096553
@@ -160,6 +161,7 @@ MonoBehaviour:
   hitIntervalTime: 0.25
   changeColorTime: 0
   hurtColor: {r: 1, g: 0, b: 0, a: 1}
+  hitEffectPos: {fileID: 9172064537781954176}
 --- !u!95 &204077961074298661
 Animator:
   serializedVersion: 5
@@ -452,3 +454,34 @@ CapsuleCollider2D:
   m_Offset: {x: 2.9, y: -2.86}
   m_Size: {x: 3.39, y: 9.51}
   m_Direction: 1
+--- !u!1 &9172064537781954176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2909520365676860352}
+  m_Layer: 8
+  m_Name: HitEffectPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2909520365676860352
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9172064537781954176}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.24, y: 0.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3906881211269733644}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

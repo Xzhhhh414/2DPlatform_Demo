@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1103184779572621434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8647569366477899321}
+  m_Layer: 8
+  m_Name: HitEffectPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8647569366477899321
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103184779572621434}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.3, y: 2.63, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1643534007564350675}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1439584510151988288
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,6 +177,7 @@ Transform:
   - {fileID: 429346695189150405}
   - {fileID: 6047386832346151958}
   - {fileID: 4720070817373532758}
+  - {fileID: 8647569366477899321}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6970840597294661560
@@ -377,6 +409,7 @@ MonoBehaviour:
   hitIntervalTime: 0
   changeColorTime: 0
   hurtColor: {r: 1, g: 0, b: 0, a: 1}
+  hitEffectPos: {fileID: 1103184779572621434}
 --- !u!114 &3025744860956657632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -612,3 +645,4 @@ MonoBehaviour:
   hitFreezeXY: 0
   freezeXY: {x: 0, y: 0}
   beHitCharacterList: []
+  hitEffect: {fileID: 0}
