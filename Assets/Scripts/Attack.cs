@@ -67,6 +67,9 @@ public class Attack : MonoBehaviour
     [SerializeField, Label("爆点特效")]
     public GameObject hitEffect;
 
+    private Vector3 firstContactPoint = Vector3.zero; // 记录第一个接触点
+    private Vector3 secondContactPoint = Vector3.zero; // 记录第一个接触点
+
     private void Start()
     {
         animator = GetComponentInParent<Animator>();
@@ -96,6 +99,7 @@ public class Attack : MonoBehaviour
             _attackDamage = attackDamage;
         }
 #endif
+        firstContactPoint = collision.ClosestPoint(transform.position);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -111,7 +115,11 @@ public class Attack : MonoBehaviour
         if (beHitCharacterList.Contains(damageable)) return;
         Vector2 deliveredKnockback = transform.parent.localScale.x > 0 ? knockback : new Vector2(-knockback.x, knockback.y);
 
-        bool gotHit = damageable.Hit(_attackDamage, deliveredKnockback, hitEffect);
+        secondContactPoint = collision.ClosestPoint(transform.position);
+        Vector3 hitPosition = (firstContactPoint + secondContactPoint) / 2f;
+
+
+        bool gotHit = damageable.Hit(_attackDamage, deliveredKnockback, hitEffect, hitPosition);
         if (gotHit)
         {
             if (damageableCoroutines.ContainsKey(damageable) && damageableCoroutines[damageable] != null)

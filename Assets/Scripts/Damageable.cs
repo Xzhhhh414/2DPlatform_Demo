@@ -137,7 +137,7 @@ public class Damageable : MonoBehaviour
 
     }
 
-    public bool Hit(int damage, Vector2 knockback, GameObject hitEffect)
+    public bool Hit(int damage, Vector2 knockback, GameObject hitEffect, Vector3 hitPosition)
     {
         if (IsAlive && !hitInterval && !IsBlocking && !IsInvincible)
         {
@@ -151,7 +151,7 @@ public class Damageable : MonoBehaviour
             damageableHit?.Invoke(damage, knockback);
             CharacterEvents.characterDamaged.Invoke(gameObject, damage);
 
-            PlayHitEffect(hitEffect);
+            PlayHitEffect(hitEffect, hitPosition);
 
             return true;
         }
@@ -195,15 +195,34 @@ public class Damageable : MonoBehaviour
 
 
     [SerializeField, Label("爆点特效位置")]
-    private GameObject hitEffectPos;
-    private void PlayHitEffect(GameObject hitEffect)
+    private GameObject[] hitEffectPosArray;
+    private void PlayHitEffect(GameObject hitEffect, Vector3 hitPosition)
     {
         if (hitEffect != null)
         {
-            Instantiate(hitEffect, hitEffectPos.transform.position, Quaternion.identity);
-            //hitEffect.transform.SetParent(hitEffectPos.transform, false);
+            Transform nearestHitEffectPos = GetNearestHitEffectPos(hitPosition);
+            Instantiate(hitEffect, nearestHitEffectPos.transform.position, Quaternion.identity);
 
         }
 
     }
+    private Transform GetNearestHitEffectPos(Vector3 hitPosition)
+    {
+        Transform nearestHitEffectPos = null;
+        float minDistance = float.MaxValue;
+
+        foreach (GameObject hitEffectPosObj in hitEffectPosArray)
+        {
+            Transform hitEffectPos = hitEffectPosObj.transform;
+            float distance = Vector3.Distance(hitPosition, hitEffectPos.position);
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                nearestHitEffectPos = hitEffectPos;
+            }
+        }
+
+        return nearestHitEffectPos;
+    }
+
 }
