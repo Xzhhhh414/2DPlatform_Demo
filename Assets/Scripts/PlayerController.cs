@@ -14,6 +14,8 @@ public class PlayerController : Character
     private int airJumpsLeft; // 记录剩余的空中跳跃次数
     private Vector2 moveInput;
     private bool isOnMoveHolding = false;
+    private bool isOnAttackHolding = false;
+    
 
     TouchingDirections touchingDirections;
     Damageable damageable;
@@ -398,11 +400,13 @@ public class PlayerController : Character
             airJumpsLeft = maxAirJumps; // 如果在地面上，重置空中跳跃次数
         }
 
-        //if (Input.GetKeyDown(KeyCode.Q))
-        //{
-        //    grabDetection.circleCollider2D.enabled = true;
-        //    startGrab = true;
-        //}
+        if (isOnAttackHolding)
+        {
+            Attacking();
+        }
+
+
+
 #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
@@ -548,18 +552,6 @@ public class PlayerController : Character
     }
 
 
-    //public void OnRun(InputAction.CallbackContext context)
-    //{
-    //    if (context.started)
-    //    {
-    //        IsRunning = true;
-    //    }
-    //    else if (context.canceled)
-    //    {
-    //        IsRunning = false;
-    //    }
-    //}
-
     [SerializeField]
     bool isJumping;
     public void OnJump(InputAction.CallbackContext context)
@@ -595,9 +587,30 @@ public class PlayerController : Character
 
     public void OnAttack(InputAction.CallbackContext context)
     {
-        if (context.performed && CanAttack)
+        if (context.started)
         {
-            //animator.SetTrigger(AnimationStrings.attackTrigger);
+            Attacking();
+            isOnAttackHolding = true;
+        }
+
+        if (context.performed)
+        {
+            Attacking();
+            isOnAttackHolding = true;
+
+        }
+
+        if (context.canceled)
+        {
+            isOnAttackHolding = false;
+
+        }
+    }
+
+    private void Attacking()
+    {
+        if (CanAttack)
+        {
             animator.SetTriggerByTime(AnimationStrings.attackTrigger, 0.3f);
         }
 
