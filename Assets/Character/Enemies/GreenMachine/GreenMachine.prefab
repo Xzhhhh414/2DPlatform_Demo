@@ -587,8 +587,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7441624599175900853}
-  - component: {fileID: 3383768387023431746}
   - component: {fileID: 5622271817453602973}
+  - component: {fileID: 1180838310763241129}
   m_Layer: 10
   m_Name: ExplosionAttack
   m_TagString: Untagged
@@ -611,8 +611,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1643534007564350675}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &3383768387023431746
-BoxCollider2D:
+--- !u!114 &5622271817453602973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7057663347638441458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8a5cb8f3f3195a4fbe2fac3034cef82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 34
+  knockback: {x: 0, y: 0}
+  stunRatio: 0.1
+  canClearCooldown: 0
+  ClearCooldown:
+    m_PersistentCalls:
+      m_Calls: []
+  impulseFrameIndex: -100
+  preClip: {fileID: 0}
+  shakeVelocity: {x: 0, y: 0}
+  shakeScpoe: 1
+  hitModifyY: 0
+  modifyY: 0
+  hitFreezeXY: 0
+  freezeXY: {x: 0, y: 0}
+  beHitCharacterList: []
+  hitEffect: {fileID: 1007209590339875020, guid: 997c440f0b306b04ea444fc169759c23, type: 3}
+--- !u!58 &1180838310763241129
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -643,48 +672,9 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.41, y: 3.69}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 1.42, y: 3.07}
   serializedVersion: 2
-  m_Size: {x: 3.87, y: 3.54}
-  m_EdgeRadius: 0
---- !u!114 &5622271817453602973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7057663347638441458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8a5cb8f3f3195a4fbe2fac3034cef82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackDamage: 34
-  knockback: {x: 0, y: 0}
-  stunRatio: 0.1
-  canClearCooldown: 0
-  ClearCooldown:
-    m_PersistentCalls:
-      m_Calls: []
-  impulseFrameIndex: -100
-  preClip: {fileID: 0}
-  shakeVelocity: {x: 0, y: 0}
-  shakeScpoe: 1
-  hitModifyY: 0
-  modifyY: 0
-  hitFreezeXY: 0
-  freezeXY: {x: 0, y: 0}
-  beHitCharacterList: []
-  hitEffect: {fileID: 1007209590339875020, guid: 997c440f0b306b04ea444fc169759c23, type: 3}
+  m_Radius: 1.88
 --- !u!1 &7059701819735555438
 GameObject:
   m_ObjectHideFlags: 0
