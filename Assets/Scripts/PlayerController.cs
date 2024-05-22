@@ -8,6 +8,8 @@ public class PlayerController : Character
     public float walkSpeed;
     //public float runSpeed = 8f;
     public float airWalkSpeed;
+    public float airDrag; //空中水平速度衰减系数
+    public float airDragInDrifting; //钩爪飘逸状态下空中水平速度衰减系数
     public float jumpImpulse_OnGround;
     public float jumpImpulse_InAir;
     private int maxAirJumps = 1; // 设置最大的空中跳跃次数
@@ -399,6 +401,7 @@ public class PlayerController : Character
         if (touchingDirections.IsGrounded)
         {
             airJumpsLeft = maxAirJumps; // 如果在地面上，重置空中跳跃次数
+            isDrifting = false;
         }
 
         if (isOnAttackHolding)
@@ -458,29 +461,77 @@ public class PlayerController : Character
                 }
             }
         }
+
         else if (!isGrabbing)
         {
             if (touchingDirections.IsGrounded) //地面移动跳跃
-                rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
-            else if (moveInput.x != 0) //空中移动
             {
-                var tempVelocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
-                if (rb.velocity.magnitude <= tempVelocity.magnitude || rb.velocity.x * moveInput.x < 0)//判断方向是否有变化，手动移动速度是不是大于现在的速度，不然就走惯性
+                rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
+
+            }
+            else if (isDrifting) //使用钩爪后的飘逸阶段
+            {
+                if (moveInput.x != 0) // 有水平输入
                 {
-                    rb.velocity = tempVelocity;
+                    var tempVelocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
+                    if (rb.velocity.magnitude <= tempVelocity.magnitude || rb.velocity.x * moveInput.x < 0)//判断方向是否有变化，手动移动速度是不是大于现在的速度，不然就走惯性
+                    {
+                        rb.velocity = tempVelocity;
+                    }
+
+                    float targetSpeed = moveInput.x * CurrentMoveSpeed;
+                    rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, targetSpeed, airDragInDrifting), rb.velocity.y);
+                }
+                else // 没有水平输入，逐渐衰减 X 轴速度
+                {
+                    rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, airDragInDrifting), rb.velocity.y);
+
+                    if (Mathf.Abs(rb.velocity.x) < 0.1f)
+                    {
+                        rb.velocity = new Vector2(0, rb.velocity.y);
+                    }
+
+                }
+
+            }
+            else //空中移动
+            {
+                if (moveInput.x != 0) // 有水平输入
+                {
+                    var tempVelocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
+                    if (rb.velocity.magnitude <= tempVelocity.magnitude || rb.velocity.x * moveInput.x < 0)//判断方向是否有变化，手动移动速度是不是大于现在的速度，不然就走惯性
+                    {
+                        rb.velocity = tempVelocity;
+                    }
+
+                    float targetSpeed = moveInput.x * CurrentMoveSpeed;
+                    rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, targetSpeed, airDrag), rb.velocity.y);
+                }
+                else // 没有水平输入，逐渐衰减 X 轴速度
+                {
+                    rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, airDrag), rb.velocity.y);
+
+                    if (Mathf.Abs(rb.velocity.x) < 0.1f)
+                    {
+                        rb.velocity = new Vector2(0, rb.velocity.y);
+                    }
+
                 }
             }
+      
             if (isUsingSpecialY)
             {
                 rb.velocity = new Vector2(rb.velocity.x, 0);
                 rb.AddForce(Vector2.up * specialY, ForceMode2D.Impulse);
             }
+
             if (isHitModifyY)
             {
                 rb.velocity = new Vector2(rb.velocity.x, 0);
                 rb.AddForce(Vector2.up * hitModifyY, ForceMode2D.Impulse);
                 isHitModifyY = false;
             }
+
             animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
 
         }
@@ -728,6 +779,9 @@ public class PlayerController : Character
     Transform grabbingHand;
     Gradient detectionGradient = new();
     Gradient grabGradient = new();
+    private bool isDrifting; //钩爪使用成功后的飘逸阶段
+
+
     void Grabable()
     {
         if (grabDetection.IsDecteted && !isGrabbing)
@@ -828,6 +882,7 @@ public class PlayerController : Character
                 rb.AddForce(dir.normalized * grabPoint.Force, ForceMode2D.Impulse);
                 rb.gravityScale = 4;
                 animator.Play("player_falling");
+                isDrifting = true;
             }
         }
         else
