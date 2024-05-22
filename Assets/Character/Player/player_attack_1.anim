@@ -22,46 +22,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
         time: 0.033333335
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.13333334
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Enabled
-    path: SwordAttack1
-    classID: 60
-    script: {fileID: 0}
-    flags: 0
-  - serializedVersion: 2
-    curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
         value: 1.5
         inSlope: 0
         outSlope: 0
@@ -70,7 +31,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.23333333
+        time: 0.33333334
         value: 1.5
         inSlope: 0
         outSlope: 0
@@ -86,19 +47,75 @@ AnimationClip:
     classID: 114
     script: {fileID: 11500000, guid: c0b1cb2a71eae694a8979da9b0aed90c, type: 3}
     flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.033333335
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.1
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.23333333
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.33333334
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Enabled
+    path: SwordAttack1
+    classID: 60
+    script: {fileID: 0}
+    flags: 0
   m_PPtrCurves:
   - serializedVersion: 2
     curve:
-    - time: 0
-      value: {fileID: 21300000, guid: 1babd8c3baa304549b5e00870699bdf5, type: 3}
     - time: 0.033333335
-      value: {fileID: 21300000, guid: 0efb129d4ff8bbd479e5fa4b494287bc, type: 3}
+      value: {fileID: 21300000, guid: d639df969eed33d43a347db2c5a9ee26, type: 3}
     - time: 0.06666667
-      value: {fileID: 21300000, guid: f06a2ef4186987d43a5486512d46eb6c, type: 3}
+      value: {fileID: 21300000, guid: 9551925755d2cf14789b1b0afe6d90c0, type: 3}
+    - time: 0.1
+      value: {fileID: 21300000, guid: 74b471d348fd70b45b4eefe6c41a2369, type: 3}
+    - time: 0.13333334
+      value: {fileID: 21300000, guid: 737e0c87c73843e47854fdf2c0662082, type: 3}
     - time: 0.16666667
-      value: {fileID: 21300000, guid: a5abc12195ce22b4d8fd07a38790a3aa, type: 3}
+      value: {fileID: 21300000, guid: f06a2ef4186987d43a5486512d46eb6c, type: 3}
     - time: 0.2
-      value: {fileID: 21300000, guid: a5abc12195ce22b4d8fd07a38790a3aa, type: 3}
+      value: {fileID: 21300000, guid: 1394cbda1e63512428bd8cc00031df9a, type: 3}
+    - time: 0.23333333
+      value: {fileID: 21300000, guid: 7cc36f557f076b54b8d9c137647de8e9, type: 3}
+    - time: 0.26666668
+      value: {fileID: 21300000, guid: f84a27afd4911e84ca1ca570d0ac6104, type: 3}
+    - time: 0.3
+      value: {fileID: 21300000, guid: bf8c95298217aac4d9101ff1cf340983, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -139,17 +156,21 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 1babd8c3baa304549b5e00870699bdf5, type: 3}
-    - {fileID: 21300000, guid: 0efb129d4ff8bbd479e5fa4b494287bc, type: 3}
+    - {fileID: 21300000, guid: d639df969eed33d43a347db2c5a9ee26, type: 3}
+    - {fileID: 21300000, guid: 9551925755d2cf14789b1b0afe6d90c0, type: 3}
+    - {fileID: 21300000, guid: 74b471d348fd70b45b4eefe6c41a2369, type: 3}
+    - {fileID: 21300000, guid: 737e0c87c73843e47854fdf2c0662082, type: 3}
     - {fileID: 21300000, guid: f06a2ef4186987d43a5486512d46eb6c, type: 3}
-    - {fileID: 21300000, guid: a5abc12195ce22b4d8fd07a38790a3aa, type: 3}
-    - {fileID: 21300000, guid: a5abc12195ce22b4d8fd07a38790a3aa, type: 3}
+    - {fileID: 21300000, guid: 1394cbda1e63512428bd8cc00031df9a, type: 3}
+    - {fileID: 21300000, guid: 7cc36f557f076b54b8d9c137647de8e9, type: 3}
+    - {fileID: 21300000, guid: f84a27afd4911e84ca1ca570d0ac6104, type: 3}
+    - {fileID: 21300000, guid: bf8c95298217aac4d9101ff1cf340983, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.23333333
+    m_StopTime: 0.33333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -170,46 +191,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
         time: 0.033333335
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.13333334
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Enabled
-    path: SwordAttack1
-    classID: 60
-    script: {fileID: 0}
-    flags: 0
-  - serializedVersion: 2
-    curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
         value: 1.5
         inSlope: 0
         outSlope: 0
@@ -218,7 +200,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.23333333
+        time: 0.33333334
         value: 1.5
         inSlope: 0
         outSlope: 0
@@ -233,6 +215,54 @@ AnimationClip:
     path: 
     classID: 114
     script: {fileID: 11500000, guid: c0b1cb2a71eae694a8979da9b0aed90c, type: 3}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0.033333335
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.1
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.23333333
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.33333334
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Enabled
+    path: SwordAttack1
+    classID: 60
+    script: {fileID: 0}
     flags: 0
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
