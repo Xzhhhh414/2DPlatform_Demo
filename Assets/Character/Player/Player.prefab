@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 25
   knockback: {x: 2.5, y: 0}
-  stunRatio: 0.08
+  stunRatio: 0.05
   canClearCooldown: 0
   ClearCooldown:
     m_PersistentCalls:
@@ -215,8 +215,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 20
-  knockback: {x: 0, y: -5}
-  stunRatio: 0.1
+  knockback: {x: 1, y: 0}
+  stunRatio: 0.03
   canClearCooldown: 0
   ClearCooldown:
     m_PersistentCalls:
@@ -644,16 +644,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 20
-  knockback: {x: 0, y: 3.5}
-  stunRatio: 0.1
+  knockback: {x: 0, y: 1.5}
+  stunRatio: 0.16
   canClearCooldown: 0
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: 9
+  impulseFrameIndex: 7
   preClip: {fileID: 7400000, guid: fa6e5eccb1e15e84db2348e48a995e6b, type: 2}
-  shakeVelocity: {x: 0.05, y: 0.2}
-  shakeScpoe: 0.08
+  shakeVelocity: {x: 0.1, y: 0.2}
+  shakeScpoe: 0.12
   hitModifyY: 0
   modifyY: 0
   hitFreezeXY: 0
@@ -788,8 +788,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 35
-  knockback: {x: 3, y: 3}
-  stunRatio: 0.1
+  knockback: {x: 2.5, y: 2.5}
+  stunRatio: 0.2
   canClearCooldown: 0
   ClearCooldown:
     m_PersistentCalls:
@@ -803,7 +803,7 @@ MonoBehaviour:
   hitFreezeXY: 0
   freezeXY: {x: 0, y: 0}
   beHitCharacterList: []
-  hitEffect: {fileID: 8652856231077481741, guid: 9528556289e4ef54fa0fa2dabf005a8d, type: 3}
+  hitEffect: {fileID: 6948576206290454084, guid: add00e8dd50268e4d9ac127b1752ce55, type: 3}
 --- !u!1 &5772479327754245111
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,7 +1045,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 15
   knockback: {x: 2, y: 0}
-  stunRatio: 0.1
+  stunRatio: 0.13
   canClearCooldown: 1
   ClearCooldown:
     m_PersistentCalls:
@@ -1304,8 +1304,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 20
-  knockback: {x: 2, y: 0}
-  stunRatio: 0.05
+  knockback: {x: 1.5, y: 0}
+  stunRatio: 0.08
   canClearCooldown: 0
   ClearCooldown:
     m_PersistentCalls:
@@ -1533,8 +1533,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 20
-  knockback: {x: 0, y: 5}
-  stunRatio: 0.1
+  knockback: {x: 2, y: 0}
+  stunRatio: 0.08
   canClearCooldown: 0
   ClearCooldown:
     m_PersistentCalls:
