@@ -630,10 +630,10 @@ MonoBehaviour:
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: -100
-  preClip: {fileID: 0}
-  shakeVelocity: {x: 0, y: 0}
-  shakeScpoe: 1
+  impulseFrameIndex: 4
+  preClip: {fileID: 7400000, guid: f6a66f0daf7ac78428570353693f9135, type: 2}
+  shakeVelocity: {x: 0.08, y: 0.08}
+  shakeScpoe: 0.15
   hitModifyY: 0
   modifyY: 0
   hitFreezeXY: 0
