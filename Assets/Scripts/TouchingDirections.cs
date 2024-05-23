@@ -95,14 +95,16 @@ public class TouchingDirections : MonoBehaviour
     }// Update is called once per frame
     void FixedUpdate()
     {
-        if (touchingCol.Cast(Vector2.down, castFliter, groundHits, groundDistance) > 0)
+        if (touchingCol.Cast(Vector2.down, castFliter, groundHits, groundDistance) > 0 && animator.GetFloat(AnimationStrings.yVelocity)<0.1f)
             IsGrounded = CollisionDetector(groundHits, CollisionDirection.Horiziontal);
         else
             IsGrounded = false;
+
         if (touchingCol.Cast(wallCheckDirection, castFliter, wallHits, wallDistance) > 0)
             IsOnWall = CollisionDetector(wallHits, CollisionDirection.Vertical);
         else
             IsOnWall = false;
+
         IsOnCeiling = touchingCol.Cast(Vector2.up, castFliter, ceilingHits, ceilingDistance) > 0;
     }
     private void LateUpdate()
