@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -471,52 +472,13 @@ public class PlayerController : Character
             }
             else if (isDrifting) //使用钩爪后的飘逸阶段
             {
-                if (moveInput.x != 0) // 有水平输入
-                {
-                    var tempVelocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
-                    if (rb.velocity.magnitude <= tempVelocity.magnitude || rb.velocity.x * moveInput.x < 0)//判断方向是否有变化，手动移动速度是不是大于现在的速度，不然就走惯性
-                    {
-                        rb.velocity = tempVelocity;
-                    }
-
-                    float targetSpeed = moveInput.x * CurrentMoveSpeed;
-                    rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, targetSpeed, airDragInDrifting), rb.velocity.y);
-                }
-                else // 没有水平输入，逐渐衰减 X 轴速度
-                {
-                    rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, airDragInDrifting), rb.velocity.y);
-
-                    if (Mathf.Abs(rb.velocity.x) < 0.1f)
-                    {
-                        rb.velocity = new Vector2(0, rb.velocity.y);
-                    }
-
-                }
-
+                CalcVelocityInAir(airDragInDrifting);
+ 
             }
             else //空中移动
             {
-                if (moveInput.x != 0) // 有水平输入
-                {
-                    var tempVelocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
-                    if (rb.velocity.magnitude <= tempVelocity.magnitude || rb.velocity.x * moveInput.x < 0)//判断方向是否有变化，手动移动速度是不是大于现在的速度，不然就走惯性
-                    {
-                        rb.velocity = tempVelocity;
-                    }
-
-                    float targetSpeed = moveInput.x * CurrentMoveSpeed;
-                    rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, targetSpeed, airDrag), rb.velocity.y);
-                }
-                else // 没有水平输入，逐渐衰减 X 轴速度
-                {
-                    rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, airDrag), rb.velocity.y);
-
-                    if (Mathf.Abs(rb.velocity.x) < 0.1f)
-                    {
-                        rb.velocity = new Vector2(0, rb.velocity.y);
-                    }
-
-                }
+                CalcVelocityInAir(airDrag);
+     
             }
       
             if (isUsingSpecialY)
@@ -536,6 +498,31 @@ public class PlayerController : Character
 
         }
 
+    }
+
+    private void CalcVelocityInAir(float dragValue)
+    {
+        if (moveInput.x != 0) // 有水平输入
+        {
+            var tempVelocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
+            if (rb.velocity.magnitude <= tempVelocity.magnitude || rb.velocity.x * moveInput.x < 0)//判断方向是否有变化，手动移动速度是不是大于现在的速度，不然就走惯性
+            {
+                rb.velocity = tempVelocity;
+            }
+
+            float targetSpeed = moveInput.x * CurrentMoveSpeed;
+            rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, targetSpeed, dragValue), rb.velocity.y);
+        }
+        else // 没有水平输入，逐渐衰减 X 轴速度
+        {
+            rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, dragValue), rb.velocity.y);
+
+            if (Mathf.Abs(rb.velocity.x) < 0.1f)
+            {
+                rb.velocity = new Vector2(0, rb.velocity.y);
+            }
+
+        }
     }
 
     private void OnEnable()
