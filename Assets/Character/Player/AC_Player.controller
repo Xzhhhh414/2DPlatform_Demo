@@ -2265,10 +2265,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boolName: canMove
-  updateOnState: 1
+  updateOnState: 0
   updateOnStateMachine: 0
   valueOnEnter: 0
-  valueOnExit: 1
+  valueOnExit: 0
 --- !u!1101 &-2053159815108723461
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -3744,10 +3744,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boolName: canMove
-  updateOnState: 1
+  updateOnState: 0
   updateOnStateMachine: 0
   valueOnEnter: 0
-  valueOnExit: 1
+  valueOnExit: 0
 --- !u!114 &2105744036645518642
 MonoBehaviour:
   m_ObjectHideFlags: 1

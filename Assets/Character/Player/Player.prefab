@@ -329,16 +329,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 30
-  knockback: {x: 6, y: 0}
-  stunRatio: 0.1
+  knockback: {x: 4, y: 0}
+  stunRatio: 0.13
   canClearCooldown: 0
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
   impulseFrameIndex: 2
   preClip: {fileID: 7400000, guid: 954e8df226f7e1a48b18467ee9df6768, type: 2}
-  shakeVelocity: {x: 0, y: 0}
-  shakeScpoe: 0
+  shakeVelocity: {x: 0.2, y: 0.2}
+  shakeScpoe: 0.15
   hitModifyY: 0
   modifyY: 0
   hitFreezeXY: 0
