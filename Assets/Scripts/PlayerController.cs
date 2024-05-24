@@ -737,9 +737,9 @@ public class PlayerController : Character
         hitDamage = false;
 
     }
-    protected override void OnHit(int damage, Vector2 knockback)
-    {
-    }
+    //protected override void OnHit(int damage, Vector2 knockback)
+    //{
+    //}
 
     # region Grab
     public AnimationCurve animationCurve;

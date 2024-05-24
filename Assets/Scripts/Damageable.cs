@@ -9,7 +9,7 @@ using UnityEngine.UIElements;
 
 public class Damageable : MonoBehaviour
 {
-    public UnityEvent<int, Vector2> damageableHit;
+    public UnityEvent<int, Vector2, int, int> damageableHit;
     public UnityEvent damagebleDeath;
     public UnityEvent<int, int> healthChanged;
 
@@ -18,9 +18,6 @@ public class Damageable : MonoBehaviour
     Color originalColorOfSprite;
 
     Coroutine coroutine;
-
-
-
 
     [SerializeField]
     private int _maxHealth = 100;
@@ -77,10 +74,6 @@ public class Damageable : MonoBehaviour
         }
     }
 
-    [SerializeField]
-    private bool hitInterval = false;
-
-    public float hitIntervalTime = 0.25f;
 
     public bool IsInvincible
     {
@@ -111,8 +104,6 @@ public class Damageable : MonoBehaviour
     }
 
 
-
-
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -120,6 +111,9 @@ public class Damageable : MonoBehaviour
         originalColorOfSprite = sprite.color;
     }
 
+    [SerializeField]
+    private bool hitInterval = false;
+    public float hitIntervalTime = 0.25f;
 
     private void Update()
     {
@@ -137,7 +131,10 @@ public class Damageable : MonoBehaviour
 
     }
 
-    public bool Hit(int damage, Vector2 knockback, GameObject hitEffect, Vector3 hitPosition)
+    [SerializeField]
+    public int armorLevel; //耐冲等级
+
+    public bool Hit(int damage, Vector2 knockback,int knockbackLevel, GameObject hitEffect, Vector3 hitPosition)
     {
         if (IsAlive && !hitInterval && !IsBlocking && !IsInvincible)
         {
@@ -148,7 +145,7 @@ public class Damageable : MonoBehaviour
             if (coroutine != null) StopCoroutine(coroutine);
             coroutine = StartCoroutine(ChangeColorTemp(sprite, originalColorOfSprite, hurtColor));
             //LockVelocity = true;
-            damageableHit?.Invoke(damage, knockback);
+            damageableHit?.Invoke(damage, knockback, knockbackLevel, armorLevel);
             CharacterEvents.characterDamaged.Invoke(gameObject, damage);
 
             PlayHitEffect(hitEffect, hitPosition);
@@ -163,7 +160,7 @@ public class Damageable : MonoBehaviour
 
         return false;
     }
-
+ 
     public bool Heal(int healthRestore)
     {
         if (IsAlive && Health < MaxHealth)

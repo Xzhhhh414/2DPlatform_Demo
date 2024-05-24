@@ -9,9 +9,10 @@ using System;
 
 public class Attack : MonoBehaviour
 {
-    public int attackDamage;
-    public Vector2 knockback = Vector2.zero;
 
+    public int attackDamage;
+    public int knockbackLevel; //冲击等级
+    public Vector2 knockback = Vector2.zero;
 
     public float stunRatio = 0.1f;
     private Animator animator;
@@ -119,7 +120,7 @@ public class Attack : MonoBehaviour
         Vector3 hitPosition = (firstContactPoint + secondContactPoint) / 2f;
 
 
-        bool gotHit = damageable.Hit(_attackDamage, deliveredKnockback, hitEffect, hitPosition);
+        bool gotHit = damageable.Hit(_attackDamage, deliveredKnockback, knockbackLevel, hitEffect, hitPosition);
         if (gotHit)
         {
             if (damageableCoroutines.ContainsKey(damageable) && damageableCoroutines[damageable] != null)

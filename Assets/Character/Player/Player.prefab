@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 25
+  knockbackLevel: 0
   knockback: {x: 2.5, y: 0}
   stunRatio: 0.05
   canClearCooldown: 0
@@ -215,6 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 20
+  knockbackLevel: 0
   knockback: {x: 1, y: 0}
   stunRatio: 0.03
   canClearCooldown: 0
@@ -329,6 +331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 30
+  knockbackLevel: 0
   knockback: {x: 4, y: 0}
   stunRatio: 0.13
   canClearCooldown: 0
@@ -527,6 +530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 5
+  knockbackLevel: 0
   knockback: {x: 0, y: 1.3}
   stunRatio: 0
   canClearCooldown: 0
@@ -644,6 +648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 20
+  knockbackLevel: 0
   knockback: {x: 0, y: 1.5}
   stunRatio: 0.16
   canClearCooldown: 0
@@ -788,6 +793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 35
+  knockbackLevel: 0
   knockback: {x: 2.5, y: 2.5}
   stunRatio: 0.2
   canClearCooldown: 0
@@ -901,6 +907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 27
+  knockbackLevel: 0
   knockback: {x: 3.5, y: 0}
   stunRatio: 0.07
   canClearCooldown: 0
@@ -1044,6 +1051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 15
+  knockbackLevel: 0
   knockback: {x: 2, y: 0}
   stunRatio: 0.13
   canClearCooldown: 1
@@ -1188,6 +1196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 50
+  knockbackLevel: 0
   knockback: {x: 5, y: 6}
   stunRatio: 0.1
   canClearCooldown: 0
@@ -1304,6 +1313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 20
+  knockbackLevel: 0
   knockback: {x: 1.5, y: 0}
   stunRatio: 0.08
   canClearCooldown: 0
@@ -1420,6 +1430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 5
+  knockbackLevel: 0
   knockback: {x: 0, y: 1.3}
   stunRatio: 0
   canClearCooldown: 0
@@ -1533,6 +1544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 20
+  knockbackLevel: 0
   knockback: {x: 2, y: 0}
   stunRatio: 0.08
   canClearCooldown: 0
@@ -2131,11 +2143,12 @@ MonoBehaviour:
   healthChanged:
     m_PersistentCalls:
       m_Calls: []
+  ArmorLevel: 0
+  hitInterval: 0
+  hitIntervalTime: 0.25
   _maxHealth: 10000
   _health: 10000
   _isAlive: 1
-  hitInterval: 0
-  hitIntervalTime: 0.25
   changeColorTime: 0.1
   hurtColor: {r: 1, g: 0, b: 0, a: 0.7176471}
   hitEffectPosArray:
@@ -2408,6 +2421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 22
+  knockbackLevel: 0
   knockback: {x: 3, y: 0}
   stunRatio: 0.03
   canClearCooldown: 0

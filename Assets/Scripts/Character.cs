@@ -7,8 +7,12 @@ public class Character : MonoBehaviour
 
     protected Rigidbody2D rb;
 
-    protected virtual void OnHit(int damage, Vector2 knockback)
+    protected virtual void OnHit(int damage, Vector2 knockback, int knockbackLevel, int armorLevel)
     {
-        rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y) * KnockBackRate;
+        if (knockbackLevel >= armorLevel)
+        {
+            rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y) * KnockBackRate;
+
+        }
     }
 }
