@@ -42,6 +42,30 @@ public class EventManager : Singleton<EventManager>
             this.action -= action;
         }
     }
+    private class EventInfo<T, K> : IEventInfo
+    {
+        public Action<T, K> action;
+        public void Init(Action<T, K> action)
+        {
+            this.action = action;
+        }
+        public void Destory()
+        {
+            this.action -= action;
+        }
+    }
+    private class EventInfo<T, K, L> : IEventInfo
+    {
+        public Action<T, K, L> action;
+        public void Init(Action<T, K, L> action)
+        {
+            this.action = action;
+        }
+        public void Destory()
+        {
+            this.action -= action;
+        }
+    }
     Dictionary<CustomEventType, IEventInfo> eventDic = new();
 
     #region 添加事件监听
@@ -70,7 +94,32 @@ public class EventManager : Singleton<EventManager>
             eventInfo.Init(action);
             eventDic.Add(type, eventInfo);
         }
-
+    }
+    public void AddListener<T, K>(CustomEventType type, Action<T, K> action)
+    {
+        if (eventDic.ContainsKey(type))
+        {
+            (eventDic[type] as EventInfo<T, K>).action += action;
+        }
+        else
+        {
+            var eventInfo = new EventInfo<T, K>();
+            eventInfo.Init(action);
+            eventDic.Add(type, eventInfo);
+        }
+    }
+    public void AddListener<T, K, L>(CustomEventType type, Action<T, K, L> action)
+    {
+        if (eventDic.ContainsKey(type))
+        {
+            (eventDic[type] as EventInfo<T, K, L>).action += action;
+        }
+        else
+        {
+            var eventInfo = new EventInfo<T, K, L>();
+            eventInfo.Init(action);
+            eventDic.Add(type, eventInfo);
+        }
     }
     #endregion
 
@@ -87,6 +136,20 @@ public class EventManager : Singleton<EventManager>
         if (eventDic.ContainsKey(type))
         {
             (eventDic[type] as EventInfo<T>).action -= action;
+        }
+    }
+    public void RemoveListener<T, K>(CustomEventType type, Action<T, K> action)
+    {
+        if (eventDic.ContainsKey(type))
+        {
+            (eventDic[type] as EventInfo<T, K>).action -= action;
+        }
+    }
+    public void RemoveListener<T, K, L>(CustomEventType type, Action<T, K, L> action)
+    {
+        if (eventDic.ContainsKey(type))
+        {
+            (eventDic[type] as EventInfo<T, K, L>).action -= action;
         }
     }
     #endregion
@@ -106,6 +169,20 @@ public class EventManager : Singleton<EventManager>
             (eventDic[type] as EventInfo<T>).action?.Invoke(arg);
         }
     }
+    public void TriggerEvent<T, K>(CustomEventType type, T arg1, K arg2)
+    {
+        if (eventDic.ContainsKey(type))
+        {
+            (eventDic[type] as EventInfo<T, K>).action?.Invoke(arg1, arg2);
+        }
+    }
+    public void TriggerEvent<T, K, L>(CustomEventType type, T arg1, K arg2, L arg3)
+    {
+        if (eventDic.ContainsKey(type))
+        {
+            (eventDic[type] as EventInfo<T, K, L>).action?.Invoke(arg1, arg2, arg3);
+        }
+    }
     #endregion
 
     #region 移除事件
@@ -118,6 +195,4 @@ public class EventManager : Singleton<EventManager>
         }
     }
     #endregion
-
-
 }
