@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class HealthText : MonoBehaviour
 {
-    public Vector3 moveSpeed = new Vector3(0,75,0);
+    public float moveSpeed = 125f;
     public float timeToFade = 1f;
+    public GameObject followingObject;
 
     RectTransform textTransform;
     TextMeshProUGUI textMeshPro;
@@ -24,10 +26,21 @@ public class HealthText : MonoBehaviour
 
     private void Update()
     {
-        textTransform.position += moveSpeed * Time.deltaTime;
+        //if (followingObject != null)
+        //{
+        //    Vector3 screenPosition = Camera.main.WorldToScreenPoint(followingObject.transform.position );
+        //    textTransform.position = screenPosition;
 
+        //    textTransform.position += new Vector3(0, moveSpeed * Time.deltaTime, 0);
+        //}
+        //else
+        //{
+        //    textTransform.position += new Vector3(0, moveSpeed * Time.deltaTime, 0);
+        //}
+
+
+        textTransform.position += new Vector3(0, moveSpeed * Time.deltaTime, 0);
         timeElapsed += Time.deltaTime;
-
         if (timeElapsed < timeToFade)
         {
             float fadeAlpha = startColor.a * (1 - timeElapsed / timeToFade);

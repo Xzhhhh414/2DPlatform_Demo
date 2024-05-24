@@ -40,6 +40,13 @@ public class UIManager : MonoBehaviour
         TMP_Text tmpText = Instantiate(damageTextPrefab, spawnPosition, Quaternion.identity, gameCanvas.transform).GetComponent<TMP_Text>();
 
         tmpText.text = damageReceived.ToString();
+
+        HealthText healthText = tmpText.GetComponent<HealthText>();
+        if (healthText != null)
+        {
+            healthText.followingObject = character;
+        }
+
     }
     public void CharacterHealed(GameObject character, int healthRestored)
     {
