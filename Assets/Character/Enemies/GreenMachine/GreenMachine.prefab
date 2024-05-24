@@ -463,6 +463,7 @@ MonoBehaviour:
   _isAlive: 1
   hitInterval: 0
   hitIntervalTime: 0
+  armorLevel: 1
   changeColorTime: 0
   hurtColor: {r: 1, g: 0, b: 0, a: 1}
   hitEffectPosArray:
@@ -624,6 +625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 34
+  knockbackLevel: 0
   knockback: {x: 0, y: 0}
   stunRatio: 0.1
   canClearCooldown: 0
