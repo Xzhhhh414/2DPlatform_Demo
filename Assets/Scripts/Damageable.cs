@@ -141,7 +141,11 @@ public class Damageable : MonoBehaviour
             Health -= damage;
             //hitInterval = true;
 
-            animator.SetTrigger(AnimationStrings.hitTrigger);
+            if (knockbackLevel >= armorLevel)
+            {
+                animator.SetTrigger(AnimationStrings.hitTrigger);
+            }
+            
             if (coroutine != null) StopCoroutine(coroutine);
             coroutine = StartCoroutine(ChangeColorTemp(sprite, originalColorOfSprite, hurtColor));
             //LockVelocity = true;
