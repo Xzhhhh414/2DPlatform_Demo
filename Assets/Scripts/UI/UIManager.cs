@@ -22,14 +22,18 @@ public class UIManager : MonoBehaviour
 
     private void OnEnable()
     {
-        CharacterEvents.characterDamaged += CharacterTookDamage;
-        CharacterEvents.characterHealed += CharacterHealed;
+        //CharacterEvents.characterDamaged += CharacterTookDamage;
+        //CharacterEvents.characterHealed += CharacterHealed;
+        EventManager.Instance.AddListener<GameObject, int>(CustomEventType.characterDamaged, CharacterTookDamage);
+        EventManager.Instance.AddListener<GameObject, int>(CustomEventType.characterHealed, CharacterHealed);
     }
 
     private void OnDisable()
     {
-        CharacterEvents.characterDamaged -= CharacterTookDamage;
-        CharacterEvents.characterHealed -= CharacterHealed;
+        //CharacterEvents.characterDamaged -= CharacterTookDamage;
+        //CharacterEvents.characterHealed -= CharacterHealed;
+        EventManager.Instance.RemoveListener<GameObject, int>(CustomEventType.characterDamaged, CharacterTookDamage);
+        EventManager.Instance.RemoveListener<GameObject, int>(CustomEventType.characterHealed, CharacterHealed);
     }
 
 
