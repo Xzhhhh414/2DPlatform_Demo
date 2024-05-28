@@ -49,6 +49,15 @@ public class UIManager : MonoBehaviour
         if (healthText != null)
         {
             healthText.followingObject = character;
+
+            if (character.CompareTag("Player"))
+            {
+                healthText.textColor = Color.red;
+            }else
+            {
+                healthText.textColor = Color.white;
+            }
+            
         }
 
     }

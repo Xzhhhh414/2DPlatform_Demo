@@ -7,11 +7,15 @@ using UnityEngine.TextCore.Text;
 
 public class HealthText : MonoBehaviour
 {
-    public float moveSpeed = 125f;
-    public float timeToFade = 1f;
+    public float moveSpeed;
+    public float timeToFade;
     public GameObject followingObject;
+    public Color textColor;
 
-    RectTransform textTransform;
+    private Vector3 offset = new Vector3(1f, 1.5f, 0); 
+    private Vector3 worldPosition; // 储存初始的世界坐标位置
+
+    //RectTransform textTransform;
     TextMeshProUGUI textMeshPro;
 
     private float timeElapsed;
@@ -19,27 +23,28 @@ public class HealthText : MonoBehaviour
 
     private void Awake()
     {
-        textTransform = GetComponent<RectTransform>();
+        //textTransform = GetComponent<RectTransform>();
         textMeshPro = GetComponent<TextMeshProUGUI>();
-        startColor = textMeshPro.color;
+               
     }
+
+    private void Start()
+    {
+        worldPosition = followingObject.transform.position + offset;
+        textMeshPro.color = textColor;
+        startColor = textMeshPro.color;
+        textMeshPro.outlineWidth = 0.2f;
+    }
+
 
     private void Update()
     {
-        //if (followingObject != null)
-        //{
-        //    Vector3 screenPosition = Camera.main.WorldToScreenPoint(followingObject.transform.position );
-        //    textTransform.position = screenPosition;
 
-        //    textTransform.position += new Vector3(0, moveSpeed * Time.deltaTime, 0);
-        //}
-        //else
-        //{
-        //    textTransform.position += new Vector3(0, moveSpeed * Time.deltaTime, 0);
-        //}
+        Vector3 screenPosition = Camera.main.WorldToScreenPoint(worldPosition);
+        transform.position = screenPosition;
 
+        worldPosition += Vector3.up * moveSpeed * Time.deltaTime;
 
-        textTransform.position += new Vector3(0, moveSpeed * Time.deltaTime, 0);
         timeElapsed += Time.deltaTime;
         if (timeElapsed < timeToFade)
         {
