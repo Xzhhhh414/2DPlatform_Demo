@@ -75,7 +75,11 @@ using UnityEngine;
             this._healRate = characterData.healRate;
             this._currentHp = MaxHp;
         }
-        
+        //Initialize by Inspector
+        public void Initialize()
+        {
+            this._currentHp = MaxHp;
+        }
 
         #region Hp
         [SerializeField]
@@ -209,7 +213,7 @@ using UnityEngine;
         [SerializeField]
         private int _armorLv;
         private int _armorLvAdd;
-        private static readonly int _minArmorLv=1;
+        private static readonly int _minArmorLv=0;
         public int ArmorLv
         {
             get
@@ -226,7 +230,7 @@ using UnityEngine;
         #endregion
         
         #region AttackSpeedRate
-        [SerializeField]
+        //[SerializeField]
         private float _attackSpeed;
         //backward 4 demical bits
         private int _attackSpeedRate=10000;
@@ -248,7 +252,7 @@ using UnityEngine;
         #endregion
         
         #region Crit
-        [SerializeField]
+        //[SerializeField]
         private int _criticalRate;
         //backward 4 demical bits
         private int _criticalAdd;
@@ -265,7 +269,7 @@ using UnityEngine;
         {
             _criticalAdd+=add;
         }
-        [SerializeField]
+        //[SerializeField]
         private int _criticalDmg;
         //backward 4 demical bits
         private int _criticalDmgAdd;
@@ -285,7 +289,7 @@ using UnityEngine;
         #endregion
         
         #region Speed
-        [SerializeField]
+        //[SerializeField]
         private float _speed;
         //backward 4 demical bits
         private int _speedRate=10000;
@@ -302,7 +306,7 @@ using UnityEngine;
         {
             _speedRate = (int)Mathf.Round(_speedRate * (multi / 10000.0f));
         }
-        [SerializeField]
+        //[SerializeField]
         private float _airSpeed;
         //backward 4 demical bits
         public float AirSpeed
@@ -338,7 +342,7 @@ using UnityEngine;
         #endregion
         
         #region DmgRate
-        [SerializeField]
+        //[SerializeField]
         private int _dmgRate=10000;
         //backward 4 demical bits
         private int _dmgRateMulti=10000;
@@ -357,7 +361,7 @@ using UnityEngine;
         }
         
         
-        [SerializeField]
+        //[SerializeField]
         private int _fragileRate=10000;
         //backward 4 demical bits
         private int _fragileRateMulti=10000;
@@ -377,7 +381,7 @@ using UnityEngine;
         
         
         
-        [SerializeField]
+        //[SerializeField]
         private int _healRate=10000;
         //backward 4 demical bits
         private int _healRateMulti=10000;

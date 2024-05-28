@@ -8,18 +8,21 @@ public class PlayerController : Character
 {
     public float walkSpeed;
     //public float runSpeed = 8f;
+    
     public float airWalkSpeed;
     public float airDrag; //空中水平速度衰减系数
     public float airDragInDrifting; //钩爪飘逸状态下空中水平速度衰减系数
     public float jumpImpulse_OnGround;
     public float jumpImpulse_InAir;
-    private int maxAirJumps = 1; // 设置最大的空中跳跃次数
+    
+    
     private int airJumpsLeft; // 记录剩余的空中跳跃次数
     private Vector2 moveInput;
     private bool isOnMoveHolding = false;
     private bool isOnAttackHolding = false;
     private float attackInputTimer = 0.0f;
     private float attackInputInterval = 0.2f;
+    private Property prop;
 
     TouchingDirections touchingDirections;
     Damageable damageable;
@@ -112,10 +115,7 @@ public class PlayerController : Character
 
     public bool IsMoving
     {
-        get
-        {
-            return _IsMoving;
-        }
+        get { return _IsMoving; }
         private set
         {
             _IsMoving = value;
@@ -266,13 +266,14 @@ public class PlayerController : Character
         distanceJoint2D = GetComponent<DistanceJoint2D>();
         grabDetection = GetComponentInChildren<GrabDetection>();
         lineRenderer = GetComponent<LineRenderer>();
+        prop = this.GetComponent<Property>();
         grabbingHand = transform.Find("GrabbingHand");
     }
     private void Start()
     {
         wallLayerMask = LayerMask.GetMask("Ground");
         clearCDTimeLeft = clearCDMaxTime;
-        airJumpsLeft = maxAirJumps; // 初始化剩余的空中跳跃次数
+        airJumpsLeft = prop.MaxAirJumps; // 初始化剩余的空中跳跃次数
         distanceJoint2D.enabled = false;
         distanceJoint2D.autoConfigureDistance = false;
         //distanceJoint2D.anchor = grabbingHand.position;
@@ -401,7 +402,7 @@ public class PlayerController : Character
 
         if (touchingDirections.IsGrounded)
         {
-            airJumpsLeft = maxAirJumps; // 如果在地面上，重置空中跳跃次数
+            airJumpsLeft = prop.MaxAirJumps; // 如果在地面上，重置空中跳跃次数
             isDrifting = false;
         }
 

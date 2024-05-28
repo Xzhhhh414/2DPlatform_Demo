@@ -153,6 +153,7 @@ GameObject:
   - component: {fileID: 6235004766465508083}
   - component: {fileID: 9051693973942563693}
   - component: {fileID: 8672496328714748678}
+  - component: {fileID: 8401967972592082013}
   m_Layer: 8
   m_Name: Charger
   m_TagString: Monster
@@ -422,8 +423,6 @@ MonoBehaviour:
   healthChanged:
     m_PersistentCalls:
       m_Calls: []
-  _maxHealth: 100
-  _health: 100
   _isAlive: 1
   hitInterval: 0
   hitIntervalTime: 0
@@ -431,6 +430,25 @@ MonoBehaviour:
   hurtColor: {r: 1, g: 0, b: 0, a: 1}
   hitEffectPosArray:
   - {fileID: 1133331393904915596}
+--- !u!114 &8401967972592082013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3522140399348579629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc0584ccbcdece440b2584bd476e2d54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentHp: 0
+  _maxHp: 11111
+  _hpRecovery: 0
+  _defense: 0
+  _attack: 0
+  _armorLv: 0
+  _maxAirJumps: 0
 --- !u!1 &5885092043841135857
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,14 +589,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 15
+  attackEnhance: 0
+  knockbackLevel: 0
   knockback: {x: 4, y: 2.5}
   stunRatio: 0.03
   canClearCooldown: 0
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: -100
   preClip: {fileID: 0}
+  impulseFrameIndex: -100
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 1
   hitModifyY: 0

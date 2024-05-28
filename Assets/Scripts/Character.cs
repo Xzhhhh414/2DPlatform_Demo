@@ -12,7 +12,7 @@ public class Character : MonoBehaviour
         if (knockbackLevel >= armorLevel)
         {
             rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y) * KnockBackRate;
-
+            Debug.Log(rb.velocity);
         }
     }
 }
