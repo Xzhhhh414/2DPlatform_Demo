@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 25
+  attackEnhance: 0
   knockbackLevel: 0
   knockback: {x: 2.5, y: 0}
   stunRatio: 0.05
@@ -109,8 +110,8 @@ MonoBehaviour:
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: -100
   preClip: {fileID: 0}
+  impulseFrameIndex: -100
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 0
   hitModifyY: 0
@@ -216,6 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 20
+  attackEnhance: 0
   knockbackLevel: 1
   knockback: {x: 0.5, y: 0}
   stunRatio: 0.03
@@ -223,8 +225,8 @@ MonoBehaviour:
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: -100
   preClip: {fileID: 0}
+  impulseFrameIndex: -100
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 0
   hitModifyY: 0
@@ -331,6 +333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 30
+  attackEnhance: 0
   knockbackLevel: 1
   knockback: {x: 4, y: 0}
   stunRatio: 0.13
@@ -338,8 +341,8 @@ MonoBehaviour:
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: 2
   preClip: {fileID: 7400000, guid: 954e8df226f7e1a48b18467ee9df6768, type: 2}
+  impulseFrameIndex: 2
   shakeVelocity: {x: 0.2, y: 0.2}
   shakeScpoe: 0.15
   hitModifyY: 0
@@ -394,6 +397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 30
+  attackEnhance: 0
   knockbackLevel: 1
   knockback: {x: 2, y: 2}
   stunRatio: 0
@@ -401,8 +405,8 @@ MonoBehaviour:
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: 1
   preClip: {fileID: 7400000, guid: d97b326b73d54784b8a9e5e142bb0a6d, type: 2}
+  impulseFrameIndex: 1
   shakeVelocity: {x: 0.2, y: 0.2}
   shakeScpoe: 0.15
   hitModifyY: 0
@@ -638,6 +642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 5
+  attackEnhance: 0
   knockbackLevel: 0
   knockback: {x: 0, y: 1.3}
   stunRatio: 0
@@ -645,8 +650,8 @@ MonoBehaviour:
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: -100
   preClip: {fileID: 0}
+  impulseFrameIndex: -100
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 0
   hitModifyY: 0
@@ -756,6 +761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 20
+  attackEnhance: 0
   knockbackLevel: 1
   knockback: {x: 0, y: 1.5}
   stunRatio: 0.16
@@ -763,8 +769,8 @@ MonoBehaviour:
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: 5
   preClip: {fileID: 7400000, guid: fa6e5eccb1e15e84db2348e48a995e6b, type: 2}
+  impulseFrameIndex: 5
   shakeVelocity: {x: 0.1, y: 0.2}
   shakeScpoe: 0.2
   hitModifyY: 0
@@ -901,6 +907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 35
+  attackEnhance: 0
   knockbackLevel: 1
   knockback: {x: 2.5, y: 2.5}
   stunRatio: 0.2
@@ -908,8 +915,8 @@ MonoBehaviour:
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: 18
   preClip: {fileID: 7400000, guid: 1e746214c7a4c1d4c85f1d5711945238, type: 2}
+  impulseFrameIndex: 18
   shakeVelocity: {x: 0.2, y: 0.2}
   shakeScpoe: 0.15
   hitModifyY: 0
@@ -1015,6 +1022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 27
+  attackEnhance: 0
   knockbackLevel: 0
   knockback: {x: 3.5, y: 0}
   stunRatio: 0.07
@@ -1022,8 +1030,8 @@ MonoBehaviour:
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: -100
   preClip: {fileID: 7400000, guid: 85fa60c66fc086a45b5bda3805a82f5f, type: 2}
+  impulseFrameIndex: -100
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 0
   hitModifyY: 0
@@ -1274,6 +1282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 20
+  attackEnhance: 0
   knockbackLevel: 1
   knockback: {x: 0.5, y: 0}
   stunRatio: 0.02
@@ -1281,8 +1290,8 @@ MonoBehaviour:
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: -100
   preClip: {fileID: 0}
+  impulseFrameIndex: -100
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 0
   hitModifyY: 0
@@ -1337,6 +1346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 30
+  attackEnhance: 0
   knockbackLevel: 0
   knockback: {x: 0, y: 10}
   stunRatio: 0
@@ -1344,8 +1354,8 @@ MonoBehaviour:
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: -100
   preClip: {fileID: 0}
+  impulseFrameIndex: -100
   shakeVelocity: {x: 0.2, y: 0.2}
   shakeScpoe: 0
   hitModifyY: 0
@@ -1495,6 +1505,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 15
+  attackEnhance: 0
   knockbackLevel: 1
   knockback: {x: 2, y: 0}
   stunRatio: 0.13
@@ -1502,8 +1513,8 @@ MonoBehaviour:
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: 2
   preClip: {fileID: 7400000, guid: 221abed6c5d4fc24a849f98304692d22, type: 2}
+  impulseFrameIndex: 2
   shakeVelocity: {x: 0.2, y: 0.2}
   shakeScpoe: 0.1
   hitModifyY: 0
@@ -1640,6 +1651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 50
+  attackEnhance: 0
   knockbackLevel: 1
   knockback: {x: 5, y: 6}
   stunRatio: 0.1
@@ -1647,8 +1659,8 @@ MonoBehaviour:
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: 0
   preClip: {fileID: 7400000, guid: 32857f41b1406cd49a8dfdea30194145, type: 2}
+  impulseFrameIndex: 0
   shakeVelocity: {x: 0.3, y: 0.3}
   shakeScpoe: 0.25
   hitModifyY: 0
@@ -1757,6 +1769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 20
+  attackEnhance: 0
   knockbackLevel: 0
   knockback: {x: 1.5, y: 0}
   stunRatio: 0.08
@@ -1764,8 +1777,8 @@ MonoBehaviour:
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: -100
   preClip: {fileID: 7400000, guid: d76bd76dec0260b449749c606dc12448, type: 2}
+  impulseFrameIndex: -100
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 0
   hitModifyY: 0
@@ -1871,6 +1884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 20
+  attackEnhance: 0
   knockbackLevel: 1
   knockback: {x: 0.5, y: 0}
   stunRatio: 0.03
@@ -1878,8 +1892,8 @@ MonoBehaviour:
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: -100
   preClip: {fileID: 0}
+  impulseFrameIndex: -100
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 0
   hitModifyY: 0
@@ -1988,6 +2002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 5
+  attackEnhance: 0
   knockbackLevel: 0
   knockback: {x: 0, y: 1.3}
   stunRatio: 0
@@ -1995,8 +2010,8 @@ MonoBehaviour:
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: -100
   preClip: {fileID: 0}
+  impulseFrameIndex: -100
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 0
   hitModifyY: 0
@@ -2330,6 +2345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 20
+  attackEnhance: 0
   knockbackLevel: 1
   knockback: {x: 0.5, y: 0}
   stunRatio: 0.03
@@ -2337,8 +2353,8 @@ MonoBehaviour:
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: -100
   preClip: {fileID: 0}
+  impulseFrameIndex: -100
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 0
   hitModifyY: 0
@@ -2393,6 +2409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 30
+  attackEnhance: 0
   knockbackLevel: 1
   knockback: {x: 0, y: -15}
   stunRatio: 0
@@ -2400,8 +2417,8 @@ MonoBehaviour:
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: -100
   preClip: {fileID: 0}
+  impulseFrameIndex: -100
   shakeVelocity: {x: 0.2, y: 0.2}
   shakeScpoe: 0
   hitModifyY: 0
@@ -3047,12 +3064,9 @@ MonoBehaviour:
   healthChanged:
     m_PersistentCalls:
       m_Calls: []
-  _maxHealth: 10000
-  _health: 10000
   _isAlive: 1
   hitInterval: 0
   hitIntervalTime: 0.25
-  armorLevel: 0
   changeColorTime: 0.1
   hurtColor: {r: 1, g: 0, b: 0, a: 0.7176471}
   hitEffectPosArray:
@@ -3239,20 +3253,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentHp: 0
-  _maxHp: 0
-  _hpRecovery: 0
+  _maxHp: 11111
   _defense: 0
   _attack: 0
   _armorLv: 0
-  _attackSpeed: 0
-  _criticalRate: 0
-  _criticalDmg: 0
-  _speed: 0
-  _airSpeed: 0
-  _maxAirJumps: 0
-  _dmgRate: 10000
-  _fragileRate: 10000
-  _healRate: 10000
+  _maxAirJumps: 1
 --- !u!114 &7008645299509921626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3366,6 +3371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 22
+  attackEnhance: 0
   knockbackLevel: 0
   knockback: {x: 3, y: 0}
   stunRatio: 0.03
@@ -3373,8 +3379,8 @@ MonoBehaviour:
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: -100
   preClip: {fileID: 7400000, guid: 89508d94aeb59da4d94aea3dbaa30837, type: 2}
+  impulseFrameIndex: -100
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 0
   hitModifyY: 0

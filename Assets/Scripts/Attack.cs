@@ -9,29 +9,34 @@ using System;
 
 public class Attack : MonoBehaviour
 {
-
+    [Label("基础伤害")]
     public int attackDamage;
+
+    [Label("攻击加成倍率")] 
+    public float attackEnhance;
     public int knockbackLevel; //冲击等级
     public Vector2 knockback = Vector2.zero;
-
     public float stunRatio = 0.1f;
-    private Animator animator;
-    private Dictionary<Damageable, Coroutine> damageableCoroutines = new Dictionary<Damageable, Coroutine>();
     public bool canClearCooldown;
     public UnityEvent ClearCooldown;
+    [Label("动作片段")]
+    public AnimationClip preClip;
+    
+    
+    private Animator animator;
+    private Dictionary<Damageable, Coroutine> damageableCoroutines = new Dictionary<Damageable, Coroutine>();
     private float lagDuration = 0.2f;//加个计时，命中多个目标只算1次
     private float lagLeftTime;
     private bool hitValid = true;
-
+    private Property prop;
     private CinemachineImpulseSource impulseSource;
     [SerializeField, Label("震屏发生的帧数")]
     private int impulseFrameIndex = -100;
     private int currentFrame;
     private int totalFrame;
     private AnimationClip currentClip;
-
-    [Label("动作片段")]
-    public AnimationClip preClip;
+    
+    
     [SerializeField, Label("震动速度")]
     Vector2 shakeVelocity;
     [SerializeField, Label("震动幅度"), Range(0, 100)]
@@ -70,9 +75,11 @@ public class Attack : MonoBehaviour
 
     private Vector3 firstContactPoint = Vector3.zero; // 记录第一个接触点
     private Vector3 secondContactPoint = Vector3.zero; // 记录第一个接触点
+    
 
     private void Start()
     {
+        prop = this.GetComponentInParent<Property>();
         animator = GetComponentInParent<Animator>();
         rb = GetComponentInParent<Rigidbody2D>();
         if (impulseFrameIndex >= 0 && preClip != null)
@@ -85,7 +92,7 @@ public class Attack : MonoBehaviour
             };
             impulseSource.m_ImpulseDefinition = definition;
         }
-        _attackDamage = attackDamage;
+        _attackDamage = (int)Mathf.Round(attackDamage+prop.Attack*attackEnhance);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -97,7 +104,7 @@ public class Attack : MonoBehaviour
         }
         else
         {
-            _attackDamage = attackDamage;
+            _attackDamage = (int)Mathf.Round(attackDamage + prop.Attack * attackEnhance);
         }
 #endif
         firstContactPoint = collision.ClosestPoint(transform.position);

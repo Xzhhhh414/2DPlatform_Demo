@@ -7,49 +7,36 @@ using UnityEngine.Events;
 using UnityEngine.Rendering;
 using UnityEngine.UIElements;
 
+[RequireComponent(typeof(Property))]
 public class Damageable : MonoBehaviour
 {
     public UnityEvent<int, Vector2, int, int> damageableHit;
     public UnityEvent damagebleDeath;
     public UnityEvent<int, int> healthChanged;
-
-    Animator animator;
-    SpriteRenderer sprite;
+    private Property prop;
+    
+    private Animator animator;
+    private SpriteRenderer sprite;
     Color originalColorOfSprite;
 
     Coroutine coroutine;
-
-    [SerializeField]
-    private int _maxHealth = 100;
+    
     public int MaxHealth
     {
         get
         {
-            return _maxHealth;
-        }
-        set
-        {
-            _maxHealth = value;
+            if(prop!=null)
+                return prop.MaxHp;
+            return 1;
         }
     }
-
-    [SerializeField]
-    private int _health = 100;
     public int Health
     {
         get
         {
-            return _health;
-        }
-        set
-        {
-            _health = value;
-            healthChanged?.Invoke(_health, MaxHealth);
-
-            if (_health <= 0)
-            {
-                IsAlive = false;
-            }
+            if(prop!=null)
+                return prop.CurrentHp;
+            return 0;
         }
     }
     
@@ -66,8 +53,7 @@ public class Damageable : MonoBehaviour
             _isAlive = value;
             animator.SetBool(AnimationStrings.isAlive, value);
             //Debug.Log("IsAlive set " + value);
-
-            if (value == false)
+            if (!value)
             {
                 damagebleDeath.Invoke();
             }
@@ -108,6 +94,8 @@ public class Damageable : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        prop = this.GetComponent<Property>();
+        prop.Initialize();
         originalColorOfSprite = sprite.color;
     }
 
@@ -131,17 +119,22 @@ public class Damageable : MonoBehaviour
 
     }
 
-    [SerializeField]
-    public int armorLevel; //耐冲等级
-
+    ///<summary>
+    ///碰撞箱检测=>判断受击
+    ///</summary>
     public bool Hit(int damage, Vector2 knockback,int knockbackLevel, GameObject hitEffect, Vector3 hitPosition)
     {
         if (IsAlive && !hitInterval && !IsBlocking && !IsInvincible)
         {
-            Health -= damage;
+            //受到伤害
+            damage -= prop.Defense;
+            if (damage <= 0) return false;
+            
+            prop.AddCurrentHp(-damage);
+            healthChanged?.Invoke(Health,MaxHealth);
+            IsAlive = prop.CurrentHp > 0;
             //hitInterval = true;
-
-            if (knockbackLevel >= armorLevel)
+            if (knockbackLevel >= prop.ArmorLv)
             {
                 animator.SetTrigger(AnimationStrings.hitTrigger);
             }
@@ -149,18 +142,17 @@ public class Damageable : MonoBehaviour
             if (coroutine != null) StopCoroutine(coroutine);
             coroutine = StartCoroutine(ChangeColorTemp(sprite, originalColorOfSprite, hurtColor));
             //LockVelocity = true;
-            damageableHit?.Invoke(damage, knockback, knockbackLevel, armorLevel);
+            damageableHit?.Invoke(damage, knockback, knockbackLevel, prop.ArmorLv);
             //CharacterEvents.characterDamaged.Invoke(gameObject, damage);
             EventManager.Instance.TriggerEvent<GameObject, int>(CustomEventType.characterDamaged, gameObject, damage);
-
+            
             PlayHitEffect(hitEffect, hitPosition);
 
             return true;
         }
-        if (IsBlocking)
+        else if (IsBlocking)
         {
             animator.SetTrigger(AnimationStrings.skill01CounterAtk);
-            return false;
         }
 
         return false;
@@ -172,7 +164,7 @@ public class Damageable : MonoBehaviour
         {
             int maxHeal = Mathf.Max(MaxHealth - Health, 0);
             int actualHeal = Mathf.Min(maxHeal, healthRestore);
-            Health += actualHeal;
+            prop.AddCurrentHp(actualHeal);
 
             //CharacterEvents.characterHealed(gameObject, actualHeal);
             EventManager.Instance.TriggerEvent<GameObject, int>(CustomEventType.characterHealed, gameObject, actualHeal);
