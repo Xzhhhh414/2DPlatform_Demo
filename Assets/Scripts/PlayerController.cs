@@ -6,9 +6,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
 public class PlayerController : Character
 {
-    public float walkSpeed;
-    //public float runSpeed = 8f;
-    
+    public float walkSpeed;   
     public float airWalkSpeed;
     public float airDrag; //空中水平速度衰减系数
     public float airDragInDrifting; //钩爪飘逸状态下空中水平速度衰减系数
@@ -31,19 +29,6 @@ public class PlayerController : Character
 
     Animator animator;
 
-    //[SerializeField]
-    //Vector2 normalPerp = Vector2.one;
-    //[SerializeField]
-    //bool isOnSlope ;
-    //[SerializeField]
-    //private float slopeDistance = 0.06f;
-
-
-
-    //[HideInInspector] public UnityEvent SpellSkill01;
-    //[HideInInspector] public UnityEvent SpellSkill02;
-    //[HideInInspector] public UnityEvent SpellSkill03;
-    //[HideInInspector] public UnityEvent Skill03ClearCDSuccess;
 
     //skill03的技能逻辑
     private float dashSpeed = 75f; // 冲刺速度
@@ -123,20 +108,6 @@ public class PlayerController : Character
         }
     }
 
-    //[SerializeField]
-    //private bool _isRunning = false;
-    //public bool IsRunning
-    //{
-    //    get
-    //    {
-    //        return _isRunning;
-    //    }
-    //    set
-    //    {
-    //        _isRunning = value;
-    //        animator.SetBool(AnimationStrings.isRunning, value);
-    //    }
-    //}
 
     public bool _isFacingRight = true;
     public bool IsFacingRight
@@ -302,15 +273,7 @@ public class PlayerController : Character
     // Update is called once per frame
     void Update()
     {
-        //stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-        //if (stateInfo.shortNameHash != lastStateHash)
-        //{
-        //    foreach (var attack in attacks)
-        //    {
-        //        attack.beHitCharacterList.Clear();
-        //        lastStateHash = stateInfo.shortNameHash;
-        //    }
-        //}
+
 
         if (Skill01Cooldown > 0)
         {
@@ -738,9 +701,7 @@ public class PlayerController : Character
         hitDamage = false;
 
     }
-    //protected override void OnHit(int damage, Vector2 knockback)
-    //{
-    //}
+
 
     # region Grab
     public AnimationCurve animationCurve;
