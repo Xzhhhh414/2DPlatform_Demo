@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3776726363771770472}
   - component: {fileID: 3010806923254081562}
   - component: {fileID: 5469986155384830715}
+  - component: {fileID: 9163222418086411559}
   m_Layer: 8
   m_Name: Goblin
   m_TagString: Monster
@@ -194,14 +195,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4242114885219933664}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5fe1d198289f62458799df4dc131fca, type: 3}
+  m_Script: {fileID: 11500000, guid: 2480eac51eb21f1419f3797330c72087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkAcceleration: 70
-  maxSpeed: 10
-  walkStopRate: 4
-  attackZone: {fileID: 5764638468449584650}
-  cliffDetectionZone: {fileID: 549912458742963074}
+  KnockBackRate: 1
+  walkAcceleration: 3
+  maxSpeed: 3
+  walkStopRate: 0.6
+  attackZone: {fileID: 0}
+  cliffDetectionZone: {fileID: 0}
   _hasTarget: 0
 --- !u!114 &3010806923254081562
 MonoBehaviour:
@@ -270,13 +272,30 @@ MonoBehaviour:
   healthChanged:
     m_PersistentCalls:
       m_Calls: []
-  _maxHealth: 100
-  _health: 100
   _isAlive: 1
   hitInterval: 0
   hitIntervalTime: 0.25
   changeColorTime: 0.7
   hurtColor: {r: 1, g: 0, b: 0, a: 1}
+  hitEffectPosArray: []
+--- !u!114 &9163222418086411559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4242114885219933664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc0584ccbcdece440b2584bd476e2d54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentHp: 0
+  _maxHp: 0
+  _defense: 0
+  _attack: 0
+  _armorLv: 0
+  _maxAirJumps: 0
 --- !u!1 &8616695409890074737
 GameObject:
   m_ObjectHideFlags: 0

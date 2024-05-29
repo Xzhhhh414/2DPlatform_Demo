@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
-public class Knight : Character
+public class Monster : Character
 {
     public float walkAcceleration = 3f;
     public float maxSpeed = 3f;
