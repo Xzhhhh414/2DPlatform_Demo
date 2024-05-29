@@ -1137,6 +1137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 20
+  attackEnhance: 0
   knockbackLevel: 1
   knockback: {x: 0.5, y: 0}
   stunRatio: 0.03
@@ -1144,8 +1145,8 @@ MonoBehaviour:
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: -100
   preClip: {fileID: 0}
+  impulseFrameIndex: -100
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 0
   hitModifyY: 0
@@ -2117,6 +2118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 20
+  attackEnhance: 0
   knockbackLevel: 1
   knockback: {x: 0.5, y: 0}
   stunRatio: 0.03
@@ -2124,8 +2126,8 @@ MonoBehaviour:
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: -100
   preClip: {fileID: 0}
+  impulseFrameIndex: -100
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 0
   hitModifyY: 0
@@ -2231,6 +2233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 20
+  attackEnhance: 0
   knockbackLevel: 1
   knockback: {x: 0.5, y: 0}
   stunRatio: 0.03
@@ -2238,8 +2241,8 @@ MonoBehaviour:
   ClearCooldown:
     m_PersistentCalls:
       m_Calls: []
-  impulseFrameIndex: -100
   preClip: {fileID: 0}
+  impulseFrameIndex: -100
   shakeVelocity: {x: 0, y: 0}
   shakeScpoe: 0
   hitModifyY: 0
@@ -3253,7 +3256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentHp: 0
-  _maxHp: 11111
+  _maxHp: 10000
   _defense: 0
   _attack: 0
   _armorLv: 0
