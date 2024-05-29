@@ -789,7 +789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5424188767339078681}
   m_Layer: 7
-  m_Name: BowAttack
+  m_Name: BladeBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -804,7 +804,7 @@ Transform:
   m_GameObject: {fileID: 5244544144875778800}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.84, y: -0.21, z: 0}
+  m_LocalPosition: {x: 1.14, y: 1.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2150,6 +2150,7 @@ GameObject:
   - component: {fileID: 6882391051196661106}
   - component: {fileID: 772671975846870223}
   - component: {fileID: 378264440965979807}
+  - component: {fileID: 7008645299509921626}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -2907,12 +2908,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentHp: 0
-  _maxHp: 10000
-  _hpRecovery: 0
+  _maxHp: 11111
   _defense: 0
-  _attack: 100
+  _attack: 0
   _armorLv: 0
-  _maxAirJumps: 3
+  _maxAirJumps: 1
+--- !u!114 &7008645299509921626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8577367491070427345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65209737d5614734eb8812630200c8f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  launchPoint: {fileID: 5424188767339078681}
+  projectilePrefab: {fileID: 2616632453500635437, guid: 8aac3a6bcff75d24ab930a6fb0556cef, type: 3}
 --- !u!1 &8783133434536609512
 GameObject:
   m_ObjectHideFlags: 0

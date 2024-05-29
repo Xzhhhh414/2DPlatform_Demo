@@ -132,7 +132,7 @@ using UnityEngine;
                 _currentHp = MaxHp;
             }
         }
-        [SerializeField]
+        
         private int _hpRecovery;
         private int _hpRecoveryAdd;
         //缩进4位
