@@ -11,10 +11,9 @@ public class MonsterHealthBar : MonoBehaviour
     public GameObject followingObject;
     private Monster monster;
     private RectTransform rectTransform;
-    private float showTime = 3f;
+    private float showTime = 2.5f;
     private float showTimeLeft;
     private Property prop;
-    public float updateSpeed = 0.1f; // 血量更新速度
 
 
     void Awake()
@@ -25,12 +24,22 @@ public class MonsterHealthBar : MonoBehaviour
     void Start()
     {
         Init();
+
     }
 
     private void Init()
     {
         monster = followingObject.GetComponent<Monster>();
         prop = monster.GetComponent<Property>();
+
+        if (followingObject != null)
+        {
+            rectTransform.localScale = monster.healthBarScale;
+        }
+        else
+        {
+            rectTransform.localScale = new Vector3(0.2f, 0.25f, 1f);
+        }
     }
 
     void Update()
@@ -43,13 +52,15 @@ public class MonsterHealthBar : MonoBehaviour
             Vector3 screenPosition = Camera.main.WorldToScreenPoint(worldPosition);
             // 更新血条的 UI 位置
             rectTransform.position = screenPosition;
+            
         }
-        else if (followingObject != null)
+        else
         {
             // 如果没有配置 healthBarPosition，则使用怪物的 Transform
             Vector3 worldPosition = followingObject.transform.position;
             Vector3 screenPosition = Camera.main.WorldToScreenPoint(worldPosition);
             rectTransform.position = screenPosition;
+            
         }
 
         if (showTimeLeft > 0)
@@ -100,7 +111,7 @@ public class MonsterHealthBar : MonoBehaviour
     {
         while (healthSlider_Start.value > targetValue)
         {
-            healthSlider_Start.value -= updateSpeed * Time.deltaTime;
+            healthSlider_Start.value -= 0.3f * Time.deltaTime;
             yield return null;
         }
         healthSlider_Start.value = targetValue;

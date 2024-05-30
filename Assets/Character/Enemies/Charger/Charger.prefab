@@ -324,6 +324,7 @@ MonoBehaviour:
   cliffDetectionZone: {fileID: 6455040145224500777}
   healthBar: {fileID: 0}
   healthBarPosition: {fileID: 7692933652999405404}
+  healthBarScale: {x: 0.15, y: 0.3, z: 1}
   _hasTarget: 0
   KnockBackRate: 1
 --- !u!114 &6235004766465508083
@@ -476,7 +477,7 @@ Transform:
   m_GameObject: {fileID: 3934359864862536503}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.886, z: 0}
+  m_LocalPosition: {x: 0, y: 0.985, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

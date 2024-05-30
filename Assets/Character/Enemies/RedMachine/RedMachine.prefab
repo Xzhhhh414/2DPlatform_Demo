@@ -318,7 +318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2480eac51eb21f1419f3797330c72087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KnockBackRate: 1
   walkAcceleration: 50
   maxSpeed: 5.8
   walkStopRate: 0.01
@@ -326,7 +325,9 @@ MonoBehaviour:
   cliffDetectionZone: {fileID: 6455040145224500777}
   healthBar: {fileID: 0}
   healthBarPosition: {fileID: 9031006578078395580}
+  healthBarScale: {x: 0.2, y: 0.25, z: 1}
   _hasTarget: 0
+  KnockBackRate: 1
 --- !u!114 &6235004766465508083
 MonoBehaviour:
   m_ObjectHideFlags: 0

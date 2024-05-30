@@ -13,6 +13,8 @@ public class Monster : MonoBehaviour
     public DetectionZone cliffDetectionZone;
     public GameObject healthBar;
     public Transform healthBarPosition;
+    public Vector3 healthBarScale;
+
 
     //Rigidbody2D rb;
     TouchingDirections touchingDirections;
