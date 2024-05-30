@@ -39,7 +39,7 @@ public class Projectile : MonoBehaviour
             bool gotHit = damageable.Hit(damage, deliveredKnockback, knockbackLevel, hitEffect, hitPosition);
 
             if (gotHit)
-                Debug.Log(collision.name + "hit for" + damage);
+            //Debug.Log(collision.name + "hit for" + damage);
             Destroy(gameObject);
         }
         else if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))

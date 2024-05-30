@@ -48,6 +48,7 @@ MonoBehaviour:
   damageTextPrefab: {fileID: 4127040908755293030, guid: 01a7d96603d857a47a7cb54a11d5c8d8, type: 3}
   healthTextPrefab: {fileID: 4127040908755293030, guid: ae3b12df415612043940b82971049c75, type: 3}
   gameCanvas: {fileID: 0}
+  NPCHealthBarPrefab: {fileID: 4010749620755499566, guid: aa4b6098a0f816840bba3464e916f23b, type: 3}
 --- !u!114 &1488914124234383455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,6 +162,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: a0aa82b9-d062-447e-b9e4-dc2fb4782b67
     m_ActionName: Player/Grab[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a649ea24-5231-46ab-9797-fbb66b348aa0
+    m_ActionName: Player/InteractObject[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: UI

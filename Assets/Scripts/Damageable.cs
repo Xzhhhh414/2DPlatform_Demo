@@ -143,9 +143,8 @@ public class Damageable : MonoBehaviour
             coroutine = StartCoroutine(ChangeColorTemp(sprite, originalColorOfSprite, hurtColor));
             //LockVelocity = true;
             damageableHit?.Invoke(damage, knockback, knockbackLevel, prop.ArmorLv);
-            //CharacterEvents.characterDamaged.Invoke(gameObject, damage);
-            EventManager.Instance.TriggerEvent<GameObject, int>(CustomEventType.characterDamaged, gameObject, damage);
-            
+
+            EventManager.Instance.TriggerEvent<GameObject, int>(CustomEventType.CharacterDamaged, gameObject, damage);
             PlayHitEffect(hitEffect, hitPosition);
 
             return true;
@@ -167,7 +166,7 @@ public class Damageable : MonoBehaviour
             prop.AddCurrentHp(actualHeal);
 
             //CharacterEvents.characterHealed(gameObject, actualHeal);
-            EventManager.Instance.TriggerEvent<GameObject, int>(CustomEventType.characterHealed, gameObject, actualHeal);
+            EventManager.Instance.TriggerEvent<GameObject, int>(CustomEventType.CharacterHealed, gameObject, actualHeal);
 
             return true;
         }

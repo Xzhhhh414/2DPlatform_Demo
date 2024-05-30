@@ -13,8 +13,9 @@ public enum CustomEventType
     InteractObjectOut, //离开场景物件交互范围
     AttemptInteractObject, //玩家按下场景交互输入
     ResourceMoneyAdd, //玩家获得金币
-    characterDamaged, //玩家造成伤害
-    characterHealed, //玩家获得治疗
+    CharacterDamaged, //玩家造成伤害
+    CharacterHealed, //玩家获得治疗
+    MonsterSpawned, //怪物被生成
 
 }
 public class EventManager : Singleton<EventManager>

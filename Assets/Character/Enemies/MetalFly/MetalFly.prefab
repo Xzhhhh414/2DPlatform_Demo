@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 3906881211269733644}
   - component: {fileID: 7551012797831096553}
   - component: {fileID: 2289677779911688229}
+  - component: {fileID: 5152039745456702030}
   - component: {fileID: 7374005314067382154}
   - component: {fileID: 204077961074298661}
-  - component: {fileID: 6143276226531961324}
   - component: {fileID: 1045608046857043527}
   - component: {fileID: 5138429354096837774}
   - component: {fileID: 5517249303062016758}
+  - component: {fileID: 7863272313552720889}
   m_Layer: 8
   m_Name: MetalFly
   m_TagString: Monster
@@ -42,6 +43,7 @@ Transform:
   - {fileID: 2131565355576758547}
   - {fileID: 7020605822768599336}
   - {fileID: 8860068921966283440}
+  - {fileID: 3817726386685152092}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7551012797831096553
@@ -123,6 +125,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5152039745456702030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76009870517717507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2480eac51eb21f1419f3797330c72087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkAcceleration: 3
+  maxSpeed: 3
+  walkStopRate: 0.6
+  attackZone: {fileID: 5781109479608492534}
+  cliffDetectionZone: {fileID: 0}
+  healthBar: {fileID: 0}
+  healthBarPosition: {fileID: 3817726386685152092}
+  _hasTarget: 0
+  KnockBackRate: 1
 --- !u!114 &7374005314067382154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,11 +160,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageableHit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5152039745456702030}
+        m_TargetAssemblyTypeName: Monster, Assembly-CSharp
+        m_MethodName: OnHit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   damagebleDeath:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6143276226531961324}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: FlyingEye, Assembly-CSharp
         m_MethodName: OnDeath
         m_Mode: 1
@@ -184,26 +219,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6143276226531961324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 76009870517717507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdb710e7ffe40ef489d7221acb411bcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flightSpeed: 5
-  waypointReachedDistance: 0.1
-  biteDetectionZone: {fileID: 5781109479608492534}
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  deathCollider: {fileID: 4433300934303020410}
-  _hasTarget: 0
 --- !u!61 &1045608046857043527
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -281,6 +296,83 @@ MonoBehaviour:
   _attack: 0
   _armorLv: 0
   _maxAirJumps: 0
+--- !u!114 &7863272313552720889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76009870517717507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 111080abff9f81645a1bf33ed0400c4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  castFliter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  groundDistance: 0.05
+  wallDistance: 0.2
+  ceilingDistance: 0.05
+  _isGrounded: 0
+  _isOnWall: 0
+  _isOnWCeiling: 0
+  contactFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+--- !u!1 &4739911775620396385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3817726386685152092}
+  m_Layer: 8
+  m_Name: HealthBarPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3817726386685152092
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4739911775620396385}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.213, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3906881211269733644}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5062289453789268635
 GameObject:
   m_ObjectHideFlags: 0
