@@ -1,5 +1,114 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &725753131735622371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7399289142091541926}
+  - component: {fileID: 1291177921609214494}
+  - component: {fileID: 1522005665362786126}
+  m_Layer: 9
+  m_Name: skill01_add
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7399289142091541926
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725753131735622371}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8198951932485516424}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1291177921609214494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725753131735622371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8a5cb8f3f3195a4fbe2fac3034cef82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 10
+  attackEnhance: 0
+  knockbackLevel: 1
+  knockback: {x: 0, y: 0.5}
+  stunRatio: 0
+  canClearCooldown: 0
+  ClearCooldown:
+    m_PersistentCalls:
+      m_Calls: []
+  preClip: {fileID: 0}
+  impulseFrameIndex: -100
+  shakeVelocity: {x: 0, y: 0}
+  shakeScpoe: 0
+  hitModifyY: 0
+  modifyY: 0
+  hitFreezeXY: 0
+  freezeXY: {x: 0, y: 0}
+  beHitCharacterList: []
+  hitEffect: {fileID: 5396592124056721318, guid: a1ffd7e1a60d5334ebf18df942c912a2, type: 3}
+--- !u!61 &1522005665362786126
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725753131735622371}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.23, y: 0.81}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.49, y: 3.68}
+  m_EdgeRadius: 0
 --- !u!1 &1089561012728513918
 GameObject:
   m_ObjectHideFlags: 0
@@ -2209,7 +2318,7 @@ MonoBehaviour:
   attackDamage: 30
   attackEnhance: 0
   knockbackLevel: 10
-  knockback: {x: 0, y: -15}
+  knockback: {x: 0, y: -25}
   stunRatio: 0
   canClearCooldown: 0
   ClearCooldown:
@@ -2322,6 +2431,7 @@ Transform:
   - {fileID: 1782021639354937461}
   - {fileID: 6475221703294493461}
   - {fileID: 987119603334810876}
+  - {fileID: 7399289142091541926}
   - {fileID: 6853647544146025658}
   - {fileID: 7803540407884615024}
   - {fileID: 7016126394080851370}
