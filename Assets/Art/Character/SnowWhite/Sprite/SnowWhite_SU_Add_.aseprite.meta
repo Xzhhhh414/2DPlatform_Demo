@@ -1,0 +1,1228 @@
+fileFormatVersion: 2
+guid: 299beb29630755d469701ce160ffde26
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: SnowWhite_SU_Add__Frame_2
+    originalName: 
+    pivot: {x: 0.38356164, y: -0.06122449}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 239
+      width: 73
+      height: 49
+    spriteID: 340303b55945e73428839aaa00138484
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 239}
+  - name: SnowWhite_SU_Add__Frame_3
+    originalName: 
+    pivot: {x: 0.38356164, y: -0.04}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 410
+      y: 159
+      width: 73
+      height: 50
+    spriteID: d1ceda23a5d24ac44a5b5c40f2447cec
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 410, y: 159}
+  - name: SnowWhite_SU_Add__Frame_4
+    originalName: 
+    pivot: {x: 0.34567901, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 148
+      y: 159
+      width: 81
+      height: 52
+    spriteID: 93a402ac1babd4248adbfb555a633dd9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 148, y: 159}
+  - name: SnowWhite_SU_Add__Frame_5
+    originalName: 
+    pivot: {x: 0.35365856, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 409
+      y: 80
+      width: 82
+      height: 52
+    spriteID: a305e160aa9f9c6489eb573d5436654f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 409, y: 80}
+  - name: SnowWhite_SU_Add__Frame_6
+    originalName: 
+    pivot: {x: 0.30952382, y: -0.041666668}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 237
+      y: 159
+      width: 84
+      height: 48
+    spriteID: 8c78af821e1b1604a83403de1efb2e6f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 237, y: 159}
+  - name: SnowWhite_SU_Add__Frame_7
+    originalName: 
+    pivot: {x: 0.22972973, y: -0.04255319}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 167
+      y: 239
+      width: 74
+      height: 47
+    spriteID: 211f6516131f8fa4c850edc8cba546df
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 167, y: 239}
+  - name: SnowWhite_SU_Add__Frame_8
+    originalName: 
+    pivot: {x: 0.22972973, y: -0.020833334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 85
+      y: 239
+      width: 74
+      height: 48
+    spriteID: 0c52bc18f37b0884ebac297813110131
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 85, y: 239}
+  - name: SnowWhite_SU_Add__Frame_9
+    originalName: 
+    pivot: {x: 0.36842105, y: -0.01724138}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 387
+      y: 4
+      width: 95
+      height: 58
+    spriteID: 939178f31fee0524ea707aabe9afb263
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 387, y: 4}
+  - name: SnowWhite_SU_Add__Frame_10
+    originalName: 
+    pivot: {x: 0.36842105, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 284
+      y: 4
+      width: 95
+      height: 59
+    spriteID: 0c1d6e52560cdc841beef7daad469c00
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 284, y: 4}
+  - name: SnowWhite_SU_Add__Frame_11
+    originalName: 
+    pivot: {x: 0.43023255, y: -0.014705882}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 86
+      height: 68
+    spriteID: 4c9be830f94c3284a997bce1a1096d14
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: SnowWhite_SU_Add__Frame_12
+    originalName: 
+    pivot: {x: 0.5, y: -0.014705882}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 92
+      y: 80
+      width: 70
+      height: 68
+    spriteID: cc49b8b9339f2f04cb77da8fb0f5ecfa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 92, y: 80}
+  - name: SnowWhite_SU_Add__Frame_13
+    originalName: 
+    pivot: {x: 0.5072464, y: -0.014705882}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 170
+      y: 80
+      width: 69
+      height: 68
+    spriteID: b83478ced45acf340977f2c69123fc81
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 170, y: 80}
+  - name: SnowWhite_SU_Add__Frame_14
+    originalName: 
+    pivot: {x: 0.546875, y: -0.013888889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 159
+      width: 64
+      height: 72
+    spriteID: 30a9b83ff3916c748882e5f5f7641006
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 159}
+  - name: SnowWhite_SU_Add__Frame_15
+    originalName: 
+    pivot: {x: 0.546875, y: -0.013888889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 159
+      width: 64
+      height: 72
+    spriteID: 74b117633603850408e59b44a2258e0b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 159}
+  - name: SnowWhite_SU_Add__Frame_16
+    originalName: 
+    pivot: {x: 0.21249999, y: -0.014084507}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 80
+      width: 80
+      height: 71
+    spriteID: eebcae6759f88cc42ac27174ff5a0860
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 80}
+  - name: SnowWhite_SU_Add__Frame_17
+    originalName: 
+    pivot: {x: 0.25882354, y: -0.014925373}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 98
+      y: 4
+      width: 85
+      height: 67
+    spriteID: 5f9aa689e13b25140885c967253e88e4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 98, y: 4}
+  - name: SnowWhite_SU_Add__Frame_18
+    originalName: 
+    pivot: {x: 0.25882354, y: -0.014925373}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 191
+      y: 4
+      width: 85
+      height: 67
+    spriteID: 12bc5d37d62de18418f72344e4883be4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 191, y: 4}
+  - name: SnowWhite_SU_Add__Frame_19
+    originalName: 
+    pivot: {x: 0.15068494, y: -0.033898305}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 247
+      y: 80
+      width: 73
+      height: 59
+    spriteID: 87a30b48ac843504b990e5135c2f39e0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 247, y: 80}
+  - name: SnowWhite_SU_Add__Frame_20
+    originalName: 
+    pivot: {x: 0.15068494, y: -0.033898305}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 328
+      y: 80
+      width: 73
+      height: 59
+    spriteID: 587b670256104be49895b8355011324e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 328, y: 80}
+  - name: SnowWhite_SU_Add__Frame_21
+    originalName: 
+    pivot: {x: 0.16438358, y: -0.036363635}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 329
+      y: 159
+      width: 73
+      height: 55
+    spriteID: 4b7f4a8b7988a7744a4772acce72785f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 329, y: 159}
+  - name: SnowWhite_SU_Add__Frame_22
+    originalName: 
+    pivot: {x: 0.15384617, y: -0.039215688}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 78
+      y: 296
+      width: 65
+      height: 51
+    spriteID: e7309e6e667d55b42932ef3774715b36
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 78, y: 296}
+  - name: SnowWhite_SU_Add__Frame_23
+    originalName: 
+    pivot: {x: 0.15384617, y: -0.039215688}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 151
+      y: 296
+      width: 65
+      height: 51
+    spriteID: 19ffa563731f2214eb67a25f83ef320c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 151, y: 296}
+  - name: SnowWhite_SU_Add__Frame_24
+    originalName: 
+    pivot: {x: 0.16666669, y: -0.039215688}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 296
+      width: 66
+      height: 51
+    spriteID: d95270610a1227942a66f5baa766a99f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 296}
+  - name: SnowWhite_SU_Add__Frame_25
+    originalName: 
+    pivot: {x: 0.23529415, y: -0.041666668}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 411
+      y: 296
+      width: 51
+      height: 48
+    spriteID: b3959ee2bbfdb1f4dbf151ab50ae5b18
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 411, y: 296}
+  - name: SnowWhite_SU_Add__Frame_26
+    originalName: 
+    pivot: {x: 0.25000003, y: -0.041666668}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 351
+      y: 296
+      width: 52
+      height: 48
+    spriteID: 05b44388a6945e649bf4d585cac54a7f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 351, y: 296}
+  - name: SnowWhite_SU_Add__Frame_27
+    originalName: 
+    pivot: {x: 0.26415092, y: -0.041666668}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 290
+      y: 296
+      width: 53
+      height: 48
+    spriteID: e74ac67b6959e76489b2ccd7dc91493a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 290, y: 296}
+  - name: SnowWhite_SU_Add__Frame_28
+    originalName: 
+    pivot: {x: 0.31034482, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 224
+      y: 296
+      width: 58
+      height: 49
+    spriteID: 9441ea65effd34e4abb1a7ff30ff5285
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 224, y: 296}
+  - name: SnowWhite_SU_Add__Frame_29
+    originalName: 
+    pivot: {x: 0.3846154, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 323
+      y: 239
+      width: 65
+      height: 49
+    spriteID: 807fb487e18afcf4ebf0a803a2ad486a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 323, y: 239}
+  - name: SnowWhite_SU_Add__Frame_30
+    originalName: 
+    pivot: {x: 0.3939394, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 249
+      y: 239
+      width: 66
+      height: 49
+    spriteID: 994a8a80771c389428ff78a2b7bdc41f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 249, y: 239}
+  - name: SnowWhite_SU_Add__Frame_31
+    originalName: 
+    pivot: {x: 0.421875, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 396
+      y: 239
+      width: 64
+      height: 45
+    spriteID: 1854880af5a029f47b2eaa6f2a66d2f7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 396, y: 239}
+  - name: SnowWhite_SU_Add__Frame_0
+    originalName: 
+    pivot: {x: 0.78125, y: -0.20689654}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 159
+      y: 355
+      width: 32
+      height: 29
+    spriteID: b189a142fb869584d88bc289d391b19f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 159, y: 355}
+  - name: SnowWhite_SU_Add__Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: -0.15625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 199
+      y: 355
+      width: 20
+      height: 32
+    spriteID: 4f55fdfedfc579e4fa768eb5920029ef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 199, y: 355}
+  - name: SnowWhite_SU_Add__Frame_32
+    originalName: 
+    pivot: {x: 0.6511628, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 355
+      width: 43
+      height: 33
+    spriteID: d2060d67216865a469bb18f1bba8ad70
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 355}
+  - name: SnowWhite_SU_Add__Frame_33
+    originalName: 
+    pivot: {x: 0.65909094, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 55
+      y: 355
+      width: 44
+      height: 30
+    spriteID: 6d85191b86e10f84981c064f1c629ed9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 55, y: 355}
+  - name: SnowWhite_SU_Add__Frame_34
+    originalName: 
+    pivot: {x: 0.65909094, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 107
+      y: 355
+      width: 44
+      height: 28
+    spriteID: 32090376c91e1bc4186329a9b561f2bb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 107, y: 355}
+  - name: SnowWhite_SU_Add__Frame_35
+    originalName: 
+    pivot: {x: 0.6216216, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 470
+      y: 296
+      width: 37
+      height: 34
+    spriteID: b1794a0dda00f6441ac27da7287c499d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 470, y: 296}
+  - name: SnowWhite_SU_Add__Frame_36
+    originalName: 
+    pivot: {x: 0.63888884, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 468
+      y: 239
+      width: 36
+      height: 35
+    spriteID: 40174c9f04484a340b131d67909c9494
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 468, y: 239}
+  - name: SnowWhite_SU_Add__Frame_37
+    originalName: 
+    pivot: {x: 0.6470589, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 46
+      y: 396
+      width: 34
+      height: 36
+    spriteID: 7e5081e453714c24eba51e9b03c8f56f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 46, y: 396}
+  - name: SnowWhite_SU_Add__Frame_38
+    originalName: 
+    pivot: {x: 0.6470589, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 396
+      width: 34
+      height: 37
+    spriteID: 017e447f7b7408a4c9b123d43a216442
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 396}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1727645856
+    name: SnowWhite_SU_Add_
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: SnowWhite_SU_Add__Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 44
+        y: 3
+        width: 73
+        height: 49
+      spriteId: 340303b55945e73428839aaa00138484
+    - name: SnowWhite_SU_Add__Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 44
+        y: 2
+        width: 73
+        height: 50
+      spriteId: d1ceda23a5d24ac44a5b5c40f2447cec
+    - name: SnowWhite_SU_Add__Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 44
+        y: 0
+        width: 81
+        height: 52
+      spriteId: 93a402ac1babd4248adbfb555a633dd9
+    - name: SnowWhite_SU_Add__Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 43
+        y: 0
+        width: 82
+        height: 52
+      spriteId: a305e160aa9f9c6489eb573d5436654f
+    - name: SnowWhite_SU_Add__Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 46
+        y: 2
+        width: 84
+        height: 48
+      spriteId: 8c78af821e1b1604a83403de1efb2e6f
+    - name: SnowWhite_SU_Add__Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 55
+        y: 2
+        width: 74
+        height: 47
+      spriteId: 211f6516131f8fa4c850edc8cba546df
+    - name: SnowWhite_SU_Add__Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 55
+        y: 1
+        width: 74
+        height: 48
+      spriteId: 0c52bc18f37b0884ebac297813110131
+    - name: SnowWhite_SU_Add__Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 37
+        y: 1
+        width: 95
+        height: 58
+      spriteId: 939178f31fee0524ea707aabe9afb263
+    - name: SnowWhite_SU_Add__Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 37
+        y: 0
+        width: 95
+        height: 59
+      spriteId: 0c1d6e52560cdc841beef7daad469c00
+    - name: SnowWhite_SU_Add__Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 35
+        y: 1
+        width: 86
+        height: 68
+      spriteId: 4c9be830f94c3284a997bce1a1096d14
+    - name: SnowWhite_SU_Add__Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 37
+        y: 1
+        width: 70
+        height: 68
+      spriteId: cc49b8b9339f2f04cb77da8fb0f5ecfa
+    - name: SnowWhite_SU_Add__Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 37
+        y: 1
+        width: 69
+        height: 68
+      spriteId: b83478ced45acf340977f2c69123fc81
+    - name: SnowWhite_SU_Add__Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 37
+        y: 1
+        width: 64
+        height: 72
+      spriteId: 30a9b83ff3916c748882e5f5f7641006
+    - name: SnowWhite_SU_Add__Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 37
+        y: 1
+        width: 64
+        height: 72
+      spriteId: 74b117633603850408e59b44a2258e0b
+    - name: SnowWhite_SU_Add__Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 55
+        y: 1
+        width: 80
+        height: 71
+      spriteId: eebcae6759f88cc42ac27174ff5a0860
+    - name: SnowWhite_SU_Add__Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 50
+        y: 1
+        width: 85
+        height: 67
+      spriteId: 5f9aa689e13b25140885c967253e88e4
+    - name: SnowWhite_SU_Add__Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 50
+        y: 1
+        width: 85
+        height: 67
+      spriteId: 12bc5d37d62de18418f72344e4883be4
+    - name: SnowWhite_SU_Add__Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 61
+        y: 2
+        width: 73
+        height: 59
+      spriteId: 87a30b48ac843504b990e5135c2f39e0
+    - name: SnowWhite_SU_Add__Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 61
+        y: 2
+        width: 73
+        height: 59
+      spriteId: 587b670256104be49895b8355011324e
+    - name: SnowWhite_SU_Add__Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 60
+        y: 2
+        width: 73
+        height: 55
+      spriteId: 4b7f4a8b7988a7744a4772acce72785f
+    - name: SnowWhite_SU_Add__Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 62
+        y: 2
+        width: 65
+        height: 51
+      spriteId: e7309e6e667d55b42932ef3774715b36
+    - name: SnowWhite_SU_Add__Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 62
+        y: 2
+        width: 65
+        height: 51
+      spriteId: 19ffa563731f2214eb67a25f83ef320c
+    - name: SnowWhite_SU_Add__Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 61
+        y: 2
+        width: 66
+        height: 51
+      spriteId: d95270610a1227942a66f5baa766a99f
+    - name: SnowWhite_SU_Add__Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 60
+        y: 2
+        width: 51
+        height: 48
+      spriteId: b3959ee2bbfdb1f4dbf151ab50ae5b18
+    - name: SnowWhite_SU_Add__Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 59
+        y: 2
+        width: 52
+        height: 48
+      spriteId: 05b44388a6945e649bf4d585cac54a7f
+    - name: SnowWhite_SU_Add__Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 58
+        y: 2
+        width: 53
+        height: 48
+      spriteId: e74ac67b6959e76489b2ccd7dc91493a
+    - name: SnowWhite_SU_Add__Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 54
+        y: 0
+        width: 58
+        height: 49
+      spriteId: 9441ea65effd34e4abb1a7ff30ff5285
+    - name: SnowWhite_SU_Add__Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 47
+        y: 0
+        width: 65
+        height: 49
+      spriteId: 807fb487e18afcf4ebf0a803a2ad486a
+    - name: SnowWhite_SU_Add__Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 46
+        y: 0
+        width: 66
+        height: 49
+      spriteId: 994a8a80771c389428ff78a2b7bdc41f
+    - name: SnowWhite_SU_Add__Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 45
+        y: 0
+        width: 64
+        height: 45
+      spriteId: 1854880af5a029f47b2eaa6f2a66d2f7
+    - name: SnowWhite_SU_Add__Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 47
+        y: 6
+        width: 32
+        height: 29
+      spriteId: b189a142fb869584d88bc289d391b19f
+    - name: SnowWhite_SU_Add__Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 62
+        y: 5
+        width: 20
+        height: 32
+      spriteId: 4f55fdfedfc579e4fa768eb5920029ef
+    - name: SnowWhite_SU_Add__Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 44
+        y: 0
+        width: 43
+        height: 33
+      spriteId: d2060d67216865a469bb18f1bba8ad70
+    - name: SnowWhite_SU_Add__Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 43
+        y: 0
+        width: 44
+        height: 30
+      spriteId: 6d85191b86e10f84981c064f1c629ed9
+    - name: SnowWhite_SU_Add__Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 43
+        y: 0
+        width: 44
+        height: 28
+      spriteId: 32090376c91e1bc4186329a9b561f2bb
+    - name: SnowWhite_SU_Add__Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 49
+        y: 0
+        width: 37
+        height: 34
+      spriteId: b1794a0dda00f6441ac27da7287c499d
+    - name: SnowWhite_SU_Add__Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 49
+        y: 0
+        width: 36
+        height: 35
+      spriteId: 40174c9f04484a340b131d67909c9494
+    - name: SnowWhite_SU_Add__Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 50
+        y: 0
+        width: 34
+        height: 36
+      spriteId: 7e5081e453714c24eba51e9b03c8f56f
+    - name: SnowWhite_SU_Add__Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 50
+        y: 0
+        width: 34
+        height: 37
+      spriteId: 017e447f7b7408a4c9b123d43a216442
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 144, y: 128}

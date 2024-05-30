@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 10
   attackEnhance: 0
-  knockbackLevel: 1
+  knockbackLevel: 10
   knockback: {x: 0, y: 0.5}
   stunRatio: 0
   canClearCooldown: 0
@@ -63,7 +63,7 @@ MonoBehaviour:
   hitFreezeXY: 0
   freezeXY: {x: 0, y: 0}
   beHitCharacterList: []
-  hitEffect: {fileID: 5396592124056721318, guid: a1ffd7e1a60d5334ebf18df942c912a2, type: 3}
+  hitEffect: {fileID: 320744395548210819, guid: 3ea7eb38eb4e40a4fb314dbf24e1b998, type: 3}
 --- !u!61 &1522005665362786126
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1339,7 +1339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 30
   attackEnhance: 0
-  knockbackLevel: 0
+  knockbackLevel: 10
   knockback: {x: 0, y: 10}
   stunRatio: 0
   canClearCooldown: 0

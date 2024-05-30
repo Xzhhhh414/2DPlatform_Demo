@@ -3474,7 +3474,7 @@ AnimatorStateMachine:
     m_Position: {x: 1150, y: 80, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1812022983306025521}
-    m_Position: {x: -20, y: 240, z: 0}
+    m_Position: {x: 10, y: 260, z: 0}
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: 5173254929578911379}
@@ -3903,7 +3903,7 @@ MonoBehaviour:
   updateOnStateMachineEnter: 0
   updateOnStateMachineExit: 1
   valueOnEnter: 0
-  valueOnExit: 0
+  valueOnExit: 5
 --- !u!114 &1002393797893384365
 MonoBehaviour:
   m_ObjectHideFlags: 1
