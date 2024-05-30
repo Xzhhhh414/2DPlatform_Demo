@@ -128,7 +128,10 @@ public class Damageable : MonoBehaviour
         {
             //受到伤害
             damage -= prop.Defense;
-            if (damage <= 0) return false;
+            if (damage <= 1)
+            {
+                damage = 1;
+            } 
             
             prop.AddCurrentHp(-damage);
             healthChanged?.Invoke(Health,MaxHealth);

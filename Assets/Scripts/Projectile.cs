@@ -6,10 +6,11 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public int damage = 10;
+    public int damage;
     public Vector2 movespeed = new Vector2(3f, 0);
     public Vector2 knockback = Vector2.zero;
     public int knockbackLevel; //³å»÷µÈ¼¶
+    int _attackDamage;
 
     private GameObject hitEffect;
     private Vector3 hitPosition;
@@ -29,6 +30,15 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (BattleTestManager.Instance.isMinDamage)
+        {
+            _attackDamage = 1;
+        }
+        else
+        {
+            _attackDamage = damage;
+        }
+
         Damageable damageable = collision.GetComponent<Damageable>();
 
         if (damageable != null)
@@ -36,7 +46,7 @@ public class Projectile : MonoBehaviour
             Vector2 deliveredKnockback = transform.localScale.x > 0 ? knockback : new Vector2(-knockback.x, knockback.y);
 
             //Vector2 deliveredKnockback = new Vector2(0, 0);
-            bool gotHit = damageable.Hit(damage, deliveredKnockback, knockbackLevel, hitEffect, hitPosition);
+            bool gotHit = damageable.Hit(_attackDamage, deliveredKnockback, knockbackLevel, hitEffect, hitPosition);
 
             if (gotHit)
             //Debug.Log(collision.name + "hit for" + damage);
