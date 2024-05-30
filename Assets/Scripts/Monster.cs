@@ -4,20 +4,21 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
-public class Monster : Character
+public class Monster : MonoBehaviour
 {
     public float walkAcceleration = 3f;
     public float maxSpeed = 3f;
     public float walkStopRate = 0.6f;
     public DetectionZone attackZone;
     public DetectionZone cliffDetectionZone;
-
+    public GameObject healthBar;
+    public Transform healthBarPosition;
 
     //Rigidbody2D rb;
     TouchingDirections touchingDirections;
     Animator animator;
     Damageable damageable;
-
+    Rigidbody2D rb;
 
     public enum WalkalbeDirection { Right, Left };
 
@@ -86,7 +87,11 @@ public class Monster : Character
         damageable = GetComponent<Damageable>();
     }
 
-    // Update is called once per frame
+    private void Start()
+    {
+        EventManager.Instance.TriggerEvent<GameObject>(CustomEventType.MonsterSpawned, gameObject);
+    }
+    
     void Update()
     {
         HasTarget = attackZone.dectectedColliders.Count > 0;
@@ -144,4 +149,16 @@ public class Monster : Character
             FlipDirection();
         }
     }
+
+    [SerializeField, Label("被击飞时的击退倍率")]
+    private float KnockBackRate = 1f;
+    public void OnHit(int damage, Vector2 knockback, int knockbackLevel, int armorLevel)
+    {
+        if (knockbackLevel >= armorLevel)
+        {
+            rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y) * KnockBackRate;
+            //Debug.Log(rb.velocity);
+        }
+    }
+
 }

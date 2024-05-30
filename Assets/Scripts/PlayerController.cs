@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
-public class PlayerController : Character
+public class PlayerController : MonoBehaviour
 {
     public float walkSpeed;   
     public float airWalkSpeed;
@@ -28,7 +28,7 @@ public class PlayerController : Character
     BoxCollider2D bCollider;
 
     Animator animator;
-
+    Rigidbody2D rb;
 
     //skill03的技能逻辑
     private float dashSpeed = 75f; // 冲刺速度
@@ -913,6 +913,17 @@ public class PlayerController : Character
         }
     }
 
+
+    [SerializeField, Label("被击飞时的击退倍率")]
+    private float KnockBackRate = 1f;
+    public void OnHit(int damage, Vector2 knockback, int knockbackLevel, int armorLevel)
+    {
+        if (knockbackLevel >= armorLevel)
+        {
+            rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y) * KnockBackRate;
+            //Debug.Log(rb.velocity);
+        }
+    }
 
     #region 废弃
     #region 斜坡判定

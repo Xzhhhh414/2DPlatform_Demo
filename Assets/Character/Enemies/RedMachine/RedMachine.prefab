@@ -179,6 +179,7 @@ Transform:
   - {fileID: 6047386832346151958}
   - {fileID: 4720070817373532758}
   - {fileID: 8647569366477899321}
+  - {fileID: 9031006578078395580}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6970840597294661560
@@ -323,6 +324,8 @@ MonoBehaviour:
   walkStopRate: 0.01
   attackZone: {fileID: 7541528397675991433}
   cliffDetectionZone: {fileID: 6455040145224500777}
+  healthBar: {fileID: 0}
+  healthBarPosition: {fileID: 9031006578078395580}
   _hasTarget: 0
 --- !u!114 &6235004766465508083
 MonoBehaviour:
@@ -666,3 +669,34 @@ MonoBehaviour:
   freezeXY: {x: 0, y: 0}
   beHitCharacterList: []
   hitEffect: {fileID: 4579777992280628377, guid: bb5e0c27fef58424fb9dd7d26aad2771, type: 3}
+--- !u!1 &8266479613809668277
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9031006578078395580}
+  m_Layer: 8
+  m_Name: HealthBarPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9031006578078395580
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8266479613809668277}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 5.122, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1643534007564350675}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

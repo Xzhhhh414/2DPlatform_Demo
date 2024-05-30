@@ -9,9 +9,8 @@ public class UIManager : MonoBehaviour
 {
     public GameObject damageTextPrefab;
     public GameObject healthTextPrefab;
-
     public Canvas gameCanvas;
-
+    public GameObject NPCHealthBarPrefab;
 
     public void Start()
     {
@@ -22,34 +21,30 @@ public class UIManager : MonoBehaviour
 
     private void OnEnable()
     {
-        //CharacterEvents.characterDamaged += CharacterTookDamage;
-        //CharacterEvents.characterHealed += CharacterHealed;
-        EventManager.Instance.AddListener<GameObject, int>(CustomEventType.characterDamaged, CharacterTookDamage);
-        EventManager.Instance.AddListener<GameObject, int>(CustomEventType.characterHealed, CharacterHealed);
+        EventManager.Instance.AddListener<GameObject>(CustomEventType.MonsterSpawned, SpawnNPCHealthBar);
+        EventManager.Instance.AddListener<GameObject, int>(CustomEventType.CharacterDamaged, CharacterTookDamage);
+        EventManager.Instance.AddListener<GameObject, int>(CustomEventType.CharacterHealed, CharacterHealed);
+
     }
 
     private void OnDisable()
     {
-        //CharacterEvents.characterDamaged -= CharacterTookDamage;
-        //CharacterEvents.characterHealed -= CharacterHealed;
-        EventManager.Instance.RemoveListener<GameObject, int>(CustomEventType.characterDamaged, CharacterTookDamage);
-        EventManager.Instance.RemoveListener<GameObject, int>(CustomEventType.characterHealed, CharacterHealed);
+        EventManager.Instance.RemoveListener<GameObject>(CustomEventType.MonsterSpawned, SpawnNPCHealthBar);
+        EventManager.Instance.RemoveListener<GameObject, int>(CustomEventType.CharacterDamaged, CharacterTookDamage);
+        EventManager.Instance.RemoveListener<GameObject, int>(CustomEventType.CharacterHealed, CharacterHealed);
+
     }
 
 
     public void CharacterTookDamage(GameObject character, int damageReceived)
     {
         Vector3 spawnPosition = Camera.main.WorldToScreenPoint(character.transform.position);
-
         TMP_Text tmpText = Instantiate(damageTextPrefab, spawnPosition, Quaternion.identity, gameCanvas.transform).GetComponent<TMP_Text>();
-
         tmpText.text = damageReceived.ToString();
-
         HealthText healthText = tmpText.GetComponent<HealthText>();
         if (healthText != null)
         {
             healthText.followingObject = character;
-
             if (character.CompareTag("Player"))
             {
                 healthText.textColor = Color.red;
@@ -57,10 +52,20 @@ public class UIManager : MonoBehaviour
             {
                 healthText.textColor = Color.white;
             }
-            
         }
 
+        if (character.CompareTag("Monster"))
+        {
+            Monster monster = character.GetComponent<Monster>();
+            MonsterHealthBar monsterHealthBar = monster.healthBar.GetComponent<MonsterHealthBar>();
+            if (monsterHealthBar != null)
+            {
+                monsterHealthBar.GetDamaged(damageReceived);
+            }
+        }
+  
     }
+
     public void CharacterHealed(GameObject character, int healthRestored)
     {
         Vector3 spawnPosition = Camera.main.WorldToScreenPoint(character.transform.position);
@@ -87,5 +92,23 @@ public class UIManager : MonoBehaviour
             #endif
 
         }
+    }
+
+
+    public void SpawnNPCHealthBar(GameObject character)
+    {
+        Vector3 spawnPositionHealthBar = Camera.main.WorldToScreenPoint(character.transform.position);
+        GameObject temp_NPCHealthBar = Instantiate(NPCHealthBarPrefab, spawnPositionHealthBar, Quaternion.identity, gameCanvas.transform);
+        temp_NPCHealthBar.SetActive(false);
+
+        MonsterHealthBar NPCHealthBar = temp_NPCHealthBar.GetComponent<MonsterHealthBar>();
+        NPCHealthBar.followingObject = character;
+
+        Monster monster = character.GetComponent<Monster>();
+        if (monster != null)
+        {
+            monster.healthBar = temp_NPCHealthBar;
+        }
+
     }
 }

@@ -214,6 +214,7 @@ Transform:
   - {fileID: 1867071579582643167}
   - {fileID: 2368959463796270356}
   - {fileID: 1199567006283638803}
+  - {fileID: 8900867226003746403}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6970840597294661560
@@ -352,13 +353,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2480eac51eb21f1419f3797330c72087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KnockBackRate: 1
   walkAcceleration: 30
   maxSpeed: 4.2
   walkStopRate: 0.15
   attackZone: {fileID: 7541528397675991433}
   cliffDetectionZone: {fileID: 6455040145224500777}
+  healthBar: {fileID: 0}
+  healthBarPosition: {fileID: 8900867226003746403}
   _hasTarget: 0
+  KnockBackRate: 1
 --- !u!114 &6235004766465508083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -442,7 +445,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3739353946498540055}
-        m_TargetAssemblyTypeName: Knight, Assembly-CSharp
+        m_TargetAssemblyTypeName: Monster, Assembly-CSharp
         m_MethodName: OnHit
         m_Mode: 0
         m_Arguments:
@@ -782,6 +785,37 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.17, y: 2.61, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1643534007564350675}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8099569319990764049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8900867226003746403}
+  m_Layer: 8
+  m_Name: HealthBarPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8900867226003746403
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8099569319990764049}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 5.672, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

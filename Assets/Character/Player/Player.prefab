@@ -2539,7 +2539,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0b1cb2a71eae694a8979da9b0aed90c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KnockBackRate: 1
   walkSpeed: 12
   airWalkSpeed: 9
   airDrag: 0.7
@@ -2666,6 +2665,7 @@ MonoBehaviour:
   startwaveRate: 4
   ropeSetRope: 20
   grabbingHand: {fileID: 0}
+  KnockBackRate: 1
 --- !u!114 &6420420121662775390
 MonoBehaviour:
   m_ObjectHideFlags: 0
