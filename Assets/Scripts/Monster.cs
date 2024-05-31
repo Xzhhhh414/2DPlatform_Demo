@@ -97,6 +97,7 @@ public class Monster : MonoBehaviour
     void Update()
     {
         HasTarget = attackZone.dectectedColliders.Count > 0;
+        //Debug.Log("HasTarget ="+ HasTarget);
         if (AttackCooldown > 0)
         {
             AttackCooldown -= Time.deltaTime;

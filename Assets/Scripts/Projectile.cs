@@ -39,7 +39,7 @@ public class Projectile : MonoBehaviour
             _attackDamage = damage;
         }
 
-        Damageable damageable = collision.GetComponent<Damageable>();
+        Damageable damageable = collision.GetComponentInParent<Damageable>();
 
         if (damageable != null)
         {
