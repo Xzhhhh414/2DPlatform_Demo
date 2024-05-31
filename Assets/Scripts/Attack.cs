@@ -28,7 +28,7 @@ public class Attack : MonoBehaviour
     private float lagDuration = 0.2f;//加个计时，命中多个目标只算1次
     private float lagLeftTime;
     private bool hitValid = true;
-    private Property prop;
+    private Character character;
     private CinemachineImpulseSource impulseSource;
     [SerializeField, Label("震屏发生的帧数")]
     private int impulseFrameIndex = -100;
@@ -79,7 +79,7 @@ public class Attack : MonoBehaviour
 
     private void Start()
     {
-        prop = this.GetComponentInParent<Property>();
+        character = this.GetComponentInParent<Character>();
         animator = GetComponentInParent<Animator>();
         rb = GetComponentInParent<Rigidbody2D>();
         if (impulseFrameIndex >= 0 && preClip != null)
@@ -92,7 +92,7 @@ public class Attack : MonoBehaviour
             };
             impulseSource.m_ImpulseDefinition = definition;
         }
-        _attackDamage = (int)Mathf.Round(attackDamage+prop.Attack*attackEnhance);
+        _attackDamage = (int)Mathf.Round(attackDamage+character.Attack*attackEnhance);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -105,7 +105,7 @@ public class Attack : MonoBehaviour
         }
         else
         {
-            _attackDamage = (int)Mathf.Round(attackDamage + prop.Attack * attackEnhance);
+            _attackDamage = (int)Mathf.Round(attackDamage + character.Attack * attackEnhance);
         }
 #endif
         firstContactPoint = collision.ClosestPoint(transform.position);

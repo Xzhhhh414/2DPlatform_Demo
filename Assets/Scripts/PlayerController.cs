@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
-public class PlayerController : MonoBehaviour
+public class PlayerController : Character
 {
     public float walkSpeed;   
     public float airWalkSpeed;
@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour
     private bool isOnAttackHolding = false;
     private float attackInputTimer = 0.0f;
     private float attackInputInterval = 0.2f;
-    private Property prop;
 
     TouchingDirections touchingDirections;
     Damageable damageable;
@@ -218,8 +217,9 @@ public class PlayerController : MonoBehaviour
 
     public bool CanGrab { get => animator.GetBool(AnimationStrings.canGrab); }
 
-    private void Awake()
+    protected override void Initialize()
     {
+        base.Initialize();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         touchingDirections = GetComponent<TouchingDirections>();
@@ -237,14 +237,14 @@ public class PlayerController : MonoBehaviour
         distanceJoint2D = GetComponent<DistanceJoint2D>();
         grabDetection = GetComponentInChildren<GrabDetection>();
         lineRenderer = GetComponent<LineRenderer>();
-        prop = this.GetComponent<Property>();
         grabbingHand = transform.Find("GrabbingHand");
     }
+    
     private void Start()
     {
         wallLayerMask = LayerMask.GetMask("Ground");
         clearCDTimeLeft = clearCDMaxTime;
-        airJumpsLeft = prop.MaxAirJumps; // 初始化剩余的空中跳跃次数
+        airJumpsLeft = MaxAirJumps; // 初始化剩余的空中跳跃次数
         distanceJoint2D.enabled = false;
         distanceJoint2D.autoConfigureDistance = false;
         //distanceJoint2D.anchor = grabbingHand.position;
@@ -365,7 +365,7 @@ public class PlayerController : MonoBehaviour
 
         if (touchingDirections.IsGrounded)
         {
-            airJumpsLeft = prop.MaxAirJumps; // 如果在地面上，重置空中跳跃次数
+            airJumpsLeft = MaxAirJumps; // 如果在地面上，重置空中跳跃次数
             isDrifting = false;
         }
 
@@ -854,9 +854,23 @@ public class PlayerController : MonoBehaviour
             RaycastHit2D[] hits = Physics2D.RaycastAll(boundsPoint, direction, Vector2.Distance(grabPosition, boundsPoint));
             foreach (var hit in hits)
             {
-                if (hit.collider != null && hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+                if (hit.collider != null)
                 {
-                    return true;
+                    GameObject hitObject = hit.collider.gameObject;
+                    if (hitObject.layer == LayerMask.NameToLayer("Ground") && !hitObject.CompareTag("One Way"))
+                    {
+                        return true;
+                    }
+
+                    if (hitObject.CompareTag("One Way"))
+                    {
+                        //Debug.Log("bCollider.bounds.min.y===" + bCollider.bounds.min.y + "hit.point.y===" + hit.point.y);
+                        if (bCollider.bounds.min.y >= hit.point.y)  //玩家在软平台上方，不能用钩锁
+                        {
+                            return true;
+                        }
+                        
+                    }
                 }
             }
 

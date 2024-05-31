@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 204077961074298661}
   - component: {fileID: 1045608046857043527}
   - component: {fileID: 7881364187364034828}
-  - component: {fileID: 5517249303062016758}
   - component: {fileID: 2556063452678045393}
   m_Layer: 8
   m_Name: Firefly
@@ -137,6 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2480eac51eb21f1419f3797330c72087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  so: {fileID: 0}
   walkAcceleration: 3
   maxSpeed: 3
   walkStopRate: 0.6
@@ -180,6 +180,7 @@ MonoBehaviour:
   healthChanged:
     m_PersistentCalls:
       m_Calls: []
+  _character: {fileID: 0}
   _isAlive: 1
   hitInterval: 0
   hitIntervalTime: 0.25
@@ -267,24 +268,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchPoint: {fileID: 6848087802950485580}
   projectilePrefab: {fileID: 5818244657351767683, guid: 1c9ff8d60e35a0446b24a66050c702d8, type: 3}
---- !u!114 &5517249303062016758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 76009870517717507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc0584ccbcdece440b2584bd476e2d54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _currentHp: 0
-  _maxHp: 100
-  _defense: 0
-  _attack: 0
-  _armorLv: 0
-  _maxAirJumps: 0
 --- !u!114 &2556063452678045393
 MonoBehaviour:
   m_ObjectHideFlags: 0

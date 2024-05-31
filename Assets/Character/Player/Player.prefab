@@ -2695,7 +2695,6 @@ GameObject:
   - component: {fileID: 4717282881302430149}
   - component: {fileID: 6882391051196661106}
   - component: {fileID: 772671975846870223}
-  - component: {fileID: 378264440965979807}
   - component: {fileID: 7008645299509921626}
   - component: {fileID: 2771905623865858567}
   m_Layer: 7
@@ -2840,6 +2839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0b1cb2a71eae694a8979da9b0aed90c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  so: {fileID: 11400000, guid: 8b09a4cad75f88b4d82b1a0318d85468, type: 2}
   walkSpeed: 12
   airWalkSpeed: 9
   airDrag: 0.7
@@ -3273,6 +3273,7 @@ MonoBehaviour:
   healthChanged:
     m_PersistentCalls:
       m_Calls: []
+  _character: {fileID: 0}
   _isAlive: 1
   hitInterval: 0
   hitIntervalTime: 0.25
@@ -3449,24 +3450,6 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!114 &378264440965979807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8577367491070427345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc0584ccbcdece440b2584bd476e2d54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _currentHp: 0
-  _maxHp: 10000
-  _defense: 0
-  _attack: 0
-  _armorLv: 0
-  _maxAirJumps: 1
 --- !u!114 &7008645299509921626
 MonoBehaviour:
   m_ObjectHideFlags: 0

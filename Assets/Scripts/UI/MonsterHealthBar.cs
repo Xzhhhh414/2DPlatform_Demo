@@ -6,14 +6,13 @@ using System;
 
 public class MonsterHealthBar : MonoBehaviour
 {
-    public Slider healthSlider_Start; //ÊÜµ½ÉËº¦Ç°µÄÑªÌõ
-    public Slider healthSlider_Current;//µ±Ç°µÄÑªÌõ
+    public Slider healthSlider_Start; //ï¿½Üµï¿½ï¿½Ëºï¿½Ç°ï¿½ï¿½Ñªï¿½ï¿½
+    public Slider healthSlider_Current;//ï¿½ï¿½Ç°ï¿½ï¿½Ñªï¿½ï¿½
     public GameObject followingObject;
     private Monster monster;
     private RectTransform rectTransform;
     private float showTime = 2.5f;
     private float showTimeLeft;
-    private Property prop;
 
 
     void Awake()
@@ -30,7 +29,6 @@ public class MonsterHealthBar : MonoBehaviour
     private void Init()
     {
         monster = followingObject.GetComponent<Monster>();
-        prop = monster.GetComponent<Property>();
 
         if (followingObject != null)
         {
@@ -46,17 +44,17 @@ public class MonsterHealthBar : MonoBehaviour
     {
         if (followingObject != null)
         {
-            // »ñÈ¡¹ÖÎïµÄÊÀ½çÎ»ÖÃ
+            // ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
             Vector3 worldPosition = monster.healthBarPosition.position;
-            // ½«ÊÀ½çÎ»ÖÃ×ª»»ÎªÆÁÄ»Î»ÖÃ
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½×ªï¿½ï¿½Îªï¿½ï¿½Ä»Î»ï¿½ï¿½
             Vector3 screenPosition = Camera.main.WorldToScreenPoint(worldPosition);
-            // ¸üÐÂÑªÌõµÄ UI Î»ÖÃ
+            // ï¿½ï¿½ï¿½ï¿½Ñªï¿½ï¿½ï¿½ï¿½ UI Î»ï¿½ï¿½
             rectTransform.position = screenPosition;
             
         }
         else
         {
-            // Èç¹ûÃ»ÓÐÅäÖÃ healthBarPosition£¬ÔòÊ¹ÓÃ¹ÖÎïµÄ Transform
+            // ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ healthBarPositionï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ã¹ï¿½ï¿½ï¿½ï¿½ Transform
             Vector3 worldPosition = followingObject.transform.position;
             Vector3 screenPosition = Camera.main.WorldToScreenPoint(worldPosition);
             rectTransform.position = screenPosition;
@@ -74,7 +72,7 @@ public class MonsterHealthBar : MonoBehaviour
             
         }
 
-        if (prop.CurrentHp <= 0)
+        if (monster.CurrentHp <= 0)
         {
             
             Destroy(gameObject);
@@ -85,17 +83,17 @@ public class MonsterHealthBar : MonoBehaviour
     public void GetDamaged(int damageReceived)
     {
         gameObject.SetActive(true);
-        if (followingObject == null || monster == null || prop == null)
+        if (followingObject == null || monster == null )
         {
             Init();
         }
 
-        healthSlider_Current.value = CalculateSliderPercentage(prop.CurrentHp, prop.MaxHp);
+        healthSlider_Current.value = CalculateSliderPercentage(monster.CurrentHp, monster.MaxHp);
         //Debug.Log("CurrentHp==" + CurrentHp + ",        MaxHp==" + MaxHp) ;
         //Debug.Log(" healthSlider_Current.value==" + healthSlider_Current.value);
 
-        int hpStart = prop.CurrentHp + damageReceived;
-        healthSlider_Start.value = CalculateSliderPercentage(hpStart, prop.MaxHp);
+        int hpStart = monster.CurrentHp + damageReceived;
+        healthSlider_Start.value = CalculateSliderPercentage(hpStart, monster.MaxHp);
         StartCoroutine(SmoothlyUpdatePreviousHealthBar(healthSlider_Current.value));
 
         showTimeLeft = showTime;

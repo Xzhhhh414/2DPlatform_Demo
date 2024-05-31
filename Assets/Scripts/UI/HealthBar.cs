@@ -11,7 +11,8 @@ public class HealthBar : MonoBehaviour
     public TMP_Text healthBarText;
 
 
-    Damageable playerDamageable;
+    PlayerController character;
+    private Damageable playerDamageable;
 
 
     private void Awake()
@@ -33,11 +34,12 @@ public class HealthBar : MonoBehaviour
         {
             Debug.Log("No Player found in the scene");
         }
+        character = player.GetComponent<PlayerController>();
         playerDamageable = player.GetComponent<Damageable>();
 
 
-        healthSlider.value = CalculateSliderPercentage(playerDamageable.Health , playerDamageable .MaxHealth);
-        healthBarText.text = playerDamageable.Health + " / " + playerDamageable.MaxHealth;
+        healthSlider.value = CalculateSliderPercentage(character.CurrentHp , character .MaxHp);
+        healthBarText.text = character.CurrentHp + " / " + character.MaxHp;
 
         CallOnEnableMethods();
     }

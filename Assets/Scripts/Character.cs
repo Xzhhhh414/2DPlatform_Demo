@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using SO;
 
 public class Character : MonoBehaviour
 {
@@ -15,4 +17,124 @@ public class Character : MonoBehaviour
     //        //Debug.Log(rb.velocity);
     //    }
     //}
+    [SerializeField,Label("属性")]
+    protected PropertySO so;
+    [HideInInspector]
+    public Property prop;
+    
+    protected virtual void Initialize()
+    {
+        
+        prop ??= new Property();
+        prop.Initialize(so);
+       
+    }
+    private void Awake()
+    {
+        Initialize();
+    }
+
+    public int MaxHp
+    {
+        get
+        {
+            if (prop is not null && prop.Get(PropertyType.MaxHP.ToString(), out int rst))
+            {
+                return rst;
+            }
+
+            return 1;
+        }
+    }
+    
+    public int CurrentHp
+    {
+        get
+        {
+            if (prop is not null && prop.Get(PropertyType.CurrentHP.ToString(), out int rst))
+            {
+                return rst;
+            }
+
+            return 1;
+        }
+    }
+    
+    public float Speed
+    {
+        get
+        {
+            if (prop is not null && prop.Get(PropertyType.SpeedRate.ToString(), out float rst))
+            {
+                return rst;
+            }
+
+            return 0;
+        }
+    }
+    
+    public float AirSpeed
+    {
+        get
+        {
+            if (prop is not null && prop.Get(PropertyType.AirSpeed.ToString(), out float rst))
+            {
+                return rst;
+            }
+
+            return 0;
+        }
+    }
+    
+    public int MaxAirJumps
+    {
+        get
+        {
+            if (prop is not null && prop.Get(PropertyType.MaxAirJumps.ToString(), out int rst))
+            {
+                return rst;
+            }
+
+            return 0;
+        }
+    }
+    
+    public int Defense
+    {
+        get
+        {
+            if (prop is not null && prop.Get(PropertyType.Defense.ToString(), out int rst))
+            {
+                return rst;
+            }
+
+            return 0;
+        }
+    }
+    
+    public int ArmorLv
+    {
+        get
+        {
+            if (prop is not null && prop.Get(PropertyType.ArmorLv.ToString(), out int rst))
+            {
+                return rst;
+            }
+
+            return 0;
+        }
+    }
+    
+    public int Attack
+    {
+        get
+        {
+            if (prop is not null && prop.Get(PropertyType.Attack.ToString(), out int rst))
+            {
+                return rst;
+            }
+
+            return 0;
+        }
+    }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
-public class Monster : MonoBehaviour
+public class Monster : Character
 {
     public float walkAcceleration = 3f;
     public float maxSpeed = 3f;
@@ -81,7 +81,7 @@ public class Monster : MonoBehaviour
         }
     }
 
-    private void Awake()
+    protected override void Initialize()
     {
         rb = GetComponent<Rigidbody2D>();
         touchingDirections = GetComponent<TouchingDirections>();
@@ -153,7 +153,7 @@ public class Monster : MonoBehaviour
         }
     }
 
-    [SerializeField, Label("±»»÷·ÉÊ±µÄ»÷ÍË±¶ÂÊ")]
+    [SerializeField, Label("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½Ä»ï¿½ï¿½Ë±ï¿½ï¿½ï¿½")]
     private float KnockBackRate = 1f;
     public void OnHit(int damage, Vector2 knockback, int knockbackLevel, int armorLevel)
     {
