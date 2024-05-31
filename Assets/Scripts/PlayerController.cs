@@ -854,9 +854,23 @@ public class PlayerController : MonoBehaviour
             RaycastHit2D[] hits = Physics2D.RaycastAll(boundsPoint, direction, Vector2.Distance(grabPosition, boundsPoint));
             foreach (var hit in hits)
             {
-                if (hit.collider != null && hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+                if (hit.collider != null)
                 {
-                    return true;
+                    GameObject hitObject = hit.collider.gameObject;
+                    if (hitObject.layer == LayerMask.NameToLayer("Ground") && !hitObject.CompareTag("One Way"))
+                    {
+                        return true;
+                    }
+
+                    if (hitObject.CompareTag("One Way"))
+                    {
+                        //Debug.Log("bCollider.bounds.min.y===" + bCollider.bounds.min.y + "hit.point.y===" + hit.point.y);
+                        if (bCollider.bounds.min.y >= hit.point.y)  //玩家在软平台上方，不能用钩锁
+                        {
+                            return true;
+                        }
+                        
+                    }
                 }
             }
 
