@@ -97,6 +97,7 @@ public class Attack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+    
 #if UNITY_EDITOR
         if (BattleTestManager.Instance.isMinDamage)
         {
@@ -112,7 +113,8 @@ public class Attack : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Damageable damageable = collision.GetComponent<Damageable>();
+        
+        Damageable damageable = collision.GetComponentInParent<Damageable>();
         if (damageable == null) return;
 
         if (hitFreezeXY)
@@ -135,7 +137,7 @@ public class Attack : MonoBehaviour
                 StopCoroutine(damageableCoroutines[damageable]);
             }
 
-            damageableCoroutines[damageable] = StartCoroutine(ChangAnimationSpeed(0f, stunRatio, animator, collision.GetComponent<Animator>()));
+            damageableCoroutines[damageable] = StartCoroutine(ChangAnimationSpeed(0f, stunRatio, animator, collision.GetComponentInParent<Animator>()));
             if (hitModifyY)
             {
                 ModifyY?.Invoke(hitModifyY, modifyY);
