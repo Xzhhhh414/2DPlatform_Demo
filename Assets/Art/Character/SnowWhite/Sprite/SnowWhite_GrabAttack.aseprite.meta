@@ -1,0 +1,1004 @@
+fileFormatVersion: 2
+guid: e3b9394ab249d5944936f735dbf46ce2
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: SnowWhite_GrabAttack_Frame_0
+    originalName: 
+    pivot: {x: 0.83870965, y: -0.22580643}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 121
+      width: 31
+      height: 31
+    spriteID: 63ae59005720b1d4e8153da42e92af7b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 121}
+  - name: SnowWhite_GrabAttack_Frame_1
+    originalName: 
+    pivot: {x: 0.83870965, y: -0.22580643}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 160
+      width: 31
+      height: 31
+    spriteID: 0ab6cfdbb90797f4db02f2138389538a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 160}
+  - name: SnowWhite_GrabAttack_Frame_2
+    originalName: 
+    pivot: {x: 0.83870965, y: -0.21875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 281
+      width: 31
+      height: 32
+    spriteID: 44092c0e39099554a9d1c04d4711e262
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 281}
+  - name: SnowWhite_GrabAttack_Frame_3
+    originalName: 
+    pivot: {x: 0.83870965, y: -0.21875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 321
+      width: 31
+      height: 32
+    spriteID: 7da6be2dd8242fe49b8498ae09077cda
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 321}
+  - name: SnowWhite_GrabAttack_Frame_4
+    originalName: 
+    pivot: {x: 0.8125, y: -0.21875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 82
+      width: 32
+      height: 32
+    spriteID: 428e8117cada4d94f8add3f765bf1fbe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 82}
+  - name: SnowWhite_GrabAttack_Frame_5
+    originalName: 
+    pivot: {x: 0.8125, y: -0.21875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 122
+      width: 32
+      height: 32
+    spriteID: 56ca16dab49c9b041898a28ca5692ba3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 122}
+  - name: SnowWhite_GrabAttack_Frame_6
+    originalName: 
+    pivot: {x: 0.8125, y: -0.21875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 162
+      width: 32
+      height: 32
+    spriteID: cbc8274d2b693ec48b494d2f542833b6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 162}
+  - name: SnowWhite_GrabAttack_Frame_7
+    originalName: 
+    pivot: {x: 0.8125, y: -0.22580643}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 361
+      width: 32
+      height: 31
+    spriteID: 5e560bffd96f1a84b827351f4f1a6a18
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 361}
+  - name: SnowWhite_GrabAttack_Frame_8
+    originalName: 
+    pivot: {x: 0.8125, y: -0.22580643}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 400
+      width: 32
+      height: 31
+    spriteID: 1f03fbe00f317814485ebe6d5f5664eb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 400}
+  - name: SnowWhite_GrabAttack_Frame_9
+    originalName: 
+    pivot: {x: 0.8125, y: -0.22580643}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 439
+      width: 32
+      height: 31
+    spriteID: 29bd4d683999bd84f9b7f5f0819a753c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 439}
+  - name: SnowWhite_GrabAttack_Frame_10
+    originalName: 
+    pivot: {x: 0.8125, y: -0.22580643}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 4
+      width: 32
+      height: 31
+    spriteID: 16ec40c80fa852b4c8f6cca0d0e39c43
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 4}
+  - name: SnowWhite_GrabAttack_Frame_11
+    originalName: 
+    pivot: {x: 0.8125, y: -0.22580643}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 43
+      width: 32
+      height: 31
+    spriteID: 8a877db672b69884cacc831eea0910c7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 43}
+  - name: SnowWhite_GrabAttack_Frame_12
+    originalName: 
+    pivot: {x: 0.8125, y: -0.22580643}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 82
+      width: 32
+      height: 31
+    spriteID: 398416a98284bac4b857b69fdb7498cf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 82}
+  - name: SnowWhite_GrabAttack_Frame_13
+    originalName: 
+    pivot: {x: 0.84375, y: -0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 202
+      width: 32
+      height: 32
+    spriteID: bae8757ffc146f045a549d3a60402bcc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 202}
+  - name: SnowWhite_GrabAttack_Frame_14
+    originalName: 
+    pivot: {x: 0.88888884, y: -0.3030303}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 280
+      width: 27
+      height: 33
+    spriteID: 73944525e44290e4999792455e57b5d8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 280}
+  - name: SnowWhite_GrabAttack_Frame_15
+    originalName: 
+    pivot: {x: 0.8076924, y: -0.36363637}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 356
+      width: 26
+      height: 33
+    spriteID: 1bd70d0ffd691674f9cf1cb3d42f513c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 356}
+  - name: SnowWhite_GrabAttack_Frame_16
+    originalName: 
+    pivot: {x: 0.6060606, y: -0.45161286}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 242
+      width: 33
+      height: 31
+    spriteID: 29ee163e67bbbe34984e4e10d9461131
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 242}
+  - name: SnowWhite_GrabAttack_Frame_17
+    originalName: 
+    pivot: {x: 0.42857146, y: -0.75}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 88
+      y: 65
+      width: 35
+      height: 24
+    spriteID: e0367f8f08bac73479045c575c311fa9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 88, y: 65}
+  - name: SnowWhite_GrabAttack_Frame_18
+    originalName: 
+    pivot: {x: 0.3611111, y: -0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 36
+      height: 32
+    spriteID: 5f5a3bc3ca3fe80409d0c7c7483f9f8c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: SnowWhite_GrabAttack_Frame_19
+    originalName: 
+    pivot: {x: 0.42307696, y: -0.121212125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 397
+      width: 26
+      height: 33
+    spriteID: d4cc5cf84486e6f44bd39b9a8f973587
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 397}
+  - name: SnowWhite_GrabAttack_Frame_20
+    originalName: 
+    pivot: {x: 0.6666667, y: -0.032258064}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 438
+      width: 27
+      height: 31
+    spriteID: ee80bb27d040ce547b9fc52e14aa62b6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 438}
+  - name: SnowWhite_GrabAttack_Frame_21
+    originalName: 
+    pivot: {x: 0.7272727, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 478
+      width: 33
+      height: 30
+    spriteID: 74739241139227647bd43182d396ff9d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 478}
+  - name: SnowWhite_GrabAttack_Frame_22
+    originalName: 
+    pivot: {x: 0.7297298, y: -0.5217391}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 88
+      y: 34
+      width: 37
+      height: 23
+    spriteID: 34a8daa0d3d8f3a4dbd294041a3d96d7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 88, y: 34}
+  - name: SnowWhite_GrabAttack_Frame_23
+    originalName: 
+    pivot: {x: 0.8000001, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 44
+      width: 35
+      height: 30
+    spriteID: 99f639ab33f313646a8d6dfcf602430c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 44}
+  - name: SnowWhite_GrabAttack_Frame_24
+    originalName: 
+    pivot: {x: 0.6315789, y: -0.45161286}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 88
+      y: 127
+      width: 19
+      height: 31
+    spriteID: ac528c8976b189c4d981fb841c1db48a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 88, y: 127}
+  - name: SnowWhite_GrabAttack_Frame_25
+    originalName: 
+    pivot: {x: 0.4375, y: -0.44444445}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 321
+      width: 32
+      height: 27
+    spriteID: a189641e9357af748a156eb1e342ef4f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 321}
+  - name: SnowWhite_GrabAttack_Frame_26
+    originalName: 
+    pivot: {x: 0.46153846, y: -0.3181818}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 88
+      y: 4
+      width: 39
+      height: 22
+    spriteID: 295f33e21fb7790419addf01765605aa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 88, y: 4}
+  - name: SnowWhite_GrabAttack_Frame_27
+    originalName: 
+    pivot: {x: 0.65384614, y: -0.13333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 477
+      width: 26
+      height: 30
+    spriteID: 1523120bd3515324f86d4a4c547ab67c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 477}
+  - name: SnowWhite_GrabAttack_Frame_28
+    originalName: 
+    pivot: {x: 0.8928571, y: -0.029411767}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 199
+      width: 28
+      height: 34
+    spriteID: 78597221ceb345a43a31da422054f286
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 199}
+  - name: SnowWhite_GrabAttack_Frame_29
+    originalName: 
+    pivot: {x: 0.81578946, y: -0.77272725}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 88
+      y: 97
+      width: 38
+      height: 22
+    spriteID: 0be5a606d03444f40bdb8e3b9eb47b55
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 88, y: 97}
+  - name: SnowWhite_GrabAttack_Frame_30
+    originalName: 
+    pivot: {x: 0.6333334, y: -0.45161286}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 241
+      width: 30
+      height: 31
+    spriteID: e5f09e2c555982c4bbcee80af067e291
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 48, y: 241}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1746735611
+    name: SnowWhite_GrabAttack
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: SnowWhite_GrabAttack_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 10
+        y: 7
+        width: 31
+        height: 31
+      spriteId: 63ae59005720b1d4e8153da42e92af7b
+    - name: SnowWhite_GrabAttack_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 10
+        y: 7
+        width: 31
+        height: 31
+      spriteId: 0ab6cfdbb90797f4db02f2138389538a
+    - name: SnowWhite_GrabAttack_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 10
+        y: 7
+        width: 31
+        height: 32
+      spriteId: 44092c0e39099554a9d1c04d4711e262
+    - name: SnowWhite_GrabAttack_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 10
+        y: 7
+        width: 31
+        height: 32
+      spriteId: 7da6be2dd8242fe49b8498ae09077cda
+    - name: SnowWhite_GrabAttack_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 10
+        y: 7
+        width: 32
+        height: 32
+      spriteId: 428e8117cada4d94f8add3f765bf1fbe
+    - name: SnowWhite_GrabAttack_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 10
+        y: 7
+        width: 32
+        height: 32
+      spriteId: 56ca16dab49c9b041898a28ca5692ba3
+    - name: SnowWhite_GrabAttack_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 10
+        y: 7
+        width: 32
+        height: 32
+      spriteId: cbc8274d2b693ec48b494d2f542833b6
+    - name: SnowWhite_GrabAttack_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 10
+        y: 7
+        width: 32
+        height: 31
+      spriteId: 5e560bffd96f1a84b827351f4f1a6a18
+    - name: SnowWhite_GrabAttack_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 10
+        y: 7
+        width: 32
+        height: 31
+      spriteId: 1f03fbe00f317814485ebe6d5f5664eb
+    - name: SnowWhite_GrabAttack_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 10
+        y: 7
+        width: 32
+        height: 31
+      spriteId: 29bd4d683999bd84f9b7f5f0819a753c
+    - name: SnowWhite_GrabAttack_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 10
+        y: 7
+        width: 32
+        height: 31
+      spriteId: 16ec40c80fa852b4c8f6cca0d0e39c43
+    - name: SnowWhite_GrabAttack_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 10
+        y: 7
+        width: 32
+        height: 31
+      spriteId: 8a877db672b69884cacc831eea0910c7
+    - name: SnowWhite_GrabAttack_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 10
+        y: 7
+        width: 32
+        height: 31
+      spriteId: 398416a98284bac4b857b69fdb7498cf
+    - name: SnowWhite_GrabAttack_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 9
+        y: 8
+        width: 32
+        height: 32
+      spriteId: bae8757ffc146f045a549d3a60402bcc
+    - name: SnowWhite_GrabAttack_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 12
+        y: 10
+        width: 27
+        height: 33
+      spriteId: 73944525e44290e4999792455e57b5d8
+    - name: SnowWhite_GrabAttack_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 15
+        y: 12
+        width: 26
+        height: 33
+      spriteId: 1bd70d0ffd691674f9cf1cb3d42f513c
+    - name: SnowWhite_GrabAttack_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 16
+        y: 14
+        width: 33
+        height: 31
+      spriteId: 29ee163e67bbbe34984e4e10d9461131
+    - name: SnowWhite_GrabAttack_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 21
+        y: 18
+        width: 35
+        height: 24
+      spriteId: e0367f8f08bac73479045c575c311fa9
+    - name: SnowWhite_GrabAttack_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 23
+        y: 8
+        width: 36
+        height: 32
+      spriteId: 5f5a3bc3ca3fe80409d0c7c7483f9f8c
+    - name: SnowWhite_GrabAttack_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 25
+        y: 4
+        width: 26
+        height: 33
+      spriteId: d4cc5cf84486e6f44bd39b9a8f973587
+    - name: SnowWhite_GrabAttack_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 18
+        y: 1
+        width: 27
+        height: 31
+      spriteId: ee80bb27d040ce547b9fc52e14aa62b6
+    - name: SnowWhite_GrabAttack_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 12
+        y: 0
+        width: 33
+        height: 30
+      spriteId: 74739241139227647bd43182d396ff9d
+    - name: SnowWhite_GrabAttack_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 9
+        y: 12
+        width: 37
+        height: 23
+      spriteId: 34a8daa0d3d8f3a4dbd294041a3d96d7
+    - name: SnowWhite_GrabAttack_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 8
+        y: 15
+        width: 35
+        height: 30
+      spriteId: 99f639ab33f313646a8d6dfcf602430c
+    - name: SnowWhite_GrabAttack_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 24
+        y: 14
+        width: 19
+        height: 31
+      spriteId: ac528c8976b189c4d981fb841c1db48a
+    - name: SnowWhite_GrabAttack_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 22
+        y: 12
+        width: 32
+        height: 27
+      spriteId: a189641e9357af748a156eb1e342ef4f
+    - name: SnowWhite_GrabAttack_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 18
+        y: 7
+        width: 39
+        height: 22
+      spriteId: 295f33e21fb7790419addf01765605aa
+    - name: SnowWhite_GrabAttack_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 19
+        y: 4
+        width: 26
+        height: 30
+      spriteId: 1523120bd3515324f86d4a4c547ab67c
+    - name: SnowWhite_GrabAttack_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 11
+        y: 1
+        width: 28
+        height: 34
+      spriteId: 78597221ceb345a43a31da422054f286
+    - name: SnowWhite_GrabAttack_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 5
+        y: 17
+        width: 38
+        height: 22
+      spriteId: 0be5a606d03444f40bdb8e3b9eb47b55
+    - name: SnowWhite_GrabAttack_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 17
+        y: 14
+        width: 30
+        height: 31
+      spriteId: e5f09e2c555982c4bbcee80af067e291
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 72, y: 48}
