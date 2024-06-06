@@ -22,7 +22,7 @@ public enum PropertyType
     AttackSpeedRate=7,
     CriticalRate=8,
     CritDamageMulti=9,
-    SpeedRate=10,
+    WalkSpeed=10,
     MaxAirJumps=11,
     DamageIncrease=12,
     RecieveDmgIncrease=13,
@@ -192,7 +192,7 @@ public enum PropertyType
                 {
                     return new DamageIncrease();
                 }
-                case PropertyType.SpeedRate:
+                case PropertyType.WalkSpeed:
                 {
                     return new Speed();
                 }

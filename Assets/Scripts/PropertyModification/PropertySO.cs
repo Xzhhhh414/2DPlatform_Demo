@@ -7,8 +7,8 @@ namespace SO
    [CreateAssetMenu(fileName = "PropertySO",menuName = "SO/Property")]
    public class PropertySO : ScriptableObject
    {
-      public List<PropertyType> propertyName;
-      public List<int> propertyParam;
+      public List<PropertyType> propertyName=new List<PropertyType>();
+      public List<int> propertyParam=new List<int>();
    }
 
 }
