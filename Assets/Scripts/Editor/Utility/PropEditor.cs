@@ -46,7 +46,7 @@ public class PropEditor : Editor      //需要继承 Editor
         EditorGUILayout.LabelField("属性信息","该角色拥有"+prop.propertyName.Count+"个属性");
         for(int i=0;i<prop.propertyName.Count;i++)
         {
-            string text=(ParseEnum(prop.propertyName[i]) is IGet<int>)?"":"（实为所填值0.01%的浮点数）";
+            string text="_Base"+((ParseEnum(prop.propertyName[i]) is IGet<int>)?"":"（实为所填值1%的浮点数）");
             prop.propertyParam[i]= EditorGUILayout.IntField(prop.propertyName[i]+text, prop.propertyParam[i]);
             
             if (GUILayout.Button("删除该属性",GUILayout.Width(100)))
@@ -96,7 +96,7 @@ public class PropEditor : Editor      //需要继承 Editor
                 {
                     return new DamageIncrease();
                 }
-                case PropertyType.SpeedRate:
+                case PropertyType.WalkSpeed:
                 {
                     return new Speed();
                 }

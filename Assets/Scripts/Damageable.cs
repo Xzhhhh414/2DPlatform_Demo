@@ -114,7 +114,7 @@ public class Damageable : MonoBehaviour
                 damage = 1;
             } 
             
-            _character.prop.Add(PropertyType.CurrentHP.ToString(),-damage);
+            _character.Add(PropertyType.CurrentHP,-damage);
             healthChanged?.Invoke(_character.CurrentHp,_character.MaxHp);
             IsAlive = _character.CurrentHp > 0;
             //hitInterval = true;
@@ -147,7 +147,7 @@ public class Damageable : MonoBehaviour
         {
             int maxHeal = Mathf.Max(_character.MaxHp - _character.CurrentHp, 0);
             int actualHeal = Mathf.Min(maxHeal, healthRestore);
-            _character.prop.Add(PropertyType.CurrentHP.ToString(),actualHeal);
+            _character.Add(PropertyType.CurrentHP,actualHeal);
 
             //CharacterEvents.characterHealed(gameObject, actualHeal);
             EventManager.Instance.TriggerEvent<GameObject, int>(CustomEventType.CharacterHealed, gameObject, actualHeal);

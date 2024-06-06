@@ -9,7 +9,7 @@ namespace PropertyModification.SPs
     {
         public float Get()
         {
-            return (this as IGet<float>).Auth((this._base/10000.0f)*(_rate/10000.0f),0.01f,10.0f);
+            return (this as IGet<float>).Auth((this._base/100.0f)*(_rate/10000.0f),0.01f,10.0f);
         }
    
         public override void Initialize()

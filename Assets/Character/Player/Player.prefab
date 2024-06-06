@@ -2839,9 +2839,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0b1cb2a71eae694a8979da9b0aed90c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockBackRate: 1
   so: {fileID: 11400000, guid: a6617f25826b49d4d8f2c8ea44d9b9c0, type: 2}
-  walkSpeed: 12
-  airWalkSpeed: 9
+  currenthp: 0
+  maxhp: 0
+  attack: 0
+  walkspeed: 0
+  airspeed: 0
+  defense: 0
+  armorlv: 0
   airDrag: 0.7
   airDragInDrifting: 0.04
   jumpImpulse_OnGround: 15
@@ -2966,7 +2972,6 @@ MonoBehaviour:
   startwaveRate: 4
   ropeSetRope: 20
   grabbingHand: {fileID: 0}
-  KnockBackRate: 1
 --- !u!114 &6420420121662775390
 MonoBehaviour:
   m_ObjectHideFlags: 0

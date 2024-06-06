@@ -3,32 +3,25 @@ using System.Net.NetworkInformation;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
+
 public class PlayerController : Character
 {
-    public float walkSpeed;   
-    public float airWalkSpeed;
+   
     public float airDrag; //空中水平速度衰减系数
     public float airDragInDrifting; //钩爪飘逸状态下空中水平速度衰减系数
     public float jumpImpulse_OnGround;
     public float jumpImpulse_InAir;
     
     
-    private int airJumpsLeft; // 记录剩余的空中跳跃次数
+    private int airJumps; // 记录剩余的空中跳跃次数
     private Vector2 moveInput;
     private bool isOnMoveHolding = false;
     private bool isOnAttackHolding = false;
     private float attackInputTimer = 0.0f;
     private float attackInputInterval = 0.2f;
-
-    TouchingDirections touchingDirections;
-    Damageable damageable;
+    
     Attack attackSkill03;
-    BoxCollider2D bCollider;
-
-    Animator animator;
-    Rigidbody2D rb;
-
+   
     //skill03的技能逻辑
     private float dashSpeed = 75f; // 冲刺速度
     private float dashDuration = 0.1f; // 冲刺持续时间，单位秒
@@ -71,12 +64,12 @@ public class PlayerController : Character
                     if (touchingDirections.IsGrounded)
                     {
 
-                        return walkSpeed;
+                        return Speed;
 
                     }
                     else
                     {
-                        return airWalkSpeed;
+                        return AirSpeed;
                     }
                 }
                 else
@@ -122,6 +115,7 @@ public class PlayerController : Character
             _isFacingRight = value;
         }
     }
+    
 
     public bool CanMove
     {
@@ -220,11 +214,6 @@ public class PlayerController : Character
     protected override void Initialize()
     {
         base.Initialize();
-        rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        touchingDirections = GetComponent<TouchingDirections>();
-        damageable = GetComponent<Damageable>();
-
         GameObject skill03 = GameObject.Find("skill03_rush");
         if (skill03 == null)
         {
@@ -244,7 +233,7 @@ public class PlayerController : Character
     {
         wallLayerMask = LayerMask.GetMask("Ground");
         clearCDTimeLeft = clearCDMaxTime;
-        airJumpsLeft = MaxAirJumps; // 初始化剩余的空中跳跃次数
+        airJumps = 0; // 初始化剩余的空中跳跃次数
         distanceJoint2D.enabled = false;
         distanceJoint2D.autoConfigureDistance = false;
         //distanceJoint2D.anchor = grabbingHand.position;
@@ -271,7 +260,7 @@ public class PlayerController : Character
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void Process()
     {
 
 
@@ -365,7 +354,7 @@ public class PlayerController : Character
 
         if (touchingDirections.IsGrounded)
         {
-            airJumpsLeft = MaxAirJumps; // 如果在地面上，重置空中跳跃次数
+            airJumps = 0; // 如果在地面上，重置空中跳跃次数
             isDrifting = false;
         }
 
@@ -388,7 +377,7 @@ public class PlayerController : Character
         }
 #endif
     }
-    private void FixedUpdate()
+    protected override void EarlyProcess()
     {
         //CheckSlope();
         Grabable();
@@ -580,7 +569,7 @@ public class PlayerController : Character
                 //Debug.Log("rb.velocity===="+ rb.velocity);
             }
 
-            airJumpsLeft -= 1;
+            airJumps++;
         }
 
     }
@@ -588,7 +577,7 @@ public class PlayerController : Character
     private bool HaveJumpTimes()
     {
 
-        return touchingDirections.IsGrounded || airJumpsLeft > 0;
+        return touchingDirections.IsGrounded || airJumps <=MaxAirJumps;
     }
 
 
@@ -924,18 +913,6 @@ public class PlayerController : Character
         if (context.started)
         {
             EventManager.Instance.TriggerEvent(CustomEventType.AttemptInteractObject);
-        }
-    }
-
-
-    [SerializeField, Label("被击飞时的击退倍率")]
-    private float KnockBackRate = 1f;
-    public void OnHit(int damage, Vector2 knockback, int knockbackLevel, int armorLevel)
-    {
-        if (knockbackLevel >= armorLevel)
-        {
-            rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y) * KnockBackRate;
-            //Debug.Log(rb.velocity);
         }
     }
 
