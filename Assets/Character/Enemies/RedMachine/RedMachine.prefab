@@ -154,6 +154,7 @@ GameObject:
   - component: {fileID: 8672496328714748678}
   - component: {fileID: 3025744860956657632}
   - component: {fileID: -3716307714428214585}
+  - component: {fileID: 8401967972592082013}
   m_Layer: 8
   m_Name: RedMachine
   m_TagString: Monster
@@ -318,7 +319,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2480eac51eb21f1419f3797330c72087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  so: {fileID: 11400000, guid: 8b09a4cad75f88b4d82b1a0318d85468, type: 2}
   walkAcceleration: 50
   maxSpeed: 5.8
   walkStopRate: 0.01
@@ -326,7 +326,7 @@ MonoBehaviour:
   cliffDetectionZone: {fileID: 6455040145224500777}
   healthBar: {fileID: 0}
   healthBarPosition: {fileID: 9031006578078395580}
-  healthBarScale: {x: 0.2, y: 0.25, z: 1}
+  healthBarScale: {x: 0.25, y: 0.4, z: 1}
   _hasTarget: 0
   KnockBackRate: 1
 --- !u!114 &6235004766465508083
@@ -408,7 +408,6 @@ MonoBehaviour:
   healthChanged:
     m_PersistentCalls:
       m_Calls: []
-  _character: {fileID: 0}
   _isAlive: 1
   hitInterval: 0
   hitIntervalTime: 0
@@ -451,6 +450,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8401967972592082013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3522140399348579629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc0584ccbcdece440b2584bd476e2d54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentHp: 0
+  _maxHp: 0
+  _defense: 0
+  _attack: 0
+  _armorLv: 0
+  _maxAirJumps: 0
 --- !u!1 &5885092043841135857
 GameObject:
   m_ObjectHideFlags: 0
