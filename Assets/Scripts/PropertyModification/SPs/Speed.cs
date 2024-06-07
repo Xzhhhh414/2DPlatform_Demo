@@ -22,7 +22,7 @@ namespace PropertyModification.SPs
 
         public void Multi(int add)
         {
-            _rate = (int)Mathf.Round(this._rate / 10000.0f * (add / 10000.0f));
+            _rate = (int)Mathf.Round(this._rate * (add / 10000.0f));
         }
     }
 }

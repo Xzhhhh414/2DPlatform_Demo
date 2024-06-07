@@ -7,15 +7,19 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Rendering;
 using UnityEngine.UIElements;
-
+using SO;
 public class Damageable : MonoBehaviour
 {
     public UnityEvent<int, Vector2, int, int> damageableHit;
     public UnityEvent damagebleDeath;
     public UnityEvent<int, int> healthChanged;
-    public Character _character;
+   
+    [SerializeField,Label("属性")]
+    protected PropertySO so;
+    [HideInInspector]
+    protected Property prop;
     
-    private Animator animator;
+    protected Animator animator;
     private SpriteRenderer sprite;
     Color originalColorOfSprite;
 
@@ -71,22 +75,28 @@ public class Damageable : MonoBehaviour
         }
     }
 
-
-    private void Awake()
-    {
-        animator = GetComponent<Animator>();
-        sprite = GetComponent<SpriteRenderer>();
-        _character = GetComponent<Character>();
-        originalColorOfSprite = sprite.color;
-    }
+    
 
     [SerializeField]
     private bool hitInterval = false;
     public float hitIntervalTime = 0.25f;
+    
 
-    private void Update()
+    protected virtual void Initialize()
     {
+        animator = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
+        originalColorOfSprite = sprite.color;
+    }
+    
+    protected virtual void EarlyProcess()
+    {
+        
+    }
+    
 
+    protected virtual void Process()
+    {
         //if (hitInterval)
         //{
         //    if (timeSinceHit > hitIntervalTime)
@@ -97,7 +107,20 @@ public class Damageable : MonoBehaviour
 
         //    timeSinceHit += Time.deltaTime;
         //}
-
+    }
+    
+    private void Awake()
+    {
+        Initialize();
+    }
+    private void Update()
+    {
+        Process();
+    }
+    
+    private void FixedUpdate()
+    {
+        EarlyProcess();
     }
 
     ///<summary>
@@ -108,17 +131,17 @@ public class Damageable : MonoBehaviour
         if (IsAlive && !hitInterval && !IsBlocking && !IsInvincible)
         {
             //受到伤害
-            damage -= _character.Defense;
+            damage -= Defense;
             if (damage <= 1)
             {
                 damage = 1;
             } 
             
-            _character.Add(PropertyType.CurrentHP,-damage);
-            healthChanged?.Invoke(_character.CurrentHp,_character.MaxHp);
-            IsAlive = _character.CurrentHp > 0;
+            prop.Add(PropertyType.CurrentHP.ToString(),-damage);
+            healthChanged?.Invoke(CurrentHp,MaxHp);
+            IsAlive = CurrentHp > 0;
             //hitInterval = true;
-            if (knockbackLevel >= _character.ArmorLv)
+            if (knockbackLevel >= ArmorLv)
             {
                 animator.SetTrigger(AnimationStrings.hitTrigger);
             }
@@ -126,7 +149,7 @@ public class Damageable : MonoBehaviour
             if (coroutine != null) StopCoroutine(coroutine);
             coroutine = StartCoroutine(ChangeColorTemp(sprite, originalColorOfSprite, hurtColor));
             //LockVelocity = true;
-            damageableHit?.Invoke(damage, knockback, knockbackLevel, _character.ArmorLv);
+            damageableHit?.Invoke(damage, knockback, knockbackLevel, ArmorLv);
 
             EventManager.Instance.TriggerEvent<GameObject, int>(CustomEventType.CharacterDamaged, gameObject, damage);
             PlayHitEffect(hitEffect, hitPosition);
@@ -143,11 +166,11 @@ public class Damageable : MonoBehaviour
  
     public bool Heal(int healthRestore)
     {
-        if (IsAlive && _character.CurrentHp < _character.MaxHp)
+        if (IsAlive && CurrentHp < MaxHp)
         {
-            int maxHeal = Mathf.Max(_character.MaxHp - _character.CurrentHp, 0);
+            int maxHeal = Mathf.Max(MaxHp - CurrentHp, 0);
             int actualHeal = Mathf.Min(maxHeal, healthRestore);
-            _character.Add(PropertyType.CurrentHP,actualHeal);
+            prop.Add(PropertyType.CurrentHP.ToString(),actualHeal);
 
             //CharacterEvents.characterHealed(gameObject, actualHeal);
             EventManager.Instance.TriggerEvent<GameObject, int>(CustomEventType.CharacterHealed, gameObject, actualHeal);
@@ -210,5 +233,110 @@ public class Damageable : MonoBehaviour
         }
 
     }
+    
+    public int MaxHp
+    {
+        get
+        {
+            if (prop is not null && prop.Get(PropertyType.MaxHP.ToString(), out int rst))
+            {
+                return rst;
+            }
+
+            return 1;
+        }
+    }
+    
+    public int CurrentHp
+    {
+        get
+        {
+            if (prop is not null && prop.Get(PropertyType.CurrentHP.ToString(), out int rst))
+            {
+                return rst;
+            }
+
+            return 0;
+        }
+    }
+    
+    public float WalkSpeed
+    {
+        get
+        {
+            if (prop is not null && prop.Get(PropertyType.WalkSpeed.ToString(), out float rst))
+            {
+                return rst;
+            }
+
+            return 0;
+        }
+    }
+    
+    public float AirSpeed
+    {
+        get
+        {
+            if (prop is not null && prop.Get(PropertyType.AirSpeed.ToString(), out float rst))
+            {
+                return rst;
+            }
+
+            return 0;
+        }
+    }
+    
+    public int MaxAirJumps
+    {
+        get
+        {
+            if (prop is not null && prop.Get(PropertyType.MaxAirJumps.ToString(), out int rst))
+            {
+                return rst;
+            }
+
+            return 0;
+        }
+    }
+    
+    public int Defense
+    {
+        get
+        {
+            if (prop is not null && prop.Get(PropertyType.Defense.ToString(), out int rst))
+            {
+                return rst;
+            }
+
+            return 0;
+        }
+    }
+    
+    public int ArmorLv
+    {
+        get
+        {
+            if (prop is not null && prop.Get(PropertyType.ArmorLv.ToString(), out int rst))
+            {
+                return rst;
+            }
+
+            return 0;
+        }
+    }
+    
+    public int Attack
+    {
+        get
+        {
+            if (prop is not null && prop.Get(PropertyType.Attack.ToString(), out int rst))
+            {
+                return rst;
+            }
+
+            return 0;
+        }
+    }
+
 
 }

@@ -1,15 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class Projectile : Damageable
 {
+    [Serializable]
+    enum FlyTrack
+    {
+        Line,
+        Gravity,
+        Aiming
+    }
     public int damage;
     public Vector2 movespeed = new Vector2(3f, 0);
     public Vector2 knockback = Vector2.zero;
-    public int knockbackLevel; //³å»÷µÈ¼¶
+    public int knockbackLevel; //ï¿½ï¿½ï¿½ï¿½È¼ï¿½
     int _attackDamage;
 
     private GameObject hitEffect;
@@ -17,17 +25,15 @@ public class Projectile : MonoBehaviour
 
     Rigidbody2D rb;
 
-    private void Awake()
+    protected override void Initialize()
     {
+        base.Initialize();
         rb = GetComponent<Rigidbody2D>();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
         rb.velocity = new Vector2(movespeed.x * transform.localScale.x, movespeed.y);
     }
+    
 
+    // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (BattleTestManager.Instance.isMinDamage)

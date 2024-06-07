@@ -1,22 +1,17 @@
 using System;
+using System.Collections;
 using PropertyModification.SPs;
 using UnityEngine;
 using SO;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
-public class Character : MonoBehaviour
+[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections))]
+public class Character : Damageable
 {
     [SerializeField, Label("被击飞时的击退倍率")]
     protected float KnockBackRate = 1f;
-   
-    [SerializeField,Label("属性")]
-    protected PropertySO so;
-    [HideInInspector]
-    protected Property prop;
     
     
     protected BoxCollider2D bCollider;
-    protected Animator animator;
     protected Rigidbody2D rb;
     protected TouchingDirections touchingDirections;
 
@@ -41,7 +36,7 @@ public class Character : MonoBehaviour
         currenthp = CurrentHp;
         maxhp = MaxHp;
         attack = Attack;
-        walkspeed = Speed;
+        walkspeed = WalkSpeed;
         airspeed = AirSpeed;
         defense = Defense;
         armorlv = ArmorLv;
@@ -59,29 +54,33 @@ public class Character : MonoBehaviour
         }
     }
     
-    protected virtual void Initialize()
+    protected override void Initialize()
     {
+        base.Initialize();
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
         prop ??= new Property();
         prop.Initialize(so);
         prop.Add(PropertyType.CurrentHP.ToString(), MaxHp - CurrentHp);
        touchingDirections = GetComponent<TouchingDirections>();
-#if UNITY_EDITOR 
+#if UNITY_EDITOR
+        changedSpeedRate = 1.0f;
         GUIUpdate();
 #endif
     }
 
     
-    protected virtual void EarlyProcess()
+    protected override void EarlyProcess()
     {
-        
+        base.EarlyProcess();
     }
     
 
-    protected virtual void Process()
+    protected override void Process()
     {
-        
+        base.Process();
+    #if UNITY_EDITOR    
+            GUIUpdate();
+    #endif
     }
     
     private void Awake()
@@ -100,116 +99,44 @@ public class Character : MonoBehaviour
     
     
 
-    public bool Add(PropertyType type,int add)
+    
+    private float changedSpeedRate;
+    private bool isListen;
+    public void AnimMultiSpeedRate(float rate)
     {
-        var rst= prop is not null&&prop.Add(type.ToString(), add);
-#if UNITY_EDITOR    
-        if(rst)GUIUpdate();
-#endif
-        return rst;
+        changedSpeedRate *= rate;
+        prop.Multi(PropertyType.WalkSpeed.ToString(),Mathf.CeilToInt(10000*rate));
+        prop.Multi(PropertyType.AirSpeed.ToString(),Mathf.CeilToInt(10000*rate));
+        if(!isListen)
+            StartCoroutine(ListenToAnimator());
+    }
+
+    public void AnimSetSpeedRate(float rate)
+    {
+        prop.Multi(PropertyType.WalkSpeed.ToString(),Mathf.CeilToInt(10000*rate/changedSpeedRate));
+        prop.Multi(PropertyType.AirSpeed.ToString(),Mathf.CeilToInt(10000*rate/changedSpeedRate));
+        changedSpeedRate = rate;
+        if(!isListen)
+            StartCoroutine(ListenToAnimator());
+    }
+
+    IEnumerator ListenToAnimator()
+    {
+        isListen = true;
+        AnimatorStateInfo LastFrameAnim=animator.GetCurrentAnimatorStateInfo(0);
+        while (LastFrameAnim.shortNameHash==animator.GetCurrentAnimatorStateInfo(0).shortNameHash&&LastFrameAnim.normalizedTime<1.0f)
+        {
+            yield return null;
+        }
+
+        prop.Multi(PropertyType.WalkSpeed.ToString(), Mathf.CeilToInt(10000 / changedSpeedRate));
+        prop.Multi(PropertyType.AirSpeed.ToString(), Mathf.CeilToInt(10000 / changedSpeedRate));
+        changedSpeedRate = 1.0f;
+        isListen = false;
     }
     
-    public int MaxHp
-    {
-        get
-        {
-            if (prop is not null && prop.Get(PropertyType.MaxHP.ToString(), out int rst))
-            {
-                return rst;
-            }
-
-            return 1;
-        }
-    }
     
-    public int CurrentHp
-    {
-        get
-        {
-            if (prop is not null && prop.Get(PropertyType.CurrentHP.ToString(), out int rst))
-            {
-                return rst;
-            }
 
-            return 0;
-        }
-    }
-    
-    public float Speed
-    {
-        get
-        {
-            if (prop is not null && prop.Get(PropertyType.WalkSpeed.ToString(), out float rst))
-            {
-                return rst;
-            }
-
-            return 0;
-        }
-    }
-    
-    public float AirSpeed
-    {
-        get
-        {
-            if (prop is not null && prop.Get(PropertyType.AirSpeed.ToString(), out float rst))
-            {
-                return rst;
-            }
-
-            return 0;
-        }
-    }
-    
-    public int MaxAirJumps
-    {
-        get
-        {
-            if (prop is not null && prop.Get(PropertyType.MaxAirJumps.ToString(), out int rst))
-            {
-                return rst;
-            }
-
-            return 0;
-        }
-    }
-    
-    public int Defense
-    {
-        get
-        {
-            if (prop is not null && prop.Get(PropertyType.Defense.ToString(), out int rst))
-            {
-                return rst;
-            }
-
-            return 0;
-        }
-    }
-    
-    public int ArmorLv
-    {
-        get
-        {
-            if (prop is not null && prop.Get(PropertyType.ArmorLv.ToString(), out int rst))
-            {
-                return rst;
-            }
-
-            return 0;
-        }
-    }
-    
-    public int Attack
-    {
-        get
-        {
-            if (prop is not null && prop.Get(PropertyType.Attack.ToString(), out int rst))
-            {
-                return rst;
-            }
-
-            return 0;
-        }
-    }
 }
+
+

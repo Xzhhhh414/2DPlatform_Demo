@@ -64,7 +64,7 @@ public class PlayerController : Character
                     if (touchingDirections.IsGrounded)
                     {
 
-                        return Speed;
+                        return WalkSpeed;
 
                     }
                     else
@@ -84,6 +84,7 @@ public class PlayerController : Character
 
         }
     }
+    
 
 
 
@@ -691,7 +692,7 @@ public class PlayerController : Character
 
     }
 
-
+   
     # region Grab
     public AnimationCurve animationCurve;
     public AnimationCurve ropeProgressionCurve;
