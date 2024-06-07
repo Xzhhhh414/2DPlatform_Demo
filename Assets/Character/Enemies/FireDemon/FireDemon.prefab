@@ -425,6 +425,7 @@ GameObject:
   - component: {fileID: 3010806923254081562}
   - component: {fileID: 5469986155384830715}
   - component: {fileID: 4336419884711203400}
+  - component: {fileID: 9163222418086411559}
   m_Layer: 8
   m_Name: FireDemon
   m_TagString: Monster
@@ -597,7 +598,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2480eac51eb21f1419f3797330c72087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  so: {fileID: 11400000, guid: b6a80188d3ffff34e85efbf5a1966c31, type: 2}
   walkAcceleration: 3
   maxSpeed: 3
   walkStopRate: 0.6
@@ -605,7 +605,7 @@ MonoBehaviour:
   cliffDetectionZone: {fileID: 549912458742963074}
   healthBar: {fileID: 0}
   healthBarPosition: {fileID: 5357399618126269039}
-  healthBarScale: {x: 0.3, y: 0.35, z: 1}
+  healthBarScale: {x: 0.5, y: 0.65, z: 1}
   _hasTarget: 0
   KnockBackRate: 1
 --- !u!114 &3010806923254081562
@@ -687,7 +687,6 @@ MonoBehaviour:
   healthChanged:
     m_PersistentCalls:
       m_Calls: []
-  _character: {fileID: 0}
   _isAlive: 1
   hitInterval: 0
   hitIntervalTime: 0.25
@@ -722,6 +721,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &9163222418086411559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4242114885219933664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc0584ccbcdece440b2584bd476e2d54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentHp: 0
+  _maxHp: 0
+  _defense: 0
+  _attack: 0
+  _armorLv: 0
+  _maxAirJumps: 0
 --- !u!1 &4575563432218755547
 GameObject:
   m_ObjectHideFlags: 0
