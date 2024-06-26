@@ -121,9 +121,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f46af9f737658b149a6b7a8cbfca3065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageableHit:
+    m_PersistentCalls:
+      m_Calls: []
+  damagebleDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  healthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  so: {fileID: 0}
+  _isAlive: 1
+  hitInterval: 0
+  hitIntervalTime: 0.25
+  changeColorTime: 0.7
+  hurtColor: {r: 1, g: 0, b: 0, a: 1}
+  hitEffectPosArray: []
   damage: 17
-  movespeed: {x: 0, y: 0}
+  track: 0
+  lifeTime: 0.27
+  fadedDelayTime: 0
   knockback: {x: 0, y: 0}
+  knockbackLevel: 0
+  mass: 0
 --- !u!50 &6167793371639121842
 Rigidbody2D:
   serializedVersion: 4

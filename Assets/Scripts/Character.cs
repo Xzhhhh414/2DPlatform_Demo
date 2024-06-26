@@ -45,7 +45,7 @@ public class Character : Damageable
     
     
     
-    protected virtual void OnHit(int damage, Vector2 knockback, int knockbackLevel, int armorLevel)
+    public virtual void OnHit(int damage, Vector2 knockback, int knockbackLevel, int armorLevel)
     {
         if (knockbackLevel >= armorLevel)
         {
@@ -54,13 +54,59 @@ public class Character : Damageable
         }
     }
     
+    public override bool Hit(int damage, Vector2 knockback,int knockbackLevel, GameObject hitEffect, Vector3 hitPosition)
+    {
+        if (IsAlive && !IsBlocking && !IsInvincible)
+        {
+            //受到伤害
+            damage = Mathf.Max(1,damage-Defense);
+            
+            
+            prop.Add(PropertyType.CurrentHP.ToString(),-damage);
+            healthChanged?.Invoke(CurrentHp,MaxHp);
+            IsAlive = CurrentHp > 0;
+            //hitInterval = true;
+            if (knockbackLevel >= ArmorLv)
+            {
+                animator.SetTrigger(AnimationStrings.hitTrigger);
+            }
+            
+            if (coroutine != null) StopCoroutine(coroutine);
+            coroutine = StartCoroutine(ChangeColorTemp(sprite, originalColorOfSprite, hurtColor));
+            //LockVelocity = true;
+            damageableHit?.Invoke(damage, knockback, knockbackLevel, ArmorLv);
+
+            EventManager.Instance.TriggerEvent<GameObject, int>(CustomEventType.CharacterDamaged, gameObject, damage);
+            PlayHitEffect(hitEffect, hitPosition);
+
+            return true;
+        }
+        else if (IsBlocking)
+        {
+            animator.SetTrigger(AnimationStrings.skill01CounterAtk);
+        }
+
+        return false;
+    }
+    
+    
+    [SerializeField, Label("受击颜色时长")]
+    private float changeColorTime = 0.7f;
+    [SerializeField, Label("受击颜色")]
+    private Color hurtColor = Color.red;
+    IEnumerator ChangeColorTemp(SpriteRenderer sprite, Color oriColor, Color newColor)
+    {
+
+        sprite.color = newColor;
+
+        yield return new WaitForSeconds(changeColorTime);
+
+        sprite.color = oriColor;
+    }
     protected override void Initialize()
     {
         base.Initialize();
         rb = GetComponent<Rigidbody2D>();
-        prop ??= new Property();
-        prop.Initialize(so);
-        prop.Add(PropertyType.CurrentHP.ToString(), MaxHp - CurrentHp);
        touchingDirections = GetComponent<TouchingDirections>();
 #if UNITY_EDITOR
         changedSpeedRate = 1.0f;
@@ -102,7 +148,7 @@ public class Character : Damageable
     
     private float changedSpeedRate;
     private bool isListen;
-    public void AnimMultiSpeedRate(float rate)
+    protected void AnimMultiSpeedRate(float rate)
     {
         changedSpeedRate *= rate;
         prop.Multi(PropertyType.WalkSpeed.ToString(),Mathf.CeilToInt(10000*rate));
@@ -111,7 +157,7 @@ public class Character : Damageable
             StartCoroutine(ListenToAnimator());
     }
 
-    public void AnimSetSpeedRate(float rate)
+    protected void AnimSetSpeedRate(float rate)
     {
         prop.Multi(PropertyType.WalkSpeed.ToString(),Mathf.CeilToInt(10000*rate/changedSpeedRate));
         prop.Multi(PropertyType.AirSpeed.ToString(),Mathf.CeilToInt(10000*rate/changedSpeedRate));

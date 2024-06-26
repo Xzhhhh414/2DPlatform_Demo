@@ -12,12 +12,10 @@ GameObject:
   - component: {fileID: 7551012797831096553}
   - component: {fileID: 2289677779911688229}
   - component: {fileID: 5152039745456702030}
-  - component: {fileID: 7374005314067382154}
   - component: {fileID: 204077961074298661}
   - component: {fileID: 1045608046857043527}
   - component: {fileID: 5138429354096837774}
   - component: {fileID: 7863272313552720889}
-  - component: {fileID: 5517249303062016758}
   m_Layer: 8
   m_Name: MetalFly
   m_TagString: Monster
@@ -138,6 +136,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2480eac51eb21f1419f3797330c72087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageableHit:
+    m_PersistentCalls:
+      m_Calls: []
+  damagebleDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  healthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  so: {fileID: 11400000, guid: 13ecf6e36b7b5d04d9ba65cfac8d1c19, type: 2}
+  _isAlive: 1
+  _isInvincible: 0
+  KnockBackRate: 1
+  currenthp: 0
+  maxhp: 0
+  attack: 0
+  walkspeed: 0
+  airspeed: 0
+  defense: 0
+  armorlv: 0
+  hitEffectPosArray: []
+  changeColorTime: 0.7
+  hurtColor: {r: 1, g: 0, b: 0, a: 1}
   walkAcceleration: 3
   maxSpeed: 3
   walkStopRate: 0.6
@@ -147,59 +168,6 @@ MonoBehaviour:
   healthBarPosition: {fileID: 3817726386685152092}
   healthBarScale: {x: 0.15, y: 0.35, z: 1}
   _hasTarget: 0
-  KnockBackRate: 1
---- !u!114 &7374005314067382154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 76009870517717507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 544d6c6a06ca4894aa8f022302b1d7c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageableHit:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5152039745456702030}
-        m_TargetAssemblyTypeName: Monster, Assembly-CSharp
-        m_MethodName: OnHit
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  damagebleDeath:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: FlyingEye, Assembly-CSharp
-        m_MethodName: OnDeath
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  healthChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  _isAlive: 1
-  hitInterval: 0
-  hitIntervalTime: 0.25
-  changeColorTime: 0
-  hurtColor: {r: 1, g: 0, b: 0, a: 1}
-  hitEffectPosArray:
-  - {fileID: 6044050635972260606}
 --- !u!95 &204077961074298661
 Animator:
   serializedVersion: 5
@@ -278,8 +246,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65209737d5614734eb8812630200c8f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchPoint: {fileID: 7020605822768599336}
+  launchPoint:
+  - {fileID: 7020605822768599336}
   projectilePrefab: {fileID: 2216790119302970356, guid: 19027e6d66ec32446a4722ac615141b4, type: 3}
+  collectionChecks: 1
+  maxPoolSize: 10
+  num: 0
+  range: 0
+  gizmoSize: 0.2
 --- !u!114 &7863272313552720889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,24 +300,6 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
---- !u!114 &5517249303062016758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 76009870517717507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc0584ccbcdece440b2584bd476e2d54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _currentHp: 0
-  _maxHp: 0
-  _defense: 0
-  _attack: 0
-  _armorLv: 0
-  _maxAirJumps: 0
 --- !u!1 &4739911775620396385
 GameObject:
   m_ObjectHideFlags: 0

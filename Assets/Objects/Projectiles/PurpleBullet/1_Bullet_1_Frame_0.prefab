@@ -121,9 +121,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f46af9f737658b149a6b7a8cbfca3065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
-  movespeed: {x: 5, y: -5}
+  damageableHit:
+    m_PersistentCalls:
+      m_Calls: []
+  damagebleDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  healthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  so: {fileID: 11400000, guid: cc901d0c8ab373c4fa179729c3ee7f1b, type: 2}
+  _isAlive: 1
+  _isInvincible: 0
+  onHitOpposite:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -4534142235342656142}
+        m_TargetAssemblyTypeName: Projectile, Assembly-CSharp
+        m_MethodName: SelfDamage
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onHitGround:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -4534142235342656142}
+        m_TargetAssemblyTypeName: Projectile, Assembly-CSharp
+        m_MethodName: SelfDamage
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  track: 1
+  lifeTime: 10
+  faded: 0
+  fadedDelayTime: 0
+  target: -1
+  Launcher: {fileID: 0}
+  constrainedAiming: 0
+  acuteAngle: 0
+  angleConstraint: 0
+  step: 5
+  mass: 30
+  hitEffect: {fileID: 5396592124056721318, guid: a1ffd7e1a60d5334ebf18df942c912a2, type: 3}
   knockback: {x: 0, y: 0}
+  knockbackLevel: 0
 --- !u!58 &-834854317738612882
 CircleCollider2D:
   m_ObjectHideFlags: 0

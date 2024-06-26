@@ -77,26 +77,27 @@ public class Monster : Character
         }
     }
 
-    private void Start()
+    protected override void Initialize()
     {
+        base.Initialize();
         EventManager.Instance.TriggerEvent<GameObject>(CustomEventType.MonsterSpawned, gameObject);
     }
-    
-    void Update()
+
+    protected override void Process()
     {
+        base.Process();
         HasTarget = attackZone.dectectedColliders.Count > 0;
         //Debug.Log("HasTarget ="+ HasTarget);
         if (AttackCooldown > 0)
         {
             AttackCooldown -= Time.deltaTime;
         }
-
     }
 
 
-    private void FixedUpdate()
+    protected override void EarlyProcess()
     {
-
+        base.EarlyProcess();
         if (touchingDirections.IsGrounded && touchingDirections.IsOnWall)
         {
             FlipDirection();

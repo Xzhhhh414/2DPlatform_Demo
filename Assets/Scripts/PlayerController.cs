@@ -126,15 +126,6 @@ public class PlayerController : Character
         }
     }
 
-    public bool IsAlive
-    {
-        get
-        {
-            return animator.GetBool(AnimationStrings.isAlive);
-        }
-
-    }
-
     public float Skill01Cooldown
     {
         get

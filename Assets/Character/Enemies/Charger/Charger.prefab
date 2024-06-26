@@ -152,8 +152,6 @@ GameObject:
   - component: {fileID: 3739353946498540055}
   - component: {fileID: 6235004766465508083}
   - component: {fileID: 9051693973942563693}
-  - component: {fileID: 8672496328714748678}
-  - component: {fileID: 8401967972592082013}
   m_Layer: 8
   m_Name: Charger
   m_TagString: Monster
@@ -318,6 +316,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2480eac51eb21f1419f3797330c72087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageableHit:
+    m_PersistentCalls:
+      m_Calls: []
+  damagebleDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  healthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  so: {fileID: 11400000, guid: 3cadb82f17cc85d4f9f7931ed29f011d, type: 2}
+  _isAlive: 1
+  hitInterval: 0
+  hitIntervalTime: 0.25
+  changeColorTime: 0.7
+  hurtColor: {r: 1, g: 0, b: 0, a: 1}
+  hitEffectPosArray: []
+  KnockBackRate: 1
+  currenthp: 0
+  maxhp: 0
+  attack: 0
+  walkspeed: 0
+  airspeed: 0
+  defense: 0
+  armorlv: 0
   walkAcceleration: 30
   maxSpeed: 2
   walkStopRate: 0.05
@@ -327,7 +349,6 @@ MonoBehaviour:
   healthBarPosition: {fileID: 7692933652999405404}
   healthBarScale: {x: 0.15, y: 0.35, z: 1}
   _hasTarget: 0
-  KnockBackRate: 1
 --- !u!114 &6235004766465508083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,64 +416,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8672496328714748678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3522140399348579629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 544d6c6a06ca4894aa8f022302b1d7c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageableHit:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3739353946498540055}
-        m_TargetAssemblyTypeName: Monster, Assembly-CSharp
-        m_MethodName: OnHit
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  damagebleDeath:
-    m_PersistentCalls:
-      m_Calls: []
-  healthChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  _isAlive: 1
-  hitInterval: 0
-  hitIntervalTime: 0
-  changeColorTime: 0
-  hurtColor: {r: 1, g: 0, b: 0, a: 1}
-  hitEffectPosArray:
-  - {fileID: 1133331393904915596}
---- !u!114 &8401967972592082013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3522140399348579629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc0584ccbcdece440b2584bd476e2d54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _currentHp: 0
-  _maxHp: 0
-  _defense: 0
-  _attack: 0
-  _armorLv: 0
-  _maxAirJumps: 0
 --- !u!1 &3569179066608250923
 GameObject:
   m_ObjectHideFlags: 0

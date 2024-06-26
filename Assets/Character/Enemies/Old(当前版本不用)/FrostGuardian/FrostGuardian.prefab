@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8259341479368238504}
   - component: {fileID: 994484952992675662}
   - component: {fileID: 1007574369893642511}
-  - component: {fileID: 8947908342335134835}
   - component: {fileID: 3010806923254081562}
   - component: {fileID: 8347368836178957743}
   m_Layer: 8
@@ -185,25 +184,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8947908342335134835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4242114885219933664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2480eac51eb21f1419f3797330c72087, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  KnockBackRate: 1
-  walkAcceleration: 25
-  maxSpeed: 5
-  walkStopRate: 0.6
-  attackZone: {fileID: 5764638468449584650}
-  cliffDetectionZone: {fileID: 549912458742963074}
-  _hasTarget: 0
 --- !u!114 &3010806923254081562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,13 +251,13 @@ MonoBehaviour:
   healthChanged:
     m_PersistentCalls:
       m_Calls: []
-  _maxHealth: 100
-  _health: 100
+  so: {fileID: 0}
   _isAlive: 1
   hitInterval: 0
   hitIntervalTime: 0
   changeColorTime: 0.7
   hurtColor: {r: 1, g: 0, b: 0, a: 1}
+  hitEffectPosArray: []
 --- !u!1 &8616695409890074737
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,7 +417,7 @@ MonoBehaviour:
   moCollidersRemain:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8947908342335134835}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Knight, Assembly-CSharp
         m_MethodName: OnCLiffDetected
         m_Mode: 1

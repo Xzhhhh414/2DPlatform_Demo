@@ -16,19 +16,20 @@ public class Damageable : MonoBehaviour
    
     [SerializeField,Label("属性")]
     protected PropertySO so;
-    [HideInInspector]
     protected Property prop;
     
     protected Animator animator;
-    private SpriteRenderer sprite;
-    Color originalColorOfSprite;
+    protected SpriteRenderer sprite;
+    protected Color originalColorOfSprite;
 
-    Coroutine coroutine;
+    protected Coroutine coroutine;
     
     
     [SerializeField]
-    private bool _isAlive = true;
-    public bool IsAlive
+    protected bool _isAlive = true;
+    [SerializeField]
+    protected bool _isInvincible;
+    public virtual bool IsAlive
     {
         get
         {
@@ -38,7 +39,6 @@ public class Damageable : MonoBehaviour
         {
             _isAlive = value;
             animator.SetBool(AnimationStrings.isAlive, value);
-            //Debug.Log("IsAlive set " + value);
             if (!value)
             {
                 damagebleDeath.Invoke();
@@ -47,7 +47,7 @@ public class Damageable : MonoBehaviour
     }
 
 
-    public bool IsInvincible
+    public virtual bool IsInvincible
     {
         get
         {
@@ -74,18 +74,15 @@ public class Damageable : MonoBehaviour
             return animator.GetBool(AnimationStrings.isBlocking);
         }
     }
-
-    
-
-    [SerializeField]
-    private bool hitInterval = false;
-    public float hitIntervalTime = 0.25f;
     
 
     protected virtual void Initialize()
     {
         animator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        prop ??= new Property();
+        prop.Initialize(so);
+        prop.Add(PropertyType.CurrentHP.ToString(), MaxHp - CurrentHp);
         originalColorOfSprite = sprite.color;
     }
     
@@ -97,16 +94,6 @@ public class Damageable : MonoBehaviour
 
     protected virtual void Process()
     {
-        //if (hitInterval)
-        //{
-        //    if (timeSinceHit > hitIntervalTime)
-        //    {
-        //        hitInterval = false;
-        //        timeSinceHit = 0;
-        //    }
-
-        //    timeSinceHit += Time.deltaTime;
-        //}
     }
     
     private void Awake()
@@ -126,41 +113,10 @@ public class Damageable : MonoBehaviour
     ///<summary>
     ///碰撞箱检测=>判断受击
     ///</summary>
-    public bool Hit(int damage, Vector2 knockback,int knockbackLevel, GameObject hitEffect, Vector3 hitPosition)
+
+    public virtual bool Hit(int damage, Vector2 knockback, int knockbackLevel, GameObject hitEffect,
+        Vector3 hitPosition)
     {
-        if (IsAlive && !hitInterval && !IsBlocking && !IsInvincible)
-        {
-            //受到伤害
-            damage -= Defense;
-            if (damage <= 1)
-            {
-                damage = 1;
-            } 
-            
-            prop.Add(PropertyType.CurrentHP.ToString(),-damage);
-            healthChanged?.Invoke(CurrentHp,MaxHp);
-            IsAlive = CurrentHp > 0;
-            //hitInterval = true;
-            if (knockbackLevel >= ArmorLv)
-            {
-                animator.SetTrigger(AnimationStrings.hitTrigger);
-            }
-            
-            if (coroutine != null) StopCoroutine(coroutine);
-            coroutine = StartCoroutine(ChangeColorTemp(sprite, originalColorOfSprite, hurtColor));
-            //LockVelocity = true;
-            damageableHit?.Invoke(damage, knockback, knockbackLevel, ArmorLv);
-
-            EventManager.Instance.TriggerEvent<GameObject, int>(CustomEventType.CharacterDamaged, gameObject, damage);
-            PlayHitEffect(hitEffect, hitPosition);
-
-            return true;
-        }
-        else if (IsBlocking)
-        {
-            animator.SetTrigger(AnimationStrings.skill01CounterAtk);
-        }
-
         return false;
     }
  
@@ -179,35 +135,20 @@ public class Damageable : MonoBehaviour
         }
         return false;
     }
-
-    [SerializeField, Label("受击颜色时长")]
-    private float changeColorTime = 0.7f;
-    [SerializeField, Label("受击颜色")]
-    private Color hurtColor = Color.red;
-    IEnumerator ChangeColorTemp(SpriteRenderer sprite, Color oriColor, Color newColor)
-    {
-
-        sprite.color = newColor;
-
-        yield return new WaitForSeconds(changeColorTime);
-
-        sprite.color = oriColor;
-    }
-
-
     [SerializeField, Label("爆点特效位置")]
-    private GameObject[] hitEffectPosArray;
-    private void PlayHitEffect(GameObject hitEffect, Vector3 hitPosition)
+    protected GameObject[] hitEffectPosArray;
+    protected virtual void PlayHitEffect(GameObject hitEffect, Vector3 hitPosition)
     {
         if (hitEffect != null)
         {
             Vector3 nearestHitEffectPos = GetNearestHitEffectPos(hitPosition);
             Instantiate(hitEffect, nearestHitEffectPos, Quaternion.identity);
-
         }
 
     }
-    private Vector3 GetNearestHitEffectPos(Vector3 hitPosition)
+    
+    
+    protected Vector3 GetNearestHitEffectPos(Vector3 hitPosition)
     {
         Vector3 nearestHitEffectPos = Vector3.zero;
         float minDistance = float.MaxValue;
@@ -233,6 +174,10 @@ public class Damageable : MonoBehaviour
         }
 
     }
+
+   
+
+    
     
     public int MaxHp
     {

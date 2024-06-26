@@ -148,8 +148,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f46af9f737658b149a6b7a8cbfca3065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 40
-  movespeed: {x: 0, y: 0}
+  damageableHit:
+    m_PersistentCalls:
+      m_Calls: []
+  damagebleDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  healthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  so: {fileID: 11400000, guid: a09453148e9316342a7c52c034809f33, type: 2}
+  _isAlive: 1
+  _isInvincible: 0
+  onHitOpposite:
+    m_PersistentCalls:
+      m_Calls: []
+  onHitGround:
+    m_PersistentCalls:
+      m_Calls: []
+  track: 0
+  lifeTime: 0.45
+  faded: 0
+  fadedDelayTime: 0.15
+  target: 0
+  Launcher: {fileID: 0}
+  constrainedAiming: 0
+  acuteAngle: 0
+  angleConstraint: 0
+  step: 2
+  mass: 0
+  hitEffect: {fileID: 0}
   knockback: {x: 0, y: 0}
   knockbackLevel: 10
 --- !u!61 &-4015211040527415714
