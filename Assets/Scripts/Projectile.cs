@@ -40,8 +40,6 @@ public class Projectile : Damageable
     [SerializeField, Label("生效目标")] protected Target target;
     protected float Timer;
     
-    [HideInInspector]
-    public ProjectileLauncher Launcher;
     [SerializeField,Label("启用限制追踪")]
     public bool constrainedAiming;
 
@@ -236,6 +234,6 @@ public class Projectile : Damageable
 
     private void Death()
     {
-        Launcher.Pool.Release(this);
+        BulletPool.Pool(this.gameObject.name.TrimEnd("(Clone)")).Release(this);
     }
 }

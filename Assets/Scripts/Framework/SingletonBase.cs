@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// µ¥ÀıÄ£Ê½µÄ»ùÀà
+/// å•ä¾‹æ¨¡å¼çš„åŸºç±»
 /// </summary>
 public abstract class Singleton<T> where T : Singleton<T>, new()
 {

@@ -2695,7 +2695,6 @@ GameObject:
   - component: {fileID: 6882391051196661106}
   - component: {fileID: 772671975846870223}
   - component: {fileID: 7008645299509921626}
-  - component: {fileID: 2771905623865858567}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -2862,6 +2861,7 @@ MonoBehaviour:
   so: {fileID: 11400000, guid: a6617f25826b49d4d8f2c8ea44d9b9c0, type: 2}
   _isAlive: 1
   _isInvincible: 0
+  hitEffectPosArray: []
   KnockBackRate: 1
   currenthp: 0
   maxhp: 0
@@ -2870,7 +2870,6 @@ MonoBehaviour:
   airspeed: 0
   defense: 0
   armorlv: 0
-  hitEffectPosArray: []
   changeColorTime: 0.7
   hurtColor: {r: 1, g: 0, b: 0, a: 1}
   airDrag: 0.7
@@ -3453,26 +3452,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchPoint:
   - {fileID: 5424188767339078681}
-  projectilePrefab: {fileID: 2616632453500635437, guid: 8aac3a6bcff75d24ab930a6fb0556cef, type: 3}
-  collectionChecks: 1
-  maxPoolSize: 10
---- !u!114 &2771905623865858567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8577367491070427345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65209737d5614734eb8812630200c8f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  launchPoint:
-  - {fileID: 7950778149469542389}
-  projectilePrefab: {fileID: 8875294635732206559, guid: 2bcbee108a9036245a7e82c4a43a88cf, type: 3}
-  collectionChecks: 1
-  maxPoolSize: 10
+  num: 0
+  range: 0
 --- !u!1 &8783133434536609512
 GameObject:
   m_ObjectHideFlags: 0
