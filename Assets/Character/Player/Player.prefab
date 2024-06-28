@@ -67,6 +67,37 @@ CapsuleCollider2D:
   m_Offset: {x: 0.028765678, y: 0.11334753}
   m_Size: {x: 1.2376118, y: 2.2311234}
   m_Direction: 0
+--- !u!1 &349437358725747476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 330659850204868101}
+  m_Layer: 7
+  m_Name: ProjectileAt2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &330659850204868101
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349437358725747476}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8198951932485516424}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &725753131735622371
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,7 +1108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5424188767339078681}
   m_Layer: 7
-  m_Name: BladeBeam
+  m_Name: ProjectileAt1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1092,7 +1123,7 @@ Transform:
   m_GameObject: {fileID: 5244544144875778800}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.11, y: 1.62, z: 0}
+  m_LocalPosition: {x: 0.982, y: 1.182, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2719,6 +2750,7 @@ Transform:
   - {fileID: 346621061299395123}
   - {fileID: 2848251024587460301}
   - {fileID: 5424188767339078681}
+  - {fileID: 330659850204868101}
   - {fileID: 7950778149469542389}
   - {fileID: 3844201558006283008}
   - {fileID: 8963731616385824594}
@@ -3452,6 +3484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchPoint:
   - {fileID: 5424188767339078681}
+  - {fileID: 330659850204868101}
   num: 0
   range: 0
 --- !u!1 &8783133434536609512

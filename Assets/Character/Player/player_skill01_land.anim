@@ -110,11 +110,11 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: FireProjectile
+    functionName: FireProjectileAt1
     data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
+    objectReferenceParameter: {fileID: 2616632453500635437, guid: 8aac3a6bcff75d24ab930a6fb0556cef, type: 3}
+    floatParameter: 111
+    intParameter: 11
     messageOptions: 0
   - time: 0
     functionName: AnimSetSpeedRate
