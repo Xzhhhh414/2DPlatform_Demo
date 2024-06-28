@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using PropertyModification.SPs;
 using UnityEngine;
 using SO;
@@ -9,6 +10,7 @@ public class Character : Damageable
 {
     [SerializeField, Label("被击飞时的击退倍率")]
     protected float KnockBackRate = 1f;
+    private Dictionary<string, Dictionary<string,Buff>> _buffPool;
     
     
     protected BoxCollider2D bCollider;
@@ -42,8 +44,37 @@ public class Character : Damageable
         armorlv = ArmorLv;
     }
 #endif
-    
-    
+
+    public void Reset()
+    {
+        if (_buffPool is null)
+            _buffPool = new Dictionary<string, Dictionary<string, Buff>>();
+        _buffPool.Clear();
+    }
+
+    public void AddBuff(Buff buff)
+    {
+        if (_buffPool.ContainsKey(buff.sortID))
+        {
+            if (_buffPool[buff.sortID] is null)
+                _buffPool[buff.sortID] = new Dictionary<string, Buff>();
+            if (_buffPool[buff.sortID].ContainsKey(buff.typeID))
+            {
+                if(_buffPool[buff.sortID][buff.typeID].Stack(buff))
+                    _buffPool[buff.sortID][buff.typeID]=buff;
+            }
+            else
+            {
+                _buffPool[buff.sortID].Add(buff.typeID,buff);
+            }
+        }
+        else
+        {
+            var add = new Dictionary<string, Buff>();
+            add.Add(buff.typeID,buff);
+            _buffPool.Add(buff.sortID,add);
+        }
+    }
     
     public virtual void OnHit(int damage, Vector2 knockback, int knockbackLevel, int armorLevel)
     {
