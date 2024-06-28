@@ -909,6 +909,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 895390624}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1969038826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1969038828}
+  - component: {fileID: 1969038827}
+  m_Layer: 0
+  m_Name: BulletPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1969038827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969038826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8598a458f0e2b0f44b37c19289f6c496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectionChecks: 1
+  maxPoolSize: 10
+  projectiles:
+  - {fileID: 2216790119302970356, guid: 19027e6d66ec32446a4722ac615141b4, type: 3}
+  - {fileID: 2616632453500635437, guid: 8aac3a6bcff75d24ab930a6fb0556cef, type: 3}
+  - {fileID: 9087744474998924757, guid: 4c3d57fb5790ff94984a9bf75339de69, type: 3}
+  - {fileID: 5818244657351767683, guid: 1c9ff8d60e35a0446b24a66050c702d8, type: 3}
+  - {fileID: 8875294635732206559, guid: 2bcbee108a9036245a7e82c4a43a88cf, type: 3}
+  - {fileID: 2531633573971145764, guid: 82e246cf5749ad743938c13db1892a48, type: 3}
+--- !u!4 &1969038828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969038826}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2683957950132590673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -976,3 +1029,4 @@ SceneRoots:
   - {fileID: 2683957950132590673}
   - {fileID: 895390624}
   - {fileID: 1237521272}
+  - {fileID: 1969038828}
