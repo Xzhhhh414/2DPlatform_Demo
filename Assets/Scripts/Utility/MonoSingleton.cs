@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-
+using Sirenix.OdinInspector;
 using UnityEngine;
  
 /// <summary>
 /// 此单例继承于Mono，绝大多情况下，都不需要使用此单例类型。请使用Singleton
 /// 不需要手动挂载
 /// </summary>
-public class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
+public class MonoSingleton<T> : Sirenix.OdinInspector.SerializedMonoBehaviour where T : SerializedMonoBehaviour
 {
     private static T _instance;
     /// <summary>

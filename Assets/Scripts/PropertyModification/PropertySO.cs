@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
+using Unity.VisualScripting;
 using UnityEngine;
 
-namespace SO
-{
+
    [CreateAssetMenu(fileName = "PropertySO",menuName = "SO/Property")]
-   public class PropertySO : ScriptableObject
+   public class PropertySO : SerializedScriptableObject
    {
-      public List<PropertyType> propertyName=new List<PropertyType>();
-      public List<int> propertyParam=new List<int>();
+      
+      [DictionaryDrawerSettings()]
+      [ShowInInspector]
+      public Dictionary<PropertyType,int> prop=new Dictionary<PropertyType, int>(){
+         {PropertyType.MaxHP,1}
+      };
+
    }
 
-}

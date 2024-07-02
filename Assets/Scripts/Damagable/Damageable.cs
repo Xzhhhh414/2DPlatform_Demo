@@ -7,7 +7,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Rendering;
 using UnityEngine.UIElements;
-using SO;
 public class Damageable : MonoBehaviour
 {
     public UnityEvent<int, Vector2, int, int> damageableHit;

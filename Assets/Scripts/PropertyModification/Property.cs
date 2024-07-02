@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using PropertyModification.SPs;
-using SO;
 using UnityEngine;
 
 
@@ -157,10 +156,10 @@ public enum PropertyType
         public void Initialize(PropertySO so)
         {
             if (so is null) return;
-            for (int i = 0; i < so.propertyName.Count; i++)
+            foreach(var prop in so.prop)
             {
-                _propDictionary.TryAdd(so.propertyName[i].ToString(), ParseEnum(so.propertyName[i]));
-                _propDictionary[so.propertyName[i].ToString()].iniNum = so.propertyParam[i];
+                _propDictionary.TryAdd(prop.Key.ToString(), ParseEnum(prop.Key));
+                _propDictionary[prop.Key.ToString()].iniNum = prop.Value;
             }
             foreach (var property in _propDictionary)
             {

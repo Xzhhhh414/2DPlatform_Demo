@@ -1,47 +1,35 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Buff:ScriptableObject
+[Serializable]
+public enum Coherence
 {
-    [SerializeField]
+    Stack,
+    Override,
+}
+[Serializable]
+public enum Exit
+{
+    Unstack,
+    Clear,
+}
+public class Buff
+{
     public string id;
-    [SerializeField]
     public string sortID;
-    [SerializeField,Label("是否来源于道具")]
     protected bool isFromItem;
-    [SerializeField,Label("基础Buff层数")]
     protected int stacknum;
-    [SerializeField,Label("最大堆叠层数")]
     protected int maxStack;
-    [SerializeField,Label("分组ID（0为特殊规则）")]
     public string typeID;
-
-    [Serializable]
-    protected enum Coherence
-    {
-        Stack,
-        Override,
-    }
-    [SerializeField,Label("共存规则")]
     protected Coherence coherence;
-    [SerializeField,Label("基础持续时间（-1为无限时间）")]
     protected int lastTimeBase;
-    [SerializeField,Label("每层附加持续时间")]
     protected int lastTimeStack;
-    [SerializeField,Label("持续时间结束后清除方式")]
     protected Exit exitMethod;
-    [Serializable]
-    protected enum Exit
-    {
-        UnStack,
-        Clear,
-    }
-    [SerializeField,Label("死亡后自动清空")]
     protected bool isDeathClear;
-
     private float _timestamp;
     private int stack;
 
@@ -54,14 +42,35 @@ public class Buff:ScriptableObject
             return rst;
         }
     }
-
-    public List<PropertyType> types = new List<PropertyType>();
     
-    
-
-    public void Initialize()
+    protected float lastTime
     {
-        
+        get
+        {
+            return lastTimeBase+stack*lastTimeStack;
+        }
+    }
+    
+
+    public Buff(BuffSO buff)
+    {
+        id=buff.id;
+        sortID=buff.sortID;
+        isFromItem=buff.isFromItem;
+        stacknum=buff.stacknum;
+        maxStack=buff.maxStack;
+        typeID=buff.typeID;
+        coherence=buff.coherence;
+        lastTimeBase=buff.lastTimeBase;
+        lastTimeStack=buff.lastTimeStack;
+        exitMethod=buff.exitMethod;
+        isDeathClear=buff.isDeathClear;
+    }
+
+    public void Initialize(){
+        stack=stacknum;
+        _timestamp= Time.time+lastTime;
+
     }
 
     public bool Stack(Buff buff)
@@ -71,7 +80,7 @@ public class Buff:ScriptableObject
             case Coherence.Stack:
             {
                 stack= Mathf.Min(stack+buff.StackNum,maxStack);
-                _timestamp = Time.time;
+                _timestamp = Time.time+lastTime;
                 break;
             }
             case Coherence.Override:
@@ -82,7 +91,80 @@ public class Buff:ScriptableObject
 
         return false;
     }
+
+    public bool OnExit()
+    {
+        switch(exitMethod){
+            case Exit.Unstack:
+            {
+                this.stack--;
+                this._timestamp=Time.time+lastTime;
+                return false;
+            }
+            case Exit.Clear:
+            {
+                return true;
+            }
+        }
+        return false;
+    }
     
     
     
+}
+public static class BuffParser{
+
+    public static List<int> Check(List<string> param){
+        var rst=new List<int>();
+        switch(param[0]){
+            case "100":
+            case "105":{
+                for(int i=1;i<=5;i++){
+                    if(!int.TryParse(param[i],out int varInt))
+                        rst.Add(i);
+                }
+                break;
+            }
+            case "101":
+            case "102":
+            case "103":
+            case "104":{
+                for(int i=1;i<=6;i++){
+                    if(!int.TryParse(param[i],out int varInt))
+                        rst.Add(i);
+                }
+                break;
+            }
+            case "200":{
+                if(!System.Enum.TryParse(typeof( PropertyType ), param[1],out object varRst))
+                    rst.Add(1);
+                for(int i=2;i<=4;i++){
+                    if(!int.TryParse(param[i],out int varInt))
+                        rst.Add(i);
+                }
+                break;
+            }
+            case "300":{
+                for(int i=1;i<=3;i++){
+                    if(!int.TryParse(param[i],out int varInt))
+                        rst.Add(i);
+                }
+                break;
+            }
+            case "400":
+            case "401":{
+                for(int i=1;i<=4;i++){
+                    if(!int.TryParse(param[i],out int varInt))
+                        rst.Add(i);
+                }
+                break;
+            }
+            default:{
+                rst.Add(0);
+                break;
+            }
+        }
+
+        return rst;
+    }
 }

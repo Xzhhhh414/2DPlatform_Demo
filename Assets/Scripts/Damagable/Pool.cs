@@ -23,7 +23,6 @@ public class BulletPool : MonoSingleton<BulletPool>
     {
         if (!Instance.pool.ContainsKey(id))
         {
-            Debug.Log(id);
             Instance.pool.Add(id,new ObjectPool<Projectile>(()=>Instance.CreatePooledItem(id), Instance.OnTakeFromPool, Instance.OnReturnedToPool, Instance.OnDestroyPoolObject, Instance.collectionChecks, 10, Instance.maxPoolSize)) ;
         }
         return Instance.pool[id];

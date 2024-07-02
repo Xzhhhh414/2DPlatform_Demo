@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using PropertyModification.SPs;
 using UnityEngine;
-using SO;
+using static PropertySO;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections))]
 public class Character : Damageable
@@ -60,12 +60,17 @@ public class Character : Damageable
                 _buffPool[buff.sortID] = new Dictionary<string, Buff>();
             if (_buffPool[buff.sortID].ContainsKey(buff.typeID))
             {
-                if(_buffPool[buff.sortID][buff.typeID].Stack(buff))
+                if(buff.typeID=="0")
+                {
+                    
+                }
+                else if(_buffPool[buff.sortID][buff.typeID].Stack(buff))
                     _buffPool[buff.sortID][buff.typeID]=buff;
             }
             else
             {
                 _buffPool[buff.sortID].Add(buff.typeID,buff);
+                buff.Initialize();
             }
         }
         else
@@ -74,6 +79,12 @@ public class Character : Damageable
             add.Add(buff.typeID,buff);
             _buffPool.Add(buff.sortID,add);
         }
+    }
+
+    public void RemoveBuff(Buff buff)
+    {
+        if(_buffPool.ContainsKey(buff.sortID)&&_buffPool[buff.sortID].ContainsKey(buff.typeID)&&_buffPool[buff.sortID][buff.typeID].id==buff.id)
+            _buffPool[buff.sortID].Remove(buff.typeID);
     }
     
     public virtual void OnHit(int damage, Vector2 knockback, int knockbackLevel, int armorLevel)
