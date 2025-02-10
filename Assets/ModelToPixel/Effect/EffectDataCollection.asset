@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9cc9c00657a8746bd3800ec387b49e, type: 3}
+  m_Name: EffectDataCollection
+  m_EditorClassIdentifier: 
+  effects:
+  - animationClip: {fileID: 7400000, guid: bc3a6fce98b3515409779792b157d1c9, type: 2}
+    effectPrefab: {fileID: 6330862641444419881, guid: 32c4fb949891aa54380ac427157aefbc,
+      type: 3}
+    bonePath: SnowWhite_All
+    startFrame: 3
+    endFrame: 9
+    offset: {x: 0, y: 0, z: 0}
+    scale: {x: 1, y: 1, z: 1}
+  - animationClip: {fileID: 7400000, guid: 6331b3d402198f14893136c0bc677a0f, type: 2}
+    effectPrefab: {fileID: 0}
+    bonePath: 
+    startFrame: 0
+    endFrame: 0
+    offset: {x: 0, y: 0, z: 0}
+    scale: {x: 1, y: 1, z: 1}
+  - animationClip: {fileID: 7400000, guid: 6876ee2b3ee27dc409b9e715d3f5d6ce, type: 2}
+    effectPrefab: {fileID: 3925561478890778472, guid: 3511ddeb84b5f2b45a139f15a6aa7304,
+      type: 3}
+    bonePath: SnowWhite_All
+    startFrame: 2
+    endFrame: 9
+    offset: {x: 0, y: 0, z: 0}
+    scale: {x: 1, y: 1, z: 1}
+  - animationClip: {fileID: 7400000, guid: 072ba64b16240004eb627a438de9189c, type: 2}
+    effectPrefab: {fileID: 5062710218632851045, guid: b18491542c581d047b030ec4511790ea,
+      type: 3}
+    bonePath: SnowWhite_All
+    startFrame: 3
+    endFrame: 9
+    offset: {x: 0, y: 0, z: 0}
+    scale: {x: 1, y: 1, z: 1}

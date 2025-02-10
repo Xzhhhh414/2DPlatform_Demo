@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Mat_SnowWhite_022_zz_wh
+  m_Shader: {fileID: 4800000, guid: ae9cf95039ff46248ac630060a0d2464, type: 3}
+  m_ShaderKeywords: _AUTODISSOLVE_ON _AUTOMASK_ON _AUTONOISE_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Additive:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Base:
+        m_Texture: {fileID: 2800000, guid: d8fbaddfc975aa24ab42174b98b03a92, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Dissolve:
+        m_Texture: {fileID: 2800000, guid: 0bf1d5df2faa4a54fa0fbd8a81094199, type: 3}
+        m_Scale: {x: 0.64, y: 1.6}
+        m_Offset: {x: -1.33, y: 2.8}
+    - _DistorMaskTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DistorNoiseTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask:
+        m_Texture: {fileID: 2800000, guid: 0a33a2e4cba389a49985ab626c63e4cb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Noise:
+        m_Texture: {fileID: 2800000, guid: 100adbb407ac8ad4790f5cd25e6eba0c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _VertexAni:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _3COLOR_ON: 0
+    - _ADDBLOOM_ON: 0
+    - _AUTOVERTEXANI_ON: 0
+    - _AddRotato: 0
+    - _AdditiveU_Speed: 0
+    - _AdditiveV_Speed: 0
+    - _AlphaClip: 0
+    - _AlphaCutoff: 0.5
+    - _AutoAdditive: 0
+    - _AutoDissolve: 1
+    - _AutoDissolveWidth: 0
+    - _AutoFresnel: 0
+    - _AutoMask: 1
+    - _AutoNoise: 1
+    - _BaseU_Speed: 0
+    - _BaseV_Speed: 0
+    - _BlendMode: 1
+    - _ColorLightIntensity: 1
+    - _Cull: 0
+    - _DepthDistance: 0
+    - _Depthfade: 0
+    - _Dissolve2U: 0
+    - _DissolveByBaseAlpha: 0
+    - _DissolvePreview: 0
+    - _DissolveU_Speed: 0
+    - _DissolveV_Speed: 0
+    - _DissolveWidth: 0
+    - _DissolveWidthIntensity: 0
+    - _Distortion: 0
+    - _DistortionIntensity: 0.5
+    - _DstBlend: 10
+    - _EdgeSharpness: 0.78
+    - _FrenelBRF: 0.04
+    - _FresnelAlpha: 0
+    - _FresnelPower: 5
+    - _FresnelScale: 1
+    - _GammaLerp: 1
+    - _MASKCUS: 0
+    - _MaskRotato: 0
+    - _MaskU_Speed: 0
+    - _MaskV_Speed: 0
+    - _MeshFade: 0
+    - _NoiseIntersity: 0.1
+    - _NoiseU_Speed: -0.49
+    - _NoiseV_Speed: -0.15
+    - _Offsetx: 0
+    - _Offsety: 0
+    - _OpacityIntersity: 1
+    - _OutLine: 0
+    - _OutLineAlphaThreshold: 0
+    - _OutLineWidth: 0
+    - _ParticleCtrlOff: 0
+    - _RenderFace: 0
+    - _SrcBlend: 5
+    - _StencilComp: 8
+    - _StencilValue: 0
+    - _TWOFACE_ON: 0
+    - _VertexAniScale: 0
+    - _VertexU_Speed: 0
+    - _VertexV_Speed: 0
+    - _ZTest: 4
+    - _ZWrite: 0
+    - _characterDepth: 0
+    - _useNoiseMask: 0
+    m_Colors:
+    - _AdditiveColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorBlack: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorLight: {r: 16.94838, g: 16.94838, b: 16.94838, a: 1}
+    - _ColorLight01: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorMiddle: {r: 1, g: 1, b: 1, a: 1}
+    - _DissWidthColor: {r: 1, g: 1, b: 1, a: 1}
+    - _DistortionParameter: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FresnelColor: {r: 1, g: 1, b: 1, a: 0}
+    - _OutLineColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &5401990258749523165
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1

@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Custom_2DSequenceFrameShader 1
+  m_Shader: {fileID: 4800000, guid: 61accafd6c6943b40b3fdcd16ee3a8ac, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 576ee7a6419e34248a5c6cde817d5ad1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MixTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: c48338c9ec47a8c4e888af14fbc6fef4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RampTex:
+        m_Texture: {fileID: 2800000, guid: 9812043b288e1464699c43a89bca5f33, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Columns: 8
+    - _FrameRate: 18
+    - _LightBrightness: 1.2
+    - _RampSoftness: 0.02
+    - _RampThreshold: 0.5
+    - _Rows: 4
+    - _ShadowBrightness: 0.6
+    - _ShowID: 0
+    - _Threshold: 0.7
+    - _X_Sum: 4
+    - _Y_Sum: 4
+    m_Colors:
+    - _AmbientColor: {r: 0.72156864, g: 0.7490196, b: 0.76862746, a: 1}
+    - _LightColor: {r: 1, g: 0.98039216, b: 0.9490196, a: 1}
+  m_BuildTextureStacks: []

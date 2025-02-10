@@ -1,0 +1,356 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: IG_Head00_SnowWhite_0
+  m_Shader: {fileID: 4800000, guid: 13d70455e87b0a043bce63f3aac2e2a0, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 42e8c56ef75e40642b9476583ca87f5a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMaskMap:
+        m_Texture: {fileID: 2800000, guid: 42e8c56ef75e40642b9476583ca87f5a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CubeTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailBMRMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailBumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DissolveTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FlowMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ImagTex:
+        m_Texture: {fileID: 2800000, guid: 5cb177eee39e7ad4fb35f92eb7309ad4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _KajiyaNoise:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LobbyMaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LowSpecmap:
+        m_Texture: {fileID: 2800000, guid: 8c8ea4fb1357f5e448e7928e56556f5e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: a87f35fdfd8bb514dbd1a458cb537143, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaterialMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetalTex:
+        m_Texture: {fileID: 2800000, guid: a5856afefb886c24c84c1321db777f5b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 2800000, guid: 7e04a13cf225a6a42ba3aa89446cb2c3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MixTexture:
+        m_Texture: {fileID: 2800000, guid: 5f0d0f79e0a45804a9213e13c6b6dc46, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormTex:
+        m_Texture: {fileID: 2800000, guid: 6caba6726f7294f40abe2ad27d72f2c4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclTex:
+        m_Texture: {fileID: 2800000, guid: 43b5936500090254a9abad15d9d34fa8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RefTex1:
+        m_Texture: {fileID: 8900000, guid: ef7513b54a0670140b9b967af7620563, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RefrTex:
+        m_Texture: {fileID: 8900000, guid: 9b3de14a5d3b0824f95e798fcb5c7d86, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RougTex:
+        m_Texture: {fileID: 2800000, guid: a5856afefb886c24c84c1321db777f5b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecTex:
+        m_Texture: {fileID: 2800000, guid: babf4f31b86242a48a6346362b0e9f4d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Specular:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Subface_Tex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Subfacemask_Tex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SubsurfaceLUT:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SubsurfaceMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _T_Pre_Integrate_SKin_Lut:
+        m_Texture: {fileID: 2800000, guid: 28b445ff4785dac4da31c7f087f2a691, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _XuBuTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _ANISOTROPICToggle: 0
+    - _ANISOTROPIC_KAJIYAKAY_Toggle: 0
+    - _AOContrast: 1
+    - _AlbedeoIntensity: 0.95
+    - _AlphaClip: 1
+    - _AlphaClipThreshold: 0.2
+    - _AlphaCutoff: 0.5
+    - _Anisotropic: 0
+    - _AnisotropicIntensity: 0
+    - _BakedSimplify: 0
+    - _Blend: 0
+    - _BlendMode: 0
+    - _BlendType: 0
+    - _BlinnPhongSpecularIntensity: 0.42
+    - _BlinnPhongSpecularShininess: 25
+    - _BumpScale: 1
+    - _CLEARCOATToggle: 0
+    - _Clearcoat: 0
+    - _ClearcoatGloss: 0
+    - _Contrast: 1
+    - _Cull: 2
+    - _CurveFactor: 0.195
+    - _CustomLight: 0
+    - _CustomSparkleFrequency: 0
+    - _Cutoff: 0.5
+    - _DISNEYBRDF_ANISOTROPIC: 0
+    - _DISNEYBRDF_CLEARCOAT: 0
+    - _DISNEYBRDF_SUBSURFACE: 0
+    - _DetailMetallicIntensity: 0
+    - _DetailNormalIntensity: 1
+    - _DetailRoughnessIntensity: 0
+    - _DirectLightIntensity: 1
+    - _DisneySubstance1: 0
+    - _DissolveKey: 0
+    - _DitherAlphaBlend: 0
+    - _DitherAlphaValue: 1
+    - _DstBlend: 0
+    - _EmissionIntensity: 0
+    - _EnvironmentReflections: 1
+    - _FXSparkInvincible_ON: 1
+    - _Float3: 0.5
+    - _Fog: 0
+    - _FrenelIntensity: 1
+    - _FresnelHigh: 0.6
+    - _FresnelIntensity: 0.3
+    - _FresnelLow: 0.4
+    - _FresnelPower: 2.34
+    - _FresnelScale: 4.5
+    - _GIIntensity: 0.75
+    - _GIfresnel: 1
+    - _GlossMapScale: 0
+    - _Glossiness: 0
+    - _GlossyReflections: 0
+    - _Grid_X: 15
+    - _Grid_Y: 15
+    - _HighSpecularShift: 0
+    - _HighSpecularShift2: 0
+    - _Highlight_1_Power: 0
+    - _Highlight_1_Strength: 0
+    - _Highlight_2_Power: 0
+    - _Highlight_2_Strength: 0
+    - _IGInvinciblePower: 2.34
+    - _IGInvincibleScale: 4.5
+    - _ImagPower: 1
+    - _InvertSmoothness: 1
+    - _Invincible: 0
+    - _InvinciblePower: 2.34
+    - _InvincibleScale: 4.5
+    - _Jitter: 0
+    - _Keyword0: 0
+    - _LightingModelIntensity: 0
+    - _LineDendity: 0
+    - _LineWidth: 1
+    - _Lobby_on: 0
+    - _LongitudinalOrTransverse: 0
+    - _MainPow: 1
+    - _Metallic: 0
+    - _MixSimMetal: 0
+    - _MixSimRough: 0.85125
+    - _Mosaic_X: 5
+    - _Mosaic_Y: 2
+    - _Normal: 1
+    - _OcclusionIntensity: 1
+    - _OcclusionStrength: 0.85
+    - _OtherShadowIntensity: 1
+    - _OutlineAlphaValue: 1
+    - _OutlineProperties: -15.7
+    - _OutlineWidth: 0
+    - _PlannarShadow_on: 0
+    - _QueueOffset: 0
+    - _RECEIVE_SHADOWS: 1
+    - _ReceiveShadows: 1
+    - _RefPow: 0.14
+    - _RefPow1: 0
+    - _RefTex: 0
+    - _ReflectDisppear: 0.25
+    - _ReflectPlane: -0.01
+    - _ReflectScaleFac: 1
+    - _RefrPow: 0.5
+    - _RenderFace: 2
+    - _RenderOrder: 0
+    - _RimPower: 3.08
+    - _Roughness: 1
+    - _RoughnessScale: 0.5
+    - _SMASH_NO_FLOWDIR: 0
+    - _SUBSURFACEToggle: 0
+    - _Saturation: 1
+    - _ScanLine: 1.17
+    - _SelectiveContour: 0
+    - _SelectiveContourRange: 0.05
+    - _SelectiveContourSmooth: 0.5
+    - _ShadowFalloff: 0
+    - _ShadowIntensity: 1
+    - _Sheen: 0.505
+    - _SheenRange: 5
+    - _SheenTint: 0.5
+    - _SimplifyOff: 0
+    - _SmallNoise: 0.5
+    - _Smoothness: 1
+    - _Smoothness2: 0
+    - _SmoothnessTextureChannel: 0
+    - _SparkelFrequency: 10
+    - _SparkleFrequency: 10
+    - _Specular: 1
+    - _SpecularHighlights: 1
+    - _SpecularIntensity: 20
+    - _SpecularPos: 0
+    - _SpecularPos2: 0
+    - _SpecularShift: 0
+    - _SpecularShift2: 0
+    - _SrcBlend: 1
+    - _Surface: 0
+    - _SurfaceType: 0
+    - _TransPower: 5
+    - _TransStrength: 1
+    - _UseCustomDir: 0
+    - _VertrexDir: 0
+    - _WorkflowMode: 1
+    - _ZTest: 4
+    - _ZWrite: 1
+    - _Ztest: 0
+    - _Zwrite: 0
+    m_Colors:
+    - _AnisotropicColor: {r: 1, g: 1, b: 1, a: 0}
+    - _AnisotropicColor2: {r: 1, g: 1, b: 1, a: 0}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BlinnPhongSpecularColor: {r: 0.8301887, g: 0.5991456, b: 0.63742495, a: 0}
+    - _Color: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 1}
+    - _CustomLightColor: {r: 1, g: 1, b: 1, a: 0}
+    - _CustomLightDir: {r: 1, g: 1, b: 1, a: 1}
+    - _CustomShadowBias: {r: 0, g: 0, b: 0, a: 0}
+    - _DirectColor: {r: 1, g: 1, b: 1, a: 1}
+    - _DissolveBrightLineColor: {r: 155.7486, g: 155.7486, b: 155.7486, a: 0}
+    - _DissolveEmissiveColor: {r: 1011.953, g: 1011.953, b: 3067.984, a: 0}
+    - _Emission: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FlickColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FresnelColor: {r: 0, g: 0, b: 0, a: 0}
+    - _IGInvincibleColor: {r: 0, g: 0, b: 0, a: 0}
+    - _IndirectColor: {r: 1, g: 1, b: 1, a: 0.8509804}
+    - _InvincibleColor: {r: 0, g: 0, b: 0, a: 0}
+    - _LightDir: {r: 0, g: 0, b: 0, a: 0}
+    - _OcclusionColor: {r: 0.6037736, g: 0.2249911, b: 0.2249911, a: 0}
+    - _OutlineColor: {r: 1, g: 1, b: 1, a: 0}
+    - _ReflectTint: {r: 0.14999998, g: 0.14999998, b: 0.14999998, a: 0.5}
+    - _RimColor: {r: 0.02, g: 0.02, b: 0.02, a: 1}
+    - _ShadowColor2: {r: 0, g: 0, b: 0, a: 0}
+    - _SkinFresnelColor: {r: 0.6792453, g: 0.18629092, b: 0, a: 1}
+    - _SparkelColor: {r: 0, g: 0, b: 0, a: 0}
+    - _SparkleColor: {r: 0, g: 0, b: 0, a: 0}
+    - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _SubfaceColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SubsurfaceCol: {r: 1, g: 0.6, b: 0.6, a: 1}
+--- !u!114 &9154928017363819001
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1

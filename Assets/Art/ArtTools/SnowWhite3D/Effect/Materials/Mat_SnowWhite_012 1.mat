@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Mat_SnowWhite_012 1
+  m_Shader: {fileID: 4800000, guid: ae9cf95039ff46248ac630060a0d2464, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _AUTOMASK_ON
+  - _AUTONOISE_ON
+  - _NOISEMASK_ON
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Additive:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Base:
+        m_Texture: {fileID: 2800000, guid: 0e84d5b3cc431af4d8ec69818489ee59, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Dissolve:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DistorMaskTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DistorNoiseTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask:
+        m_Texture: {fileID: 2800000, guid: a5dc718d2128c754ebf06ceffa5fda52, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Noise:
+        m_Texture: {fileID: 2800000, guid: a15a92a5b79425c47a6aae0cb367d15f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _VertexAni:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _3COLOR_ON: 0
+    - _ADDBLOOM_ON: 0
+    - _AUTOVERTEXANI_ON: 0
+    - _AddRotato: 0
+    - _AdditiveU_Speed: 0
+    - _AdditiveV_Speed: 0
+    - _AlphaClip: 0
+    - _AlphaCutoff: 0.5
+    - _AutoAdditive: 0
+    - _AutoDissolve: 0
+    - _AutoDissolveWidth: 0
+    - _AutoFresnel: 0
+    - _AutoMask: 1
+    - _AutoNoise: 1
+    - _BaseU_Speed: 0
+    - _BaseV_Speed: 0
+    - _BlendMode: 3
+    - _ColorLightIntensity: 1
+    - _Cull: 0
+    - _DepthDistance: 0
+    - _Depthfade: 0
+    - _Dissolve2U: 0
+    - _DissolveByBaseAlpha: 0
+    - _DissolvePreview: 0
+    - _DissolveU_Speed: 0
+    - _DissolveV_Speed: 0
+    - _DissolveWidth: 0
+    - _DissolveWidthIntensity: 0
+    - _Distortion: 0
+    - _DistortionIntensity: 0.5
+    - _DstBlend: 1
+    - _EdgeSharpness: 5
+    - _FrenelBRF: 0.04
+    - _FresnelAlpha: 0
+    - _FresnelPower: 5
+    - _FresnelScale: 1
+    - _GammaLerp: 1
+    - _MASKCUS: 0
+    - _MaskRotato: 0
+    - _MaskU_Speed: 0
+    - _MaskV_Speed: 0
+    - _MeshFade: 0
+    - _NoiseIntersity: 0
+    - _NoiseU_Speed: 0.61
+    - _NoiseV_Speed: 0
+    - _Offsetx: 0
+    - _Offsety: 0
+    - _OpacityIntersity: 1
+    - _OutLine: 0
+    - _OutLineAlphaThreshold: 0
+    - _OutLineWidth: 0
+    - _ParticleCtrlOff: 0
+    - _RenderFace: 0
+    - _SrcBlend: 5
+    - _StencilComp: 8
+    - _StencilValue: 0
+    - _TWOFACE_ON: 0
+    - _VertexAniScale: 0
+    - _VertexU_Speed: 0
+    - _VertexV_Speed: 0
+    - _ZTest: 4
+    - _ZWrite: 0
+    - _characterDepth: 0
+    - _useNoiseMask: 1
+    m_Colors:
+    - _AdditiveColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorBlack: {r: 0, g: 0, b: 0, a: 1}
+    - _ColorLight: {r: 3.018868, g: 3.018868, b: 3.018868, a: 1}
+    - _ColorLight01: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorMiddle: {r: 1, g: 1, b: 1, a: 1}
+    - _DissWidthColor: {r: 1, g: 1, b: 1, a: 1}
+    - _DistortionParameter: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FresnelColor: {r: 1, g: 1, b: 1, a: 0}
+    - _OutLineColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []

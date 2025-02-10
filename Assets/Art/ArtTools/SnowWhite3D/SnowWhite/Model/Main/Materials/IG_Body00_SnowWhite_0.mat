@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: IG_Body00_SnowWhite_0
+  m_Shader: {fileID: 4800000, guid: eae7347285c46fb4bb8e85bc6d2a3ad1, type: 3}
+  m_ShaderKeywords: _SMASH_DISNEY_CUSTOMLOWREF
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMaskMap:
+        m_Texture: {fileID: 2800000, guid: 42e8c56ef75e40642b9476583ca87f5a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LowSpecmap:
+        m_Texture: {fileID: 2800000, guid: 8c8ea4fb1357f5e448e7928e56556f5e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: a87f35fdfd8bb514dbd1a458cb537143, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MixTexture:
+        m_Texture: {fileID: 2800000, guid: 5f0d0f79e0a45804a9213e13c6b6dc46, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaClipThreshold: 0.2
+    - _BlendType: 0
+    - _CustomLightSpecIntensity: 0
+    - _DirectLightIntensity: 1
+    - _DstBlend: 0
+    - _EmissionIntensity: 0
+    - _EnableHightLightNormal: 0
+    - _FXSparkInvincible_ON: 1
+    - _GIIntensity: 0.85
+    - _GIfresnel: 0.3
+    - _IGInvinciblePower: 2.34
+    - _IGInvincibleScale: 4.5
+    - _InvinciblePower: 2.34
+    - _InvincibleScale: 4.5
+    - _LightmapNormEnhance: 0
+    - _LightmapNormEnhanceBrighter: 0
+    - _LowRough: 0.6
+    - _MixSimMetal: 0
+    - _MixSimRough: 0.85125
+    - _OcclusionIntensity: 0.8
+    - _RenderFace: 2
+    - _RenderOrder: 0
+    - _ShadowIntensity: 1
+    - _Sheen: 0.505
+    - _SheenTint: 0.5
+    - _SimplifyOff: 0
+    - _SparkleFrequency: 10
+    - _SpecularIntensity: 20
+    - _SrcBlend: 1
+    - _SurfaceType: 0
+    - _UseCustomDir: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _CustomShadowBias: {r: 0, g: 0, b: 0, a: 0}
+    - _IGInvincibleColor: {r: 0, g: 0, b: 0, a: 0}
+    - _InvincibleColor: {r: 0, g: 0, b: 0, a: 0}
+    - _OcclusionColor: {r: 0.4156863, g: 0.28235295, b: 0.27450982, a: 0}
+    - _SparkleColor: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &9154928017363819001
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
