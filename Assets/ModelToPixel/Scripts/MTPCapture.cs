@@ -1100,10 +1100,14 @@ namespace ModelToPixel
         {
             foreach (var clip in clips)
             {
-                yield return StartCoroutine(CaptureAnimations(clip, animator, frameRate, CaptureType.BaseColor));
-                yield return StartCoroutine(CaptureAnimations(clip, animator, frameRate, CaptureType.Normal));
-                yield return StartCoroutine(CaptureAnimations(clip, animator, frameRate, CaptureType.Effect));
-                yield return StartCoroutine(CaptureAnimations(clip, animator, frameRate, CaptureType.Emissive));
+                if(clip != null)
+                {
+                    yield return StartCoroutine(CaptureAnimations(clip, animator, frameRate, CaptureType.BaseColor));
+                    yield return StartCoroutine(CaptureAnimations(clip, animator, frameRate, CaptureType.Normal));
+                    yield return StartCoroutine(CaptureAnimations(clip, animator, frameRate, CaptureType.Effect));
+                    yield return StartCoroutine(CaptureAnimations(clip, animator, frameRate, CaptureType.Emissive));
+                }
+
             }
         }
 
