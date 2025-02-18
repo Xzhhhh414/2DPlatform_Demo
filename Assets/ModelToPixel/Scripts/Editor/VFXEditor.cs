@@ -97,6 +97,7 @@ namespace ModelToPixel
                 lastStartFrame = startFrame;
                 lastEndFrame = endFrame;
                 lastCurrentFrame = currentFrame;
+                Debug.Log("aminuosi");
             }
 
             GUILayout.Space(10);
@@ -243,6 +244,7 @@ namespace ModelToPixel
                 targetInstance.name = modelPrefab.name;
 
                 string scriptPath = AssetDatabase.GetAssetPath(MonoScript.FromScriptableObject(this));
+                Debug.Log(scriptPath);
                 string scriptFolder = Path.GetDirectoryName(scriptPath);
                 string parentFolder = FindParentFolder(scriptPath, "ModelToPixel");
 
@@ -449,6 +451,8 @@ namespace ModelToPixel
                 }
                 animator.runtimeAnimatorController = overrideController;
                 animator.Play(0, 0, 0);
+                animator.speed = 1;
+                currentFrame = 0;
             }
         }
     }
