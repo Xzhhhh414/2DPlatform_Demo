@@ -1,0 +1,18 @@
+namespace {0:Namespace}
+{{
+	/// <summary>
+	/// Properties registry.
+	/// </summary>
+	public static class PropertyWrappersRegistry
+	{{
+		/// <summary>
+		/// Add properties.
+		/// </summary>
+		[UIThemes.PropertiesRegistry]
+		[UnityEngine.Scripting.Preserve]
+		public static void AddWrappers()
+		{{
+{0:Wrappers}
+		}}
+	}}
+}}

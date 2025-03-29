@@ -561,7 +561,7 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Standalone: NODECANVAS;FLOWCANVAS
+    Standalone: NODECANVAS;FLOWCANVAS;UIWIDGETS_INSTALLED;UIWIDGETS_TMPRO_SUPPORT;UITHEMES_INSTALLED
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}

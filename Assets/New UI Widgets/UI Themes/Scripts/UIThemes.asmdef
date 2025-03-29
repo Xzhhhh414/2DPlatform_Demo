@@ -1,0 +1,20 @@
+{
+    "name": "UIThemes",
+    "references": [
+        "Unity.TextMeshPro", "Unity.Addressables", "Unity.ResourceManager"
+    ],
+    
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.textmeshpro",
+            "expression": "",
+            "define": "UIWIDGETS_TMPRO_INSTALLED"
+        }
+    ],
+    "noEngineReferences": false
+}

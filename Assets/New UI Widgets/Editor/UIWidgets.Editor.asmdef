@@ -1,0 +1,35 @@
+{
+    "name": "UIWidgets.Editor",
+    "references": [
+        "UIThemes", "Unity.TextMeshPro", "Unity.InputSystem", "UIWidgets", "UIThemes.Editor"
+    ],
+    "includePlatforms": ["Editor"], "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "",
+            "define": "UIWIDGETS_INPUT_SYSTEM_INSTALLED"
+        },
+        {
+            "name": "com.unity.textmeshpro",
+            "expression": "",
+            "define": "UIWIDGETS_TMPRO_INSTALLED"
+        },
+        {
+            "name": "com.unity.textmeshpro",
+            "expression": "3.2.0-pre.5",
+            "define": "UIWIDGETS_TMPRO_3_2_OR_NEWER"
+        },
+        {
+            "name": "com.unity.textmeshpro",
+            "expression": "4.0.0-pre.2",
+            "define": "UIWIDGETS_TMPRO_4_0_OR_NEWER"
+        }
+    ],
+    "noEngineReferences": false
+}

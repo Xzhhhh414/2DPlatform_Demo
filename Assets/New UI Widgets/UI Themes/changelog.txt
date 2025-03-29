@@ -1,0 +1,55 @@
+1.0.11
+- now support addressable assets, support can be enabled in "Project Settings... / UI Themes"
+- Theme: added the AddressableSupport option (use when the Theme should be included in the build and assets (sprites, textures, fonts, etc) are addressable and loaded by request), addressable assets can be preloaded with PreloadAddressable() or PreloadAddressable(VariationId) calls
+- now requires references to the Unity.Addressables and Unity.ResourceManager in the UIThemes assembly definition
+- now requires reference to Unity.Addressables.Editor in the UIThemes.Editor assembly definition
+
+1.0.10
+- improved Assembly Definitions support
+
+1.0.9
+- fixed ThemeTarget bug caused by the removed component
+
+1.0.8
+- small improvements
+
+v1.0.7
+- "Remove All ThemeTargets" renamed to "Detach Theme"
+- "Remove ThemeTargets with Default Theme" renamed to "Detach Default Theme"
+- Theme editor: added "Attach to the Scene" button, it will add/replace all themes in the active scene with the current one
+
+v1.0.6
+- fixed problems during the first installation
+
+v1.0.5
+- Assembly Definitions: improved support when reinstalling package
+- fixed build error for Unity 2021.3 versions
+
+v1.0.4
+- added commands "Find Options" and "Find And Create Options" to use with existing ThemeTarget components
+- font size by default changed to 24
+- colorMultiplier by default changed to 1
+- commands "... Create Options" now set the current value for all variations if the option was created
+
+v1.0.3
+- fixed bug when properties controlled by owner were changed by Theme
+- added Selectable.colorMultiplier support
+- added Text.fontSize support
+
+v1.0.2
+- fixed error caused by a missing folder in the package (since Unity does not include an empty folder in the package)
+
+v1.0.1
+- added option to specify folder, and namespace for wrappers, and enable generate wrappers in Project Settings
+- ThemeTargets Search window: search is now performed on all opened scenes, not only active
+- ThemeTargets Search window: added search on all scenes and prefabs
+- ThemeTargets Search window: search results preserved after assembly reload
+- added context menu "Remove ThemeTargets with Default Theme"
+- added variations reorder
+- added Theme.IsActiveProperty(name) method to control available properties
+- white sprite can be marked with the "ui-themes-white-sprite" label
+- fixed options reordering when filter enabled
+- fixed variations delete
+
+v1.0.0
+- initial release

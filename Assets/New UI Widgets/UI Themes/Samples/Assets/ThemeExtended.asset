@@ -1,0 +1,468 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc0818dbcacc3a4469ec42cc93b641a4, type: 3}
+  m_Name: ThemeExtended
+  m_EditorClassIdentifier: 
+  variations:
+  - id:
+      id: 0
+    name: Variation 0
+  - id:
+      id: 1
+    name: Variation 1
+  - id:
+      id: 2
+    name: Variation 2
+  activeVariationId:
+    id: 1
+  initialVariationId:
+    id: 0
+  ColorsTable:
+    options:
+    - id:
+        id: 1
+      name: Option 1
+    - id:
+        id: 2
+      name: Option 2
+    - id:
+        id: 3
+      name: Option 3
+    - id:
+        id: 4
+      name: Image (2).color
+    - id:
+        id: 5
+      name: Image (2).color 2
+    - id:
+        id: 6
+      name: Button.color
+    - id:
+        id: 7
+      name: Button.highlightedColor
+    - id:
+        id: 8
+      name: Button.pressedColor
+    - id:
+        id: 9
+      name: Button.disabledColor
+    - id:
+        id: 10
+      name: Text.color
+    - id:
+        id: 11
+      name: ListViewIcons.DefaultBackgroundColor
+    - id:
+        id: 12
+      name: ListViewIcons.DefaultColor
+    - id:
+        id: 13
+      name: ListViewIcons.HighlightedBackgroundColor
+    - id:
+        id: 14
+      name: ListViewIcons.HighlightedColor
+    - id:
+        id: 15
+      name: ListViewIcons.SelectedBackgroundColor
+    - id:
+        id: 16
+      name: TestImage.color
+    values:
+    - variationId:
+        id: 0
+      optionId:
+        id: 2
+      Value: {r: 0, g: 0, b: 0, a: 0}
+    - variationId:
+        id: 1
+      optionId:
+        id: 2
+      Value: {r: 0, g: 0, b: 0, a: 0}
+    - variationId:
+        id: 0
+      optionId:
+        id: 3
+      Value: {r: 0, g: 0, b: 0, a: 0}
+    - variationId:
+        id: 1
+      optionId:
+        id: 3
+      Value: {r: 1, g: 0.9622972, b: 0, a: 1}
+    - variationId:
+        id: 0
+      optionId:
+        id: 1
+      Value: {r: 1, g: 0, b: 0, a: 1}
+    - variationId:
+        id: 1
+      optionId:
+        id: 1
+      Value: {r: 1, g: 1, b: 1, a: 1}
+    - variationId:
+        id: 2
+      optionId:
+        id: 4
+      Value: {r: 0, g: 1, b: 0.87342286, a: 1}
+    - variationId:
+        id: 0
+      optionId:
+        id: 5
+      Value: {r: 0, g: 1, b: 0.2, a: 1}
+    - variationId:
+        id: 1
+      optionId:
+        id: 6
+      Value: {r: 0, g: 0.17201233, b: 1, a: 1}
+    - variationId:
+        id: 1
+      optionId:
+        id: 7
+      Value: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    - variationId:
+        id: 1
+      optionId:
+        id: 8
+      Value: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    - variationId:
+        id: 1
+      optionId:
+        id: 9
+      Value: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    - variationId:
+        id: 1
+      optionId:
+        id: 10
+      Value: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    - variationId:
+        id: 1
+      optionId:
+        id: 11
+      Value: {r: 1, g: 1, b: 1, a: 0}
+    - variationId:
+        id: 1
+      optionId:
+        id: 12
+      Value: {r: 1, g: 0.84313726, b: 0.4509804, a: 1}
+    - variationId:
+        id: 1
+      optionId:
+        id: 13
+      Value: {r: 0.70980394, g: 0.47843137, b: 0.14117648, a: 1}
+    - variationId:
+        id: 1
+      optionId:
+        id: 14
+      Value: {r: 0, g: 0, b: 0, a: 1}
+    - variationId:
+        id: 1
+      optionId:
+        id: 15
+      Value: {r: 0.76862746, g: 0.6117647, b: 0.15294118, a: 1}
+    - variationId:
+        id: 0
+      optionId:
+        id: 16
+      Value: {r: 1, g: 0.9622972, b: 0, a: 1}
+    - variationId:
+        id: 1
+      optionId:
+        id: 16
+      Value: {r: 1, g: 0, b: 0, a: 1}
+    - variationId:
+        id: 1
+      optionId:
+        id: 5
+      Value: {r: 0, g: 0, b: 0, a: 1}
+  SpritesTable:
+    options:
+    - id:
+        id: 1
+      name: Image (2).sprite
+    - id:
+        id: 2
+      name: Image (2).sprite 2
+    - id:
+        id: 3
+      name: Image.sprite
+    - id:
+        id: 4
+      name: Button.sprite
+    - id:
+        id: 5
+      name: Button.highlightedSprite
+    - id:
+        id: 6
+      name: ListViewIcons.sprite
+    - id:
+        id: 7
+      name: DefaultItem.sprite
+    - id:
+        id: 8
+      name: Background.sprite
+    - id:
+        id: 9
+      name: Handle.sprite
+    - id:
+        id: 10
+      name: Canvas.sprite
+    values:
+    - variationId:
+        id: 2
+      optionId:
+        id: 1
+      Value: {fileID: 21300000, guid: 599628cb8dbf0e846b59ec27fda3380c, type: 3}
+    - variationId:
+        id: 0
+      optionId:
+        id: 2
+      Value: {fileID: 0}
+    - variationId:
+        id: 1
+      optionId:
+        id: 3
+      Value: {fileID: 21300000, guid: 599628cb8dbf0e846b59ec27fda3380c, type: 3}
+    - variationId:
+        id: 1
+      optionId:
+        id: 4
+      Value: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+    - variationId:
+        id: 1
+      optionId:
+        id: 5
+      Value: {fileID: 0}
+    - variationId:
+        id: 1
+      optionId:
+        id: 6
+      Value: {fileID: 21300000, guid: 65edbbe76bc1a414f96214cc6149be06, type: 3}
+    - variationId:
+        id: 1
+      optionId:
+        id: 7
+      Value: {fileID: 21300000, guid: a3ce1bc3a6889304597afd4439dc8d65, type: 3}
+    - variationId:
+        id: 1
+      optionId:
+        id: 8
+      Value: {fileID: 21300000, guid: a0740d2bab7ff05478a195ef348b8d49, type: 3}
+    - variationId:
+        id: 1
+      optionId:
+        id: 9
+      Value: {fileID: 21300000, guid: 3fa7e4a84b523df4cb9a5729cff2d0cf, type: 3}
+    - variationId:
+        id: 1
+      optionId:
+        id: 10
+      Value: {fileID: 21300000, guid: e6ec35e733105f64698fcce9abe1800e, type: 3}
+    - variationId:
+        id: 1
+      optionId:
+        id: 2
+      Value: {fileID: 0}
+  TexturesTable:
+    options:
+    - id:
+        id: 1
+      name: DefaultItem.AllowDropCursor
+    - id:
+        id: 2
+      name: DefaultItem.DeniedDropCursor
+    - id:
+        id: 3
+      name: DefaultItem.DefaultCursorTexture
+    values:
+    - variationId:
+        id: 1
+      optionId:
+        id: 1
+      Value: {fileID: 2800000, guid: 2b808f7c3d6a24b4885fde391543fe58, type: 3}
+    - variationId:
+        id: 1
+      optionId:
+        id: 2
+      Value: {fileID: 2800000, guid: 7200c69591c3f4144ac09f5347b5e18d, type: 3}
+    - variationId:
+        id: 1
+      optionId:
+        id: 3
+      Value: {fileID: 0}
+  FontsTable:
+    options:
+    - id:
+        id: 1
+      name: Text.font
+    values:
+    - variationId:
+        id: 1
+      optionId:
+        id: 1
+      Value: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  FontsTMProTable:
+    options:
+    - id:
+        id: 1
+      name: Text.font
+    values:
+    - variationId:
+        id: 1
+      optionId:
+        id: 1
+      Value: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  RotatedSpritesTable:
+    options:
+    - id:
+        id: 1
+      name: Option 1
+    - id:
+        id: 2
+      name: Option 2
+    - id:
+        id: 3
+      name: Image (2).Sprite + Rotation
+    - id:
+        id: 4
+      name: Image (2).Sprite + Rotation 2
+    - id:
+        id: 5
+      name: Canvas.Sprite + Rotation
+    - id:
+        id: 6
+      name: Button.Sprite + Rotation
+    - id:
+        id: 7
+      name: Image (2).Sprite + Rotation 3
+    - id:
+        id: 8
+      name: ListViewIcons.Sprite + Rotation
+    - id:
+        id: 9
+      name: DefaultItem.Sprite + Rotation
+    - id:
+        id: 10
+      name: Background.Sprite + Rotation
+    - id:
+        id: 11
+      name: Handle.Sprite + Rotation
+    - id:
+        id: 12
+      name: Image.Sprite + Rotation
+    - id:
+        id: 13
+      name: Image.Sprite + Rotation 2
+    values:
+    - variationId:
+        id: 0
+      optionId:
+        id: 1
+      Value:
+        Sprite: {fileID: 21300000, guid: b2c3862e069a65e41ae6b03ad7c7a57d, type: 3}
+        RotationZ: -90
+    - variationId:
+        id: 1
+      optionId:
+        id: 1
+      Value:
+        Sprite: {fileID: 21300000, guid: 599628cb8dbf0e846b59ec27fda3380c, type: 3}
+        RotationZ: 90
+    - variationId:
+        id: 0
+      optionId:
+        id: 2
+      Value:
+        Sprite: {fileID: 21300000, guid: b2c3862e069a65e41ae6b03ad7c7a57d, type: 3}
+        RotationZ: 90
+    - variationId:
+        id: 1
+      optionId:
+        id: 2
+      Value:
+        Sprite: {fileID: 21300000, guid: 599628cb8dbf0e846b59ec27fda3380c, type: 3}
+        RotationZ: -90
+    - variationId:
+        id: 2
+      optionId:
+        id: 3
+      Value:
+        Sprite: {fileID: 21300000, guid: 599628cb8dbf0e846b59ec27fda3380c, type: 3}
+        RotationZ: 90
+    - variationId:
+        id: 1
+      optionId:
+        id: 4
+      Value:
+        Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+        RotationZ: 90
+    - variationId:
+        id: 1
+      optionId:
+        id: 5
+      Value:
+        Sprite: {fileID: 21300000, guid: e6ec35e733105f64698fcce9abe1800e, type: 3}
+        RotationZ: 0
+    - variationId:
+        id: 1
+      optionId:
+        id: 6
+      Value:
+        Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+        RotationZ: 0
+    - variationId:
+        id: 1
+      optionId:
+        id: 7
+      Value:
+        Sprite: {fileID: 0}
+        RotationZ: 0
+    - variationId:
+        id: 1
+      optionId:
+        id: 8
+      Value:
+        Sprite: {fileID: 21300000, guid: 65edbbe76bc1a414f96214cc6149be06, type: 3}
+        RotationZ: 0
+    - variationId:
+        id: 1
+      optionId:
+        id: 9
+      Value:
+        Sprite: {fileID: 21300000, guid: a3ce1bc3a6889304597afd4439dc8d65, type: 3}
+        RotationZ: 0
+    - variationId:
+        id: 1
+      optionId:
+        id: 10
+      Value:
+        Sprite: {fileID: 21300000, guid: a0740d2bab7ff05478a195ef348b8d49, type: 3}
+        RotationZ: 0
+    - variationId:
+        id: 1
+      optionId:
+        id: 11
+      Value:
+        Sprite: {fileID: 21300000, guid: 3fa7e4a84b523df4cb9a5729cff2d0cf, type: 3}
+        RotationZ: 0
+    - variationId:
+        id: 0
+      optionId:
+        id: 12
+      Value:
+        Sprite: {fileID: 0}
+        RotationZ: 90
+    - variationId:
+        id: 0
+      optionId:
+        id: 13
+      Value:
+        Sprite: {fileID: 0}
+        RotationZ: 0

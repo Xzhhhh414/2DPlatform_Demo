@@ -1,0 +1,19 @@
+namespace {0:Namespace}
+{{
+	/// <summary>
+	/// Theme property for the {0:Field} of {0:ComponentType}.
+	/// </summary>
+	public class {0:WrapperClass} : UIThemes.Wrappers.Wrapper<{0:FieldType}, {0:ComponentType}>
+	{{
+		/// <summary>
+		/// Initializes a new instance of the <see cref="{0:WrapperClass}"/> class.
+		/// </summary>
+		public {0:WrapperClass}() => Name = nameof({0:ComponentType}.{0:Field});
+
+		/// <inheritdoc/>
+		protected override {0:FieldType} Get({0:ComponentType} widget) => widget.{0:Field};
+
+		/// <inheritdoc/>
+		protected override void Set({0:ComponentType} widget, {0:FieldType} value) => widget.{0:Field} = value;
+	}}
+}}
